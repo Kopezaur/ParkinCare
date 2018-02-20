@@ -15,6 +15,15 @@
 		E94903A5203C38DC00FE7396 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E94903A3203C38DC00FE7396 /* LaunchScreen.storyboard */; };
 		E94903B0203C38DC00FE7396 /* ParkinCareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903AF203C38DC00FE7396 /* ParkinCareTests.swift */; };
 		E94903BB203C38DC00FE7396 /* ParkinCareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903BA203C38DC00FE7396 /* ParkinCareUITests.swift */; };
+		E94903CA203C3D1000FE7396 /* Prescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903C9203C3D0F00FE7396 /* Prescription.swift */; };
+		E94903CB203C3D1000FE7396 /* Prescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903C9203C3D0F00FE7396 /* Prescription.swift */; };
+		E94903CC203C3D1000FE7396 /* Prescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903C9203C3D0F00FE7396 /* Prescription.swift */; };
+		E94903CE203C3E8100FE7396 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903CD203C3E8100FE7396 /* User.swift */; };
+		E94903CF203C3E8100FE7396 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903CD203C3E8100FE7396 /* User.swift */; };
+		E94903D0203C3E8100FE7396 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903CD203C3E8100FE7396 /* User.swift */; };
+		E94903D2203C452F00FE7396 /* Prescriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903D1203C452F00FE7396 /* Prescriptions.swift */; };
+		E94903D3203C452F00FE7396 /* Prescriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903D1203C452F00FE7396 /* Prescriptions.swift */; };
+		E94903D4203C452F00FE7396 /* Prescriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903D1203C452F00FE7396 /* Prescriptions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,9 @@
 		E94903B6203C38DC00FE7396 /* ParkinCareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkinCareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E94903BA203C38DC00FE7396 /* ParkinCareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkinCareUITests.swift; sourceTree = "<group>"; };
 		E94903BC203C38DC00FE7396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E94903C9203C3D0F00FE7396 /* Prescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prescription.swift; sourceTree = "<group>"; };
+		E94903CD203C3E8100FE7396 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E94903D1203C452F00FE7396 /* Prescriptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prescriptions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,7 @@
 		E9490396203C38DC00FE7396 /* ParkinCare */ = {
 			isa = PBXGroup;
 			children = (
+				E94903C8203C3BDD00FE7396 /* Entities */,
 				E9490397203C38DC00FE7396 /* AppDelegate.swift */,
 				E9490399203C38DC00FE7396 /* ViewController.swift */,
 				E949039B203C38DC00FE7396 /* Main.storyboard */,
@@ -126,6 +139,16 @@
 				E94903BC203C38DC00FE7396 /* Info.plist */,
 			);
 			path = ParkinCareUITests;
+			sourceTree = "<group>";
+		};
+		E94903C8203C3BDD00FE7396 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				E94903C9203C3D0F00FE7396 /* Prescription.swift */,
+				E94903CD203C3E8100FE7396 /* User.swift */,
+				E94903D1203C452F00FE7396 /* Prescriptions.swift */,
+			);
+			name = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,8 +289,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E949039A203C38DC00FE7396 /* ViewController.swift in Sources */,
+				E94903D2203C452F00FE7396 /* Prescriptions.swift in Sources */,
 				E9490398203C38DC00FE7396 /* AppDelegate.swift in Sources */,
 				E94903A0203C38DC00FE7396 /* ParkinCare.xcdatamodeld in Sources */,
+				E94903CE203C3E8100FE7396 /* User.swift in Sources */,
+				E94903CA203C3D1000FE7396 /* Prescription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +302,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E94903B0203C38DC00FE7396 /* ParkinCareTests.swift in Sources */,
+				E94903CB203C3D1000FE7396 /* Prescription.swift in Sources */,
+				E94903CF203C3E8100FE7396 /* User.swift in Sources */,
+				E94903D3203C452F00FE7396 /* Prescriptions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +313,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E94903BB203C38DC00FE7396 /* ParkinCareUITests.swift in Sources */,
+				E94903CC203C3D1000FE7396 /* Prescription.swift in Sources */,
+				E94903D0203C3E8100FE7396 /* User.swift in Sources */,
+				E94903D4203C452F00FE7396 /* Prescriptions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +552,7 @@
 				E94903C1203C38DC00FE7396 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E94903C2203C38DC00FE7396 /* Build configuration list for PBXNativeTarget "ParkinCareTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +561,7 @@
 				E94903C4203C38DC00FE7396 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E94903C5203C38DC00FE7396 /* Build configuration list for PBXNativeTarget "ParkinCareUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +570,7 @@
 				E94903C7203C38DC00FE7396 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
