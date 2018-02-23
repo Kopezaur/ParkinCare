@@ -8,6 +8,8 @@
 
 import Foundation
 
+// ----- Specification fonctionelle
+//
 // addPrescription: Prescriptions x Prescription -> Prescriptions
 // Ajoute la prescription entrée aux autres prescription
 //
@@ -28,3 +30,7 @@ import Foundation
 //
 // makeIterator : Prescription -> ItPrescriptions
 // Res : Cree un iterateur pour Prescription
+
+class Prescriptions {
+    
+}
