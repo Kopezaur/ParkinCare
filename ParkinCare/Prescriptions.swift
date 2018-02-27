@@ -30,6 +30,10 @@ import Foundation
 //
 // makeIterator : Prescription -> ItPrescriptions
 // Res : Cree un iterateur pour Prescription
+//
+// reminder: Activity -> Boolean
+// Indique si l’activite doit etre rappele
+
 
 class Prescriptions {
     
