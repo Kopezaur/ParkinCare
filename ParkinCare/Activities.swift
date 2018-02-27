@@ -8,7 +8,8 @@
 
 import Foundation
 
-// ----- Specification fonctionelle
+// ----- Specifications fonctionelles
+//
 // addActivity: Activities x Activity -> Activities
 // Ajoute une activite aux autres activite
 //
@@ -24,6 +25,12 @@ import Foundation
 //
 // makeIterator: Activities -> ItActivity
 // Cree un iterator pour les activites
+//
+// getNextActivity: Activities -> Activity
+// Renvoie la prochaine activite en date
+//
+// getDailyActivities: Activities x Date -> Activities
+// Renvoie les activites de la journee entree en parametre
 
 
 class Activities {

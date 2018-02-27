@@ -8,7 +8,7 @@
 
 import Foundation
 
-// ----- Specification fonctionelle
+// ----- Specifications fonctionelles
 //
 // addPrescription: Prescriptions x Prescription -> Prescriptions
 // Ajoute la prescription entrée aux autres prescription
@@ -30,9 +30,12 @@ import Foundation
 //
 // makeIterator : Prescription -> ItPrescriptions
 // Res : Cree un iterateur pour Prescription
+// 
+// getNextPrescription: Prescriptions -> Prescription
+// Renvoie la prochaine prescription en date
 //
-// reminder: Activity -> Boolean
-// Indique si l’activite doit etre rappele
+// getDailyPrescriptions: Prescriptions x Date -> Prescriptions
+// Renvoie les prescriptions de la journee entree en parametre
 
 
 class Prescriptions {

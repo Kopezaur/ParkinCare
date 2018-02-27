@@ -8,7 +8,7 @@
 
 import Foundation
 
-// ----- Specification fonctionelle :
+// ----- Specifications fonctionelles :
 //
 // dateTime: Prescription -> DateTime
 // La date et l’heure a laquelle l’utilisateur doit prendre ses
@@ -37,6 +37,11 @@ import Foundation
 // changeQuantity: Prescription x Integer -> Prescription
 // Pre : L’entier entre doit etre superieur a 0
 // Change la quantitee de medicament de la prescription
+//
+// changeDateTimeReminder: Prescription x DateTime -> Prescription
+// Pre: la date doit etre superieur a la date de l’ancienne date 
+// du rappel
+// Change l'heure et la date du rappel de la prescription
 //
 // validate: Prescription -> Prescription
 // Pre: Il faut que la date de la prescription soit inferieur a la

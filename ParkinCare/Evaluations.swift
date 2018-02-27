@@ -28,6 +28,12 @@ import Foundation
 // Renvoie les evaluations des x derniers jours x etant l’entier 
 // entre
 //
+// getNextEvaluation: Evaluations -> Evaluation
+// Renvoie la prochaine evaluation en date
+//
+// getDailyEvaluations: Evaluations x Date -> Evaluations
+// Renvoie les evaluations de la journee entree en parametre
+
 // makeIterator: Evaluations -> ItEvaluation
 // Cree un iterateur pour les evaluations
 

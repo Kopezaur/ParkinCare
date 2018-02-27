@@ -9,18 +9,21 @@
 import Foundation
 
 // ----- Specifications fonctionnelles
-//addRendezVous: RendezVousSet x RendezVous -> RendezVousSet
-//Ajoute un rendez vous aux autres rendez vous
 //
-//delRendezVous: RendezVousSet x RendezVous -> RendezVousSet
-//Pre : Le rendez vous en parametre doit etre present dans le RendezVousSet sinon ne change rien
-//Enleve des rendez vous le rendez vous entre en parametre
+// addRendezVous: RendezVousSet x RendezVous -> RendezVousSet
+// Ajoute un rendez vous aux autres rendez vous
 //
-//getFutureRendezVous: RendezVousSet -> RendezVousSet
-//Renvoie les rendez vous dont la date est après la date d’aujourd’hui
+// delRendezVous: RendezVousSet x RendezVous -> RendezVousSet
+// Pre : Le rendez vous en parametre doit etre present dans le 
+// RendezVousSet sinon ne change rien
+// Enleve des rendez vous le rendez vous entre en parametre
 //
-//makeIterator: RendezVousSet -> ItRendezVous
-//Cree un iterateur pour RendezVousSet
+// getFutureRendezVous: RendezVousSet -> RendezVousSet
+// Renvoie les rendez vous dont la date est après la date 
+// d’aujourd’hui
+//
+// makeIterator: RendezVousSet -> ItRendezVous
+// Cree un iterateur pour RendezVousSet
 
 
 class RendezVousSet{

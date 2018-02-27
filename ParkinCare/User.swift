@@ -8,7 +8,22 @@
 
 import Foundation
 
-// ----- Specification fonctionelle:
+// ----- Specifications fonctionelles:
+//
+// lastname: User -> String
+// Le nom de famille de l’utilisateur
+//
+// firstname: User -> String
+// le prenom de l’utilisateur
+//
+// address: User -> String
+// L’adresse de l’utilisateur
+//
+// numberTel: User -> String
+// Numero de telephone de l’utilisateur
+//
+// mail: User -> String
+// L’adresse mail de l’utilisateur
 //
 // prescriptions : User -> Prescriptions
 // Les prescriptions de medicament pour l'utilisateur
