@@ -10,32 +10,21 @@ import Foundation
 
 // ----- Specifications fonctionelles:
 //
-// lastname: User -> String
-// Le nom de famille de l’utilisateur
+//lastname: User -> String
+//Le nom de famille de l’utilisateur (get/set)
 //
-// firstname: User -> String
-// le prenom de l’utilisateur
+//firstname: User -> String
+//le prenom de l’utilisateur (get/set)
 //
-// address: User -> String
-// L’adresse de l’utilisateur
+//address: User -> String
+//L’adresse de l’utilisateur (get/set)
 //
-// numberTel: User -> String
-// Numero de telephone de l’utilisateur
+//numberTel: User -> String
+//Numero de telephone de l’utilisateur (get/set)
 //
-// mail: User -> String
-// L’adresse mail de l’utilisateur
-//
-// prescriptions : User -> Prescriptions
-// Les prescriptions de medicament pour l'utilisateur
-//
-// rendezVousSet : User -> RendezVousSet
-// Les rendez-vous de l'utilisateur
-//
-// activites : User -> Activites
-// Les activites sportive de l'utilisateur
-//
-// evaluations : User -> Evaluations
-// Les evaluations de symptomes de l'utilisateur
+//mail: User -> String
+//L’adresse mail de l’utilisateur (get/set)
+
 
 
 class User {
