@@ -147,7 +147,7 @@
 		E9490396203C38DC00FE7396 /* ParkinCare */ = {
 			isa = PBXGroup;
 			children = (
-				E94903C8203C3BDD00FE7396 /* Entities */,
+				E94903C8203C3BDD00FE7396 /* Classes */,
 				E9490397203C38DC00FE7396 /* AppDelegate.swift */,
 				E9490399203C38DC00FE7396 /* ViewController.swift */,
 				E949039B203C38DC00FE7396 /* Main.storyboard */,
@@ -177,7 +177,7 @@
 			path = ParkinCareUITests;
 			sourceTree = "<group>";
 		};
-		E94903C8203C3BDD00FE7396 /* Entities */ = {
+		E94903C8203C3BDD00FE7396 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				E94903C9203C3D0F00FE7396 /* Prescription.swift */,
@@ -194,7 +194,7 @@
 				E938374B20454C85005A6FCF /* Professional.swift */,
 				E938374F20454E16005A6FCF /* Professionals.swift */,
 			);
-			name = Entities;
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
