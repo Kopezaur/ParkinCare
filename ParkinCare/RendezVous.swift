@@ -10,26 +10,24 @@ import Foundation
 
 // ----- Specifications fonctionnelles
 //
-// dateTime : RendezVous -> DateTime
-// La date et l’heure du rendez vous
+//dateTime : RendezVous -> DateTime
+//La date et l’heure du rendez vous (get/set)
 //
-// professional : RendezVous -> Professionnal
-// Le professionnel avec qui le patient a rendez vous
+//professional : RendezVous -> Professionnal
+//Le professionnel avec qui le patient a rendez vous (get)
 //
-// dateTimeReminder : RendezVous -> DateTime
-// La date et l’heure du rappel
+//dateTimeReminder : RendezVous -> DateTime
+//Pre: la date et l’heure renvoyees doivent etre inferieures a la date et a l’heure du rendez vous
+//La date et l’heure du rappel (get/set)
 //
-// setTimeBeforeRemind: RendezVous x Time -> RendezVous
-// Pre : Le temps entre de neut exceder 2 heures
-// Change l’heure de rappel du rendez vous avec l’heure du rendez 
-// vous moins le temps entre en parametre
+//setTimeBeforeRemind: RendezVous x Time -> RendezVous
+//Pre : Le temps entre ne peut exceder 2 heures
+//Change l’heure de rappel du rendez vous avec l’heure du rendez vous moins le temps entre en parametre
 //
-// setDateTime: RendezVous x DateTime -> RendezVous
-// Pre : l’heure et la date entrees doivent etre après la date du 
-// moment.
-// Change la date du rendez vous avec la date entre en parametre
+//reminder: RendezVous -> Boolean
+//Indique si le rendez-vous doit etre rappele
+
 
 class RendezVous{
     
-    //test hello
 }

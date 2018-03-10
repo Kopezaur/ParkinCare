@@ -10,26 +10,27 @@ import Foundation
 
 // ----- Specifications fonctionelles
 //
-// lastname: Professional -> String
-// Le nom du professionnel
+//lastname: Professional -> String
+//Le nom du professionnel (get/set)
 //
-// firstname: Professional -> String
-// Le prenom du professionnel
+//firstname: Professional -> String
+//Le prenom du professionnel (get/set)
 //
-// title: Professional -> String
-// Le titre du professionnel
+//title: Professional -> String
+//Le titre du professionnel (get/set)
 //
-// address: Profesional -> String
-// L’adresse du professionnel (ou organisation)
+//address: Professional -> String
+//L’adresse du professionnel (ou organisation) (get/set)
 //
-// mail: Professional -> String
-// L’adresse mail du professionnel
+//mail: Profesional -> String
+//L’adresse mail du professionnel (get/set)
 //
-// telNumber: Professional -> String
-// Le numero de telephone du professionnel
+//telNumber: Professional -> String
+//Le numero de telephone du professionnel (get/set)
 //
-// organization: Professional -> String
-// L’organisation dans laquelle se trouve le professionnel
+//organization: Professional -> String
+//L’organisation dans laquelle se trouve le professionnel (get/set)
+
 
 class Professional {
     

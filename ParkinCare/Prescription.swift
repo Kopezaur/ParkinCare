@@ -10,43 +10,29 @@ import Foundation
 
 // ----- Specifications fonctionelles :
 //
-// dateTime: Prescription -> DateTime
-// La date et l’heure a laquelle l’utilisateur doit prendre ses
-// medicaments
+//dateTime: Prescription -> DateTime
+//La date et l’heure à laquelle l’utilisateur doit prendre ses medicaments (get/set)
 //
-// medicament: Prescription -> Medicament
-// Le medicament que doit prendre l’utilisateur
+//medicaments: Prescription -> Medicaments
+//Les medicaments que doit prendre l’utilisateur (get/set)
 //
-// quantity: Prescription -> Integer
-// La quantite de medicament a prendre
+//changeDateTime: Prescription x DateTime -> Prescription
+//Pre : la date entre doit etre superieur a la date du jour
+//Change la date de la description
 //
-// validated: Prescription : Boolean
-// Indique si l’utilisateur a pris son/ses medicaments
+//prescValidated: Prescription -> Boolean
+//Retourne vraie si toute les doses ont ete validees
 //
-// reminder: Prescription -> Reminder
-// Le rappel lie a la prescription
+//isPartForgotten: Prescription -> Boolean
+//Retourne vraie si au moins un medicament a ete oublie
 //
-// isForgotten: Prescription -> Boolean
-// Indique si la date de la prescription est depassee et que
-// l’utilisateur n’a pas pris ses medicaments
+//snooze: Prescription x Integer -> Prescription
+//Pre: l’entier doit etre compris strict entre 0 et 60
+//Decaler le rappelle de x minutes avec x l’entier entre
 //
-// changeDateTime: Prescription x DateTime -> Prescription
-// Pre : la date entre doit etre superieur a la date du jour
-// Change la date de la description
-//
-// changeQuantity: Prescription x Integer -> Prescription
-// Pre : L’entier entre doit etre superieur a 0
-// Change la quantitee de medicament de la prescription
-//
-// changeDateTimeReminder: Prescription x DateTime -> Prescription
-// Pre: la date doit etre superieur a la date de l’ancienne date 
-// du rappel
-// Change l'heure et la date du rappel de la prescription
-//
-// validate: Prescription -> Prescription
-// Pre: Il faut que la date de la prescription soit inferieur a la
-// date du moment
-// Indique que l’utilisateur a bien pris ses medicaments
+//reminder: Prescription -> Boolean
+//Indique si la prescription doit etre rappele
+
 
 
 class Prescription{
