@@ -28,6 +28,6 @@ import Foundation
 //Indique si le rendez-vous doit etre rappele
 
 
-class RendezVous{
+//class RendezVous{
     
-}
+//}

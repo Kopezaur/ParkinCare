@@ -30,6 +30,6 @@ import Foundation
 //makeIterator: Evaluations -> ItEvaluation
 //Cree un iterateur pour les evaluations
 
-class Evaluations {
+//class Evaluations {
     
-}
+//}

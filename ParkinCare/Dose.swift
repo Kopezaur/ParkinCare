@@ -20,6 +20,6 @@ import Foundation
 //Indique si l’utilisateur a pris son/ses medicaments en quantité  (get/set)
 //Ne peut etre vraie que si la date de la prescription dans laquelle il se trouve est passee
 
-class Dose{
+//class Dose{
     
-}
+//}

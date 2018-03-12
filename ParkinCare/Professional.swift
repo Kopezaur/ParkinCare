@@ -32,7 +32,7 @@ import Foundation
 //L’organisation dans laquelle se trouve le professionnel (get/set)
 
 
-class Professional {
+//class Professional {
     
-}
+//}
 

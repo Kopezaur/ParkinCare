@@ -28,6 +28,6 @@ import Foundation
 
 
 
-class Activities {
+//class Activities {
     
-}
+//}

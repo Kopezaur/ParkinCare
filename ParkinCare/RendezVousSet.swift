@@ -30,6 +30,6 @@ import Foundation
 //Cree un iterateur pour RendezVousSet
 
 
-class RendezVousSet{
+//class RendezVousSet{
     
-}
+//}

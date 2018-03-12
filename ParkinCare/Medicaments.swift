@@ -20,6 +20,6 @@ import Foundation
 //makeIterator: Medicament -> ItMedicament
 //Cree un iterator pour les medicaments
 
-class Medicaments{
+//lass Medicaments{
     
-}
+//}

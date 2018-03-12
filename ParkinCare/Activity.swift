@@ -31,6 +31,6 @@ import Foundation
 
 
 
-class Activity {
+//class Activity {
     
-}
+//}

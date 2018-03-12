@@ -29,6 +29,6 @@ import Foundation
 //Pre : La date de l’evaluation doit etre superieur a la date du moment
 //Indique que l’evaluation a ete validee
 
-class Evaluation {
+//class Evaluation {
     
-}
+//}
