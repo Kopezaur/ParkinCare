@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		15356CDD2045C562003A7EB8 /* Medicaments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15356CDC2045C562003A7EB8 /* Medicaments.swift */; };
 		15356CDF2045C5AE003A7EB8 /* Dose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15356CDE2045C5AE003A7EB8 /* Dose.swift */; };
+		1581149020583434001A912F /* MedicamentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1581148F20583434001A912F /* MedicamentTableViewCell.swift */; };
+		1581149220583903001A912F /* MedicamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1581149120583903001A912F /* MedicamentViewController.swift */; };
 		6F0B99B620453ED200A1BEF8 /* RendezVousSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0B99B520453ED200A1BEF8 /* RendezVousSet.swift */; };
 		6F0B99B820453F7D00A1BEF8 /* RendezVous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0B99B720453F7D00A1BEF8 /* RendezVous.swift */; };
 		E938374C20454C85005A6FCF /* Professional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374B20454C85005A6FCF /* Professional.swift */; };
@@ -74,6 +76,8 @@
 /* Begin PBXFileReference section */
 		15356CDC2045C562003A7EB8 /* Medicaments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medicaments.swift; sourceTree = "<group>"; };
 		15356CDE2045C5AE003A7EB8 /* Dose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dose.swift; sourceTree = "<group>"; };
+		1581148F20583434001A912F /* MedicamentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicamentTableViewCell.swift; sourceTree = "<group>"; };
+		1581149120583903001A912F /* MedicamentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicamentViewController.swift; sourceTree = "<group>"; };
 		6F0B99B520453ED200A1BEF8 /* RendezVousSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendezVousSet.swift; sourceTree = "<group>"; };
 		6F0B99B720453F7D00A1BEF8 /* RendezVous.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendezVous.swift; sourceTree = "<group>"; };
 		E938374B20454C85005A6FCF /* Professional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Professional.swift; sourceTree = "<group>"; };
@@ -167,10 +171,12 @@
 				E9490397203C38DC00FE7396 /* AppDelegate.swift */,
 				E9490399203C38DC00FE7396 /* ViewController.swift */,
 				E949039B203C38DC00FE7396 /* Main.storyboard */,
+				1581148F20583434001A912F /* MedicamentTableViewCell.swift */,
 				E94903A1203C38DC00FE7396 /* Assets.xcassets */,
 				E94903A3203C38DC00FE7396 /* LaunchScreen.storyboard */,
 				E94903A6203C38DC00FE7396 /* Info.plist */,
 				E949039E203C38DC00FE7396 /* ParkinCare.xcdatamodeld */,
+				1581149120583903001A912F /* MedicamentViewController.swift */,
 			);
 			path = ParkinCare;
 			sourceTree = "<group>";
@@ -363,6 +369,7 @@
 				15356CDF2045C5AE003A7EB8 /* Dose.swift in Sources */,
 				E96D53F820581FCC004562BE /* UserViewController.swift in Sources */,
 				E94E74CB20402B3100AECAC6 /* Evaluation.swift in Sources */,
+				1581149020583434001A912F /* MedicamentTableViewCell.swift in Sources */,
 				E949039A203C38DC00FE7396 /* ViewController.swift in Sources */,
 				6F0B99B820453F7D00A1BEF8 /* RendezVous.swift in Sources */,
 				E94903D2203C452F00FE7396 /* Prescriptions.swift in Sources */,
@@ -378,6 +385,7 @@
 				E94E74C720402A2400AECAC6 /* Activity.swift in Sources */,
 				E96D53F420581F82004562BE /* UsersTableViewController.swift in Sources */,
 				E94E74C32040289000AECAC6 /* Activities.swift in Sources */,
+				1581149220583903001A912F /* MedicamentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
