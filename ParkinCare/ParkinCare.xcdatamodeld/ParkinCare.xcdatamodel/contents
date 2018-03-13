@@ -1,78 +1,78 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Activities" representedClassName="Activities" parentEntity="Reminders" syncable="YES" codeGenerationType="class">
+    <entity name="Activity" representedClassName="Activity" parentEntity="Reminder" syncable="YES" codeGenerationType="class">
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="validated" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="belongsTo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Users" inverseName="hasManyA" inverseEntity="Users" syncable="YES"/>
+        <relationship name="belongsTo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="hasManyA" inverseEntity="User" syncable="YES"/>
     </entity>
-    <entity name="Doses" representedClassName="Doses" syncable="YES" codeGenerationType="class">
+    <entity name="Dose" representedClassName="Dose" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="hasOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Medicaments" inverseName="isDosedBy" inverseEntity="Medicaments" syncable="YES"/>
-        <relationship name="isAttachedTo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Prescriptions" inverseName="distributedBy" inverseEntity="Prescriptions" syncable="YES"/>
+        <relationship name="hasOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Medicament" inverseName="isDosedBy" inverseEntity="Medicament" syncable="YES"/>
+        <relationship name="isAttachedTo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Prescription" inverseName="distributedBy" inverseEntity="Prescription" syncable="YES"/>
     </entity>
-    <entity name="Evaluations" representedClassName="Evaluations" parentEntity="Reminders" syncable="YES" codeGenerationType="class">
+    <entity name="Evaluation" representedClassName="Evaluation" parentEntity="Reminder" syncable="YES" codeGenerationType="class">
         <attribute name="extraEvent" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="validated" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="belongsTo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Users" inverseName="hasManyE" inverseEntity="Users" syncable="YES"/>
+        <relationship name="belongsTo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="hasManyE" inverseEntity="User" syncable="YES"/>
     </entity>
-    <entity name="Medicaments" representedClassName="Medicaments" syncable="YES" codeGenerationType="class">
+    <entity name="Medicament" representedClassName="Medicament" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="isDosedBy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Doses" inverseName="hasOne" inverseEntity="Doses" syncable="YES"/>
+        <relationship name="isDosedBy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Dose" inverseName="hasOne" inverseEntity="Dose" syncable="YES"/>
     </entity>
-    <entity name="Persons" representedClassName="Persons" isAbstract="YES" syncable="YES" codeGenerationType="class">
+    <entity name="Person" representedClassName="Person" isAbstract="YES" syncable="YES" codeGenerationType="class">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="firstname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="numTel" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Prescriptions" representedClassName="Prescriptions" parentEntity="Reminders" syncable="YES" codeGenerationType="class">
+    <entity name="Prescription" representedClassName="Prescription" parentEntity="Reminder" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="observations" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="belongsTo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Users" inverseName="hasManyP" inverseEntity="Users" syncable="YES"/>
-        <relationship name="distributedBy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Doses" inverseName="isAttachedTo" inverseEntity="Doses" syncable="YES"/>
+        <relationship name="belongsTo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="hasManyP" inverseEntity="User" syncable="YES"/>
+        <relationship name="distributedBy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Dose" inverseName="isAttachedTo" inverseEntity="Dose" syncable="YES"/>
     </entity>
-    <entity name="Professionals" representedClassName="Professionals" parentEntity="Persons" syncable="YES" codeGenerationType="class">
+    <entity name="Professional" representedClassName="Professional" parentEntity="Person" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="organization" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="titre" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="isAssignedTo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RDVs" inverseName="hasOne" inverseEntity="RDVs" syncable="YES"/>
-        <relationship name="isContactedBy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Users" inverseName="contacts" inverseEntity="Users" syncable="YES"/>
+        <relationship name="isAssignedTo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RDV" inverseName="hasOne" inverseEntity="RDV" syncable="YES"/>
+        <relationship name="isContactedBy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="contacts" inverseEntity="User" syncable="YES"/>
     </entity>
-    <entity name="RDVs" representedClassName="RDVs" parentEntity="Reminders" syncable="YES" codeGenerationType="class">
+    <entity name="RDV" representedClassName="RDV" parentEntity="Reminder" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="belongsTo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Users" inverseName="hasManyR" inverseEntity="Users" syncable="YES"/>
-        <relationship name="hasOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Professionals" inverseName="isAssignedTo" inverseEntity="Professionals" syncable="YES"/>
+        <relationship name="belongsTo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="hasManyR" inverseEntity="User" syncable="YES"/>
+        <relationship name="hasOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Professional" inverseName="isAssignedTo" inverseEntity="Professional" syncable="YES"/>
     </entity>
-    <entity name="Reminders" representedClassName="Reminders" isAbstract="YES" syncable="YES" codeGenerationType="class">
+    <entity name="Reminder" representedClassName="Reminder" isAbstract="YES" syncable="YES" codeGenerationType="class">
         <attribute name="dateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dateTimeReminder" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
-    <entity name="Users" representedClassName="Users" parentEntity="Persons" syncable="YES" codeGenerationType="class">
+    <entity name="User" representedClassName="User" parentEntity="Person" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="contacts" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Professionals" inverseName="isContactedBy" inverseEntity="Professionals" syncable="YES"/>
-        <relationship name="hasManyA" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activities" inverseName="belongsTo" inverseEntity="Activities" syncable="YES"/>
-        <relationship name="hasManyE" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Evaluations" inverseName="belongsTo" inverseEntity="Evaluations" syncable="YES"/>
-        <relationship name="hasManyP" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Prescriptions" inverseName="belongsTo" inverseEntity="Prescriptions" syncable="YES"/>
-        <relationship name="hasManyR" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RDVs" inverseName="belongsTo" inverseEntity="RDVs" syncable="YES"/>
+        <relationship name="contacts" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Professional" inverseName="isContactedBy" inverseEntity="Professional" syncable="YES"/>
+        <relationship name="hasManyA" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="belongsTo" inverseEntity="Activity" syncable="YES"/>
+        <relationship name="hasManyE" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Evaluation" inverseName="belongsTo" inverseEntity="Evaluation" syncable="YES"/>
+        <relationship name="hasManyP" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Prescription" inverseName="belongsTo" inverseEntity="Prescription" syncable="YES"/>
+        <relationship name="hasManyR" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RDV" inverseName="belongsTo" inverseEntity="RDV" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Persons" positionX="-3116" positionY="-3331" width="128" height="118"/>
-        <element name="Users" positionX="-3375" positionY="-3213" width="128" height="133"/>
-        <element name="Professionals" positionX="-3114" positionY="-3112" width="128" height="118"/>
-        <element name="RDVs" positionX="-3116" positionY="-2941" width="128" height="103"/>
-        <element name="Evaluations" positionX="-3368" positionY="-2958" width="128" height="118"/>
-        <element name="Prescriptions" positionX="-3548" positionY="-2916" width="128" height="103"/>
-        <element name="Activities" positionX="-3735" positionY="-3042" width="128" height="118"/>
-        <element name="Doses" positionX="-3368" positionY="-2808" width="128" height="103"/>
-        <element name="Medicaments" positionX="-3116" positionY="-2808" width="128" height="88"/>
-        <element name="Reminders" positionX="-3735" positionY="-3180" width="128" height="75"/>
+        <element name="Activity" positionX="-3735" positionY="-3042" width="128" height="118"/>
+        <element name="Dose" positionX="-3368" positionY="-2808" width="128" height="103"/>
+        <element name="Evaluation" positionX="-3368" positionY="-2958" width="128" height="118"/>
+        <element name="Medicament" positionX="-3116" positionY="-2808" width="128" height="88"/>
+        <element name="Person" positionX="-3116" positionY="-3331" width="128" height="118"/>
+        <element name="Prescription" positionX="-3548" positionY="-2916" width="128" height="103"/>
+        <element name="Professional" positionX="-3114" positionY="-3112" width="128" height="118"/>
+        <element name="RDV" positionX="-3116" positionY="-2941" width="128" height="103"/>
+        <element name="Reminder" positionX="-3735" positionY="-3180" width="128" height="73"/>
+        <element name="User" positionX="-3375" positionY="-3213" width="128" height="133"/>
     </elements>
 </model>
