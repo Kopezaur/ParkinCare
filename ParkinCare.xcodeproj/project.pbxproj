@@ -51,9 +51,6 @@
 		E96D53F820581FCC004562BE /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D53F720581FCC004562BE /* UserViewController.swift */; };
 		E96D53F920581FCC004562BE /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D53F720581FCC004562BE /* UserViewController.swift */; };
 		E96D53FF205822F7004562BE /* ParkinCare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E949039E203C38DC00FE7396 /* ParkinCare.xcdatamodeld */; };
-		E96D5402205825DB004562BE /* ParkinCareLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E96D5401205825DB004562BE /* ParkinCareLogo.png */; };
-		E96D5403205825DB004562BE /* ParkinCareLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E96D5401205825DB004562BE /* ParkinCareLogo.png */; };
-		E96D5404205825DB004562BE /* ParkinCareLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E96D5401205825DB004562BE /* ParkinCareLogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,7 +100,6 @@
 		E94E74CE20402C0C00AECAC6 /* Evaluations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evaluations.swift; sourceTree = "<group>"; };
 		E96D53F320581F82004562BE /* UsersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		E96D53F720581FCC004562BE /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
-		E96D5401205825DB004562BE /* ParkinCareLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ParkinCareLogo.png; path = ../../../Downloads/ParkinCareLogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,7 +214,6 @@
 		E96D540020582541004562BE /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				E96D5401205825DB004562BE /* ParkinCareLogo.png */,
 			);
 			name = Images;
 			path = ..;
@@ -336,7 +331,6 @@
 			files = (
 				E94903A5203C38DC00FE7396 /* LaunchScreen.storyboard in Resources */,
 				E94903A2203C38DC00FE7396 /* Assets.xcassets in Resources */,
-				E96D5402205825DB004562BE /* ParkinCareLogo.png in Resources */,
 				E949039D203C38DC00FE7396 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,7 +339,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E96D5403205825DB004562BE /* ParkinCareLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +346,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E96D5404205825DB004562BE /* ParkinCareLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
