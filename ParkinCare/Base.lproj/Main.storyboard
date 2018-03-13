@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,10 +22,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jeu-Gh-qtD">
-                                <rect key="frame" x="25" y="157" width="150" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jeu-Gh-qtD">
+                                <rect key="frame" x="26" y="84" width="150" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.82357108160000003" blue="0.37473223890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="3l3-2i-Pcp"/>
+                                    <constraint firstAttribute="height" constant="50" id="FrW-Yk-OGW"/>
+                                </constraints>
                                 <state key="normal" title="Aujourd'hui">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -34,59 +38,69 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LxS-DH-OA9">
-                                <rect key="frame" x="225" y="157" width="150" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LxS-DH-OA9">
+                                <rect key="frame" x="199" y="84" width="150" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.82357108160000003" blue="0.37473223890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="LHq-HZ-WBU"/>
+                                    <constraint firstAttribute="height" constant="50" id="LbT-U3-JMM"/>
+                                </constraints>
                                 <state key="normal" title="Prescriptions">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAk-B9-kaf">
-                                <rect key="frame" x="25" y="248" width="150" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAk-B9-kaf">
+                                <rect key="frame" x="26" y="154" width="150" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.82357108160000003" blue="0.37473223890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="4Bw-hL-oA8"/>
+                                    <constraint firstAttribute="height" constant="50" id="PJE-ZX-Pix"/>
+                                </constraints>
                                 <state key="normal" title="Rendez Vous">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVs-EO-42j">
-                                <rect key="frame" x="258" y="248" width="150" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVs-EO-42j">
+                                <rect key="frame" x="199" y="154" width="150" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.82357108160000003" blue="0.37473223890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="2si-gv-jat"/>
+                                    <constraint firstAttribute="height" constant="50" id="viU-dz-cog"/>
+                                </constraints>
                                 <state key="normal" title="Activitées">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Pv-Lv-vuu">
-                                <rect key="frame" x="31" y="318" width="150" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Pv-Lv-vuu">
+                                <rect key="frame" x="26" y="224" width="150" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.82357108160000003" blue="0.37473223890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="6Sf-dT-W4x"/>
+                                    <constraint firstAttribute="height" constant="50" id="Q5s-Hq-hCW"/>
+                                </constraints>
                                 <state key="normal" title="Evaluations">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GS6-R0-fxT">
-                                <rect key="frame" x="260" y="318" width="150" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GS6-R0-fxT">
+                                <rect key="frame" x="199" y="224" width="150" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.82357108160000003" blue="0.37473223890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gab-1C-F3q"/>
+                                    <constraint firstAttribute="width" constant="150" id="xn6-jl-hRC"/>
+                                </constraints>
                                 <state key="normal" title="Synthèse">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4d2-i4-i6V">
-                                <rect key="frame" x="25" y="393" width="150" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4d2-i4-i6V">
+                                <rect key="frame" x="26" y="294" width="150" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.82357108160000003" blue="0.37473223890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Contact">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLv-RB-4Nl">
-                                <rect key="frame" x="225" y="393" width="150" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.82357108160000003" blue="0.37473223890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Profil">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="La7-N9-qpQ"/>
+                                    <constraint firstAttribute="width" constant="150" id="MOw-Ge-Jic"/>
+                                </constraints>
+                                <state key="normal" title="Contacts">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
@@ -94,8 +108,37 @@
                                 <rect key="frame" x="16" y="510" width="200" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLv-RB-4Nl">
+                                <rect key="frame" x="199" y="294" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.82357108160000003" blue="0.37473223890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="dmj-wq-3Oc"/>
+                                    <constraint firstAttribute="height" constant="50" id="l7z-ik-uba"/>
+                                </constraints>
+                                <state key="normal" title="Profil">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="LxS-DH-OA9" secondAttribute="trailing" constant="10" id="0Lq-za-MUc"/>
+                            <constraint firstItem="4d2-i4-i6V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="1qq-UG-JOR"/>
+                            <constraint firstItem="JLv-RB-4Nl" firstAttribute="top" secondItem="GS6-R0-fxT" secondAttribute="bottom" constant="20" id="I0r-i7-R2j"/>
+                            <constraint firstItem="5Pv-Lv-vuu" firstAttribute="top" secondItem="QAk-B9-kaf" secondAttribute="bottom" constant="20" id="LrN-ZY-TUq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HVs-EO-42j" secondAttribute="trailing" constant="10" id="Mte-Nt-2Cx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GS6-R0-fxT" secondAttribute="trailing" constant="10" id="Ni3-pn-2gI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JLv-RB-4Nl" secondAttribute="trailing" constant="10" id="Pyg-UZ-h6n"/>
+                            <constraint firstItem="Jeu-Gh-qtD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Qbg-hy-0Vo"/>
+                            <constraint firstItem="QAk-B9-kaf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Sru-HS-7wC"/>
+                            <constraint firstItem="GS6-R0-fxT" firstAttribute="top" secondItem="HVs-EO-42j" secondAttribute="bottom" constant="20" id="THz-Kr-Usf"/>
+                            <constraint firstItem="5Pv-Lv-vuu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="VNR-5v-B30"/>
+                            <constraint firstItem="LxS-DH-OA9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="eEY-Oc-m39"/>
+                            <constraint firstItem="HVs-EO-42j" firstAttribute="top" secondItem="LxS-DH-OA9" secondAttribute="bottom" constant="20" id="hcF-Zk-4jD"/>
+                            <constraint firstItem="Jeu-Gh-qtD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="jyK-d8-0ZP"/>
+                            <constraint firstItem="QAk-B9-kaf" firstAttribute="top" secondItem="Jeu-Gh-qtD" secondAttribute="bottom" constant="20" id="qe5-L1-sjp"/>
+                            <constraint firstItem="4d2-i4-i6V" firstAttribute="top" secondItem="5Pv-Lv-vuu" secondAttribute="bottom" constant="20" id="tTr-Y9-852"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jo5-sm-DIB"/>
                     <connections>
@@ -139,7 +182,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ceX-Uf-W2q" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bb8-Xu-3eF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bb8-Xu-3eF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
