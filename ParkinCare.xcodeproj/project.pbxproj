@@ -13,9 +13,9 @@
 		1581149220583903001A912F /* MedicamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1581149120583903001A912F /* MedicamentViewController.swift */; };
 		6F0B99B620453ED200A1BEF8 /* RendezVousSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0B99B520453ED200A1BEF8 /* RendezVousSet.swift */; };
 		6F0B99B820453F7D00A1BEF8 /* RendezVous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0B99B720453F7D00A1BEF8 /* RendezVous.swift */; };
-		E938374C20454C85005A6FCF /* Professional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374B20454C85005A6FCF /* Professional.swift */; };
-		E938374D20454C85005A6FCF /* Professional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374B20454C85005A6FCF /* Professional.swift */; };
-		E938374E20454C85005A6FCF /* Professional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374B20454C85005A6FCF /* Professional.swift */; };
+		E938374C20454C85005A6FCF /* ProfessionalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374B20454C85005A6FCF /* ProfessionalModel.swift */; };
+		E938374D20454C85005A6FCF /* ProfessionalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374B20454C85005A6FCF /* ProfessionalModel.swift */; };
+		E938374E20454C85005A6FCF /* ProfessionalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374B20454C85005A6FCF /* ProfessionalModel.swift */; };
 		E938375020454E16005A6FCF /* Professionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374F20454E16005A6FCF /* Professionals.swift */; };
 		E938375120454E16005A6FCF /* Professionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374F20454E16005A6FCF /* Professionals.swift */; };
 		E938375220454E16005A6FCF /* Professionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374F20454E16005A6FCF /* Professionals.swift */; };
@@ -30,9 +30,9 @@
 		E94903CA203C3D1000FE7396 /* Prescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903C9203C3D0F00FE7396 /* Prescription.swift */; };
 		E94903CB203C3D1000FE7396 /* Prescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903C9203C3D0F00FE7396 /* Prescription.swift */; };
 		E94903CC203C3D1000FE7396 /* Prescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903C9203C3D0F00FE7396 /* Prescription.swift */; };
-		E94903CE203C3E8100FE7396 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903CD203C3E8100FE7396 /* User.swift */; };
-		E94903CF203C3E8100FE7396 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903CD203C3E8100FE7396 /* User.swift */; };
-		E94903D0203C3E8100FE7396 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903CD203C3E8100FE7396 /* User.swift */; };
+		E94903CE203C3E8100FE7396 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903CD203C3E8100FE7396 /* UserModel.swift */; };
+		E94903CF203C3E8100FE7396 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903CD203C3E8100FE7396 /* UserModel.swift */; };
+		E94903D0203C3E8100FE7396 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903CD203C3E8100FE7396 /* UserModel.swift */; };
 		E94903D2203C452F00FE7396 /* Prescriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903D1203C452F00FE7396 /* Prescriptions.swift */; };
 		E94903D3203C452F00FE7396 /* Prescriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903D1203C452F00FE7396 /* Prescriptions.swift */; };
 		E94903D4203C452F00FE7396 /* Prescriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903D1203C452F00FE7396 /* Prescriptions.swift */; };
@@ -78,7 +78,7 @@
 		1581149120583903001A912F /* MedicamentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicamentViewController.swift; sourceTree = "<group>"; };
 		6F0B99B520453ED200A1BEF8 /* RendezVousSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendezVousSet.swift; sourceTree = "<group>"; };
 		6F0B99B720453F7D00A1BEF8 /* RendezVous.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendezVous.swift; sourceTree = "<group>"; };
-		E938374B20454C85005A6FCF /* Professional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Professional.swift; sourceTree = "<group>"; };
+		E938374B20454C85005A6FCF /* ProfessionalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfessionalModel.swift; sourceTree = "<group>"; };
 		E938374F20454E16005A6FCF /* Professionals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Professionals.swift; sourceTree = "<group>"; };
 		E9490394203C38DC00FE7396 /* ParkinCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkinCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9490397203C38DC00FE7396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 		E94903BA203C38DC00FE7396 /* ParkinCareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkinCareUITests.swift; sourceTree = "<group>"; };
 		E94903BC203C38DC00FE7396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E94903C9203C3D0F00FE7396 /* Prescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prescription.swift; sourceTree = "<group>"; };
-		E94903CD203C3E8100FE7396 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E94903CD203C3E8100FE7396 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		E94903D1203C452F00FE7396 /* Prescriptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prescriptions.swift; sourceTree = "<group>"; };
 		E94E74C22040289000AECAC6 /* Activities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
 		E94E74C620402A2400AECAC6 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
@@ -200,7 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				E94903C9203C3D0F00FE7396 /* Prescription.swift */,
-				E94903CD203C3E8100FE7396 /* User.swift */,
+				E94903CD203C3E8100FE7396 /* UserModel.swift */,
 				E94903D1203C452F00FE7396 /* Prescriptions.swift */,
 				E94E74C22040289000AECAC6 /* Activities.swift */,
 				E94E74C620402A2400AECAC6 /* Activity.swift */,
@@ -208,7 +208,7 @@
 				E94E74CE20402C0C00AECAC6 /* Evaluations.swift */,
 				6F0B99B520453ED200A1BEF8 /* RendezVousSet.swift */,
 				6F0B99B720453F7D00A1BEF8 /* RendezVous.swift */,
-				E938374B20454C85005A6FCF /* Professional.swift */,
+				E938374B20454C85005A6FCF /* ProfessionalModel.swift */,
 				E938374F20454E16005A6FCF /* Professionals.swift */,
 				15356CDC2045C562003A7EB8 /* Medicaments.swift */,
 				15356CDE2045C5AE003A7EB8 /* Dose.swift */,
@@ -391,11 +391,11 @@
 				E9490398203C38DC00FE7396 /* AppDelegate.swift in Sources */,
 				E94903A0203C38DC00FE7396 /* ParkinCare.xcdatamodeld in Sources */,
 				15356CDD2045C562003A7EB8 /* Medicaments.swift in Sources */,
-				E938374C20454C85005A6FCF /* Professional.swift in Sources */,
+				E938374C20454C85005A6FCF /* ProfessionalModel.swift in Sources */,
 				E9F0FCDD2058888500939660 /* CoreDataManager.swift in Sources */,
 				6F0B99B620453ED200A1BEF8 /* RendezVousSet.swift in Sources */,
 				E94E74CF20402C0C00AECAC6 /* Evaluations.swift in Sources */,
-				E94903CE203C3E8100FE7396 /* User.swift in Sources */,
+				E94903CE203C3E8100FE7396 /* UserModel.swift in Sources */,
 				E94903CA203C3D1000FE7396 /* Prescription.swift in Sources */,
 				E94E74C720402A2400AECAC6 /* Activity.swift in Sources */,
 				E94E74C32040289000AECAC6 /* Activities.swift in Sources */,
@@ -407,13 +407,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E938374D20454C85005A6FCF /* Professional.swift in Sources */,
+				E938374D20454C85005A6FCF /* ProfessionalModel.swift in Sources */,
 				E94E74C820402A2400AECAC6 /* Activity.swift in Sources */,
 				E94903B0203C38DC00FE7396 /* ParkinCareTests.swift in Sources */,
 				E94E74CC20402B3100AECAC6 /* Evaluation.swift in Sources */,
 				E96D53FF205822F7004562BE /* ParkinCare.xcdatamodeld in Sources */,
 				E94903CB203C3D1000FE7396 /* Prescription.swift in Sources */,
-				E94903CF203C3E8100FE7396 /* User.swift in Sources */,
+				E94903CF203C3E8100FE7396 /* UserModel.swift in Sources */,
 				E94E74C42040289000AECAC6 /* Activities.swift in Sources */,
 				E94903D3203C452F00FE7396 /* Prescriptions.swift in Sources */,
 				E938375120454E16005A6FCF /* Professionals.swift in Sources */,
@@ -425,12 +425,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E938374E20454C85005A6FCF /* Professional.swift in Sources */,
+				E938374E20454C85005A6FCF /* ProfessionalModel.swift in Sources */,
 				E94E74C920402A2400AECAC6 /* Activity.swift in Sources */,
 				E94903BB203C38DC00FE7396 /* ParkinCareUITests.swift in Sources */,
 				E94E74CD20402B3100AECAC6 /* Evaluation.swift in Sources */,
 				E94903CC203C3D1000FE7396 /* Prescription.swift in Sources */,
-				E94903D0203C3E8100FE7396 /* User.swift in Sources */,
+				E94903D0203C3E8100FE7396 /* UserModel.swift in Sources */,
 				E94E74C52040289000AECAC6 /* Activities.swift in Sources */,
 				E94903D4203C452F00FE7396 /* Prescriptions.swift in Sources */,
 				E938375220454E16005A6FCF /* Professionals.swift in Sources */,

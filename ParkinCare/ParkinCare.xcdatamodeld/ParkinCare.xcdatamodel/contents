@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Activity" representedClassName="Activity" parentEntity="Reminder" syncable="YES" codeGenerationType="class">
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -41,7 +41,7 @@
     <entity name="Professional" representedClassName="Professional" parentEntity="Person" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="organization" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="titre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="isAssignedTo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RDV" inverseName="hasOne" inverseEntity="RDV" syncable="YES"/>
         <relationship name="isContactedBy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="contacts" inverseEntity="User" syncable="YES"/>
     </entity>
