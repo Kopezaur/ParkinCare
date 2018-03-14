@@ -76,6 +76,54 @@ class UserModel {
         }
     }
     
+    var prescriptions: NSSet?{
+        get{
+            guard let prescriptions = self.dao.prescriptions else{
+                fatalError()
+            }
+            return prescriptions
+        }
+        set{
+            self.dao.prescriptions = newValue
+        }
+    }
+    
+    var evaluations: NSSet?{
+        get{
+            guard let evaluations = self.dao.evaluations else{
+                fatalError()
+            }
+            return evaluations
+        }
+        set{
+            self.dao.evaluations = newValue
+        }
+    }
+    
+    var activities: NSSet?{
+        get{
+            guard let activities = self.dao.activities else{
+                fatalError()
+            }
+            return activities
+        }
+        set{
+            self.dao.activities = newValue
+        }
+    }
+    
+    var rendezVous: NSSet?{
+        get{
+            guard let rendezVous = self.dao.rendezVous else{
+                fatalError()
+            }
+            return rendezVous
+        }
+        set{
+            self.dao.rendezVous = newValue
+        }
+    }
+    
     init(firstname: String, lastname: String, address: String, email: String, numTel: String){
         guard let dao = User.getNewUserDao() else{
             fatalError()
@@ -86,6 +134,10 @@ class UserModel {
         self.address = address
         self.email = email
         self.numTel = numTel
+        self.prescriptions = []
+        self.evaluations = []
+        self.activities = []
+        self.rendezVous = []
     }
 }
 
