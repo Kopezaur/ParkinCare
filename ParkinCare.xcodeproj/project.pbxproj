@@ -48,12 +48,10 @@
 		E94E74CF20402C0C00AECAC6 /* Evaluations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74CE20402C0C00AECAC6 /* Evaluations.swift */; };
 		E94E74D020402C0C00AECAC6 /* Evaluations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74CE20402C0C00AECAC6 /* Evaluations.swift */; };
 		E94E74D120402C0C00AECAC6 /* Evaluations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74CE20402C0C00AECAC6 /* Evaluations.swift */; };
-		E96D53F420581F82004562BE /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D53F320581F82004562BE /* UsersTableViewController.swift */; };
-		E96D53F520581F82004562BE /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D53F320581F82004562BE /* UsersTableViewController.swift */; };
-		E96D53F820581FCC004562BE /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D53F720581FCC004562BE /* UserViewController.swift */; };
-		E96D53F920581FCC004562BE /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D53F720581FCC004562BE /* UserViewController.swift */; };
 		E96D53FF205822F7004562BE /* ParkinCare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E949039E203C38DC00FE7396 /* ParkinCare.xcdatamodeld */; };
 		E96D5406205830CA004562BE /* ParkinCareLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E96D5405205830CA004562BE /* ParkinCareLogo.png */; };
+		E9F0FCDD2058888500939660 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F0FCDC2058888500939660 /* CoreDataManager.swift */; };
+		E9F0FCDF20588C3400939660 /* DialogBoxHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F0FCDE20588C3400939660 /* DialogBoxHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,9 +101,9 @@
 		E94E74C620402A2400AECAC6 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		E94E74CA20402B3100AECAC6 /* Evaluation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evaluation.swift; sourceTree = "<group>"; };
 		E94E74CE20402C0C00AECAC6 /* Evaluations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evaluations.swift; sourceTree = "<group>"; };
-		E96D53F320581F82004562BE /* UsersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
-		E96D53F720581FCC004562BE /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		E96D5405205830CA004562BE /* ParkinCareLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ParkinCareLogo.png; path = ParkinCare/ParkinCareLogo.png; sourceTree = "<group>"; };
+		E9F0FCDC2058888500939660 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		E9F0FCDE20588C3400939660 /* DialogBoxHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogBoxHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,8 +134,7 @@
 		E9279FD62058187500381EEC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E96D53F320581F82004562BE /* UsersTableViewController.swift */,
-				E96D53F720581FCC004562BE /* UserViewController.swift */,
+				1581149120583903001A912F /* MedicamentViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -165,18 +162,18 @@
 		E9490396203C38DC00FE7396 /* ParkinCare */ = {
 			isa = PBXGroup;
 			children = (
+				E9F0FCE02058A28D00939660 /* Cells */,
+				E9F0FCDB2058880200939660 /* Class Helpers */,
 				E96D540020582541004562BE /* Images */,
 				E9279FD62058187500381EEC /* Controllers */,
 				E94903C8203C3BDD00FE7396 /* SpecFonctionelle */,
 				E9490397203C38DC00FE7396 /* AppDelegate.swift */,
 				E9490399203C38DC00FE7396 /* ViewController.swift */,
 				E949039B203C38DC00FE7396 /* Main.storyboard */,
-				1581148F20583434001A912F /* MedicamentTableViewCell.swift */,
 				E94903A1203C38DC00FE7396 /* Assets.xcassets */,
 				E94903A3203C38DC00FE7396 /* LaunchScreen.storyboard */,
 				E94903A6203C38DC00FE7396 /* Info.plist */,
 				E949039E203C38DC00FE7396 /* ParkinCare.xcdatamodeld */,
-				1581149120583903001A912F /* MedicamentViewController.swift */,
 			);
 			path = ParkinCare;
 			sourceTree = "<group>";
@@ -226,6 +223,23 @@
 			);
 			name = Images;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		E9F0FCDB2058880200939660 /* Class Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E9F0FCDC2058888500939660 /* CoreDataManager.swift */,
+				E9F0FCDE20588C3400939660 /* DialogBoxHelper.swift */,
+			);
+			name = "Class Helpers";
+			sourceTree = "<group>";
+		};
+		E9F0FCE02058A28D00939660 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1581148F20583434001A912F /* MedicamentTableViewCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,7 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15356CDF2045C5AE003A7EB8 /* Dose.swift in Sources */,
-				E96D53F820581FCC004562BE /* UserViewController.swift in Sources */,
+				E9F0FCDF20588C3400939660 /* DialogBoxHelper.swift in Sources */,
 				E94E74CB20402B3100AECAC6 /* Evaluation.swift in Sources */,
 				1581149020583434001A912F /* MedicamentTableViewCell.swift in Sources */,
 				E949039A203C38DC00FE7396 /* ViewController.swift in Sources */,
@@ -378,12 +392,12 @@
 				E94903A0203C38DC00FE7396 /* ParkinCare.xcdatamodeld in Sources */,
 				15356CDD2045C562003A7EB8 /* Medicaments.swift in Sources */,
 				E938374C20454C85005A6FCF /* Professional.swift in Sources */,
+				E9F0FCDD2058888500939660 /* CoreDataManager.swift in Sources */,
 				6F0B99B620453ED200A1BEF8 /* RendezVousSet.swift in Sources */,
 				E94E74CF20402C0C00AECAC6 /* Evaluations.swift in Sources */,
 				E94903CE203C3E8100FE7396 /* User.swift in Sources */,
 				E94903CA203C3D1000FE7396 /* Prescription.swift in Sources */,
 				E94E74C720402A2400AECAC6 /* Activity.swift in Sources */,
-				E96D53F420581F82004562BE /* UsersTableViewController.swift in Sources */,
 				E94E74C32040289000AECAC6 /* Activities.swift in Sources */,
 				1581149220583903001A912F /* MedicamentViewController.swift in Sources */,
 			);
@@ -394,13 +408,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E938374D20454C85005A6FCF /* Professional.swift in Sources */,
-				E96D53F920581FCC004562BE /* UserViewController.swift in Sources */,
 				E94E74C820402A2400AECAC6 /* Activity.swift in Sources */,
 				E94903B0203C38DC00FE7396 /* ParkinCareTests.swift in Sources */,
 				E94E74CC20402B3100AECAC6 /* Evaluation.swift in Sources */,
 				E96D53FF205822F7004562BE /* ParkinCare.xcdatamodeld in Sources */,
 				E94903CB203C3D1000FE7396 /* Prescription.swift in Sources */,
-				E96D53F520581F82004562BE /* UsersTableViewController.swift in Sources */,
 				E94903CF203C3E8100FE7396 /* User.swift in Sources */,
 				E94E74C42040289000AECAC6 /* Activities.swift in Sources */,
 				E94903D3203C452F00FE7396 /* Prescriptions.swift in Sources */,
