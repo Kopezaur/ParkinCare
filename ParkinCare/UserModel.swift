@@ -29,7 +29,7 @@ import CoreData
 
 
 class UserModel {
-    private var dao: User
+    private var dao : User
     
     var lastname: String?{
         get{
@@ -124,9 +124,21 @@ class UserModel {
         }
     }
     
+    var contacts: NSSet?{
+        get{
+            guard let contacts = self.dao.contacts else{
+                fatalError()
+            }
+            return contacts
+        }
+        set{
+            self.dao.contacts = newValue
+        }
+    }
+    
     init(firstname: String, lastname: String, address: String, email: String, numTel: String){
         guard let dao = User.getNewUserDao() else{
-            fatalError()
+            fatalError("Initialisation error")
         }
         self.dao = dao
         self.firstname = firstname
@@ -138,6 +150,7 @@ class UserModel {
         self.evaluations = []
         self.activities = []
         self.rendezVous = []
+        self.contacts = []
     }
 }
 

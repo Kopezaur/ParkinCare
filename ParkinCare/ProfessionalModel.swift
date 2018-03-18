@@ -99,9 +99,18 @@ class ProfessionalModel {
         }
     }
     
+    var patient: User?{
+        get{
+            return self.dao.patient
+        }
+        set{
+            self.dao.patient = newValue
+        }
+    }
+    
     init(firstname: String, lastname: String, title: String, address: String, email: String, numTel: String, organization: String){
         guard let dao = Professional.getNewProfessionalDao() else{
-            fatalError()
+            fatalError("Initialisation error")
         }
         self.dao = dao
         self.firstname = firstname
@@ -111,6 +120,7 @@ class ProfessionalModel {
         self.email = email
         self.numTel = numTel
         self.organization = organization
+        self.patient = nil
     }
 }
 

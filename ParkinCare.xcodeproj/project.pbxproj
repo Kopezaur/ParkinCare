@@ -7,18 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		15356CDD2045C562003A7EB8 /* Medicaments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15356CDC2045C562003A7EB8 /* Medicaments.swift */; };
-		15356CDF2045C5AE003A7EB8 /* Dose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15356CDE2045C5AE003A7EB8 /* Dose.swift */; };
+		15356CDD2045C562003A7EB8 /* MedicamentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15356CDC2045C562003A7EB8 /* MedicamentModel.swift */; };
+		15356CDF2045C5AE003A7EB8 /* DoseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15356CDE2045C5AE003A7EB8 /* DoseModel.swift */; };
 		1581149020583434001A912F /* MedicamentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1581148F20583434001A912F /* MedicamentTableViewCell.swift */; };
 		1581149220583903001A912F /* MedicamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1581149120583903001A912F /* MedicamentViewController.swift */; };
 		6F0B99B620453ED200A1BEF8 /* RendezVousSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0B99B520453ED200A1BEF8 /* RendezVousSet.swift */; };
-		6F0B99B820453F7D00A1BEF8 /* RendezVous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0B99B720453F7D00A1BEF8 /* RendezVous.swift */; };
+		6F0B99B820453F7D00A1BEF8 /* RDVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0B99B720453F7D00A1BEF8 /* RDVModel.swift */; };
 		E938374C20454C85005A6FCF /* ProfessionalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374B20454C85005A6FCF /* ProfessionalModel.swift */; };
 		E938374D20454C85005A6FCF /* ProfessionalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374B20454C85005A6FCF /* ProfessionalModel.swift */; };
-		E938374E20454C85005A6FCF /* ProfessionalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374B20454C85005A6FCF /* ProfessionalModel.swift */; };
 		E938375020454E16005A6FCF /* Professionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374F20454E16005A6FCF /* Professionals.swift */; };
 		E938375120454E16005A6FCF /* Professionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374F20454E16005A6FCF /* Professionals.swift */; };
-		E938375220454E16005A6FCF /* Professionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374F20454E16005A6FCF /* Professionals.swift */; };
 		E9490398203C38DC00FE7396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9490397203C38DC00FE7396 /* AppDelegate.swift */; };
 		E949039A203C38DC00FE7396 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9490399203C38DC00FE7396 /* ViewController.swift */; };
 		E949039D203C38DC00FE7396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E949039B203C38DC00FE7396 /* Main.storyboard */; };
@@ -27,27 +25,20 @@
 		E94903A5203C38DC00FE7396 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E94903A3203C38DC00FE7396 /* LaunchScreen.storyboard */; };
 		E94903B0203C38DC00FE7396 /* ParkinCareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903AF203C38DC00FE7396 /* ParkinCareTests.swift */; };
 		E94903BB203C38DC00FE7396 /* ParkinCareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903BA203C38DC00FE7396 /* ParkinCareUITests.swift */; };
-		E94903CA203C3D1000FE7396 /* Prescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903C9203C3D0F00FE7396 /* Prescription.swift */; };
-		E94903CB203C3D1000FE7396 /* Prescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903C9203C3D0F00FE7396 /* Prescription.swift */; };
-		E94903CC203C3D1000FE7396 /* Prescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903C9203C3D0F00FE7396 /* Prescription.swift */; };
+		E94903CA203C3D1000FE7396 /* PrescriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903C9203C3D0F00FE7396 /* PrescriptionModel.swift */; };
+		E94903CB203C3D1000FE7396 /* PrescriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903C9203C3D0F00FE7396 /* PrescriptionModel.swift */; };
 		E94903CE203C3E8100FE7396 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903CD203C3E8100FE7396 /* UserModel.swift */; };
 		E94903CF203C3E8100FE7396 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903CD203C3E8100FE7396 /* UserModel.swift */; };
-		E94903D0203C3E8100FE7396 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903CD203C3E8100FE7396 /* UserModel.swift */; };
 		E94903D2203C452F00FE7396 /* Prescriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903D1203C452F00FE7396 /* Prescriptions.swift */; };
 		E94903D3203C452F00FE7396 /* Prescriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903D1203C452F00FE7396 /* Prescriptions.swift */; };
-		E94903D4203C452F00FE7396 /* Prescriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903D1203C452F00FE7396 /* Prescriptions.swift */; };
 		E94E74C32040289000AECAC6 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74C22040289000AECAC6 /* Activities.swift */; };
 		E94E74C42040289000AECAC6 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74C22040289000AECAC6 /* Activities.swift */; };
-		E94E74C52040289000AECAC6 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74C22040289000AECAC6 /* Activities.swift */; };
-		E94E74C720402A2400AECAC6 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74C620402A2400AECAC6 /* Activity.swift */; };
-		E94E74C820402A2400AECAC6 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74C620402A2400AECAC6 /* Activity.swift */; };
-		E94E74C920402A2400AECAC6 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74C620402A2400AECAC6 /* Activity.swift */; };
-		E94E74CB20402B3100AECAC6 /* Evaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74CA20402B3100AECAC6 /* Evaluation.swift */; };
-		E94E74CC20402B3100AECAC6 /* Evaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74CA20402B3100AECAC6 /* Evaluation.swift */; };
-		E94E74CD20402B3100AECAC6 /* Evaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74CA20402B3100AECAC6 /* Evaluation.swift */; };
+		E94E74C720402A2400AECAC6 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74C620402A2400AECAC6 /* ActivityModel.swift */; };
+		E94E74C820402A2400AECAC6 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74C620402A2400AECAC6 /* ActivityModel.swift */; };
+		E94E74CB20402B3100AECAC6 /* EvaluationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74CA20402B3100AECAC6 /* EvaluationModel.swift */; };
+		E94E74CC20402B3100AECAC6 /* EvaluationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74CA20402B3100AECAC6 /* EvaluationModel.swift */; };
 		E94E74CF20402C0C00AECAC6 /* Evaluations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74CE20402C0C00AECAC6 /* Evaluations.swift */; };
 		E94E74D020402C0C00AECAC6 /* Evaluations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74CE20402C0C00AECAC6 /* Evaluations.swift */; };
-		E94E74D120402C0C00AECAC6 /* Evaluations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74CE20402C0C00AECAC6 /* Evaluations.swift */; };
 		E96D53FF205822F7004562BE /* ParkinCare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E949039E203C38DC00FE7396 /* ParkinCare.xcdatamodeld */; };
 		E96D5406205830CA004562BE /* ParkinCareLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E96D5405205830CA004562BE /* ParkinCareLogo.png */; };
 		E9F0FCDD2058888500939660 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F0FCDC2058888500939660 /* CoreDataManager.swift */; };
@@ -72,12 +63,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		15356CDC2045C562003A7EB8 /* Medicaments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medicaments.swift; sourceTree = "<group>"; };
-		15356CDE2045C5AE003A7EB8 /* Dose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dose.swift; sourceTree = "<group>"; };
+		15356CDC2045C562003A7EB8 /* MedicamentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicamentModel.swift; sourceTree = "<group>"; };
+		15356CDE2045C5AE003A7EB8 /* DoseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoseModel.swift; sourceTree = "<group>"; };
 		1581148F20583434001A912F /* MedicamentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicamentTableViewCell.swift; sourceTree = "<group>"; };
 		1581149120583903001A912F /* MedicamentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicamentViewController.swift; sourceTree = "<group>"; };
 		6F0B99B520453ED200A1BEF8 /* RendezVousSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendezVousSet.swift; sourceTree = "<group>"; };
-		6F0B99B720453F7D00A1BEF8 /* RendezVous.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendezVous.swift; sourceTree = "<group>"; };
+		6F0B99B720453F7D00A1BEF8 /* RDVModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDVModel.swift; sourceTree = "<group>"; };
 		E938374B20454C85005A6FCF /* ProfessionalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfessionalModel.swift; sourceTree = "<group>"; };
 		E938374F20454E16005A6FCF /* Professionals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Professionals.swift; sourceTree = "<group>"; };
 		E9490394203C38DC00FE7396 /* ParkinCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkinCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,12 +85,12 @@
 		E94903B6203C38DC00FE7396 /* ParkinCareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkinCareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E94903BA203C38DC00FE7396 /* ParkinCareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkinCareUITests.swift; sourceTree = "<group>"; };
 		E94903BC203C38DC00FE7396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E94903C9203C3D0F00FE7396 /* Prescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prescription.swift; sourceTree = "<group>"; };
+		E94903C9203C3D0F00FE7396 /* PrescriptionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrescriptionModel.swift; sourceTree = "<group>"; };
 		E94903CD203C3E8100FE7396 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		E94903D1203C452F00FE7396 /* Prescriptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prescriptions.swift; sourceTree = "<group>"; };
 		E94E74C22040289000AECAC6 /* Activities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
-		E94E74C620402A2400AECAC6 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		E94E74CA20402B3100AECAC6 /* Evaluation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evaluation.swift; sourceTree = "<group>"; };
+		E94E74C620402A2400AECAC6 /* ActivityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
+		E94E74CA20402B3100AECAC6 /* EvaluationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluationModel.swift; sourceTree = "<group>"; };
 		E94E74CE20402C0C00AECAC6 /* Evaluations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evaluations.swift; sourceTree = "<group>"; };
 		E96D5405205830CA004562BE /* ParkinCareLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ParkinCareLogo.png; path = ParkinCare/ParkinCareLogo.png; sourceTree = "<group>"; };
 		E9F0FCDC2058888500939660 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -162,6 +153,7 @@
 		E9490396203C38DC00FE7396 /* ParkinCare */ = {
 			isa = PBXGroup;
 			children = (
+				E94B1E2A205D263C00A7182E /* Models */,
 				E9F0FCE02058A28D00939660 /* Cells */,
 				E9F0FCDB2058880200939660 /* Class Helpers */,
 				E96D540020582541004562BE /* Images */,
@@ -199,21 +191,28 @@
 		E94903C8203C3BDD00FE7396 /* SpecFonctionelle */ = {
 			isa = PBXGroup;
 			children = (
-				E94903C9203C3D0F00FE7396 /* Prescription.swift */,
-				E94903CD203C3E8100FE7396 /* UserModel.swift */,
 				E94903D1203C452F00FE7396 /* Prescriptions.swift */,
 				E94E74C22040289000AECAC6 /* Activities.swift */,
-				E94E74C620402A2400AECAC6 /* Activity.swift */,
-				E94E74CA20402B3100AECAC6 /* Evaluation.swift */,
 				E94E74CE20402C0C00AECAC6 /* Evaluations.swift */,
 				6F0B99B520453ED200A1BEF8 /* RendezVousSet.swift */,
-				6F0B99B720453F7D00A1BEF8 /* RendezVous.swift */,
-				E938374B20454C85005A6FCF /* ProfessionalModel.swift */,
 				E938374F20454E16005A6FCF /* Professionals.swift */,
-				15356CDC2045C562003A7EB8 /* Medicaments.swift */,
-				15356CDE2045C5AE003A7EB8 /* Dose.swift */,
 			);
 			name = SpecFonctionelle;
+			sourceTree = "<group>";
+		};
+		E94B1E2A205D263C00A7182E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E938374B20454C85005A6FCF /* ProfessionalModel.swift */,
+				E94903CD203C3E8100FE7396 /* UserModel.swift */,
+				E94E74C620402A2400AECAC6 /* ActivityModel.swift */,
+				6F0B99B720453F7D00A1BEF8 /* RDVModel.swift */,
+				E94E74CA20402B3100AECAC6 /* EvaluationModel.swift */,
+				15356CDC2045C562003A7EB8 /* MedicamentModel.swift */,
+				15356CDE2045C5AE003A7EB8 /* DoseModel.swift */,
+				E94903C9203C3D0F00FE7396 /* PrescriptionModel.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		E96D540020582541004562BE /* Images */ = {
@@ -380,24 +379,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15356CDF2045C5AE003A7EB8 /* Dose.swift in Sources */,
+				15356CDF2045C5AE003A7EB8 /* DoseModel.swift in Sources */,
 				E9F0FCDF20588C3400939660 /* DialogBoxHelper.swift in Sources */,
-				E94E74CB20402B3100AECAC6 /* Evaluation.swift in Sources */,
+				E94E74CB20402B3100AECAC6 /* EvaluationModel.swift in Sources */,
 				1581149020583434001A912F /* MedicamentTableViewCell.swift in Sources */,
 				E949039A203C38DC00FE7396 /* ViewController.swift in Sources */,
-				6F0B99B820453F7D00A1BEF8 /* RendezVous.swift in Sources */,
+				6F0B99B820453F7D00A1BEF8 /* RDVModel.swift in Sources */,
 				E94903D2203C452F00FE7396 /* Prescriptions.swift in Sources */,
 				E938375020454E16005A6FCF /* Professionals.swift in Sources */,
 				E9490398203C38DC00FE7396 /* AppDelegate.swift in Sources */,
 				E94903A0203C38DC00FE7396 /* ParkinCare.xcdatamodeld in Sources */,
-				15356CDD2045C562003A7EB8 /* Medicaments.swift in Sources */,
+				15356CDD2045C562003A7EB8 /* MedicamentModel.swift in Sources */,
 				E938374C20454C85005A6FCF /* ProfessionalModel.swift in Sources */,
 				E9F0FCDD2058888500939660 /* CoreDataManager.swift in Sources */,
 				6F0B99B620453ED200A1BEF8 /* RendezVousSet.swift in Sources */,
 				E94E74CF20402C0C00AECAC6 /* Evaluations.swift in Sources */,
 				E94903CE203C3E8100FE7396 /* UserModel.swift in Sources */,
-				E94903CA203C3D1000FE7396 /* Prescription.swift in Sources */,
-				E94E74C720402A2400AECAC6 /* Activity.swift in Sources */,
+				E94903CA203C3D1000FE7396 /* PrescriptionModel.swift in Sources */,
+				E94E74C720402A2400AECAC6 /* ActivityModel.swift in Sources */,
 				E94E74C32040289000AECAC6 /* Activities.swift in Sources */,
 				1581149220583903001A912F /* MedicamentViewController.swift in Sources */,
 			);
@@ -408,11 +407,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E938374D20454C85005A6FCF /* ProfessionalModel.swift in Sources */,
-				E94E74C820402A2400AECAC6 /* Activity.swift in Sources */,
+				E94E74C820402A2400AECAC6 /* ActivityModel.swift in Sources */,
 				E94903B0203C38DC00FE7396 /* ParkinCareTests.swift in Sources */,
-				E94E74CC20402B3100AECAC6 /* Evaluation.swift in Sources */,
+				E94E74CC20402B3100AECAC6 /* EvaluationModel.swift in Sources */,
 				E96D53FF205822F7004562BE /* ParkinCare.xcdatamodeld in Sources */,
-				E94903CB203C3D1000FE7396 /* Prescription.swift in Sources */,
+				E94903CB203C3D1000FE7396 /* PrescriptionModel.swift in Sources */,
 				E94903CF203C3E8100FE7396 /* UserModel.swift in Sources */,
 				E94E74C42040289000AECAC6 /* Activities.swift in Sources */,
 				E94903D3203C452F00FE7396 /* Prescriptions.swift in Sources */,
@@ -425,16 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E938374E20454C85005A6FCF /* ProfessionalModel.swift in Sources */,
-				E94E74C920402A2400AECAC6 /* Activity.swift in Sources */,
 				E94903BB203C38DC00FE7396 /* ParkinCareUITests.swift in Sources */,
-				E94E74CD20402B3100AECAC6 /* Evaluation.swift in Sources */,
-				E94903CC203C3D1000FE7396 /* Prescription.swift in Sources */,
-				E94903D0203C3E8100FE7396 /* UserModel.swift in Sources */,
-				E94E74C52040289000AECAC6 /* Activities.swift in Sources */,
-				E94903D4203C452F00FE7396 /* Prescriptions.swift in Sources */,
-				E938375220454E16005A6FCF /* Professionals.swift in Sources */,
-				E94E74D120402C0C00AECAC6 /* Evaluations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
