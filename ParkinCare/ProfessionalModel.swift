@@ -109,26 +109,18 @@ class ProfessionalModel {
     }
     
     init(firstname: String, lastname: String, title: String, address: String, email: String, numTel: String, organization: String){
-        guard let dao = Professional.getNewProfessionalDao() else{
+        guard let dao = Professional.create() else{
             fatalError("Initialisation error")
-        }
+        } 
         self.dao = dao
-        self.firstname = firstname
-        self.lastname = lastname
-        self.title = title
-        self.address = address
-        self.email = email
-        self.numTel = numTel
-        self.organization = organization
+        self.dao.firstname! = firstname
+        self.dao.lastname! = lastname
+        self.dao.title! = title
+        self.dao.address = address
+        self.dao.email! = email
+        self.dao.numTel = numTel
+        self.dao.organization = organization
         self.patient = nil
     }
 }
 
-extension Professional{
-    static func getNewProfessionalDao() -> Professional?{
-        guard let entity = NSEntityDescription.entity(forEntityName: "Professional", in: CoreDataManager.context) else{
-            return nil
-        }
-        return Professional(entity: entity,insertInto: CoreDataManager.context)
-    }
-}
