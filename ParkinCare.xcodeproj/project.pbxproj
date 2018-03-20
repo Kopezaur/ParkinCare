@@ -11,10 +11,13 @@
 		15356CDF2045C5AE003A7EB8 /* DoseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15356CDE2045C5AE003A7EB8 /* DoseModel.swift */; };
 		1581149020583434001A912F /* MedicamentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1581148F20583434001A912F /* MedicamentTableViewCell.swift */; };
 		1581149220583903001A912F /* MedicamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1581149120583903001A912F /* MedicamentViewController.swift */; };
+		15D08BF520616DC000302868 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D08BF420616DC000302868 /* ContactTableViewCell.swift */; };
+		15D08BF72061779500302868 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D08BF62061779500302868 /* ContactsViewController.swift */; };
+		15D08BF92061829200302868 /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D08BF82061829200302868 /* NewContactViewController.swift */; };
+		15D08BFB2061843700302868 /* ProfessionalSetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D08BFA2061843700302868 /* ProfessionalSetModel.swift */; };
 		6F0B99B620453ED200A1BEF8 /* RendezVousSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0B99B520453ED200A1BEF8 /* RendezVousSet.swift */; };
 		6F0B99B820453F7D00A1BEF8 /* RDVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0B99B720453F7D00A1BEF8 /* RDVModel.swift */; };
 		E938374C20454C85005A6FCF /* ProfessionalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374B20454C85005A6FCF /* ProfessionalModel.swift */; };
-		E938374D20454C85005A6FCF /* ProfessionalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374B20454C85005A6FCF /* ProfessionalModel.swift */; };
 		E938375020454E16005A6FCF /* Professionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374F20454E16005A6FCF /* Professionals.swift */; };
 		E938375120454E16005A6FCF /* Professionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374F20454E16005A6FCF /* Professionals.swift */; };
 		E9490398203C38DC00FE7396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9490397203C38DC00FE7396 /* AppDelegate.swift */; };
@@ -26,17 +29,13 @@
 		E94903B0203C38DC00FE7396 /* ParkinCareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903AF203C38DC00FE7396 /* ParkinCareTests.swift */; };
 		E94903BB203C38DC00FE7396 /* ParkinCareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903BA203C38DC00FE7396 /* ParkinCareUITests.swift */; };
 		E94903CA203C3D1000FE7396 /* PrescriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903C9203C3D0F00FE7396 /* PrescriptionModel.swift */; };
-		E94903CB203C3D1000FE7396 /* PrescriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903C9203C3D0F00FE7396 /* PrescriptionModel.swift */; };
 		E94903CE203C3E8100FE7396 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903CD203C3E8100FE7396 /* UserModel.swift */; };
-		E94903CF203C3E8100FE7396 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903CD203C3E8100FE7396 /* UserModel.swift */; };
 		E94903D2203C452F00FE7396 /* Prescriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903D1203C452F00FE7396 /* Prescriptions.swift */; };
 		E94903D3203C452F00FE7396 /* Prescriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94903D1203C452F00FE7396 /* Prescriptions.swift */; };
 		E94E74C32040289000AECAC6 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74C22040289000AECAC6 /* Activities.swift */; };
 		E94E74C42040289000AECAC6 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74C22040289000AECAC6 /* Activities.swift */; };
 		E94E74C720402A2400AECAC6 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74C620402A2400AECAC6 /* ActivityModel.swift */; };
-		E94E74C820402A2400AECAC6 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74C620402A2400AECAC6 /* ActivityModel.swift */; };
 		E94E74CB20402B3100AECAC6 /* EvaluationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74CA20402B3100AECAC6 /* EvaluationModel.swift */; };
-		E94E74CC20402B3100AECAC6 /* EvaluationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74CA20402B3100AECAC6 /* EvaluationModel.swift */; };
 		E94E74CF20402C0C00AECAC6 /* Evaluations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74CE20402C0C00AECAC6 /* Evaluations.swift */; };
 		E94E74D020402C0C00AECAC6 /* Evaluations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74CE20402C0C00AECAC6 /* Evaluations.swift */; };
 		E96D53FF205822F7004562BE /* ParkinCare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E949039E203C38DC00FE7396 /* ParkinCare.xcdatamodeld */; };
@@ -67,6 +66,10 @@
 		15356CDE2045C5AE003A7EB8 /* DoseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoseModel.swift; sourceTree = "<group>"; };
 		1581148F20583434001A912F /* MedicamentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicamentTableViewCell.swift; sourceTree = "<group>"; };
 		1581149120583903001A912F /* MedicamentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicamentViewController.swift; sourceTree = "<group>"; };
+		15D08BF420616DC000302868 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTableViewCell.swift; path = ../ContactTableViewCell.swift; sourceTree = "<group>"; };
+		15D08BF62061779500302868 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		15D08BF82061829200302868 /* NewContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewContactViewController.swift; sourceTree = "<group>"; };
+		15D08BFA2061843700302868 /* ProfessionalSetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfessionalSetModel.swift; sourceTree = "<group>"; };
 		6F0B99B520453ED200A1BEF8 /* RendezVousSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendezVousSet.swift; sourceTree = "<group>"; };
 		6F0B99B720453F7D00A1BEF8 /* RDVModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDVModel.swift; sourceTree = "<group>"; };
 		E938374B20454C85005A6FCF /* ProfessionalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfessionalModel.swift; sourceTree = "<group>"; };
@@ -122,9 +125,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15D08BF3206164C100302868 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DAO;
+			sourceTree = "<group>";
+		};
 		E9279FD62058187500381EEC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				15D08BF82061829200302868 /* NewContactViewController.swift */,
+				15D08BF62061779500302868 /* ContactsViewController.swift */,
+				15D08BF420616DC000302868 /* ContactTableViewCell.swift */,
 				1581149120583903001A912F /* MedicamentViewController.swift */,
 			);
 			name = Controllers;
@@ -153,6 +166,7 @@
 		E9490396203C38DC00FE7396 /* ParkinCare */ = {
 			isa = PBXGroup;
 			children = (
+				15D08BF3206164C100302868 /* DAO */,
 				E94B1E2A205D263C00A7182E /* Models */,
 				E9F0FCE02058A28D00939660 /* Cells */,
 				E9F0FCDB2058880200939660 /* Class Helpers */,
@@ -211,6 +225,7 @@
 				15356CDC2045C562003A7EB8 /* MedicamentModel.swift */,
 				15356CDE2045C5AE003A7EB8 /* DoseModel.swift */,
 				E94903C9203C3D0F00FE7396 /* PrescriptionModel.swift */,
+				15D08BFA2061843700302868 /* ProfessionalSetModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -380,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15356CDF2045C5AE003A7EB8 /* DoseModel.swift in Sources */,
+				15D08BF72061779500302868 /* ContactsViewController.swift in Sources */,
 				E9F0FCDF20588C3400939660 /* DialogBoxHelper.swift in Sources */,
 				E94E74CB20402B3100AECAC6 /* EvaluationModel.swift in Sources */,
 				1581149020583434001A912F /* MedicamentTableViewCell.swift in Sources */,
@@ -393,10 +409,13 @@
 				E938374C20454C85005A6FCF /* ProfessionalModel.swift in Sources */,
 				E9F0FCDD2058888500939660 /* CoreDataManager.swift in Sources */,
 				6F0B99B620453ED200A1BEF8 /* RendezVousSet.swift in Sources */,
+				15D08BF92061829200302868 /* NewContactViewController.swift in Sources */,
 				E94E74CF20402C0C00AECAC6 /* Evaluations.swift in Sources */,
+				15D08BFB2061843700302868 /* ProfessionalSetModel.swift in Sources */,
 				E94903CE203C3E8100FE7396 /* UserModel.swift in Sources */,
 				E94903CA203C3D1000FE7396 /* PrescriptionModel.swift in Sources */,
 				E94E74C720402A2400AECAC6 /* ActivityModel.swift in Sources */,
+				15D08BF520616DC000302868 /* ContactTableViewCell.swift in Sources */,
 				E94E74C32040289000AECAC6 /* Activities.swift in Sources */,
 				1581149220583903001A912F /* MedicamentViewController.swift in Sources */,
 			);
@@ -406,13 +425,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E938374D20454C85005A6FCF /* ProfessionalModel.swift in Sources */,
-				E94E74C820402A2400AECAC6 /* ActivityModel.swift in Sources */,
 				E94903B0203C38DC00FE7396 /* ParkinCareTests.swift in Sources */,
-				E94E74CC20402B3100AECAC6 /* EvaluationModel.swift in Sources */,
 				E96D53FF205822F7004562BE /* ParkinCare.xcdatamodeld in Sources */,
-				E94903CB203C3D1000FE7396 /* PrescriptionModel.swift in Sources */,
-				E94903CF203C3E8100FE7396 /* UserModel.swift in Sources */,
 				E94E74C42040289000AECAC6 /* Activities.swift in Sources */,
 				E94903D3203C452F00FE7396 /* Prescriptions.swift in Sources */,
 				E938375120454E16005A6FCF /* Professionals.swift in Sources */,
