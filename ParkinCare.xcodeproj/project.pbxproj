@@ -140,7 +140,6 @@
 			children = (
 				15D08BF82061829200302868 /* NewContactViewController.swift */,
 				15D08BF62061779500302868 /* ContactsViewController.swift */,
-				15D08BF420616DC000302868 /* ContactTableViewCell.swift */,
 				1581149120583903001A912F /* MedicamentViewController.swift */,
 			);
 			name = Controllers;
@@ -255,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				1581148F20583434001A912F /* MedicamentTableViewCell.swift */,
+				15D08BF420616DC000302868 /* ContactTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
