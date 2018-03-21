@@ -18,6 +18,7 @@
 		15D08BFB2061843700302868 /* ProfessionalSetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D08BFA2061843700302868 /* ProfessionalSetModel.swift */; };
 		6F0B99B620453ED200A1BEF8 /* RendezVousSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0B99B520453ED200A1BEF8 /* RendezVousSet.swift */; };
 		6F0B99B820453F7D00A1BEF8 /* RDVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0B99B720453F7D00A1BEF8 /* RDVModel.swift */; };
+		E91C2D5120616CC100A2519B /* Professional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91C2D5020616CC100A2519B /* Professional.swift */; };
 		E938374C20454C85005A6FCF /* ProfessionalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374B20454C85005A6FCF /* ProfessionalModel.swift */; };
 		E938375020454E16005A6FCF /* Professionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374F20454E16005A6FCF /* Professionals.swift */; };
 		E938375120454E16005A6FCF /* Professionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374F20454E16005A6FCF /* Professionals.swift */; };
@@ -74,6 +75,7 @@
 		15D08BFA2061843700302868 /* ProfessionalSetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfessionalSetModel.swift; sourceTree = "<group>"; };
 		6F0B99B520453ED200A1BEF8 /* RendezVousSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendezVousSet.swift; sourceTree = "<group>"; };
 		6F0B99B720453F7D00A1BEF8 /* RDVModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDVModel.swift; sourceTree = "<group>"; };
+		E91C2D5020616CC100A2519B /* Professional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Professional.swift; sourceTree = "<group>"; };
 		E938374B20454C85005A6FCF /* ProfessionalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfessionalModel.swift; sourceTree = "<group>"; };
 		E938374F20454E16005A6FCF /* Professionals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Professionals.swift; sourceTree = "<group>"; };
 		E9490394203C38DC00FE7396 /* ParkinCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkinCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,11 +129,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		15D08BF3206164C100302868 /* DAO */ = {
+		E91C2D4F20616C6200A2519B /* DTO */ = {
 			isa = PBXGroup;
 			children = (
+				E91C2D5020616CC100A2519B /* Professional.swift */,
 			);
-			name = DAO;
+			name = "DTO\U0010";
 			sourceTree = "<group>";
 		};
 		E9279FD62058187500381EEC /* Controllers */ = {
@@ -139,7 +142,6 @@
 			children = (
 				15D08BF82061829200302868 /* NewContactViewController.swift */,
 				15D08BF62061779500302868 /* ContactsViewController.swift */,
-				15D08BF420616DC000302868 /* ContactTableViewCell.swift */,
 				1581149120583903001A912F /* MedicamentViewController.swift */,
 				1535056D2062665100D500D6 /* ContactViewController.swift */,
 			);
@@ -169,7 +171,7 @@
 		E9490396203C38DC00FE7396 /* ParkinCare */ = {
 			isa = PBXGroup;
 			children = (
-				15D08BF3206164C100302868 /* DAO */,
+				E91C2D4F20616C6200A2519B /* DTO */,
 				E94B1E2A205D263C00A7182E /* Models */,
 				E9F0FCE02058A28D00939660 /* Cells */,
 				E9F0FCDB2058880200939660 /* Class Helpers */,
@@ -255,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				1581148F20583434001A912F /* MedicamentTableViewCell.swift */,
+				15D08BF420616DC000302868 /* ContactTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				6F0B99B820453F7D00A1BEF8 /* RDVModel.swift in Sources */,
 				E94903D2203C452F00FE7396 /* Prescriptions.swift in Sources */,
 				E938375020454E16005A6FCF /* Professionals.swift in Sources */,
+				E91C2D5120616CC100A2519B /* Professional.swift in Sources */,
 				E9490398203C38DC00FE7396 /* AppDelegate.swift in Sources */,
 				E94903A0203C38DC00FE7396 /* ParkinCare.xcdatamodeld in Sources */,
 				15356CDD2045C562003A7EB8 /* MedicamentModel.swift in Sources */,

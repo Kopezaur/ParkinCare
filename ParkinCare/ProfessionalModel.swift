@@ -33,7 +33,7 @@ import CoreData
 //L’organisation dans laquelle se trouve le professionnel (get/set)
 
 
-class ProfessionalModel {
+class ProfessionalModel: Equatable {
     private var dao: Professional
     
     var firstname: String?{
@@ -108,27 +108,38 @@ class ProfessionalModel {
         }
     }
     
+    /// fullname property: `String` firstname lastname (read-only)
+    var fullname: String {
+        return self.dao.firstname! + " " + self.dao.lastname!
+    }
+    
+    // MARK: - Constructor -
+    
     init(firstname: String, lastname: String, title: String, address: String, email: String, numTel: String, organization: String){
-        guard let dao = Professional.getNewProfessionalDao() else{
+        guard let dao = Professional.create() else{
             fatalError("Initialisation error")
-        }
+        } 
         self.dao = dao
-        self.firstname = firstname
-        self.lastname = lastname
-        self.title = title
-        self.address = address
-        self.email = email
-        self.numTel = numTel
-        self.organization = organization
+        self.dao.firstname = firstname
+        self.dao.lastname = lastname
+        self.dao.title = title
+        self.dao.address = address
+        self.dao.email = email
+        self.dao.numTel = numTel
+        self.dao.organization = organization
         self.patient = nil
     }
+    
+    // -- MARK: - Equatable functions -
+    
+    static func == (lhs: ProfessionalModel, rhs: ProfessionalModel) -> Bool {
+        return lhs.firstname == rhs.firstname &&
+            lhs.lastname == rhs.lastname
+    }
+    
+    static func != (lhs: ProfessionalModel, rhs: ProfessionalModel) -> Bool {
+        return !(lhs == rhs)
+    }
+
 }
 
-extension Professional{
-    static func getNewProfessionalDao() -> Professional?{
-        guard let entity = NSEntityDescription.entity(forEntityName: "Professional", in: CoreDataManager.context) else{
-            return nil
-        }
-        return Professional(entity: entity,insertInto: CoreDataManager.context)
-    }
-}
