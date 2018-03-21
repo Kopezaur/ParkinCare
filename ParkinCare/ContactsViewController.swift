@@ -10,9 +10,13 @@ import UIKit
 
 class ContactsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    
     private var professionalSet : ProfessionalSetModel = ProfessionalSetModel()
 
     @IBOutlet weak var contactTable: UITableView!
+    
+    
+
     var professionals : [ProfessionalModel] = [ProfessionalModel(firstname:"Patrick", lastname:"Bruel", title:"Dentiste", address:"hopital", email:"f@f.f", numTel:"05142345", organization:"orgnisation")]
     
     override func viewDidLoad() {
@@ -40,18 +44,28 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         return self.professionals.count
     }
 
-    @IBAction func unwindFromForm(_ segue: UIStoryboardSegue){
-    
+    @IBAction func unwindToContactsViewController(_ segue: UIStoryboardSegue){
+        self.contactTable.reloadData()
     }
     
-    /*
+    
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "showContactSegue"{
+            if let indexPath = self.contactTable.indexPathForSelectedRow{
+                if let contactViewController = segue.destination as? ContactViewController{
+                    contactViewController.professional = self.professionals[indexPath.row]
+                    self.contactTable.deselectRow(at: indexPath, animated: true)
+                }
+            }
+        }
+        else if segue.identifier == "newContactSegue"{
+            if let controller = segue.destination as? NewContactViewController{
+                controller.professionalSet = self.professionalSet
+            }
+        }
     }
-    */
 
 }

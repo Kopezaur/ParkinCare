@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1535056E2062665100D500D6 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1535056D2062665100D500D6 /* ContactViewController.swift */; };
 		15356CDD2045C562003A7EB8 /* MedicamentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15356CDC2045C562003A7EB8 /* MedicamentModel.swift */; };
 		15356CDF2045C5AE003A7EB8 /* DoseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15356CDE2045C5AE003A7EB8 /* DoseModel.swift */; };
 		1581149020583434001A912F /* MedicamentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1581148F20583434001A912F /* MedicamentTableViewCell.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1535056D2062665100D500D6 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		15356CDC2045C562003A7EB8 /* MedicamentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicamentModel.swift; sourceTree = "<group>"; };
 		15356CDE2045C5AE003A7EB8 /* DoseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoseModel.swift; sourceTree = "<group>"; };
 		1581148F20583434001A912F /* MedicamentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicamentTableViewCell.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				15D08BF62061779500302868 /* ContactsViewController.swift */,
 				15D08BF420616DC000302868 /* ContactTableViewCell.swift */,
 				1581149120583903001A912F /* MedicamentViewController.swift */,
+				1535056D2062665100D500D6 /* ContactViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				15356CDD2045C562003A7EB8 /* MedicamentModel.swift in Sources */,
 				E938374C20454C85005A6FCF /* ProfessionalModel.swift in Sources */,
 				E9F0FCDD2058888500939660 /* CoreDataManager.swift in Sources */,
+				1535056E2062665100D500D6 /* ContactViewController.swift in Sources */,
 				6F0B99B620453ED200A1BEF8 /* RendezVousSet.swift in Sources */,
 				15D08BF92061829200302868 /* NewContactViewController.swift in Sources */,
 				E94E74CF20402C0C00AECAC6 /* Evaluations.swift in Sources */,

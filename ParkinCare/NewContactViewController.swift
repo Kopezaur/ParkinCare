@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewContactViewController: UIViewController {
+class NewContactViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var lastnameInput: UITextField!
     @IBOutlet weak var firstnameInput: UITextField!
@@ -17,13 +17,15 @@ class NewContactViewController: UIViewController {
     @IBOutlet weak var mailInput: UITextField!
     @IBOutlet weak var numTelInput: UITextField!
     
-    private var professionalSet : ProfessionalSetModel = ProfessionalSetModel()
+    public var professionalSet : ProfessionalSetModel?
     
     @IBAction func newContactClicked(_ sender: Any) {
         
         let professional : ProfessionalModel = ProfessionalModel(firstname: firstnameInput.text!, lastname: lastnameInput.text!, title: titleInput.text!, address: "", email: mailInput.text!, numTel: numTelInput.text!, organization: organizationInput.text!)
+        if let set = self.professionalSet{
+            set.addProfessional(professional: professional)
+        }
         
-        professionalSet.addProfessional(professional: professional)
         performSegue(withIdentifier: "formSegue", sender: self)
     }
 
@@ -39,6 +41,14 @@ class NewContactViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
+    // MARK: - TextField Delegate
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
     /*
     // MARK: - Navigation
