@@ -45,6 +45,10 @@ extension Professional{
         CoreDataManager.save()
     }
     
+    static func getAll() -> NSFetchRequest<Professional>{
+        return self.request as! NSFetchRequest<Professional>
+    }
+    
 //    static func getNewProfessionalDao() -> Professional?{
 //        guard let entity = NSEntityDescription.entity(forEntityName: "Professional", in: CoreDataManager.context) else{
 //            return nil
