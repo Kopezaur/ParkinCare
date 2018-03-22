@@ -144,6 +144,7 @@
 		E9279FD62058187500381EEC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B19E005920642A6200F9F0A8 /* ContactTableViewController.swift */,
 				15D08BF82061829200302868 /* NewContactViewController.swift */,
 				15D08BF62061779500302868 /* ContactsViewController.swift */,
 				1581149120583903001A912F /* MedicamentViewController.swift */,
@@ -263,7 +264,6 @@
 			children = (
 				1581148F20583434001A912F /* MedicamentTableViewCell.swift */,
 				15D08BF420616DC000302868 /* ContactTableViewCell.swift */,
-				B19E005920642A6200F9F0A8 /* ContactTableViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
