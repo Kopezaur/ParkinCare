@@ -67,6 +67,22 @@ extension Professional{
         return results
     }
     
+    /// initialize a `Professional`
+    ///
+    /// - Parameters:
+    ///   - lastname: `String` last name of `Professional`
+    ///   - firstname:  `String` first name of `Professional`
+    ///   - title: `String` title of `Professional`
+    convenience init(lastname: String, firstname: String, title: String, organization: String, email: String, numTel: String){
+        self.init(context: CoreDataManager.context)
+        self.lastname  = lastname
+        self.firstname = firstname
+        self.title = title
+        self.organization = organization
+        self.email = email
+        self.numTel = numTel
+    }
+    
 //    static func getNewProfessionalDao() -> Professional?{
 //        guard let entity = NSEntityDescription.entity(forEntityName: "Professional", in: CoreDataManager.context) else{
 //            return nil

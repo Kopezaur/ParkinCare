@@ -14,6 +14,7 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     private var professionalSet : ProfessionalSetModel = ProfessionalSetModel()
     fileprivate var professionals : [ProfessionalModel] = []
+    var tableViewController: ContactTableViewController!
 
     @IBOutlet weak var contactTable: UITableView!
     
@@ -26,7 +27,7 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        professionals = self.professionalSet.getAll()
+        professionals = Professional.getAll()
     }
 
     override func didReceiveMemoryWarning() {

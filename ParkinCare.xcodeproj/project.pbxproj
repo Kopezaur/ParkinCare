@@ -18,6 +18,10 @@
 		15D08BFB2061843700302868 /* ProfessionalSetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D08BFA2061843700302868 /* ProfessionalSetModel.swift */; };
 		6F0B99B620453ED200A1BEF8 /* RendezVousSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0B99B520453ED200A1BEF8 /* RendezVousSet.swift */; };
 		6F0B99B820453F7D00A1BEF8 /* RDVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0B99B720453F7D00A1BEF8 /* RDVModel.swift */; };
+		B19E00542064091D00F9F0A8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19E00532064091D00F9F0A8 /* CoreDataManager.swift */; };
+		B19E00562064092000F9F0A8 /* DialogBoxHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19E00552064092000F9F0A8 /* DialogBoxHelper.swift */; };
+		B19E00582064211E00F9F0A8 /* ContactFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19E00572064211D00F9F0A8 /* ContactFormViewController.swift */; };
+		B19E005A20642A6200F9F0A8 /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19E005920642A6200F9F0A8 /* ContactTableViewController.swift */; };
 		E91C2D5120616CC100A2519B /* Professional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91C2D5020616CC100A2519B /* Professional.swift */; };
 		E938374C20454C85005A6FCF /* ProfessionalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374B20454C85005A6FCF /* ProfessionalModel.swift */; };
 		E938375020454E16005A6FCF /* Professionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374F20454E16005A6FCF /* Professionals.swift */; };
@@ -42,8 +46,6 @@
 		E94E74D020402C0C00AECAC6 /* Evaluations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E74CE20402C0C00AECAC6 /* Evaluations.swift */; };
 		E96D53FF205822F7004562BE /* ParkinCare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E949039E203C38DC00FE7396 /* ParkinCare.xcdatamodeld */; };
 		E96D5406205830CA004562BE /* ParkinCareLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E96D5405205830CA004562BE /* ParkinCareLogo.png */; };
-		E9F0FCDD2058888500939660 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F0FCDC2058888500939660 /* CoreDataManager.swift */; };
-		E9F0FCDF20588C3400939660 /* DialogBoxHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F0FCDE20588C3400939660 /* DialogBoxHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,10 @@
 		15D08BFA2061843700302868 /* ProfessionalSetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfessionalSetModel.swift; sourceTree = "<group>"; };
 		6F0B99B520453ED200A1BEF8 /* RendezVousSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendezVousSet.swift; sourceTree = "<group>"; };
 		6F0B99B720453F7D00A1BEF8 /* RDVModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDVModel.swift; sourceTree = "<group>"; };
+		B19E00532064091D00F9F0A8 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = "../../../Desktop/TP08-CoreDataRelations/TP08-CoreDataRelations/Class Helper/CoreDataManager.swift"; sourceTree = "<group>"; };
+		B19E00552064092000F9F0A8 /* DialogBoxHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DialogBoxHelper.swift; path = "../../../Desktop/TP08-CoreDataRelations/TP08-CoreDataRelations/Class Helper/DialogBoxHelper.swift"; sourceTree = "<group>"; };
+		B19E00572064211D00F9F0A8 /* ContactFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewController.swift; sourceTree = "<group>"; };
+		B19E005920642A6200F9F0A8 /* ContactTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewController.swift; sourceTree = "<group>"; };
 		E91C2D5020616CC100A2519B /* Professional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Professional.swift; sourceTree = "<group>"; };
 		E938374B20454C85005A6FCF /* ProfessionalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfessionalModel.swift; sourceTree = "<group>"; };
 		E938374F20454E16005A6FCF /* Professionals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Professionals.swift; sourceTree = "<group>"; };
@@ -100,8 +106,6 @@
 		E94E74CA20402B3100AECAC6 /* EvaluationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluationModel.swift; sourceTree = "<group>"; };
 		E94E74CE20402C0C00AECAC6 /* Evaluations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evaluations.swift; sourceTree = "<group>"; };
 		E96D5405205830CA004562BE /* ParkinCareLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ParkinCareLogo.png; path = ParkinCare/ParkinCareLogo.png; sourceTree = "<group>"; };
-		E9F0FCDC2058888500939660 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		E9F0FCDE20588C3400939660 /* DialogBoxHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogBoxHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,7 @@
 				15D08BF62061779500302868 /* ContactsViewController.swift */,
 				1581149120583903001A912F /* MedicamentViewController.swift */,
 				1535056D2062665100D500D6 /* ContactViewController.swift */,
+				B19E00572064211D00F9F0A8 /* ContactFormViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -247,8 +252,8 @@
 		E9F0FCDB2058880200939660 /* Class Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				E9F0FCDC2058888500939660 /* CoreDataManager.swift */,
-				E9F0FCDE20588C3400939660 /* DialogBoxHelper.swift */,
+				B19E00532064091D00F9F0A8 /* CoreDataManager.swift */,
+				B19E00552064092000F9F0A8 /* DialogBoxHelper.swift */,
 			);
 			name = "Class Helpers";
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 			children = (
 				1581148F20583434001A912F /* MedicamentTableViewCell.swift */,
 				15D08BF420616DC000302868 /* ContactTableViewCell.swift */,
+				B19E005920642A6200F9F0A8 /* ContactTableViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -402,28 +408,30 @@
 			files = (
 				15356CDF2045C5AE003A7EB8 /* DoseModel.swift in Sources */,
 				15D08BF72061779500302868 /* ContactsViewController.swift in Sources */,
-				E9F0FCDF20588C3400939660 /* DialogBoxHelper.swift in Sources */,
 				E94E74CB20402B3100AECAC6 /* EvaluationModel.swift in Sources */,
 				1581149020583434001A912F /* MedicamentTableViewCell.swift in Sources */,
+				B19E005A20642A6200F9F0A8 /* ContactTableViewController.swift in Sources */,
 				E949039A203C38DC00FE7396 /* ViewController.swift in Sources */,
 				6F0B99B820453F7D00A1BEF8 /* RDVModel.swift in Sources */,
 				E94903D2203C452F00FE7396 /* Prescriptions.swift in Sources */,
 				E938375020454E16005A6FCF /* Professionals.swift in Sources */,
 				E91C2D5120616CC100A2519B /* Professional.swift in Sources */,
+				B19E00582064211E00F9F0A8 /* ContactFormViewController.swift in Sources */,
 				E9490398203C38DC00FE7396 /* AppDelegate.swift in Sources */,
 				E94903A0203C38DC00FE7396 /* ParkinCare.xcdatamodeld in Sources */,
 				15356CDD2045C562003A7EB8 /* MedicamentModel.swift in Sources */,
 				E938374C20454C85005A6FCF /* ProfessionalModel.swift in Sources */,
-				E9F0FCDD2058888500939660 /* CoreDataManager.swift in Sources */,
 				1535056E2062665100D500D6 /* ContactViewController.swift in Sources */,
 				6F0B99B620453ED200A1BEF8 /* RendezVousSet.swift in Sources */,
 				15D08BF92061829200302868 /* NewContactViewController.swift in Sources */,
 				E94E74CF20402C0C00AECAC6 /* Evaluations.swift in Sources */,
 				15D08BFB2061843700302868 /* ProfessionalSetModel.swift in Sources */,
+				B19E00542064091D00F9F0A8 /* CoreDataManager.swift in Sources */,
 				E94903CE203C3E8100FE7396 /* UserModel.swift in Sources */,
 				E94903CA203C3D1000FE7396 /* PrescriptionModel.swift in Sources */,
 				E94E74C720402A2400AECAC6 /* ActivityModel.swift in Sources */,
 				15D08BF520616DC000302868 /* ContactTableViewCell.swift in Sources */,
+				B19E00562064092000F9F0A8 /* DialogBoxHelper.swift in Sources */,
 				E94E74C32040289000AECAC6 /* Activities.swift in Sources */,
 				1581149220583903001A912F /* MedicamentViewController.swift in Sources */,
 			);

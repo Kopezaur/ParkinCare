@@ -10,23 +10,16 @@ import UIKit
 
 class NewContactViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var lastnameInput: UITextField!
-    @IBOutlet weak var firstnameInput: UITextField!
-    @IBOutlet weak var titleInput: UITextField!
-    @IBOutlet weak var organizationInput: UITextField!
-    @IBOutlet weak var mailInput: UITextField!
-    @IBOutlet weak var numTelInput: UITextField!
-    
+    var editContactController : ContactFormViewController!
+    private var newProfessional : Professional?
     public var professionalSet : ProfessionalSetModel?
     
     @IBAction func newContactClicked(_ sender: Any) {
         
-        let professional : ProfessionalModel = ProfessionalModel(firstname: firstnameInput.text!, lastname: lastnameInput.text!, title: titleInput.text!, address: "", email: mailInput.text!, numTel: numTelInput.text!, organization: organizationInput.text!)
-        if let set = self.professionalSet{
-            set.addProfessional(professional: professional)
+        guard let controller = self.childViewControllers.first as? ContactFormViewController else{
+            return
         }
-        
-        performSegue(withIdentifier: "formSegue", sender: self)
+        self.editContactController = controller
     }
 
     override func viewDidLoad() {
@@ -50,14 +43,21 @@ class NewContactViewController: UIViewController, UITextFieldDelegate {
         return true
     }
 
-    /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "newContactSegue" {
+            let lastname : String  = self.editContactController.lastnameField.text!
+            let firstname  : String  = self.editContactController.firstnameField.text!
+            let title : String    = self.editContactController.titleField.text!
+            let organization : String    = self.editContactController.organizationField.text!
+            let email : String    = self.editContactController.emailField.text!
+            let numTel : String    = self.editContactController.numTelField.text!
+            self.newProfessional  = Professional(lastname: lastname, firstname: firstname, title: title, organization: organization, email: email, numTel: numTel)
+        }
     }
-    */
 
 }
