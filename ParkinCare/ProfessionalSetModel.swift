@@ -140,7 +140,8 @@ class ProfessionalSetModel: Sequence{
     // MARK: - Depreciated functions-
     
     init(){
-        self.professionals = [ProfessionalModel(firstname:"Patrick", lastname:"Bruel", title:"Dentiste", address:"hopital", email:"f@f.f", numTel:"05142345", organization:"orgnisation")]
+//        self.professionals = [ProfessionalModel(firstname:"Patrick", lastname:"Bruel", title:"Dentiste", address:"hopital", email:"f@f.f", numTel:"05142345", organization:"orgnisation")]
+        self.professionals = Professional.getAll()
     }
     
     func getAll() -> [ProfessionalModel]{

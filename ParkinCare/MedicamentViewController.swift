@@ -68,15 +68,6 @@ class MedicamentViewController: UIViewController, UITableViewDataSource, UITable
         present(alert, animated: true)
     }
     
-    func alertError(errorMsg error : String, userInfo user : String = "") {
-        let alert = UIAlertController(title: error,
-                                      message: user,
-                                      preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "Ok",
-                                         style: .default)
-        alert.addAction(cancelAction)
-        present(alert, animated: true)
-    }
 
     
     // MARK: - TableView data source protocol -
@@ -195,6 +186,16 @@ class MedicamentViewController: UIViewController, UITableViewDataSource, UITable
     /// - Parameter error: error we want information about
     func alert(error : NSError) {
         self.alert(WithTitle: "\(error)", andMessage: "\(error.userInfo)")
+    }
+    
+    func alertError(errorMsg error : String, userInfo user : String = "") {
+        let alert = UIAlertController(title: error,
+                                      message: user,
+                                      preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Ok",
+                                         style: .default)
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
     }
 
 

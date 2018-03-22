@@ -45,8 +45,26 @@ extension Professional{
         CoreDataManager.save()
     }
     
-    static func getAll() -> NSFetchRequest<Professional>{
-        return self.request as! NSFetchRequest<Professional>
+    static func getAll() -> [ProfessionalModel]{
+        var results : [ProfessionalModel] = []
+        var fetchedResults : [Professional] = []
+        do{
+            try fetchedResults = CoreDataManager.context.fetch(request)
+            
+            if let result = fetchedResults as? [Professional]
+            {
+                for object in result {
+                    let pModel = ProfessionalModel(professional: object)
+                    results.append(pModel)
+                }
+            }
+
+        }
+        catch let error as NSError{
+            // to be done
+        }
+
+        return results
     }
     
 //    static func getNewProfessionalDao() -> Professional?{

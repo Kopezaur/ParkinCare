@@ -129,12 +129,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E91C2D4F20616C6200A2519B /* DTO */ = {
+		E91C2D4F20616C6200A2519B /* DAO */ = {
 			isa = PBXGroup;
 			children = (
 				E91C2D5020616CC100A2519B /* Professional.swift */,
 			);
-			name = "DTO\U0010";
+			name = DAO;
 			sourceTree = "<group>";
 		};
 		E9279FD62058187500381EEC /* Controllers */ = {
@@ -171,9 +171,9 @@
 		E9490396203C38DC00FE7396 /* ParkinCare */ = {
 			isa = PBXGroup;
 			children = (
-				E91C2D4F20616C6200A2519B /* DTO */,
+				E91C2D4F20616C6200A2519B /* DAO */,
 				E94B1E2A205D263C00A7182E /* Models */,
-				E9F0FCE02058A28D00939660 /* Cells */,
+				E9F0FCE02058A28D00939660 /* Views */,
 				E9F0FCDB2058880200939660 /* Class Helpers */,
 				E96D540020582541004562BE /* Images */,
 				E9279FD62058187500381EEC /* Controllers */,
@@ -253,13 +253,13 @@
 			name = "Class Helpers";
 			sourceTree = "<group>";
 		};
-		E9F0FCE02058A28D00939660 /* Cells */ = {
+		E9F0FCE02058A28D00939660 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				1581148F20583434001A912F /* MedicamentTableViewCell.swift */,
 				15D08BF420616DC000302868 /* ContactTableViewCell.swift */,
 			);
-			name = Cells;
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

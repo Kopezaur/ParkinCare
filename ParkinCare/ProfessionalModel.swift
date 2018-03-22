@@ -113,7 +113,7 @@ class ProfessionalModel: Equatable {
         return self.dao.firstname! + " " + self.dao.lastname!
     }
     
-    // MARK: - Constructor -
+    // MARK: - Constructors -
     
     init(firstname: String, lastname: String, title: String, address: String, email: String, numTel: String, organization: String){
         guard let dao = Professional.create() else{
@@ -127,6 +127,11 @@ class ProfessionalModel: Equatable {
         self.dao.email = email
         self.dao.numTel = numTel
         self.dao.organization = organization
+        self.patient = nil
+    }
+    
+    init(professional: Professional){
+        self.dao = professional
         self.patient = nil
     }
     
