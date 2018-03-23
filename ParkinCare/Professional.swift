@@ -1,5 +1,5 @@
 //
-//  ProfessionalDTO.swift
+//  Professional.swift
 //  ParkinCare
 //
 //  Created by Kopezaur on 3/20/18.
@@ -61,7 +61,7 @@ extension Professional{
     
     static func getAll() -> [ProfessionalModel]{
         var results : [ProfessionalModel] = []
-        var fetchedResults : [Professional] = []
+        //var fetchedResults : [Professional] = []
         do{
             let result = try CoreDataManager.context.fetch(request) as [Professional]
             guard result.count != 0 else { return [] }

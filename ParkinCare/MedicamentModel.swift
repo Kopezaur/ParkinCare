@@ -42,20 +42,36 @@ class MedicamentModel{
 //        }
 //    }
     
+    func save(){
+        if let medicament = Medicament.search(medicament: self){
+            medicament.name = self.name
+            CoreDataManager.save()
+        }
+    }
+
+    // MARK: - Constructors -
+    
     init(name: String){
-        guard let dao = Medicament.getNewMedicamentDao() else{
+        guard let dao = Medicament.create() else{
             fatalError("Initialisation error")
         }
         self.dao = dao
         self.name = name
     }
+    
+    init(medicament: Medicament){
+        self.dao = medicament
+    }
+    
+    // -- MARK: - Equatable functions -
+    
+    static func == (lhs: MedicamentModel, rhs: MedicamentModel) -> Bool {
+        return lhs.name == rhs.name
+    }
+    
+    static func != (lhs: MedicamentModel, rhs: MedicamentModel) -> Bool {
+        return !(lhs == rhs)
+    }
+
 }
 
-extension Medicament{
-    static func getNewMedicamentDao() -> Medicament?{
-        guard let entity = NSEntityDescription.entity(forEntityName: "Medicament", in: CoreDataManager.context) else{
-            return nil
-        }
-        return Medicament(entity: entity,insertInto: CoreDataManager.context)
-    }
-}
