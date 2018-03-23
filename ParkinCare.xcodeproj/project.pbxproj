@@ -21,7 +21,7 @@
 		B19E00542064091D00F9F0A8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19E00532064091D00F9F0A8 /* CoreDataManager.swift */; };
 		B19E00562064092000F9F0A8 /* DialogBoxHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19E00552064092000F9F0A8 /* DialogBoxHelper.swift */; };
 		B19E00582064211E00F9F0A8 /* ContactFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19E00572064211D00F9F0A8 /* ContactFormViewController.swift */; };
-		B19E005A20642A6200F9F0A8 /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19E005920642A6200F9F0A8 /* ContactTableViewController.swift */; };
+		B1E025082065145A00CE446A /* editContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E025072065145A00CE446A /* editContactViewController.swift */; };
 		E91C2D5120616CC100A2519B /* Professional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91C2D5020616CC100A2519B /* Professional.swift */; };
 		E938374C20454C85005A6FCF /* ProfessionalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374B20454C85005A6FCF /* ProfessionalModel.swift */; };
 		E938375020454E16005A6FCF /* Professionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374F20454E16005A6FCF /* Professionals.swift */; };
@@ -80,7 +80,7 @@
 		B19E00532064091D00F9F0A8 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B19E00552064092000F9F0A8 /* DialogBoxHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogBoxHelper.swift; sourceTree = "<group>"; };
 		B19E00572064211D00F9F0A8 /* ContactFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewController.swift; sourceTree = "<group>"; };
-		B19E005920642A6200F9F0A8 /* ContactTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewController.swift; sourceTree = "<group>"; };
+		B1E025072065145A00CE446A /* editContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editContactViewController.swift; sourceTree = "<group>"; };
 		E91C2D5020616CC100A2519B /* Professional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Professional.swift; sourceTree = "<group>"; };
 		E938374B20454C85005A6FCF /* ProfessionalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfessionalModel.swift; sourceTree = "<group>"; };
 		E938374F20454E16005A6FCF /* Professionals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Professionals.swift; sourceTree = "<group>"; };
@@ -144,12 +144,12 @@
 		E9279FD62058187500381EEC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B19E005920642A6200F9F0A8 /* ContactTableViewController.swift */,
 				15D08BF82061829200302868 /* NewContactViewController.swift */,
 				15D08BF62061779500302868 /* ContactsViewController.swift */,
 				1581149120583903001A912F /* MedicamentViewController.swift */,
 				1535056D2062665100D500D6 /* ContactViewController.swift */,
 				B19E00572064211D00F9F0A8 /* ContactFormViewController.swift */,
+				B1E025072065145A00CE446A /* editContactViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -410,7 +410,6 @@
 				15D08BF72061779500302868 /* ContactsViewController.swift in Sources */,
 				E94E74CB20402B3100AECAC6 /* EvaluationModel.swift in Sources */,
 				1581149020583434001A912F /* MedicamentTableViewCell.swift in Sources */,
-				B19E005A20642A6200F9F0A8 /* ContactTableViewController.swift in Sources */,
 				E949039A203C38DC00FE7396 /* ViewController.swift in Sources */,
 				6F0B99B820453F7D00A1BEF8 /* RDVModel.swift in Sources */,
 				E94903D2203C452F00FE7396 /* Prescriptions.swift in Sources */,
@@ -431,6 +430,7 @@
 				E94903CA203C3D1000FE7396 /* PrescriptionModel.swift in Sources */,
 				E94E74C720402A2400AECAC6 /* ActivityModel.swift in Sources */,
 				15D08BF520616DC000302868 /* ContactTableViewCell.swift in Sources */,
+				B1E025082065145A00CE446A /* editContactViewController.swift in Sources */,
 				B19E00562064092000F9F0A8 /* DialogBoxHelper.swift in Sources */,
 				E94E74C32040289000AECAC6 /* Activities.swift in Sources */,
 				1581149220583903001A912F /* MedicamentViewController.swift in Sources */,

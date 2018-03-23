@@ -112,10 +112,19 @@ class ProfessionalModel: Equatable {
     var fullname: String {
         return self.dao.firstname! + " " + self.dao.lastname!
     }
+    func save(){
+        if let professional = Professional.search(professional: self){
+            professional.title = self.title
+            professional.organization = self.organization
+            professional.email = self.email
+            professional.numTel = self.numTel
+            CoreDataManager.save()
+        }
+    }
     
     // MARK: - Constructors -
     
-    init(firstname: String, lastname: String, title: String, address: String, email: String, numTel: String, organization: String){
+    init(lastname: String, firstname: String, title: String, organization: String, email: String, numTel: String){
         guard let dao = Professional.create() else{
             fatalError("Initialisation error")
         } 
@@ -123,16 +132,13 @@ class ProfessionalModel: Equatable {
         self.dao.firstname = firstname
         self.dao.lastname = lastname
         self.dao.title = title
-        self.dao.address = address
         self.dao.email = email
         self.dao.numTel = numTel
         self.dao.organization = organization
-        self.patient = nil
     }
     
     init(professional: Professional){
         self.dao = professional
-        self.patient = nil
     }
     
     // -- MARK: - Equatable functions -

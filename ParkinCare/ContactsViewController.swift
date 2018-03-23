@@ -14,11 +14,10 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     private var professionalSet : ProfessionalSetModel = ProfessionalSetModel()
     fileprivate var professionals : [ProfessionalModel] = []
-    var tableViewController: ContactTableViewController!
-
+    var tableViewController: UITableView!
+    
     @IBOutlet weak var contactTable: UITableView!
     
-
 //    var professionals : [ProfessionalModel] = [ProfessionalModel(firstname:"Patrick", lastname:"Bruel", title:"Dentiste", address:"hopital", email:"f@f.f", numTel:"05142345", organization:"orgnisation")]
     
 //    var professionals : [ProfessionalModel] = []
@@ -47,24 +46,29 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.professionals.count
     }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .delete:
+            if let indexPath = indexPath{
+                self.tableViewController.deleteRows(at: [indexPath], with: .automatic)
+            }
+        default:
+            break
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
+        // just managed deleting
+        if (editingStyle==UITableViewCellEditingStyle.delete){
+            let professional : ProfessionalModel = self.professionals[indexPath.row]
+            print(professional.email)
+            //Professional.delete(professionalModel: professional)
+        }
+    }
 
     
     // MARK: - Helper Methods -
-    
-    /// get context of core data initialized in application delegate
-    ///
-    /// - Parameters:
-    ///     -errorMsg: main error message
-    ///     -userInfoMsg: additional information user wants to display
-    /// - Returns: context of CoreData
-    func getContext(errorMsg: String, userInfoMsg: String = "could not retrieve data context") -> NSManagedObjectContext?{
-        // first get context of persistent data
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
-            self.alert(WithTitle: errorMsg, andMessage: userInfoMsg)
-            return nil
-        }
-        return appDelegate.persistentContainer.viewContext
-    }
     
     /// shows an alert box with two messages
     ///
@@ -99,6 +103,7 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     // MARK: - Navigation
     
     @IBAction func unwindToContactsViewController(_ segue: UIStoryboardSegue){
+        self.professionals = Professional.getAll()
         self.contactTable.reloadData()
     }
     
@@ -109,11 +114,6 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
                     contactViewController.professional = self.professionals[indexPath.row]
                     self.contactTable.deselectRow(at: indexPath, animated: true)
                 }
-            }
-        }
-        else if segue.identifier == "newContactSegue"{
-            if let controller = segue.destination as? NewContactViewController{
-                controller.professionalSet = self.professionalSet
             }
         }
     }

@@ -13,20 +13,16 @@ class NewContactViewController: UIViewController, UITextFieldDelegate {
     var editContactController : ContactFormViewController!
     private var newProfessional : Professional?
     public var professionalSet : ProfessionalSetModel?
-    
-    @IBAction func newContactClicked(_ sender: Any) {
-        
-        guard let controller = self.childViewControllers.first as? ContactFormViewController else{
-            return
-        }
-        self.editContactController = controller
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
+        guard let controller = self.childViewControllers.first as? ContactFormViewController else{
+            return
+        }
+        self.editContactController = controller
+         self.editContactController.lastnameField.text = "Bite"
     }
 
     override func didReceiveMemoryWarning() {

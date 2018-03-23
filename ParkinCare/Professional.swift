@@ -40,30 +40,39 @@ extension Professional{
         
     }
     
-    static func delete(professional : Professional){
-        CoreDataManager.context.delete(professional)
-        CoreDataManager.save()
+    static func search(professional: ProfessionalModel) -> Professional? {
+        self.request.predicate = NSPredicate(format:"firstname == %@ AND lastname == %@", professional.firstname!, professional.lastname!)
+        do{
+            let result = try CoreDataManager.context.fetch(request) as [Professional]
+            guard result.count != 0 else { return nil }
+            return result[0]
+        }
+        catch{
+            return nil
+        }
+    }
+    
+    static func delete(professionalModel : ProfessionalModel){
+        if let professional: Professional = self.search(professional: professionalModel){
+            CoreDataManager.context.delete(professional)
+            CoreDataManager.save()
+        }
     }
     
     static func getAll() -> [ProfessionalModel]{
         var results : [ProfessionalModel] = []
         var fetchedResults : [Professional] = []
         do{
-            try fetchedResults = CoreDataManager.context.fetch(request)
-            
-            if let result = fetchedResults as? [Professional]
-            {
-                for object in result {
-                    let pModel = ProfessionalModel(professional: object)
-                    results.append(pModel)
-                }
+            let result = try CoreDataManager.context.fetch(request) as [Professional]
+            guard result.count != 0 else { return [] }
+            for object in result {
+                let pModel = ProfessionalModel(professional: object)
+                results.append(pModel)
             }
-
         }
-        catch let error as NSError{
-            // to be done
+        catch{
+            return []
         }
-
         return results
     }
     

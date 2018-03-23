@@ -28,6 +28,17 @@ class ContactFormViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - TextFieldDelegate
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if (textField == self.lastnameField) || (textField == self.firstnameField) {
+            self.performSegue(withIdentifier: "editContactSegue", sender: self)
+            return false
+        }
+        else{
+            return true
+        }
+    }
 
     /*
     // MARK: - Navigation

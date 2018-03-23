@@ -143,7 +143,7 @@
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="O8G-Jx-4rc" kind="show" identifier="newContactSegue" id="XOW-RE-5tg"/>
+                                    <segue destination="O8G-Jx-4rc" kind="show" identifier="" id="XOW-RE-5tg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -161,7 +161,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="contactTable" destination="Cpo-nK-XSD" id="Ywu-Lw-LJs"/>
+                        <outlet property="contactTable" destination="Cpo-nK-XSD" id="vbN-4M-KeC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHc-Gz-hNz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -197,7 +197,7 @@
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="newContactClicked:" destination="O8G-Jx-4rc" eventType="touchUpInside" id="WwZ-mr-cBd"/>
+                                    <segue destination="LoQ-ON-x1u" kind="unwind" identifier="newContactSegue" unwindAction="unwindToContactsViewController:" id="cqW-mn-znb"/>
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oZS-L5-Wyp">
@@ -222,9 +222,6 @@
                             <constraint firstItem="oZS-L5-Wyp" firstAttribute="leading" secondItem="hNc-Rh-t1A" secondAttribute="leadingMargin" id="uhC-6K-PtH"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <segue destination="LoQ-ON-x1u" kind="unwind" identifier="newContactSegue" unwindAction="unwindToContactsViewController:" id="x7X-D5-xZS"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t43-tQ-CNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="LoQ-ON-x1u" userLabel="Exit" sceneMemberID="exit"/>
@@ -326,7 +323,7 @@
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fIn-r9-NeE" kind="show" id="zyg-uU-tLw"/>
+                                    <segue destination="fIn-r9-NeE" kind="show" identifier="toEditContactSegue" id="zyg-uU-tLw"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fiche contact" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixv-mB-ges">
@@ -383,10 +380,10 @@
             </objects>
             <point key="canvasLocation" x="1548" y="842"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Contact View Controller-->
         <scene sceneID="io7-7K-FHb">
             <objects>
-                <viewController id="fIn-r9-NeE" sceneMemberID="viewController">
+                <viewController id="fIn-r9-NeE" customClass="editContactViewController" customModule="ParkinCare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zSN-Rr-4tY"/>
                         <viewControllerLayoutGuide type="bottom" id="ud1-ag-9jy"/>
@@ -407,7 +404,7 @@
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vhe-ik-Ge4" kind="unwind" identifier="editContactSegue" unwindAction="unwindToContactsViewController:" id="fRc-kl-Tcm"/>
+                                    <segue destination="vhe-ik-Ge4" kind="unwind" identifier="editContactSegue" unwindAction="unwindToContactViewController:" id="nhl-OE-fd5"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modifier contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzS-s4-ReQ">
@@ -419,7 +416,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6fk-jR-Dyr">
                                 <rect key="frame" x="16" y="101" width="343" height="496"/>
                                 <connections>
-                                    <segue destination="cav-E4-Wck" kind="embed" id="V4F-34-HdX"/>
+                                    <segue destination="cav-E4-Wck" kind="embed" identifier="editContactSegue" id="V4F-34-HdX"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -445,7 +442,6 @@
         <!--Navigation Controller-->
         <scene sceneID="MXS-1A-CCV">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f9a-go-hFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ceX-Uf-W2q" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bb8-Xu-3eF">
@@ -457,14 +453,18 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="p7Q-eh-RGl"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f9a-go-hFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="224.80000000000001" y="-640.02998500749629"/>
         </scene>
         <!--Contact Form View Controller-->
         <scene sceneID="ZwL-9F-8zK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cOu-ze-k5r" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="cav-E4-Wck" customClass="ContactFormViewController" customModule="ParkinCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LH0-Li-G2x"/>
+                        <viewControllerLayoutGuide type="bottom" id="cUV-w6-0lw"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="b0v-X2-u3E">
                         <rect key="frame" x="0.0" y="0.0" width="343" height="496"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -483,6 +483,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="lastnameField:" destination="5GP-VR-A7l" eventType="editingDidEnd" id="LYO-u1-ZQl"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Prénom" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hCI-Ao-Zkn">
                                                 <rect key="frame" x="10" y="100" width="323" height="50"/>
@@ -581,6 +584,8 @@
                         <outlet property="titleField" destination="zCs-b7-0ta" id="LcB-XE-Qe2"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cOu-ze-k5r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="5GP-VR-A7l" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3436" y="593.70314842578716"/>
         </scene>

@@ -54,5 +54,26 @@ class ContactViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "toEditContactSegue"{
+            print("test2")
+            if let editContactViewController = segue.destination as? editContactViewController{
+                editContactViewController.professional = self.professional
+                print("test2")
+            }
+            
+        }
+    }
+    
+    @IBAction func unwindToContactViewController(_ segue: UIStoryboardSegue){
+        let newProfessional = Professional.search(professional:self.professional!)
+        self.professional?.lastname = newProfessional!.lastname
+        self.professional?.firstname = newProfessional!.firstname
+        self.professional?.title = newProfessional!.title
+        self.professional?.organization = newProfessional!.organization
+        self.professional?.email = newProfessional!.email
+        self.professional?.numTel = newProfessional!.numTel
+    }
 
 }
