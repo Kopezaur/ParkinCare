@@ -10,7 +10,7 @@ import UIKit
 
 class editContactViewController: UIViewController {
         
-    var professional: ProfessionalModel? = nil
+    var professional: Professional? = nil
     var editContactController : ContactFormViewController!
 
     override func viewDidLoad() {
@@ -61,7 +61,7 @@ class editContactViewController: UIViewController {
             self.professional?.organization = self.editContactController.organizationField.text!
             self.professional?.email = self.editContactController.emailField.text!
             self.professional?.numTel = self.editContactController.numTelField.text!
-            CoreDataManager.save()
+            //CoreDataManager.save()
             //ProfessionalModel(lastname:lastname,firstname:firstname,title:title,organization:organization,email:email,numTel:numTel).save()
         }
     }

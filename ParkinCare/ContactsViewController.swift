@@ -11,9 +11,6 @@ import CoreData
 
 class ContactsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    
-    private var professionalSet : ProfessionalSetModel = ProfessionalSetModel()
-    fileprivate var professionals : [ProfessionalModel] = []
     var tableViewController: UITableView!
     
     @IBOutlet weak var contactTable: UITableView!
@@ -25,8 +22,6 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        professionals = Professional.getAll()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,14 +32,16 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.contactTable.dequeueReusableCell(withIdentifier: "contactCell",for: indexPath) as! ContactTableViewCell
-        cell.lastnameLabel.text = self.professionals[indexPath.row].lastname
-        cell.firstnameLabel.text = self.professionals[indexPath.row].firstname
-        cell.titleLabel.text = self.professionals[indexPath.row].title
+        if let professional: Professional = Professional.getAll()[indexPath.row]{
+            cell.lastnameLabel.text = professional.lastname
+            cell.firstnameLabel.text = professional.firstname
+            cell.titleLabel.text = professional.title
+        }        
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.professionals.count
+        return Professional.getAll().count
     }
     
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
@@ -61,9 +58,8 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
         // just managed deleting
         if (editingStyle==UITableViewCellEditingStyle.delete){
-            let professional : ProfessionalModel = self.professionals[indexPath.row]
-            print(professional.email)
-            //Professional.delete(professionalModel: professional)
+            let professional = Professional.getAll()[indexPath.row]
+            Professional.delete(professional: professional)
         }
     }
 
@@ -102,16 +98,16 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     // MARK: - Navigation
     
-    @IBAction func unwindToContactsViewController(_ segue: UIStoryboardSegue){
+    /*@IBAction func unwindToContactsViewController(_ segue: UIStoryboardSegue){
         self.professionals = Professional.getAll()
         self.contactTable.reloadData()
-    }
+    }*/
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "showContactSegue"{
             if let indexPath = self.contactTable.indexPathForSelectedRow{
                 if let contactViewController = segue.destination as? ContactViewController{
-                    contactViewController.professional = self.professionals[indexPath.row]
+                    contactViewController.professional = Professional.getAll()[indexPath.row]
                     self.contactTable.deselectRow(at: indexPath, animated: true)
                 }
             }

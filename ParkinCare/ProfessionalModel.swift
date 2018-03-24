@@ -112,15 +112,6 @@ class ProfessionalModel: Equatable {
     var fullname: String {
         return self.dao.firstname! + " " + self.dao.lastname!
     }
-    func save(){
-        if let professional = Professional.search(professional: self){
-            professional.title = self.title
-            professional.organization = self.organization
-            professional.email = self.email
-            professional.numTel = self.numTel
-            CoreDataManager.save()
-        }
-    }
     
     // MARK: - Constructors -
     

@@ -12,7 +12,6 @@ class NewContactViewController: UIViewController, UITextFieldDelegate {
     
     var editContactController : ContactFormViewController!
     private var newProfessional : Professional?
-    public var professionalSet : ProfessionalSetModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +21,6 @@ class NewContactViewController: UIViewController, UITextFieldDelegate {
             return
         }
         self.editContactController = controller
-         self.editContactController.lastnameField.text = "Bite"
     }
 
     override func didReceiveMemoryWarning() {

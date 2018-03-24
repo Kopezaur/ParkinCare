@@ -18,7 +18,7 @@ class ContactViewController: UIViewController {
     @IBOutlet weak var numTelLabel: UILabel!
     
     
-    var professional : ProfessionalModel? = nil
+    var professional : Professional? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,12 +57,9 @@ class ContactViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "toEditContactSegue"{
-            print("test2")
             if let editContactViewController = segue.destination as? editContactViewController{
                 editContactViewController.professional = self.professional
-                print("test2")
             }
-            
         }
     }
     

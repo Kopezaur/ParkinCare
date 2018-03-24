@@ -40,7 +40,7 @@ extension Professional{
         
     }
     
-    static func search(professional: ProfessionalModel) -> Professional? {
+    static func search(professional: Professional) -> Professional? {
         self.request.predicate = NSPredicate(format:"firstname == %@ AND lastname == %@", professional.firstname!, professional.lastname!)
         do{
             let result = try CoreDataManager.context.fetch(request) as [Professional]
@@ -52,28 +52,18 @@ extension Professional{
         }
     }
     
-    static func delete(professionalModel : ProfessionalModel){
-        if let professional: Professional = self.search(professional: professionalModel){
-            CoreDataManager.context.delete(professional)
-            CoreDataManager.save()
-        }
+    static func delete(professional: Professional){
+        CoreDataManager.context.delete(professional)
     }
     
-    static func getAll() -> [ProfessionalModel]{
-        var results : [ProfessionalModel] = []
-        var fetchedResults : [Professional] = []
+    static func getAll() -> [Professional]!{
+        request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Professional.lastname),ascending:true),NSSortDescriptor(key:#keyPath(Professional.firstname),ascending:true)]
         do{
-            let result = try CoreDataManager.context.fetch(request) as [Professional]
-            guard result.count != 0 else { return [] }
-            for object in result {
-                let pModel = ProfessionalModel(professional: object)
-                results.append(pModel)
-            }
+            return try CoreDataManager.context.fetch(self.request)
         }
         catch{
             return []
         }
-        return results
     }
     
     /// initialize a `Professional`
@@ -100,3 +90,4 @@ extension Professional{
 //    }
 
 }
+
