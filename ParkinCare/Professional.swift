@@ -1,5 +1,5 @@
 //
-//  ProfessionalDTO.swift
+//  Professional.swift
 //  ParkinCare
 //
 //  Created by Kopezaur on 3/20/18.
