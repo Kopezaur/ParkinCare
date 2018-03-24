@@ -10,27 +10,15 @@ import UIKit
 import CoreData
 
 class ContactsViewController: UIViewController{
+    
 
     
     var tableViewController: ProfessionalTableViewController!
     
     @IBOutlet weak var contactTable: UITableView!
     
-    /*func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-        switch type {
-        case .delete:
-            if let indexPath = indexPath{
-                self.tableViewController.deleteRows(at: [indexPath], with: .automatic)
-            }
-        default:
-            break
-        }
-    }*/
-    
     // MARK - Teacher one
-    
-    
-    
+       
     
     override func viewDidLoad() {
         super.viewDidLoad()

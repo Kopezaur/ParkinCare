@@ -27,7 +27,7 @@ protocol ProfessionalTableViewModel {
 //-------------------------------------------------------------------------------------------------
 // MARK: -
 
-class ProfessionalTableViewController: NSObject, UITableViewDataSource {
+class ProfessionalTableViewController: NSObject, UITableViewDataSource{
 
     var tableView   : UITableView
     let professionalsViewModel : ProfessionalSetViewModel
@@ -42,8 +42,27 @@ class ProfessionalTableViewController: NSObject, UITableViewDataSource {
         self.professionalsViewModel.delegate = self.fetchResultController
     }
     
+    
+    
     //-------------------------------------------------------------------------------------------------
     // MARK: - TableView DataSource
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        // after it has just managed deleting
+        if(editingStyle == UITableViewCellEditingStyle.delete){
+            ProfessionalDAO.delete(professional: professionalsViewModel.getProfessional(at: indexPath)!)
+            //self.tableView.deleteRows(at : [indexPath], with: UITableViewRowAnimation.automatic)
+        }
+        
+        /*if (editingStyle==UITableViewCellEditingStyle.delete){
+            let city = self.citiesFetched.object(at: indexPath)
+            CityDAO.delete(city: city)
+        }*/
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
