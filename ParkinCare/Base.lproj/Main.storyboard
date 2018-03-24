@@ -197,7 +197,7 @@
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="LoQ-ON-x1u" kind="unwind" identifier="newContactSegue" unwindAction="unwindToContactsViewController:" id="cqW-mn-znb"/>
+                                    <segue destination="LoQ-ON-x1u" kind="unwind" identifier="newContactSegue" unwindAction="unwindToThisViewWithSender:" id="cqW-mn-znb"/>
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oZS-L5-Wyp">

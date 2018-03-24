@@ -19,6 +19,8 @@ class ContactViewController: UIViewController {
     
     
     var professional : Professional? = nil
+    var indexPath : IndexPath? = nil
+    var professionalsViewModel : ProfessionalSetViewModel? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,20 +30,24 @@ class ContactViewController: UIViewController {
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        if let aprofessional = self.professional{
-            self.lastnameLabel.text = aprofessional.lastname
-            self.firstnameLabel.text = aprofessional.firstname
-            self.titleLabel.text = aprofessional.title
-            self.organizationLabel.text = aprofessional.organization
-            self.emailLabel.text = aprofessional.email
-            self.numTelLabel.text = aprofessional.numTel
+        if let professional = self.professionalsViewModel!.getProfessional(at: self.indexPath!) {
+            self.professional = professional
+            initLabels()
         }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func initLabels(){
+        self.lastnameLabel.text = self.professional!.lastname
+        self.firstnameLabel.text = self.professional!.firstname
+        self.titleLabel.text = self.professional!.title
+        self.organizationLabel.text = self.professional!.organization
+        self.emailLabel.text = self.professional!.email
+        self.numTelLabel.text = self.professional!.numTel
     }
     
 
@@ -64,13 +70,8 @@ class ContactViewController: UIViewController {
     }
     
     @IBAction func unwindToContactViewController(_ segue: UIStoryboardSegue){
-        let newProfessional = Professional.search(professional:self.professional!)
-        self.professional?.lastname = newProfessional!.lastname
-        self.professional?.firstname = newProfessional!.firstname
-        self.professional?.title = newProfessional!.title
-        self.professional?.organization = newProfessional!.organization
-        self.professional?.email = newProfessional!.email
-        self.professional?.numTel = newProfessional!.numTel
+        self.professional = self.professionalsViewModel!.getProfessional(at: self.indexPath!)
+        initLabels()
     }
 
 }

@@ -11,7 +11,7 @@ import UIKit
 class NewContactViewController: UIViewController, UITextFieldDelegate {
     
     var editContactController : ContactFormViewController!
-    private var newProfessional : Professional?
+    var newProfessional : Professional?
 
     override func viewDidLoad() {
         super.viewDidLoad()

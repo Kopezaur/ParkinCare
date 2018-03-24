@@ -9,42 +9,14 @@
 import UIKit
 import CoreData
 
-class ContactsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ContactsViewController: UIViewController{
+
     
-    var tableViewController: UITableView!
+    var tableViewController: ProfessionalTableViewController!
     
     @IBOutlet weak var contactTable: UITableView!
     
-//    var professionals : [ProfessionalModel] = [ProfessionalModel(firstname:"Patrick", lastname:"Bruel", title:"Dentiste", address:"hopital", email:"f@f.f", numTel:"05142345", organization:"orgnisation")]
-    
-//    var professionals : [ProfessionalModel] = []
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-        
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.contactTable.dequeueReusableCell(withIdentifier: "contactCell",for: indexPath) as! ContactTableViewCell
-        if let professional: Professional = Professional.getAll()[indexPath.row]{
-            cell.lastnameLabel.text = professional.lastname
-            cell.firstnameLabel.text = professional.firstname
-            cell.titleLabel.text = professional.title
-        }        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Professional.getAll().count
-    }
-    
-    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+    /*func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch type {
         case .delete:
             if let indexPath = indexPath{
@@ -53,63 +25,48 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         default:
             break
         }
+    }*/
+    
+    // MARK - Teacher one
+    
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        self.tableViewController = ProfessionalTableViewController(tableView: self.contactTable)
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
-        // just managed deleting
-        if (editingStyle==UITableViewCellEditingStyle.delete){
-            let professional = Professional.getAll()[indexPath.row]
-            Professional.delete(professional: professional)
-        }
-    }
-
-    
-    // MARK: - Helper Methods -
-    
-    /// shows an alert box with two messages
-    ///
-    /// - Parameters:
-    ///     - title: title of dialog box as main message
-    ///     - msg: additional message used to describe context or additional information
-    func alert(WithTitle title: String, andMessage msg: String = "") {
-        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "OK", style: .default)
-        alert.addAction(cancelAction)
-        present(alert, animated: true)
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    /// shows an alert to inform about an error
-    ///
-    /// - Parameter error: error we want information about
-    func alert(error : NSError) {
-        self.alert(WithTitle: "\(error)", andMessage: "\(error.userInfo)")
-    }
-    
-    func alertError(errorMsg error : String, userInfo user : String = "") {
-        let alert = UIAlertController(title: error,
-                                      message: user,
-                                      preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "Ok",
-                                         style: .default)
-        alert.addAction(cancelAction)
-        present(alert, animated: true)
-    }
-
     
     // MARK: - Navigation
     
-    /*@IBAction func unwindToContactsViewController(_ segue: UIStoryboardSegue){
-        self.professionals = Professional.getAll()
-        self.contactTable.reloadData()
-    }*/
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        if segue.identifier == "showContactSegue"{
-            if let indexPath = self.contactTable.indexPathForSelectedRow{
-                if let contactViewController = segue.destination as? ContactViewController{
-                    contactViewController.professional = Professional.getAll()[indexPath.row]
-                    self.contactTable.deselectRow(at: indexPath, animated: true)
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if let destController = segue.destination as? ContactViewController{
+            if let cell = sender as? UITableViewCell{
+                guard let index = self.contactTable.indexPath(for: cell) else {
+                    return
                 }
+                destController.indexPath = index
+                destController.professionalsViewModel = self.tableViewController.professionalsViewModel
+            }
+        }
+    }
+    
+    // segue ViewControllerB -> ViewController
+    @IBAction func unwindToThisView(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? NewContactViewController {
+            //dataRecieved = sourceViewController.dataPassed
+            if let newProfessional = sourceViewController.newProfessional{
+                self.tableViewController.professionalsViewModel.add(professional: newProfessional)
             }
         }
     }
