@@ -39,6 +39,7 @@ protocol RDVSetViewModelDelegate {
 // MARK: -
 class RDVSetViewModel : RDVTableViewModel{
     
+    
     // MARK: -
     let modelset : RDVSet = RDVSet()
     
@@ -109,17 +110,6 @@ class RDVSetViewModel : RDVTableViewModel{
     public func add(rdv: RDV){
         self.modelset.add(rdv: rdv)
     }
-    
-    /// update birth date of RDV
-    ///
-    /// - Parameters:
-    ///   - indexPath: (section,row) of RDV we want to update the birth date
-    ///   - date: birth date
-    /*public func updateBirthDate(atIndexPath indexPath: IndexPath, withDate date: Date){
-     let RDV = self.rdvsFetched.object(at: indexPath)
-     RDV.birthdate = date
-     self.delegate?.RDVUpdated(at: indexPath)
-     }*/
     
     //-------------------------------------------------------------------------------------------------
     // MARK: Convenience functions

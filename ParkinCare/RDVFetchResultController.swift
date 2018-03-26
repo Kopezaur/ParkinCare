@@ -1,38 +1,39 @@
 //
-//  ProfessionalFetchResultController.swift
+//  RDVFetchResultController.swift
 //  ParkinCare
 //
 //  Created by Polytech Montpellier on 26/03/2018.
 //  Copyright © 2018 Kopezaur. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import CoreData
+import UIKit
 
-class ProfessionalFetchResultController: NSObject, NSFetchedResultsControllerDelegate, ProfessionalSetViewModelDelegate{
+class RDVFetchResultController: NSObject, NSFetchedResultsControllerDelegate, RDVSetViewModelDelegate{
     
     
     let tableView  : UITableView
-    let professionalsSet : ProfessionalSetViewModel
+    let rdvSet : RDVSetViewModel
     
-    init(view : UITableView, model : ProfessionalSetViewModel){
+    init(view : UITableView, model : RDVSetViewModel){
         self.tableView  = view
-        self.professionalsSet = model
+        self.rdvSet = model
         super.init()
     }
     
     //-------------------------------------------------------------------------------------------------
-    // MARK: - PersonSetViewModelDelegate
+    // MARK: - RendezVousSetViewModelDelegate
     func dataSetChanged(){
         self.tableView.reloadData()
     }
-    func professionalDeleted(at indexPath: IndexPath){
+    func rdvDeleted(at indexPath: IndexPath){
         self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableViewScrollPosition.middle)
     }
-    func professionalUpdated(at indexPath: IndexPath){
+    func rdvUpdated(at indexPath: IndexPath){
         self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableViewScrollPosition.middle)
     }
-    func professionalAdded(at indexPath: IndexPath){
+    func rdvAdded(at indexPath: IndexPath){
         self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableViewScrollPosition.middle)
     }
     
@@ -68,4 +69,3 @@ class ProfessionalFetchResultController: NSObject, NSFetchedResultsControllerDel
     }
     
 }
-
