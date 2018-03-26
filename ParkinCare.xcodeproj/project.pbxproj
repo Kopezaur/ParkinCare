@@ -52,6 +52,7 @@
 		E94F277220696C030032BAB1 /* RDVDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94F277120696C030032BAB1 /* RDVDAO.swift */; };
 		E94F2774206971EA0032BAB1 /* RDVSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94F2773206971EA0032BAB1 /* RDVSet.swift */; };
 		E94F2776206974590032BAB1 /* RDVSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94F2775206974590032BAB1 /* RDVSetViewModel.swift */; };
+		E94F2778206976CA0032BAB1 /* ProfessionalDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94F2777206976CA0032BAB1 /* ProfessionalDAO.swift */; };
 		E96D53FF205822F7004562BE /* ParkinCare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E949039E203C38DC00FE7396 /* ParkinCare.xcdatamodeld */; };
 		E96D5406205830CA004562BE /* ParkinCareLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E96D5405205830CA004562BE /* ParkinCareLogo.png */; };
 /* End PBXBuildFile section */
@@ -121,6 +122,7 @@
 		E94F277120696C030032BAB1 /* RDVDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDVDAO.swift; sourceTree = "<group>"; };
 		E94F2773206971EA0032BAB1 /* RDVSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDVSet.swift; sourceTree = "<group>"; };
 		E94F2775206974590032BAB1 /* RDVSetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDVSetViewModel.swift; sourceTree = "<group>"; };
+		E94F2777206976CA0032BAB1 /* ProfessionalDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfessionalDAO.swift; sourceTree = "<group>"; };
 		E96D5405205830CA004562BE /* ParkinCareLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ParkinCareLogo.png; path = ParkinCare/ParkinCareLogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +158,7 @@
 				E91D69322065BE57001BAE17 /* Medicament.swift */,
 				E94F276F2069687D0032BAB1 /* MedicamentDAO.swift */,
 				E94F277120696C030032BAB1 /* RDVDAO.swift */,
+				E94F2777206976CA0032BAB1 /* ProfessionalDAO.swift */,
 			);
 			name = DAO;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				B19E00542064091D00F9F0A8 /* CoreDataManager.swift in Sources */,
 				E94903CE203C3E8100FE7396 /* UserModel.swift in Sources */,
 				E94903CA203C3D1000FE7396 /* PrescriptionModel.swift in Sources */,
+				E94F2778206976CA0032BAB1 /* ProfessionalDAO.swift in Sources */,
 				E94E74C720402A2400AECAC6 /* ActivityModel.swift in Sources */,
 				15D08BF520616DC000302868 /* ContactTableViewCell.swift in Sources */,
 				B1E025082065145A00CE446A /* editContactViewController.swift in Sources */,
