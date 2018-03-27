@@ -24,7 +24,7 @@ protocol RDVTableViewModel {
     func getRDV(at indexPath: IndexPath) -> RDV?
 }
 
-class RendezVousTableViewController: NSObject, UITableViewDataSource {
+class RendezVousTableViewController: NSObject, UITableViewDataSource, UITableViewDelegate {
 
 
     var tableView   : UITableView
@@ -38,6 +38,7 @@ class RendezVousTableViewController: NSObject, UITableViewDataSource {
         super.init()
         self.tableView.dataSource      = self
         self.rendezVousViewModel.delegate = self.fetchResultController
+        self.tableView.rowHeight = 120.0
     }
     
     
@@ -67,6 +68,8 @@ class RendezVousTableViewController: NSObject, UITableViewDataSource {
         // Configure the cell...
         return configure(cell: cell, atIndexPath: indexPath)
     }
+    
+    //func tableView
     
     //-------------------------------------------------------------------------------------------------
     // MARK: - convenience methods

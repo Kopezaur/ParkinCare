@@ -21,6 +21,7 @@ class PrescriptionDAO{
     static func fetchAll() -> [Prescription]?{
         self.request.predicate = nil
         do{
+            request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Professional.lastname),ascending:true)]
             return try CoreDataManager.context.fetch(self.request)
         }
         catch{

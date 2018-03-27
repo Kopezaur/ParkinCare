@@ -29,6 +29,16 @@ class NewContactViewController: UIViewController, UITextFieldDelegate {
     }
     
     
+    @IBAction func addContactButtonAction(_ sender: Any) {
+        let lastname = self.editContactController.lastnameField.text!
+        let firstname = self.editContactController.firstnameField.text!
+        if(lastname != "" && firstname != ""){
+            performSegue(withIdentifier: "newContactSegue", sender: sender)
+        }
+        else{
+            DialogBoxHelper.alert(view: self, WithTitle: "Erreur", andMessage: "Les champs Nom et Prénom sont obligatoirs.")
+        }
+    }
     
     // MARK: - TextField Delegate
     

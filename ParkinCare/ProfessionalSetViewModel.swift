@@ -46,7 +46,7 @@ class ProfessionalSetViewModel : ProfessionalTableViewModel{
     fileprivate lazy var professionalsFetched : NSFetchedResultsController<Professional> = {
         // prepare a request
         let request : NSFetchRequest<Professional> = Professional.fetchRequest()
-        request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Professional.lastname),ascending:true),NSSortDescriptor(key:#keyPath(Professional.firstname),ascending:true)]
+        request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Professional.lastname.localizedUppercase),ascending:true),NSSortDescriptor(key:#keyPath(Professional.firstname.localizedUppercase),ascending:true)]
         let fetchResultController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataManager.context, sectionNameKeyPath: nil, cacheName: nil)
         guard let fetchResultControllerDelegate = self.delegate as? NSFetchedResultsControllerDelegate else{
             fatalError("delegate of ProfessionalSetViewModel should also be a NSFetchedResultsControllerDelegate")

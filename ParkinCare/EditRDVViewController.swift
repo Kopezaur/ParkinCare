@@ -32,7 +32,16 @@ class EditRDVViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func editRDVButtonAction(_ sender: Any) {
+        let location = self.editContactController.locationField.text!
+        if(location == ""){
+            DialogBoxHelper.alert(view: self.editContactController, WithTitle: "Entrez un lieu ou une adresse.")
+        }
+        else{
+            performSegue(withIdentifier: "editRDVSegue", sender: sender)
+        }
+    }
+    
     
     // MARK: - Navigation
 

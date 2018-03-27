@@ -34,6 +34,16 @@ class editContactViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func editContactButtonAction(_ sender: Any) {
+        let lastname = self.editContactController.lastnameField.text!
+        let firstname = self.editContactController.firstnameField.text!
+        if(lastname != "" && firstname != ""){
+            performSegue(withIdentifier: "editContactSegue", sender: sender)
+        }
+        else{
+            DialogBoxHelper.alert(view: self, WithTitle: "Erreur", andMessage: "Les champs Nom et Prénom sont obligatoirs.")
+        }
+    }
     
     
     // MARK: - Navigation
@@ -58,7 +68,4 @@ class editContactViewController: UIViewController {
             self.professional?.numTel = self.editContactController.numTelField.text!
         }
     }
-    
-    
-
 }

@@ -30,6 +30,15 @@ class NewRDVViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    @IBAction func addRDVButton(_ sender: Any) {
+        let location = self.editRDVController.locationField.text
+        if(location == ""){
+            DialogBoxHelper.alert(view: self, WithTitle: "Entrez un lieu ou une adresse.")
+        }
+        else{
+            performSegue(withIdentifier: "addRDVSegue", sender: self)
+        }
+    }
     
     // MARK: - Navigation
 
@@ -37,7 +46,7 @@ class NewRDVViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "newRDVSegue" {
+        if segue.identifier == "addRDVSegue" {
             let date : Date = self.editRDVController.datePicker.date
             let location : String  = self.editRDVController.locationField.text!
             let professional : Professional = self.editRDVController.professional!
