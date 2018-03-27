@@ -84,7 +84,7 @@ class ProfessionalTableViewController: NSObject, UITableViewDataSource{
         guard let professional = self.professionalsViewModel.getProfessional(at: indexPath) else { return cell }
         cell.lastnameLabel.text = professional.lastname
         cell.firstnameLabel.text = professional.firstname
-        cell.titleLabel.text = professional.title
+        cell.titleLabel.text = Presenter.emptyString(text: professional.title)
         return cell
     }
 }

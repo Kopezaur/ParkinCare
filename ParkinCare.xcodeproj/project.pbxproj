@@ -25,6 +25,7 @@
 		B1051ACF2069B8BD0056CC5A /* FormRDVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1051ACE2069B8BD0056CC5A /* FormRDVViewController.swift */; };
 		B1051AD12069C53C0056CC5A /* RDV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1051AD02069C53C0056CC5A /* RDV.swift */; };
 		B1051AD32069D9900056CC5A /* EditRDVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1051AD22069D9900056CC5A /* EditRDVViewController.swift */; };
+		B16BDAA3206AFD98002A0E5B /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16BDAA2206AFD98002A0E5B /* Presenter.swift */; };
 		B19E00542064091D00F9F0A8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19E00532064091D00F9F0A8 /* CoreDataManager.swift */; };
 		B19E00562064092000F9F0A8 /* DialogBoxHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19E00552064092000F9F0A8 /* DialogBoxHelper.swift */; };
 		B19E00582064211E00F9F0A8 /* ContactFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19E00572064211D00F9F0A8 /* ContactFormViewController.swift */; };
@@ -109,6 +110,7 @@
 		B1051ACE2069B8BD0056CC5A /* FormRDVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRDVViewController.swift; sourceTree = "<group>"; };
 		B1051AD02069C53C0056CC5A /* RDV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDV.swift; sourceTree = "<group>"; };
 		B1051AD22069D9900056CC5A /* EditRDVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRDVViewController.swift; sourceTree = "<group>"; };
+		B16BDAA2206AFD98002A0E5B /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		B19E00532064091D00F9F0A8 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B19E00552064092000F9F0A8 /* DialogBoxHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogBoxHelper.swift; sourceTree = "<group>"; };
 		B19E00572064211D00F9F0A8 /* ContactFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewController.swift; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 			children = (
 				B19E00532064091D00F9F0A8 /* CoreDataManager.swift */,
 				B19E00552064092000F9F0A8 /* DialogBoxHelper.swift */,
+				B16BDAA2206AFD98002A0E5B /* Presenter.swift */,
 			);
 			name = "Class Helpers";
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				E9627987206A74470029CA05 /* DoseDAO.swift in Sources */,
 				B1051AC920699DEA0056CC5A /* RendezVousTableViewCell.swift in Sources */,
 				1535056E2062665100D500D6 /* ContactViewController.swift in Sources */,
+				B16BDAA3206AFD98002A0E5B /* Presenter.swift in Sources */,
 				E962798D206A81BE0029CA05 /* EvaluationDAO.swift in Sources */,
 				6F0B99B620453ED200A1BEF8 /* RendezVousSet.swift in Sources */,
 				B1D5E6B12065D39B0093166B /* ProfessionalTableViewController.swift in Sources */,

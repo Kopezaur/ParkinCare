@@ -34,12 +34,6 @@ class RDVViewController: UIViewController {
             initLabels()
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     func initLabels(){
         let dateTime = self.rdv!.dateTime!as Date
@@ -50,10 +44,10 @@ class RDVViewController: UIViewController {
         let hour = formatter.string(from: dateTime)
         self.lastnameLabel.text = self.rdv!.professional!.lastname
         self.firstnameLabel.text = self.rdv!.professional!.firstname
-        self.titleLabel.text = self.rdv!.professional!.title
-        self.organizationLabel.text = self.rdv!.professional!.organization
-        self.emailLabel.text = self.rdv!.professional!.email
-        self.numTelLabel.text = self.rdv!.professional!.numTel
+        self.titleLabel.text = Presenter.emptyString(text: self.rdv!.professional!.title)
+        self.organizationLabel.text = Presenter.emptyString(text: self.rdv!.professional!.organization)
+        self.emailLabel.text = Presenter.emptyString(text: self.rdv!.professional!.email)
+        self.numTelLabel.text = Presenter.emptyString(text: self.rdv!.professional!.numTel)
         self.dateLabel.text = date
         self.hourLabel.text = hour
         self.locationLabel.text = self.rdv!.location
@@ -71,9 +65,11 @@ class RDVViewController: UIViewController {
         }
     }
  
-    @IBAction func unwindToContactViewController(_ segue: UIStoryboardSegue){
-        self.rdv = self.rdvViewModel!.getRDV(at: self.indexPath!)
-        initLabels()
+    @IBAction func unwindToThisViewWithSender(_ segue: UIStoryboardSegue){
+        if let rdv = self.rdvViewModel!.getRDV(at: self.indexPath!) {
+            self.rdv = rdv
+            initLabels()
+        }
     }
 
 }

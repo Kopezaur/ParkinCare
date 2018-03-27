@@ -85,7 +85,7 @@ class RendezVousTableViewController: NSObject, UITableViewDataSource, UITableVie
         let hour = formatter.string(from: dateTime)
         cell.lastnameLabel.text = rendezVous.professional!.lastname
         cell.firstnameLabel.text = rendezVous.professional!.firstname
-        cell.titleLabel.text = rendezVous.professional!.title
+        cell.titleLabel.text = Presenter.emptyString(text: rendezVous.professional!.title)
         cell.dateLabel.text = date
         cell.hourLabel.text = hour
         cell.locationLabel.text = rendezVous.location

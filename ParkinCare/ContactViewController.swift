@@ -44,10 +44,10 @@ class ContactViewController: UIViewController {
     func initLabels(){
         self.lastnameLabel.text = self.professional!.lastname
         self.firstnameLabel.text = self.professional!.firstname
-        self.titleLabel.text = self.professional!.title
-        self.organizationLabel.text = self.professional!.organization
-        self.emailLabel.text = self.professional!.email
-        self.numTelLabel.text = self.professional!.numTel
+        self.titleLabel.text = Presenter.emptyString(text: self.professional!.title)
+        self.organizationLabel.text = Presenter.emptyString(text: self.professional!.organization)
+        self.emailLabel.text = Presenter.emptyString(text: self.professional!.email)
+        self.numTelLabel.text = Presenter.emptyString(text: self.professional!.numTel)
     }
     
 
@@ -64,9 +64,11 @@ class ContactViewController: UIViewController {
         }
     }
     
-    @IBAction func unwindToContactViewController(_ segue: UIStoryboardSegue){
-        self.professional = self.professionalsViewModel!.getProfessional(at: self.indexPath!)
-        initLabels()
+    @IBAction func unwindToThisViewWithSender(_ segue: UIStoryboardSegue){
+        if let professional = self.professionalsViewModel!.getProfessional(at: self.indexPath!) {
+            self.professional = professional
+            initLabels()
+        }
     }
 
 }
