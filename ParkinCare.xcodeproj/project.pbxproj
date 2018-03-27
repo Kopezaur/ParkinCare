@@ -37,6 +37,7 @@
 		B1E025082065145A00CE446A /* editContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E025072065145A00CE446A /* editContactViewController.swift */; };
 		E91C2D5120616CC100A2519B /* Professional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91C2D5020616CC100A2519B /* Professional.swift */; };
 		E91D69332065BE57001BAE17 /* Medicament.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D69322065BE57001BAE17 /* Medicament.swift */; };
+		E927785A206B091800B18210 /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9277859206B091800B18210 /* UserDAO.swift */; };
 		E938374C20454C85005A6FCF /* ProfessionalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374B20454C85005A6FCF /* ProfessionalModel.swift */; };
 		E938375020454E16005A6FCF /* Professionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374F20454E16005A6FCF /* Professionals.swift */; };
 		E938375120454E16005A6FCF /* Professionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374F20454E16005A6FCF /* Professionals.swift */; };
@@ -122,6 +123,7 @@
 		B1E025072065145A00CE446A /* editContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editContactViewController.swift; sourceTree = "<group>"; };
 		E91C2D5020616CC100A2519B /* Professional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Professional.swift; sourceTree = "<group>"; };
 		E91D69322065BE57001BAE17 /* Medicament.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medicament.swift; sourceTree = "<group>"; };
+		E9277859206B091800B18210 /* UserDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
 		E938374B20454C85005A6FCF /* ProfessionalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfessionalModel.swift; sourceTree = "<group>"; };
 		E938374F20454E16005A6FCF /* Professionals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Professionals.swift; sourceTree = "<group>"; };
 		E9490394203C38DC00FE7396 /* ParkinCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkinCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,6 +202,7 @@
 				E962798A206A7BC00029CA05 /* ActivityDAO.swift */,
 				E962798E206A86190029CA05 /* Prescription.swift */,
 				E9627990206A87660029CA05 /* PrescriptionDAO.swift */,
+				E9277859206B091800B18210 /* UserDAO.swift */,
 			);
 			name = DAO;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				E94E74C720402A2400AECAC6 /* ActivityModel.swift in Sources */,
 				15D08BF520616DC000302868 /* ContactTableViewCell.swift in Sources */,
 				E962798B206A7BC00029CA05 /* ActivityDAO.swift in Sources */,
+				E927785A206B091800B18210 /* UserDAO.swift in Sources */,
 				B1E025082065145A00CE446A /* editContactViewController.swift in Sources */,
 				B19E00562064092000F9F0A8 /* DialogBoxHelper.swift in Sources */,
 				E94E74C32040289000AECAC6 /* Activities.swift in Sources */,
