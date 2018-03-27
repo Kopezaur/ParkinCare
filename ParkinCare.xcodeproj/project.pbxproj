@@ -70,6 +70,8 @@
 		E9627991206A87660029CA05 /* PrescriptionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9627990206A87660029CA05 /* PrescriptionDAO.swift */; };
 		E96D53FF205822F7004562BE /* ParkinCare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E949039E203C38DC00FE7396 /* ParkinCare.xcdatamodeld */; };
 		E96D5406205830CA004562BE /* ParkinCareLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E96D5405205830CA004562BE /* ParkinCareLogo.png */; };
+		E9E6585A206AA2050038686D /* ActivitySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E65859206AA2050038686D /* ActivitySet.swift */; };
+		E9E6585C206AA34C0038686D /* ActivitySetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E6585B206AA34C0038686D /* ActivitySetViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +156,8 @@
 		E962798E206A86190029CA05 /* Prescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prescription.swift; sourceTree = "<group>"; };
 		E9627990206A87660029CA05 /* PrescriptionDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrescriptionDAO.swift; sourceTree = "<group>"; };
 		E96D5405205830CA004562BE /* ParkinCareLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ParkinCareLogo.png; path = ParkinCare/ParkinCareLogo.png; sourceTree = "<group>"; };
+		E9E65859206AA2050038686D /* ActivitySet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitySet.swift; sourceTree = "<group>"; };
+		E9E6585B206AA34C0038686D /* ActivitySetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitySetViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +232,7 @@
 				B1D5E6B42066668B0093166B /* ProfessionalSet.swift */,
 				E94F2773206971EA0032BAB1 /* RDVSet.swift */,
 				E9627988206A786F0029CA05 /* DoseSet.swift */,
+				E9E65859206AA2050038686D /* ActivitySet.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 			children = (
 				B1D5E6B22065D6F80093166B /* ProfessionalSetViewModel.swift */,
 				E94F2775206974590032BAB1 /* RDVSetViewModel.swift */,
+				E9E6585B206AA34C0038686D /* ActivitySetViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -531,8 +537,10 @@
 				E962798D206A81BE0029CA05 /* EvaluationDAO.swift in Sources */,
 				6F0B99B620453ED200A1BEF8 /* RendezVousSet.swift in Sources */,
 				B1D5E6B12065D39B0093166B /* ProfessionalTableViewController.swift in Sources */,
+				E9E6585A206AA2050038686D /* ActivitySet.swift in Sources */,
 				15D08BF92061829200302868 /* NewContactViewController.swift in Sources */,
 				E94E74CF20402C0C00AECAC6 /* Evaluations.swift in Sources */,
+				E9E6585C206AA34C0038686D /* ActivitySetViewModel.swift in Sources */,
 				B19E00542064091D00F9F0A8 /* CoreDataManager.swift in Sources */,
 				E94903CE203C3E8100FE7396 /* UserModel.swift in Sources */,
 				E94903CA203C3D1000FE7396 /* PrescriptionModel.swift in Sources */,
