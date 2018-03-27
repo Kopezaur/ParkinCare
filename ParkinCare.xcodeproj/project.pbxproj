@@ -62,6 +62,12 @@
 		E94F2774206971EA0032BAB1 /* RDVSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94F2773206971EA0032BAB1 /* RDVSet.swift */; };
 		E94F2776206974590032BAB1 /* RDVSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94F2775206974590032BAB1 /* RDVSetViewModel.swift */; };
 		E94F2778206976CA0032BAB1 /* ProfessionalDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94F2777206976CA0032BAB1 /* ProfessionalDAO.swift */; };
+		E9627987206A74470029CA05 /* DoseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9627986206A74470029CA05 /* DoseDAO.swift */; };
+		E9627989206A786F0029CA05 /* DoseSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9627988206A786F0029CA05 /* DoseSet.swift */; };
+		E962798B206A7BC00029CA05 /* ActivityDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E962798A206A7BC00029CA05 /* ActivityDAO.swift */; };
+		E962798D206A81BE0029CA05 /* EvaluationDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E962798C206A81BE0029CA05 /* EvaluationDAO.swift */; };
+		E962798F206A86190029CA05 /* Prescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E962798E206A86190029CA05 /* Prescription.swift */; };
+		E9627991206A87660029CA05 /* PrescriptionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9627990206A87660029CA05 /* PrescriptionDAO.swift */; };
 		E96D53FF205822F7004562BE /* ParkinCare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E949039E203C38DC00FE7396 /* ParkinCare.xcdatamodeld */; };
 		E96D5406205830CA004562BE /* ParkinCareLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E96D5405205830CA004562BE /* ParkinCareLogo.png */; };
 /* End PBXBuildFile section */
@@ -141,6 +147,12 @@
 		E94F2773206971EA0032BAB1 /* RDVSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDVSet.swift; sourceTree = "<group>"; };
 		E94F2775206974590032BAB1 /* RDVSetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDVSetViewModel.swift; sourceTree = "<group>"; };
 		E94F2777206976CA0032BAB1 /* ProfessionalDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfessionalDAO.swift; sourceTree = "<group>"; };
+		E9627986206A74470029CA05 /* DoseDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoseDAO.swift; sourceTree = "<group>"; };
+		E9627988206A786F0029CA05 /* DoseSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoseSet.swift; sourceTree = "<group>"; };
+		E962798A206A7BC00029CA05 /* ActivityDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDAO.swift; sourceTree = "<group>"; };
+		E962798C206A81BE0029CA05 /* EvaluationDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluationDAO.swift; sourceTree = "<group>"; };
+		E962798E206A86190029CA05 /* Prescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prescription.swift; sourceTree = "<group>"; };
+		E9627990206A87660029CA05 /* PrescriptionDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrescriptionDAO.swift; sourceTree = "<group>"; };
 		E96D5405205830CA004562BE /* ParkinCareLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ParkinCareLogo.png; path = ParkinCare/ParkinCareLogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,6 +190,11 @@
 				E94F277120696C030032BAB1 /* RDVDAO.swift */,
 				E94F2777206976CA0032BAB1 /* ProfessionalDAO.swift */,
 				B1051AD02069C53C0056CC5A /* RDV.swift */,
+				E9627986206A74470029CA05 /* DoseDAO.swift */,
+				E962798C206A81BE0029CA05 /* EvaluationDAO.swift */,
+				E962798A206A7BC00029CA05 /* ActivityDAO.swift */,
+				E962798E206A86190029CA05 /* Prescription.swift */,
+				E9627990206A87660029CA05 /* PrescriptionDAO.swift */,
 			);
 			name = DAO;
 			sourceTree = "<group>";
@@ -210,6 +227,7 @@
 			children = (
 				B1D5E6B42066668B0093166B /* ProfessionalSet.swift */,
 				E94F2773206971EA0032BAB1 /* RDVSet.swift */,
+				E9627988206A786F0029CA05 /* DoseSet.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -485,17 +503,20 @@
 				1581149020583434001A912F /* MedicamentTableViewCell.swift in Sources */,
 				E949039A203C38DC00FE7396 /* ViewController.swift in Sources */,
 				B1D5E6BA2066921B0093166B /* ProfessionalFetchResultController.swift in Sources */,
+				E962798F206A86190029CA05 /* Prescription.swift in Sources */,
 				6F0B99B820453F7D00A1BEF8 /* RDVModel.swift in Sources */,
 				E94903D2203C452F00FE7396 /* Prescriptions.swift in Sources */,
 				E94F277220696C030032BAB1 /* RDVDAO.swift in Sources */,
 				E938375020454E16005A6FCF /* Professionals.swift in Sources */,
 				B1D5E6BC20698C700093166B /* RendezVousViewController.swift in Sources */,
 				B1051AC320698FFD0056CC5A /* RendezVousTableViewController.swift in Sources */,
+				E9627989206A786F0029CA05 /* DoseSet.swift in Sources */,
 				B1051AD12069C53C0056CC5A /* RDV.swift in Sources */,
 				B1D5E6B32065D6F80093166B /* ProfessionalSetViewModel.swift in Sources */,
 				B1051AD32069D9900056CC5A /* EditRDVViewController.swift in Sources */,
 				E94F27702069687D0032BAB1 /* MedicamentDAO.swift in Sources */,
 				E91C2D5120616CC100A2519B /* Professional.swift in Sources */,
+				E9627991206A87660029CA05 /* PrescriptionDAO.swift in Sources */,
 				B19E00582064211E00F9F0A8 /* ContactFormViewController.swift in Sources */,
 				E9490398203C38DC00FE7396 /* AppDelegate.swift in Sources */,
 				E94F2776206974590032BAB1 /* RDVSetViewModel.swift in Sources */,
@@ -504,8 +525,10 @@
 				15356CDD2045C562003A7EB8 /* MedicamentModel.swift in Sources */,
 				E938374C20454C85005A6FCF /* ProfessionalModel.swift in Sources */,
 				B1D5E6B52066668B0093166B /* ProfessionalSet.swift in Sources */,
+				E9627987206A74470029CA05 /* DoseDAO.swift in Sources */,
 				B1051AC920699DEA0056CC5A /* RendezVousTableViewCell.swift in Sources */,
 				1535056E2062665100D500D6 /* ContactViewController.swift in Sources */,
+				E962798D206A81BE0029CA05 /* EvaluationDAO.swift in Sources */,
 				6F0B99B620453ED200A1BEF8 /* RendezVousSet.swift in Sources */,
 				B1D5E6B12065D39B0093166B /* ProfessionalTableViewController.swift in Sources */,
 				15D08BF92061829200302868 /* NewContactViewController.swift in Sources */,
@@ -518,6 +541,7 @@
 				B1051ACF2069B8BD0056CC5A /* FormRDVViewController.swift in Sources */,
 				E94E74C720402A2400AECAC6 /* ActivityModel.swift in Sources */,
 				15D08BF520616DC000302868 /* ContactTableViewCell.swift in Sources */,
+				E962798B206A7BC00029CA05 /* ActivityDAO.swift in Sources */,
 				B1E025082065145A00CE446A /* editContactViewController.swift in Sources */,
 				B19E00562064092000F9F0A8 /* DialogBoxHelper.swift in Sources */,
 				E94E74C32040289000AECAC6 /* Activities.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Activity" representedClassName="Activity" parentEntity="Reminder" syncable="YES" codeGenerationType="class">
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
@@ -7,12 +7,14 @@
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="activities" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="Dose" representedClassName="Dose" syncable="YES" codeGenerationType="class">
+        <attribute name="medName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="validated" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="medicament" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Medicament" inverseName="dose" inverseEntity="Medicament" syncable="YES"/>
         <relationship name="prescription" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Prescription" inverseName="doses" inverseEntity="Prescription" syncable="YES"/>
     </entity>
     <entity name="Evaluation" representedClassName="Evaluation" parentEntity="Reminder" syncable="YES" codeGenerationType="class">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="extraEvent" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rating" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="validated" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -59,8 +61,8 @@
     </entity>
     <elements>
         <element name="Activity" positionX="-3735" positionY="-3042" width="128" height="105"/>
-        <element name="Dose" positionX="-3368" positionY="-2808" width="128" height="105"/>
-        <element name="Evaluation" positionX="-3368" positionY="-2958" width="128" height="105"/>
+        <element name="Dose" positionX="-3368" positionY="-2808" width="128" height="120"/>
+        <element name="Evaluation" positionX="-3368" positionY="-2958" width="128" height="120"/>
         <element name="Medicament" positionX="-3116" positionY="-2808" width="128" height="75"/>
         <element name="Person" positionX="-3116" positionY="-3331" width="128" height="118"/>
         <element name="Prescription" positionX="-3548" positionY="-2916" width="128" height="105"/>
