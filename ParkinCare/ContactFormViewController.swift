@@ -9,13 +9,15 @@
 import UIKit
 
 class ContactFormViewController: UIViewController {
+    
     @IBOutlet weak var lastnameField: UITextField!
     @IBOutlet weak var firstnameField: UITextField!
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var organizationField: UITextField!
-    
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var numTelField: UITextField!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

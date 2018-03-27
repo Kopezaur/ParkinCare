@@ -45,13 +45,12 @@ class RendezVousViewController: UIViewController {
     }
     
     // segue ViewControllerB -> ViewController
-    /*@IBAction func unwindToThisView(sender: UIStoryboardSegue) {
+    @IBAction func unwindToThisView(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? NewRDVViewController {
             //dataRecieved = sourceViewController.dataPassed
             if let newRDV = sourceViewController.newRDV{
-                self.tableViewController.rendezVousViewModel.add(professional: newRDV)
+                self.tableViewController.rendezVousViewModel.add(rdv: newRDV)
             }
         }
-    }*/
-
+    }
 }

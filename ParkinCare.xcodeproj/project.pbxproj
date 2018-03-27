@@ -21,6 +21,10 @@
 		B1051AC7206999D70056CC5A /* RDVFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1051AC6206999D70056CC5A /* RDVFetchResultController.swift */; };
 		B1051AC920699DEA0056CC5A /* RendezVousTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1051AC820699DEA0056CC5A /* RendezVousTableViewCell.swift */; };
 		B1051ACB2069A4B30056CC5A /* RDVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1051ACA2069A4B30056CC5A /* RDVViewController.swift */; };
+		B1051ACD2069B3B70056CC5A /* NewRDVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1051ACC2069B3B70056CC5A /* NewRDVViewController.swift */; };
+		B1051ACF2069B8BD0056CC5A /* FormRDVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1051ACE2069B8BD0056CC5A /* FormRDVViewController.swift */; };
+		B1051AD12069C53C0056CC5A /* RDV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1051AD02069C53C0056CC5A /* RDV.swift */; };
+		B1051AD32069D9900056CC5A /* EditRDVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1051AD22069D9900056CC5A /* EditRDVViewController.swift */; };
 		B19E00542064091D00F9F0A8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19E00532064091D00F9F0A8 /* CoreDataManager.swift */; };
 		B19E00562064092000F9F0A8 /* DialogBoxHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19E00552064092000F9F0A8 /* DialogBoxHelper.swift */; };
 		B19E00582064211E00F9F0A8 /* ContactFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19E00572064211D00F9F0A8 /* ContactFormViewController.swift */; };
@@ -94,6 +98,10 @@
 		B1051AC6206999D70056CC5A /* RDVFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDVFetchResultController.swift; sourceTree = "<group>"; };
 		B1051AC820699DEA0056CC5A /* RendezVousTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendezVousTableViewCell.swift; sourceTree = "<group>"; };
 		B1051ACA2069A4B30056CC5A /* RDVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDVViewController.swift; sourceTree = "<group>"; };
+		B1051ACC2069B3B70056CC5A /* NewRDVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRDVViewController.swift; sourceTree = "<group>"; };
+		B1051ACE2069B8BD0056CC5A /* FormRDVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRDVViewController.swift; sourceTree = "<group>"; };
+		B1051AD02069C53C0056CC5A /* RDV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDV.swift; sourceTree = "<group>"; };
+		B1051AD22069D9900056CC5A /* EditRDVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRDVViewController.swift; sourceTree = "<group>"; };
 		B19E00532064091D00F9F0A8 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B19E00552064092000F9F0A8 /* DialogBoxHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogBoxHelper.swift; sourceTree = "<group>"; };
 		B19E00572064211D00F9F0A8 /* ContactFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +177,7 @@
 				E94F276F2069687D0032BAB1 /* MedicamentDAO.swift */,
 				E94F277120696C030032BAB1 /* RDVDAO.swift */,
 				E94F2777206976CA0032BAB1 /* ProfessionalDAO.swift */,
+				B1051AD02069C53C0056CC5A /* RDV.swift */,
 			);
 			name = DAO;
 			sourceTree = "<group>";
@@ -176,6 +185,8 @@
 		E9279FD62058187500381EEC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B1051ACE2069B8BD0056CC5A /* FormRDVViewController.swift */,
+				B1051ACC2069B3B70056CC5A /* NewRDVViewController.swift */,
 				B1051AC220698FFD0056CC5A /* RendezVousTableViewController.swift */,
 				B1051AC6206999D70056CC5A /* RDVFetchResultController.swift */,
 				B1D5E6BB20698C700093166B /* RendezVousViewController.swift */,
@@ -187,6 +198,7 @@
 				1581149120583903001A912F /* MedicamentViewController.swift */,
 				1535056D2062665100D500D6 /* ContactViewController.swift */,
 				B19E00572064211D00F9F0A8 /* ContactFormViewController.swift */,
+				B1051AD22069D9900056CC5A /* EditRDVViewController.swift */,
 				B1E025072065145A00CE446A /* editContactViewController.swift */,
 				B1D5E6B92066921B0093166B /* ProfessionalFetchResultController.swift */,
 			);
@@ -479,7 +491,9 @@
 				E938375020454E16005A6FCF /* Professionals.swift in Sources */,
 				B1D5E6BC20698C700093166B /* RendezVousViewController.swift in Sources */,
 				B1051AC320698FFD0056CC5A /* RendezVousTableViewController.swift in Sources */,
+				B1051AD12069C53C0056CC5A /* RDV.swift in Sources */,
 				B1D5E6B32065D6F80093166B /* ProfessionalSetViewModel.swift in Sources */,
+				B1051AD32069D9900056CC5A /* EditRDVViewController.swift in Sources */,
 				E94F27702069687D0032BAB1 /* MedicamentDAO.swift in Sources */,
 				E91C2D5120616CC100A2519B /* Professional.swift in Sources */,
 				B19E00582064211E00F9F0A8 /* ContactFormViewController.swift in Sources */,
@@ -500,6 +514,8 @@
 				E94903CE203C3E8100FE7396 /* UserModel.swift in Sources */,
 				E94903CA203C3D1000FE7396 /* PrescriptionModel.swift in Sources */,
 				E94F2778206976CA0032BAB1 /* ProfessionalDAO.swift in Sources */,
+				B1051ACD2069B3B70056CC5A /* NewRDVViewController.swift in Sources */,
+				B1051ACF2069B8BD0056CC5A /* FormRDVViewController.swift in Sources */,
 				E94E74C720402A2400AECAC6 /* ActivityModel.swift in Sources */,
 				15D08BF520616DC000302868 /* ContactTableViewCell.swift in Sources */,
 				B1E025082065145A00CE446A /* editContactViewController.swift in Sources */,

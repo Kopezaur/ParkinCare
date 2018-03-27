@@ -42,7 +42,7 @@ class RDVViewController: UIViewController {
     
     
     func initLabels(){
-        let dateTime = self.rdv!.dateTime as! Date
+        let dateTime = self.rdv!.dateTime!as Date
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM/yyyy"
         let date = formatter.string(from: dateTime)
@@ -63,17 +63,17 @@ class RDVViewController: UIViewController {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "toEditRDVSegue"{
             if let editContactViewController = segue.destination as? EditRDVViewController{
-                editContactViewController.professional = self.professional
+                editContactViewController.rdv = self.rdv
             }
         }
     }
-    
+ 
     @IBAction func unwindToContactViewController(_ segue: UIStoryboardSegue){
         self.rdv = self.rdvViewModel!.getRDV(at: self.indexPath!)
         initLabels()
-    }*/
+    }
 
 }
