@@ -35,7 +35,7 @@ protocol ActivitySetViewModelDelegate {
 //----------------------------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------------------
 // MARK: -
-class ActivitySetViewModel : ActivityTableViewModel{
+/*class ActivitySetViewModel : ActivityTableViewModel{
     
     // MARK: -
     let modelset : ActivitySet = ActivitySet()
@@ -122,7 +122,7 @@ class ActivitySetViewModel : ActivityTableViewModel{
     //-------------------------------------------------------------------------------------------------
     // MARK: Convenience functions
     
-}
+}*/
 
 
 
