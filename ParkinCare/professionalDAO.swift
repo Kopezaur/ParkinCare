@@ -21,6 +21,7 @@ class ProfessionalDAO{
     static func fetchAll() -> [Professional]?{
         self.request.predicate = nil
         do{
+            request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Professional.lastname.localizedUppercase),ascending:true),NSSortDescriptor(key:#keyPath(Professional.firstname.localizedUppercase),ascending:true)]
             return try CoreDataManager.context.fetch(self.request)
         }
         catch{
