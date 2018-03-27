@@ -63,8 +63,8 @@ class ActivityDAO{
         return dao
     }
     
-    static func count(title: String, dateTime: NSDate) -> Int{
-        self.request.predicate = NSPredicate(format: "title == %@ AND quantity == %@", title, dateTime)
+    static func count(title: String) -> Int{
+        self.request.predicate = NSPredicate(format: "title == %@", title)
         do{
             return try CoreDataManager.context.count(for: self.request)
         }
@@ -95,8 +95,8 @@ class ActivityDAO{
         }
     }
     
-    static func search(title: String, dateTime: NSDate) -> Activity?{
-        self.request.predicate = NSPredicate(format: "title == %@ AND quantity == %@", title, dateTime)
+    static func search(title: String) -> Activity?{
+        self.request.predicate = NSPredicate(format: "title == %@", title)
         do{
             let result = try CoreDataManager.context.fetch(request) as [Activity]
             guard result.count != 0 else { return nil }
