@@ -75,14 +75,14 @@ class RDVSet : Sequence{
     /// - Parameter lastname: `String` lastname to be looked for
     /// - Parameter birthdate: `Date?` Date if it has one, else nil
     /// - Returns: `RDV` will these firstname, lastname and birthdate given in parameter, or nil if it is not in set
-    func look(rdvWithDateAndLocation dateTime: NSDate, location: String) -> [RDV]{
+    /*func look(rdvWithDateAndLocation dateTime: NSDate, location: String) -> [RDV]{
         if let ret = RDVDAO.search(dateTime: dateTime, location: location){
             return [ret]
         }
         else{
             return []
         }
-    }
+    }*/
     
     /// `RDVSet` x `RDV` -> `Int?` --
     ///  returns index of the `RDV` in set with same firstname, lastname and birthdate
