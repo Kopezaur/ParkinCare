@@ -8,12 +8,19 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 //comment   ABRT xcode
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    func applicationDidFinishLaunching(_ application: UIApplication) {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler:  {didAllow, error in
+            print(error as Any)
+        })
+    }
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

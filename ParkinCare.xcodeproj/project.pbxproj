@@ -186,6 +186,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B16BDAA4206B0430002A0E5B /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				15D08BF82061829200302868 /* NewContactViewController.swift */,
+				15D08BF62061779500302868 /* ContactsViewController.swift */,
+				B1D5E6B02065D39B0093166B /* ProfessionalTableViewController.swift */,
+				1535056D2062665100D500D6 /* ContactViewController.swift */,
+				B19E00572064211D00F9F0A8 /* ContactFormViewController.swift */,
+				B1E025072065145A00CE446A /* editContactViewController.swift */,
+				B1D5E6B92066921B0093166B /* ProfessionalFetchResultController.swift */,
+			);
+			name = Contacts;
+			sourceTree = "<group>";
+		};
+		B16BDAA5206B0480002A0E5B /* RDV */ = {
+			isa = PBXGroup;
+			children = (
+				B1051ACE2069B8BD0056CC5A /* FormRDVViewController.swift */,
+				B1051ACC2069B3B70056CC5A /* NewRDVViewController.swift */,
+				B1051AC220698FFD0056CC5A /* RendezVousTableViewController.swift */,
+				B1051AC6206999D70056CC5A /* RDVFetchResultController.swift */,
+				B1D5E6BB20698C700093166B /* RendezVousViewController.swift */,
+				B1051ACA2069A4B30056CC5A /* RDVViewController.swift */,
+				B1051AD22069D9900056CC5A /* EditRDVViewController.swift */,
+			);
+			name = RDV;
+			sourceTree = "<group>";
+		};
+		B16BDAA6206B04B3002A0E5B /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Activities;
+			sourceTree = "<group>";
+		};
 		E91C2D4F20616C6200A2519B /* DAO */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,22 +242,11 @@
 		E9279FD62058187500381EEC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B1051ACE2069B8BD0056CC5A /* FormRDVViewController.swift */,
-				B1051ACC2069B3B70056CC5A /* NewRDVViewController.swift */,
-				B1051AC220698FFD0056CC5A /* RendezVousTableViewController.swift */,
-				B1051AC6206999D70056CC5A /* RDVFetchResultController.swift */,
-				B1D5E6BB20698C700093166B /* RendezVousViewController.swift */,
-				B1051ACA2069A4B30056CC5A /* RDVViewController.swift */,
+				B16BDAA6206B04B3002A0E5B /* Activities */,
+				B16BDAA5206B0480002A0E5B /* RDV */,
+				B16BDAA4206B0430002A0E5B /* Contacts */,
 				E9490399203C38DC00FE7396 /* ViewController.swift */,
-				15D08BF82061829200302868 /* NewContactViewController.swift */,
-				15D08BF62061779500302868 /* ContactsViewController.swift */,
-				B1D5E6B02065D39B0093166B /* ProfessionalTableViewController.swift */,
 				1581149120583903001A912F /* MedicamentViewController.swift */,
-				1535056D2062665100D500D6 /* ContactViewController.swift */,
-				B19E00572064211D00F9F0A8 /* ContactFormViewController.swift */,
-				B1051AD22069D9900056CC5A /* EditRDVViewController.swift */,
-				B1E025072065145A00CE446A /* editContactViewController.swift */,
-				B1D5E6B92066921B0093166B /* ProfessionalFetchResultController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";

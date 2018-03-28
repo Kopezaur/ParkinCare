@@ -19,6 +19,7 @@ class RDVViewController: UIViewController {
     @IBOutlet weak var organizationLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var numTelLabel: UILabel!
+    @IBOutlet weak var remindLabel: UILabel!
     
     var rdv : RDV? = nil
     var indexPath : IndexPath? = nil
@@ -51,6 +52,7 @@ class RDVViewController: UIViewController {
         self.dateLabel.text = date
         self.hourLabel.text = hour
         self.locationLabel.text = self.rdv!.location
+        self.remindLabel.text = "Rappel : " + formatter.string(from: (self.rdv?.dateTimeReminder)! as Date)
     }
 
     // MARK: - Navigation

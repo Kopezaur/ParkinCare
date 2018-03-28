@@ -10,10 +10,11 @@ import Foundation
 import CoreData
 
 extension RDV {
-    convenience init(date: Date, location: String, professional: Professional){
+    convenience init(date: Date, location: String, professional: Professional, dateTimeReminder: Date){
         self.init(context: CoreDataManager.context)
         self.dateTime  = date as NSDate
         self.location = location
         self.professional = professional
+        self.dateTimeReminder = dateTimeReminder as NSDate
     }
 }

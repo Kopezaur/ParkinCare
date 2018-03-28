@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import UserNotifications
 
-class NewRDVViewController: UIViewController, UITextFieldDelegate {
+class NewRDVViewController: UIViewController, UITextFieldDelegate, UNUserNotificationCenterDelegate {
 
     var editRDVController : FormRDVViewController!
     var newRDV: RDV?
@@ -22,6 +23,8 @@ class NewRDVViewController: UIViewController, UITextFieldDelegate {
             return
         }
         self.editRDVController = controller
+        
+        UNUserNotificationCenter.current().delegate = self
     }
     
     // MARK: - TextField Delegate
@@ -50,7 +53,21 @@ class NewRDVViewController: UIViewController, UITextFieldDelegate {
             let date : Date = self.editRDVController.datePicker.date
             let location : String  = self.editRDVController.locationField.text!
             let professional : Professional = self.editRDVController.professional!
-            self.newRDV  = RDV(date: date, location: location, professional: professional)
+            let calendar = Calendar.current
+            let dateTimeReminder = calendar.date(byAdding: .minute, value: (0 - Int(self.editRDVController.timeLabel.text!)!), to: (self.editRDVController.datePicker.date))
+            self.newRDV  = RDV(date: date, location: location, professional: professional, dateTimeReminder: dateTimeReminder!)
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "HH:mm"
+            let hour = formatter.string(from: date)
+            let content = UNMutableNotificationContent()
+            content.title = "Vous avez bientot un rendez vous !"
+            content.subtitle = "Dans " + self.editRDVController.timeLabel.text! + " min."
+            content.body = "Vous avez rendez vous à " + hour + " avec " + professional.lastname! + " " + professional.firstname! + " (" + professional.title! + ") au  '" + location + "'"
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+            let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
+            
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         }
     }
 

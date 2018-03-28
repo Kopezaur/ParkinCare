@@ -13,6 +13,8 @@ class FormRDVViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     @IBOutlet weak var professionalSelect: UIPickerView!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var locationField: UITextField!
+    @IBOutlet weak var timeSlider: UISlider!
+    @IBOutlet weak var timeLabel: UILabel!
     
     var professionalsViewModel : ProfessionalSetViewModel? = nil
     var professional : Professional? = nil
@@ -25,8 +27,13 @@ class FormRDVViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         self.professionals = ProfessionalDAO.fetchAll();
         self.professional = professionals?[0];
         // Do any additional setup after loading the view.
+        self.timeLabel.text = String(Int(timeSlider.value))
     }
-
+    
+    @IBAction func timeSliderAction(_ sender: Any) {
+        self.timeLabel.text = String(Int(timeSlider.value) - Int(timeSlider.value)%5)
+    }
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
