@@ -211,10 +211,10 @@
             </objects>
             <point key="canvasLocation" x="526" y="-676"/>
         </scene>
-        <!--View Controller-->
+        <!--Activités-->
         <scene sceneID="Apr-P3-0JW">
             <objects>
-                <viewController id="Qym-HZ-rPX" sceneMemberID="viewController">
+                <viewController id="Qym-HZ-rPX" customClass="ActivitiesViewController" customModule="ParkinCare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tdt-AX-Iva"/>
                         <viewControllerLayoutGuide type="bottom" id="dCn-rt-569"/>
@@ -276,8 +276,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="tgC-c8-gC8" id="gzY-78-XGU"/>
-                                    <outlet property="delegate" destination="tgC-c8-gC8" id="GGW-BV-355"/>
+                                    <outlet property="dataSource" destination="Qym-HZ-rPX" id="WPn-MG-ov2"/>
+                                    <outlet property="delegate" destination="Qym-HZ-rPX" id="SAz-rt-hbT"/>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGS-Fi-QrL">
@@ -307,7 +307,7 @@
                             <constraint firstItem="kf4-d6-k5t" firstAttribute="trailing" secondItem="PkZ-su-bb3" secondAttribute="trailingMargin" id="z3x-S9-8q1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="1CN-bm-GQK"/>
+                    <navigationItem key="navigationItem" title="Activités" id="RpM-rT-P3F"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vau-lU-B7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -519,7 +519,7 @@
             </objects>
             <point key="canvasLocation" x="2889" y="259"/>
         </scene>
-        <!--Rendez Vous View Controller-->
+        <!--Rendez Vous-->
         <scene sceneID="E6x-84-Cyu">
             <objects>
                 <viewController id="bFm-eV-n0a" customClass="RendezVousViewController" customModule="ParkinCare" customModuleProvider="target" sceneMemberID="viewController">
@@ -626,7 +626,7 @@
                                     <segue destination="vv8-aO-LiW" kind="show" identifier="newRDVSegue" id="7hu-bP-uht"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eka-4L-slU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rendez vous" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eka-4L-slU">
                                 <rect key="frame" x="16" y="80" width="343" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.63661755180000001" blue="0.059613820769999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -647,7 +647,7 @@
                             <constraint firstItem="aTf-zY-8t4" firstAttribute="trailing" secondItem="KJ6-H4-ui2" secondAttribute="trailingMargin" id="lnk-eE-JM6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="5Lu-yw-hSb"/>
+                    <navigationItem key="navigationItem" title="Rendez Vous" id="5Lu-yw-hSb"/>
                     <connections>
                         <outlet property="rendezVousTable" destination="jSV-yf-w8X" id="5Vw-YG-d6B"/>
                     </connections>
@@ -719,7 +719,7 @@
             </objects>
             <point key="canvasLocation" x="2889" y="2507"/>
         </scene>
-        <!--View Controller-->
+        <!--Rendez Vous-->
         <scene sceneID="iaK-4t-NGw">
             <objects>
                 <viewController id="d1r-WW-0mE" customClass="RDVViewController" customModule="ParkinCare" customModuleProvider="target" sceneMemberID="viewController">
@@ -943,6 +943,7 @@
                             <constraint firstItem="QY0-md-fKe" firstAttribute="top" secondItem="w66-e3-Xzj" secondAttribute="bottom" id="yDL-Xp-gpO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Rendez Vous" id="VxE-np-r7X"/>
                     <size key="freeformSize" width="375" height="800"/>
                     <connections>
                         <outlet property="dateLabel" destination="kb7-xx-YYF" id="CPs-in-egR"/>
@@ -1162,6 +1163,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="aWB-CI-2yU" secondAttribute="trailing" constant="16" id="zoN-GS-Xe0"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Contact" id="pc7-ps-4Yj"/>
                     <connections>
                         <outlet property="emailLabel" destination="YvA-Ip-LxK" id="9Vz-QX-reY"/>
                         <outlet property="firstnameLabel" destination="5G1-li-v8w" id="Ifr-T2-dgG"/>
@@ -1555,7 +1557,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UFP-iI-bmN"/>
-        <segue reference="a7i-rH-3o5"/>
+        <segue reference="V4F-34-HdX"/>
         <segue reference="u3B-8P-C07"/>
         <segue reference="iUi-hu-b0G"/>
         <segue reference="K8G-9U-h6X"/>

@@ -20,6 +20,7 @@
 		A3EC47BF206EC1990055A6C5 /* teamwork.png in Resources */ = {isa = PBXBuildFile; fileRef = A3EC47BE206EC1980055A6C5 /* teamwork.png */; };
 		A3EC47C1206EC2190055A6C5 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = A3EC47C0206EC2180055A6C5 /* home.png */; };
 		A3EC47C3206EC2F40055A6C5 /* running-man.png in Resources */ = {isa = PBXBuildFile; fileRef = A3EC47C2206EC2F30055A6C5 /* running-man.png */; };
+		A3EC47C8206EC8EF0055A6C5 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC47C7206EC8EF0055A6C5 /* ActivitiesViewController.swift */; };
 		B1051AC320698FFD0056CC5A /* RendezVousTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1051AC220698FFD0056CC5A /* RendezVousTableViewController.swift */; };
 		B1051AC7206999D70056CC5A /* RDVFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1051AC6206999D70056CC5A /* RDVFetchResultController.swift */; };
 		B1051AC920699DEA0056CC5A /* RendezVousTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1051AC820699DEA0056CC5A /* RendezVousTableViewCell.swift */; };
@@ -50,7 +51,7 @@
 		E938375120454E16005A6FCF /* Professionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374F20454E16005A6FCF /* Professionals.swift */; };
 		E9490398203C38DC00FE7396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9490397203C38DC00FE7396 /* AppDelegate.swift */; };
 		E949039A203C38DC00FE7396 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9490399203C38DC00FE7396 /* ViewController.swift */; };
-		E949039D203C38DC00FE7396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E949039B203C38DC00FE7396 /* Main.storyboard */; settings = {ASSET_TAGS = (zeddsd, ); }; };
+		E949039D203C38DC00FE7396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E949039B203C38DC00FE7396 /* Main.storyboard */; };
 		E94903A0203C38DC00FE7396 /* ParkinCare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E949039E203C38DC00FE7396 /* ParkinCare.xcdatamodeld */; };
 		E94903A2203C38DC00FE7396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E94903A1203C38DC00FE7396 /* Assets.xcassets */; };
 		E94903A5203C38DC00FE7396 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E94903A3203C38DC00FE7396 /* LaunchScreen.storyboard */; };
@@ -116,6 +117,7 @@
 		A3EC47C4206EC3AF0055A6C5 /* teamwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teamwork.png; sourceTree = "<group>"; };
 		A3EC47C5206EC3B20055A6C5 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		A3EC47C6206EC3B60055A6C5 /* running-man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "running-man.png"; sourceTree = "<group>"; };
+		A3EC47C7206EC8EF0055A6C5 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		B1051AC220698FFD0056CC5A /* RendezVousTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendezVousTableViewController.swift; sourceTree = "<group>"; };
 		B1051AC6206999D70056CC5A /* RDVFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDVFetchResultController.swift; sourceTree = "<group>"; };
 		B1051AC820699DEA0056CC5A /* RendezVousTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendezVousTableViewCell.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 		B16BDAA6206B04B3002A0E5B /* Activities */ = {
 			isa = PBXGroup;
 			children = (
+				A3EC47C7206EC8EF0055A6C5 /* ActivitiesViewController.swift */,
 			);
 			name = Activities;
 			sourceTree = "<group>";
@@ -579,6 +582,7 @@
 				E938375020454E16005A6FCF /* Professionals.swift in Sources */,
 				B1D5E6BC20698C700093166B /* RendezVousViewController.swift in Sources */,
 				B1051AC320698FFD0056CC5A /* RendezVousTableViewController.swift in Sources */,
+				A3EC47C8206EC8EF0055A6C5 /* ActivitiesViewController.swift in Sources */,
 				E9627989206A786F0029CA05 /* DoseSet.swift in Sources */,
 				B1051AD12069C53C0056CC5A /* RDV.swift in Sources */,
 				B1D5E6B32065D6F80093166B /* ProfessionalSetViewModel.swift in Sources */,
