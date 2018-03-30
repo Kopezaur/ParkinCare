@@ -25,7 +25,9 @@ class FormRDVViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         professionalSelect.dataSource = self
         super.viewDidLoad()
         self.professionals = ProfessionalDAO.fetchAll();
-        self.professional = professionals?[0];
+        if professionals!.count > 0{
+            self.professional = professionals?[0]
+        };
         // Do any additional setup after loading the view.
         self.timeLabel.text = String(Int(timeSlider.value))
     }

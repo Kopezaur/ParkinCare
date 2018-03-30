@@ -84,7 +84,7 @@ class EditRDVViewController: UIViewController, UNUserNotificationCenterDelegate 
             content.title = "Vous avez bientot un rendez vous !"
             content.subtitle = "Dans " + self.editRDVController.timeLabel.text! + " minutes."
             content.body = "Vous avez rendez vous à " + hour + " avec " + fullname
-            content.body = content.body + " (" + title + ") au  '" + location + "'"
+            content.body = content.body + " (" + title! + ") au  '" + location! + "'"
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
             let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
             
