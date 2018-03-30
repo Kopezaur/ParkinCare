@@ -83,9 +83,17 @@ class RendezVousTableViewController: NSObject, UITableViewDataSource, UITableVie
         let date = formatter.string(from: dateTime)
         formatter.dateFormat = "HH:mm"
         let hour = formatter.string(from: dateTime)
-        cell.lastnameLabel.text = rendezVous.professional!.lastname
-        cell.firstnameLabel.text = rendezVous.professional!.firstname
-        cell.titleLabel.text = Presenter.emptyString(text: rendezVous.professional!.title)
+        //Verification u'il existe bien un professionel
+        if(rendezVous.professional == nil){
+            cell.lastnameLabel.text = "Inconnu"
+            cell.firstnameLabel.text = "Inconnu"
+            cell.titleLabel.text = "Inconnu"
+        }
+        else{
+            cell.lastnameLabel.text = rendezVous.professional!.lastname
+            cell.firstnameLabel.text = rendezVous.professional!.firstname
+            cell.titleLabel.text = Presenter.emptyString(text: rendezVous.professional!.title)
+        }
         cell.dateLabel.text = date
         cell.hourLabel.text = hour
         cell.locationLabel.text = rendezVous.location

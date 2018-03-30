@@ -42,11 +42,11 @@ class EditRDVViewController: UIViewController, UNUserNotificationCenterDelegate 
     
     @IBAction func editRDVButtonAction(_ sender: Any) {
         let location = self.editRDVController.locationField.text!
-        if(location == ""){
-            DialogBoxHelper.alert(view: self.editRDVController, WithTitle: "Entrez un lieu ou une adresse.")
+        if(location == "" || self.editRDVController.professional == nil){
+            DialogBoxHelper.alert(view: self, WithTitle: "Des champs sont vides.")
         }
         else{
-            performSegue(withIdentifier: "editRDVSegue", sender: sender)
+            performSegue(withIdentifier: "addRDVSegue", sender: self)
         }
     }
     
@@ -70,6 +70,7 @@ class EditRDVViewController: UIViewController, UNUserNotificationCenterDelegate 
             let date = calendar.date(byAdding: .minute, value: (0 - Int(self.editRDVController.timeLabel.text!)!), to: (self.editRDVController.datePicker.date))
             self.rdv?.dateTimeReminder = date as NSDate?
             
+            //Creation de la notif
             let formatter = DateFormatter()
             formatter.dateFormat = "HH:mm"
             let professional = self.rdv?.professional

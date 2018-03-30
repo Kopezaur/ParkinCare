@@ -35,8 +35,8 @@ class NewRDVViewController: UIViewController, UITextFieldDelegate, UNUserNotific
     }
     @IBAction func addRDVButton(_ sender: Any) {
         let location = self.editRDVController.locationField.text
-        if(location == ""){
-            DialogBoxHelper.alert(view: self, WithTitle: "Entrez un lieu ou une adresse.")
+        if(location == "" || self.editRDVController.professional == nil){
+            DialogBoxHelper.alert(view: self, WithTitle: "Des champs sont vides.")
         }
         else{
             performSegue(withIdentifier: "addRDVSegue", sender: self)
@@ -49,7 +49,9 @@ class NewRDVViewController: UIViewController, UITextFieldDelegate, UNUserNotific
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
         if segue.identifier == "addRDVSegue" {
+            //Creation du nouveau rdv
             let date : Date = self.editRDVController.datePicker.date
             let location : String  = self.editRDVController.locationField.text!
             let professional : Professional = self.editRDVController.professional!
@@ -57,6 +59,7 @@ class NewRDVViewController: UIViewController, UITextFieldDelegate, UNUserNotific
             let dateTimeReminder = calendar.date(byAdding: .minute, value: (0 - Int(self.editRDVController.timeLabel.text!)!), to: (self.editRDVController.datePicker.date))
             self.newRDV  = RDV(date: date, location: location, professional: professional, dateTimeReminder: dateTimeReminder!)
             
+            //Creation de la notif
             let formatter = DateFormatter()
             formatter.dateFormat = "HH:mm"
             let hour = formatter.string(from: date)

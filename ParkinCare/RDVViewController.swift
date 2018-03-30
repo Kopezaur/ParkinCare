@@ -43,12 +43,25 @@ class RDVViewController: UIViewController {
         let date = formatter.string(from: dateTime)
         formatter.dateFormat = "HH:mm"
         let hour = formatter.string(from: dateTime)
-        self.lastnameLabel.text = self.rdv!.professional!.lastname
-        self.firstnameLabel.text = self.rdv!.professional!.firstname
-        self.titleLabel.text = Presenter.emptyString(text: self.rdv!.professional!.title)
-        self.organizationLabel.text = Presenter.emptyString(text: self.rdv!.professional!.organization)
-        self.emailLabel.text = Presenter.emptyString(text: self.rdv!.professional!.email)
-        self.numTelLabel.text = Presenter.emptyString(text: self.rdv!.professional!.numTel)
+        
+        //Verfification qu'il existe bien un professionel
+        if(self.rdv?.professional == nil){
+            self.lastnameLabel.text = "Inconnu"
+            self.firstnameLabel.text = "Inconnu"
+            self.titleLabel.text = "Inconnu"
+            self.organizationLabel.text = "Inconnu"
+            self.emailLabel.text = "Inconnu"
+            self.numTelLabel.text = "Inconnu"
+        }
+        else{
+            self.lastnameLabel.text = self.rdv!.professional!.lastname
+            self.firstnameLabel.text = self.rdv!.professional!.firstname
+            self.titleLabel.text = Presenter.emptyString(text: self.rdv!.professional!.title)
+            self.organizationLabel.text = Presenter.emptyString(text: self.rdv!.professional!.organization)
+            self.emailLabel.text = Presenter.emptyString(text: self.rdv!.professional!.email)
+            self.numTelLabel.text = Presenter.emptyString(text: self.rdv!.professional!.numTel)
+        }
+        
         self.dateLabel.text = date
         self.hourLabel.text = hour
         self.locationLabel.text = self.rdv!.location

@@ -1396,22 +1396,22 @@
                                                 <color key="textColor" red="0.89436933289999998" green="0.54543245340000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temps de préparation :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZA-Pk-Gbf">
-                                                <rect key="frame" x="0.0" y="424" width="204.5" height="23"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                                <color key="textColor" red="0.89436933289999998" green="0.54543245340000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Usp-O4-2nl">
-                                                <rect key="frame" x="346" y="424" width="29" height="21"/>
+                                                <rect key="frame" x="330" y="424" width="29" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0B0-QB-NXT">
-                                                <rect key="frame" x="327" y="424" width="11" height="21"/>
+                                                <rect key="frame" x="311" y="424" width="11" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                 <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temps de préparation :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZA-Pk-Gbf">
+                                                <rect key="frame" x="8" y="424" width="204.5" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                                <color key="textColor" red="0.89436933289999998" green="0.54543245340000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -1427,8 +1427,7 @@
                                             <constraint firstAttribute="height" constant="500" id="GFw-pV-wUj"/>
                                             <constraint firstItem="jmw-E8-M50" firstAttribute="leading" secondItem="Cgt-PA-lde" secondAttribute="leading" id="WfC-SL-OgG"/>
                                             <constraint firstItem="tZA-Pk-Gbf" firstAttribute="top" secondItem="HY9-ZE-ZNq" secondAttribute="bottom" constant="40" id="YN0-Zc-QPP"/>
-                                            <constraint firstAttribute="trailing" secondItem="Usp-O4-2nl" secondAttribute="trailing" id="Ypx-TJ-kev"/>
-                                            <constraint firstItem="tZA-Pk-Gbf" firstAttribute="leading" secondItem="Cgt-PA-lde" secondAttribute="leading" id="aBk-UM-Fgr"/>
+                                            <constraint firstItem="tZA-Pk-Gbf" firstAttribute="leading" secondItem="Cgt-PA-lde" secondAttribute="leading" constant="8" id="aBk-UM-Fgr"/>
                                             <constraint firstItem="2hR-3L-9uk" firstAttribute="leading" secondItem="Cgt-PA-lde" secondAttribute="leading" id="c8m-G7-JTW"/>
                                             <constraint firstItem="FfK-VN-B1d" firstAttribute="centerX" secondItem="Cgt-PA-lde" secondAttribute="centerX" id="eha-Gd-23f"/>
                                             <constraint firstItem="Krw-AP-Hgs" firstAttribute="leading" secondItem="Cgt-PA-lde" secondAttribute="leading" id="ein-Ym-120"/>
@@ -1439,6 +1438,7 @@
                                             <constraint firstAttribute="trailing" secondItem="HY9-ZE-ZNq" secondAttribute="trailing" constant="16" id="pmL-Sd-sMY"/>
                                             <constraint firstItem="0B0-QB-NXT" firstAttribute="top" secondItem="HY9-ZE-ZNq" secondAttribute="bottom" constant="40" id="qay-ak-39y"/>
                                             <constraint firstAttribute="trailing" secondItem="Krw-AP-Hgs" secondAttribute="trailing" id="uLr-eh-sOK"/>
+                                            <constraint firstAttribute="trailing" secondItem="Usp-O4-2nl" secondAttribute="trailing" constant="16" id="wMf-WX-bMl"/>
                                             <constraint firstAttribute="trailing" secondItem="jmw-E8-M50" secondAttribute="trailing" id="wn9-Hj-SX4"/>
                                             <constraint firstItem="FfK-VN-B1d" firstAttribute="top" secondItem="Cgt-PA-lde" secondAttribute="top" constant="8" id="x0X-sH-uFY"/>
                                             <constraint firstAttribute="trailing" secondItem="iuA-1u-gh7" secondAttribute="trailing" constant="16" id="zTR-xV-dok"/>
