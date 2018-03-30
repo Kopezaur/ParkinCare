@@ -17,6 +17,9 @@
 		15D08BF92061829200302868 /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D08BF82061829200302868 /* NewContactViewController.swift */; };
 		6F0B99B620453ED200A1BEF8 /* RendezVousSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0B99B520453ED200A1BEF8 /* RendezVousSet.swift */; };
 		6F0B99B820453F7D00A1BEF8 /* RDVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0B99B720453F7D00A1BEF8 /* RDVModel.swift */; };
+		A3EC47BF206EC1990055A6C5 /* teamwork.png in Resources */ = {isa = PBXBuildFile; fileRef = A3EC47BE206EC1980055A6C5 /* teamwork.png */; };
+		A3EC47C1206EC2190055A6C5 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = A3EC47C0206EC2180055A6C5 /* home.png */; };
+		A3EC47C3206EC2F40055A6C5 /* running-man.png in Resources */ = {isa = PBXBuildFile; fileRef = A3EC47C2206EC2F30055A6C5 /* running-man.png */; };
 		B1051AC320698FFD0056CC5A /* RendezVousTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1051AC220698FFD0056CC5A /* RendezVousTableViewController.swift */; };
 		B1051AC7206999D70056CC5A /* RDVFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1051AC6206999D70056CC5A /* RDVFetchResultController.swift */; };
 		B1051AC920699DEA0056CC5A /* RendezVousTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1051AC820699DEA0056CC5A /* RendezVousTableViewCell.swift */; };
@@ -47,7 +50,7 @@
 		E938375120454E16005A6FCF /* Professionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374F20454E16005A6FCF /* Professionals.swift */; };
 		E9490398203C38DC00FE7396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9490397203C38DC00FE7396 /* AppDelegate.swift */; };
 		E949039A203C38DC00FE7396 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9490399203C38DC00FE7396 /* ViewController.swift */; };
-		E949039D203C38DC00FE7396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E949039B203C38DC00FE7396 /* Main.storyboard */; };
+		E949039D203C38DC00FE7396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E949039B203C38DC00FE7396 /* Main.storyboard */; settings = {ASSET_TAGS = (zeddsd, ); }; };
 		E94903A0203C38DC00FE7396 /* ParkinCare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E949039E203C38DC00FE7396 /* ParkinCare.xcdatamodeld */; };
 		E94903A2203C38DC00FE7396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E94903A1203C38DC00FE7396 /* Assets.xcassets */; };
 		E94903A5203C38DC00FE7396 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E94903A3203C38DC00FE7396 /* LaunchScreen.storyboard */; };
@@ -107,6 +110,12 @@
 		15D08BF82061829200302868 /* NewContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewContactViewController.swift; sourceTree = "<group>"; };
 		6F0B99B520453ED200A1BEF8 /* RendezVousSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendezVousSet.swift; sourceTree = "<group>"; };
 		6F0B99B720453F7D00A1BEF8 /* RDVModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDVModel.swift; sourceTree = "<group>"; };
+		A3EC47BE206EC1980055A6C5 /* teamwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teamwork.png; path = ../../Downloads/teamwork.png; sourceTree = SOURCE_ROOT; };
+		A3EC47C0206EC2180055A6C5 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = ../../Downloads/home.png; sourceTree = SOURCE_ROOT; };
+		A3EC47C2206EC2F30055A6C5 /* running-man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "running-man.png"; path = "../../Downloads/running-man.png"; sourceTree = SOURCE_ROOT; };
+		A3EC47C4206EC3AF0055A6C5 /* teamwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teamwork.png; sourceTree = "<group>"; };
+		A3EC47C5206EC3B20055A6C5 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		A3EC47C6206EC3B60055A6C5 /* running-man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "running-man.png"; sourceTree = "<group>"; };
 		B1051AC220698FFD0056CC5A /* RendezVousTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendezVousTableViewController.swift; sourceTree = "<group>"; };
 		B1051AC6206999D70056CC5A /* RDVFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDVFetchResultController.swift; sourceTree = "<group>"; };
 		B1051AC820699DEA0056CC5A /* RendezVousTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendezVousTableViewCell.swift; sourceTree = "<group>"; };
@@ -298,6 +307,9 @@
 		E9490396203C38DC00FE7396 /* ParkinCare */ = {
 			isa = PBXGroup;
 			children = (
+				A3EC47C2206EC2F30055A6C5 /* running-man.png */,
+				A3EC47C0206EC2180055A6C5 /* home.png */,
+				A3EC47BE206EC1980055A6C5 /* teamwork.png */,
 				E91C2D4F20616C6200A2519B /* DAO */,
 				E92B845420668A690032E75D /* Models */,
 				E94F276E206967340032BAB1 /* ViewModels */,
@@ -377,6 +389,9 @@
 		E96D540020582541004562BE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A3EC47C6206EC3B60055A6C5 /* running-man.png */,
+				A3EC47C5206EC3B20055A6C5 /* home.png */,
+				A3EC47C4206EC3AF0055A6C5 /* teamwork.png */,
 				E96D5405205830CA004562BE /* ParkinCareLogo.png */,
 			);
 			name = Images;
@@ -465,6 +480,9 @@
 		E949038C203C38DC00FE7396 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					zeddsd,
+				);
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Kopezaur;
@@ -513,9 +531,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3EC47BF206EC1990055A6C5 /* teamwork.png in Resources */,
 				E94903A5203C38DC00FE7396 /* LaunchScreen.storyboard in Resources */,
+				A3EC47C1206EC2190055A6C5 /* home.png in Resources */,
 				E94903A2203C38DC00FE7396 /* Assets.xcassets in Resources */,
 				E96D5406205830CA004562BE /* ParkinCareLogo.png in Resources */,
+				A3EC47C3206EC2F40055A6C5 /* running-man.png in Resources */,
 				E949039D203C38DC00FE7396 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
