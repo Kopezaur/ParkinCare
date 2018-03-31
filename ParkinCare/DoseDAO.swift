@@ -43,9 +43,9 @@ class DoseDAO{
         return Dose(context: CoreDataManager.context)
     }
     
-    static func createDose(medName: String, quantity: Int16, validated: Bool?) -> Dose{
+    static func createDose(medicament: Medicament, quantity: Int16, validated: Bool?) -> Dose{
         let dao = self.createDose()
-        dao.medName = medName
+        dao.medicament = medicament
         dao.quantity  = quantity
         dao.validated = validated!
         return dao
@@ -53,7 +53,7 @@ class DoseDAO{
     
     static func createDose(dose :Dose) -> Dose{
         let dao = self.createDose()
-        dao.medName = dose.medName
+        dao.medicament = dose.medicament
         dao.quantity  = dose.quantity
         dao.validated = dose.validated
         return dao
@@ -69,27 +69,28 @@ class DoseDAO{
         }
     }
     
-    static func count(dose: Dose) -> Int{
-        self.request.predicate = NSPredicate(format: "medName == %@ AND quantity == %@", dose.medName!, dose.quantity)
-        do{
-            return try CoreDataManager.context.count(for: self.request)
-        }
-        catch let error as NSError{
-            fatalError(error.description)
-        }
-    }
-    
-    static func search(dose: Dose) -> Dose?{
-        self.request.predicate = NSPredicate(format: "medName == %@ AND quantity == %@", dose.medName!, dose.quantity)
-        do{
-            let result = try CoreDataManager.context.fetch(request) as [Dose]
-            guard result.count != 0 else { return nil }
-            return result[0]
-        }
-        catch{
-            return nil
-        }
-    }
+    // DEPRECIATED FUNCTIONS
+//    static func count(dose: Dose) -> Int{
+//        self.request.predicate = NSPredicate(format: "medName == %@ AND quantity == %@", dose.medName!, dose.quantity)
+//        do{
+//            return try CoreDataManager.context.count(for: self.request)
+//        }
+//        catch let error as NSError{
+//            fatalError(error.description)
+//        }
+//    }
+//    
+//    static func search(dose: Dose) -> Dose?{
+//        self.request.predicate = NSPredicate(format: "medName == %@ AND quantity == %@", dose.medName!, dose.quantity)
+//        do{
+//            let result = try CoreDataManager.context.fetch(request) as [Dose]
+//            guard result.count != 0 else { return nil }
+//            return result[0]
+//        }
+//        catch{
+//            return nil
+//        }
+//    }
     
     static func search(medName: String, quantity: Int16) -> Dose?{
         self.request.predicate = NSPredicate(format: "medName == %@ AND quantity == %@", medName, quantity)
@@ -104,10 +105,8 @@ class DoseDAO{
     }
     
     static func add(dose: Dose){
-        if let _ = self.search(dose: dose){} else{
             let _ = self.createDose(dose: dose)
             self.save()
-        }
     }
 }
 
