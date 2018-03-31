@@ -18,6 +18,9 @@
 		6F0B99B620453ED200A1BEF8 /* RendezVousSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0B99B520453ED200A1BEF8 /* RendezVousSet.swift */; };
 		6F0B99B820453F7D00A1BEF8 /* RDVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0B99B720453F7D00A1BEF8 /* RDVModel.swift */; };
 		A324973C206FD0D4007D9095 /* ActivityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324973B206FD0D4007D9095 /* ActivityTableViewController.swift */; };
+		A324973F20700946007D9095 /* ActivityFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324973E20700946007D9095 /* ActivityFetchResultController.swift */; };
+		A324974120700AB8007D9095 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324974020700AB8007D9095 /* ActivityTableViewCell.swift */; };
+		A324974320700DDC007D9095 /* NewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324974220700DDC007D9095 /* NewActivityViewController.swift */; };
 		A3EC47C8206EC8EF0055A6C5 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC47C7206EC8EF0055A6C5 /* ActivitiesViewController.swift */; };
 		B1051AC320698FFD0056CC5A /* RendezVousTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1051AC220698FFD0056CC5A /* RendezVousTableViewController.swift */; };
 		B1051AC7206999D70056CC5A /* RDVFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1051AC6206999D70056CC5A /* RDVFetchResultController.swift */; };
@@ -112,6 +115,9 @@
 		6F0B99B520453ED200A1BEF8 /* RendezVousSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendezVousSet.swift; sourceTree = "<group>"; };
 		6F0B99B720453F7D00A1BEF8 /* RDVModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDVModel.swift; sourceTree = "<group>"; };
 		A324973B206FD0D4007D9095 /* ActivityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewController.swift; sourceTree = "<group>"; };
+		A324973E20700946007D9095 /* ActivityFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFetchResultController.swift; sourceTree = "<group>"; };
+		A324974020700AB8007D9095 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		A324974220700DDC007D9095 /* NewActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityViewController.swift; sourceTree = "<group>"; };
 		A3EC47C4206EC3AF0055A6C5 /* teamwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teamwork.png; sourceTree = "<group>"; };
 		A3EC47C5206EC3B20055A6C5 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		A3EC47C6206EC3B60055A6C5 /* running-man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "running-man.png"; sourceTree = "<group>"; };
@@ -240,6 +246,8 @@
 			children = (
 				A3EC47C7206EC8EF0055A6C5 /* ActivitiesViewController.swift */,
 				A324973B206FD0D4007D9095 /* ActivityTableViewController.swift */,
+				A324973E20700946007D9095 /* ActivityFetchResultController.swift */,
+				A324974220700DDC007D9095 /* NewActivityViewController.swift */,
 			);
 			name = Activities;
 			sourceTree = "<group>";
@@ -417,6 +425,7 @@
 				1581148F20583434001A912F /* MedicamentTableViewCell.swift */,
 				15D08BF420616DC000302868 /* ContactTableViewCell.swift */,
 				B1051AC820699DEA0056CC5A /* RendezVousTableViewCell.swift */,
+				A324974020700AB8007D9095 /* ActivityTableViewCell.swift */,
 			);
 			name = ViewsCell;
 			sourceTree = "<group>";
@@ -586,9 +595,12 @@
 				B1D5E6B32065D6F80093166B /* ProfessionalSetViewModel.swift in Sources */,
 				B1051AD32069D9900056CC5A /* EditRDVViewController.swift in Sources */,
 				E94F27702069687D0032BAB1 /* MedicamentDAO.swift in Sources */,
+				A324974320700DDC007D9095 /* NewActivityViewController.swift in Sources */,
 				E91C2D5120616CC100A2519B /* Professional.swift in Sources */,
 				E9627991206A87660029CA05 /* PrescriptionDAO.swift in Sources */,
+				A324974120700AB8007D9095 /* ActivityTableViewCell.swift in Sources */,
 				B19E00582064211E00F9F0A8 /* ContactFormViewController.swift in Sources */,
+				A324973F20700946007D9095 /* ActivityFetchResultController.swift in Sources */,
 				E9490398203C38DC00FE7396 /* AppDelegate.swift in Sources */,
 				E94F2776206974590032BAB1 /* RDVSetViewModel.swift in Sources */,
 				E92A50E9206C5802009C6D0F /* PrescriptionSetViewModel.swift in Sources */,

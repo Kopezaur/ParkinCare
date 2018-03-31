@@ -209,7 +209,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EYE-Li-BZ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="526" y="-676"/>
+            <point key="canvasLocation" x="526" y="-702"/>
         </scene>
         <!--Activités-->
         <scene sceneID="Apr-P3-0JW">
@@ -229,49 +229,50 @@
                                 <color key="textColor" red="0.0" green="0.63661755180000001" blue="0.059613820769999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kf4-d6-k5t">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="73" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kf4-d6-k5t">
                                 <rect key="frame" x="16" y="115" width="343" height="435"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="contactCell" id="hGK-fj-0ar" customClass="ContactTableViewCell" customModule="ParkinCare" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="contactCell" rowHeight="73" id="hGK-fj-0ar" customClass="ActivityTableViewCell" customModule="ParkinCare" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hGK-fj-0ar" id="mj4-kE-qHc">
-                                            <rect key="frame" x="0.0" y="0.0" width="310" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="310" height="72.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y84-LB-43p">
-                                                    <rect key="frame" x="15" y="12" width="37" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZs-Pw-8XW">
+                                                    <rect key="frame" x="252.5" y="11" width="39.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="titleActivity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auR-jP-otE">
+                                                    <rect key="frame" x="112.5" y="35" width="85" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prénom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sh5-od-1SR">
-                                                    <rect key="frame" x="60" y="12" width="60" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZs-Pw-8XW">
-                                                    <rect key="frame" x="257" y="12" width="35" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y84-LB-43p">
+                                                    <rect key="frame" x="15" y="11" width="37.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="y84-LB-43p" firstAttribute="centerY" secondItem="mj4-kE-qHc" secondAttribute="centerY" id="22o-V6-8Ro"/>
+                                                <constraint firstItem="qZs-Pw-8XW" firstAttribute="top" secondItem="mj4-kE-qHc" secondAttribute="topMargin" id="EUV-xy-MuV"/>
                                                 <constraint firstItem="y84-LB-43p" firstAttribute="leading" secondItem="mj4-kE-qHc" secondAttribute="leadingMargin" id="HZi-BO-XFu"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="qZs-Pw-8XW" secondAttribute="trailing" constant="10" id="HpY-XR-4y2"/>
-                                                <constraint firstItem="qZs-Pw-8XW" firstAttribute="centerY" secondItem="mj4-kE-qHc" secondAttribute="centerY" id="XBG-Dn-D3s"/>
-                                                <constraint firstItem="sh5-od-1SR" firstAttribute="centerY" secondItem="mj4-kE-qHc" secondAttribute="centerY" id="iAY-kS-0e2"/>
-                                                <constraint firstItem="sh5-od-1SR" firstAttribute="leading" secondItem="y84-LB-43p" secondAttribute="trailing" constant="8" id="jji-IE-XK4"/>
+                                                <constraint firstItem="auR-jP-otE" firstAttribute="top" secondItem="mj4-kE-qHc" secondAttribute="topMargin" constant="24" id="I9f-a0-XYM"/>
+                                                <constraint firstItem="auR-jP-otE" firstAttribute="centerX" secondItem="mj4-kE-qHc" secondAttribute="centerX" id="aQv-Cg-AfF"/>
+                                                <constraint firstItem="y84-LB-43p" firstAttribute="top" secondItem="mj4-kE-qHc" secondAttribute="topMargin" id="rJ9-kE-A00"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="firstnameLabel" destination="sh5-od-1SR" id="poK-2a-bBF"/>
+                                            <outlet property="dateLabel" destination="y84-LB-43p" id="q8d-Ka-fAA"/>
+                                            <outlet property="hourLabel" destination="qZs-Pw-8XW" id="xZm-HX-VI3"/>
                                             <outlet property="lastnameLabel" destination="y84-LB-43p" id="sHz-ea-Tya"/>
-                                            <outlet property="titleLabel" destination="qZs-Pw-8XW" id="eKp-Zr-IxB"/>
+                                            <outlet property="titleLabel" destination="auR-jP-otE" id="luN-K4-caH"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -315,7 +316,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vau-lU-B7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2092" y="-702"/>
+            <point key="canvasLocation" x="2092" y="-702.09895052473769"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Bsa-o8-X29">
