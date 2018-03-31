@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         if(TitleDAO.count == 0){
             TitleDAO.add(name: "Kinésithérapeute")
         }

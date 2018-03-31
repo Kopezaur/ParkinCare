@@ -37,11 +37,12 @@ class editContactViewController: UIViewController {
     @IBAction func editContactButtonAction(_ sender: Any) {
         let lastname = self.editContactController.lastnameField.text!
         let firstname = self.editContactController.firstnameField.text!
-        if(lastname != "" && firstname != ""){
+        let title = self.editContactController.titleSelected
+        if(lastname != "" && firstname != "" && title != nil){
             performSegue(withIdentifier: "editContactSegue", sender: sender)
         }
         else{
-            DialogBoxHelper.alert(view: self, WithTitle: "Erreur", andMessage: "Les champs Nom et Prénom sont obligatoirs.")
+            DialogBoxHelper.alert(view: self, WithTitle: "Erreur", andMessage: "Les champs Nom, Prénom et titre sont obligatoirs.")
         }
     }
     

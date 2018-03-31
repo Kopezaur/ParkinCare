@@ -38,7 +38,7 @@ class RendezVousTableViewController: NSObject, UITableViewDataSource, UITableVie
         super.init()
         self.tableView.dataSource      = self
         self.rendezVousViewModel.delegate = self.fetchResultController
-        self.tableView.rowHeight = 120.0
+        self.tableView.rowHeight = 150.0
     }
     
     

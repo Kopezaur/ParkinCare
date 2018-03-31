@@ -40,6 +40,7 @@ class ProfessionalTableViewController: NSObject, UITableViewDataSource{
         super.init()
         self.tableView.dataSource      = self
         self.professionalsViewModel.delegate = self.fetchResultController
+        self.tableView.rowHeight = 70.0
     }
     
     
