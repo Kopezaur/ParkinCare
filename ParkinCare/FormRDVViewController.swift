@@ -50,7 +50,7 @@ class FormRDVViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if(self.professional! == nil){
+        if(self.professional == nil){
             self.professional = self.professionals?[row]
         }
     }

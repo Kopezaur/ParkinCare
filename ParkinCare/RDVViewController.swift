@@ -56,7 +56,7 @@ class RDVViewController: UIViewController {
         else{
             self.lastnameLabel.text = self.rdv!.professional!.lastname
             self.firstnameLabel.text = self.rdv!.professional!.firstname
-            self.titleLabel.text = Presenter.emptyString(text: self.rdv!.professional!.title)
+            self.titleLabel.text = Presenter.emptyString(text: self.rdv!.professional!.title!.name)
             self.organizationLabel.text = Presenter.emptyString(text: self.rdv!.professional!.organization)
             self.emailLabel.text = Presenter.emptyString(text: self.rdv!.professional!.email)
             self.numTelLabel.text = Presenter.emptyString(text: self.rdv!.professional!.numTel)

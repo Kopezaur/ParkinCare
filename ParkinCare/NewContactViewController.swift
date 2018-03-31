@@ -56,7 +56,7 @@ class NewContactViewController: UIViewController, UITextFieldDelegate {
         if segue.identifier == "newContactSegue" {
             let lastname : String  = self.editContactController.lastnameField.text!
             let firstname  : String  = self.editContactController.firstnameField.text!
-            let title : String    = self.editContactController.titleField.text!
+            let title : Title    = self.editContactController.title!
             let organization : String    = self.editContactController.organizationField.text!
             let email : String    = self.editContactController.emailField.text!
             let numTel : String    = self.editContactController.numTelField.text!

@@ -54,7 +54,7 @@ class ProfessionalModel: Equatable {
         }
     }
     
-    var title: String?{
+    var title: Title?{
         get{
             return self.dao.title
         }
@@ -115,18 +115,18 @@ class ProfessionalModel: Equatable {
     
     // MARK: - Constructors -
     
-    init(lastname: String, firstname: String, title: String, organization: String, email: String, numTel: String){
+    /*init(lastname: String, firstname: String, title: String, organization: String, email: String, numTel: String){
         guard let dao = Professional.create() else{
             fatalError("Initialisation error")
         } 
         self.dao = dao
         self.dao.firstname = firstname
         self.dao.lastname = lastname
-        self.dao.title = title
+        //self.dao.title = title
         self.dao.email = email
         self.dao.numTel = numTel
         self.dao.organization = organization
-    }
+    }*/
     
     init(professional: Professional){
         self.dao = professional

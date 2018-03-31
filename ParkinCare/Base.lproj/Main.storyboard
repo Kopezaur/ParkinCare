@@ -1329,15 +1329,6 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Titre" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zCs-b7-0ta">
-                                                <rect key="frame" x="10" y="175" width="323" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="SVc-ZW-zfh"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Organisation" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sGj-Qk-igz">
                                                 <rect key="frame" x="10" y="250" width="323" height="50"/>
                                                 <constraints>
@@ -1365,27 +1356,31 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HXy-5R-gRY">
+                                                <rect key="frame" x="0.0" y="158" width="343" height="84"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="84" id="k70-5t-VlQ"/>
+                                                </constraints>
+                                            </pickerView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="IMR-RI-amc" secondAttribute="trailing" constant="10" id="95l-1J-IuV"/>
                                             <constraint firstAttribute="trailing" secondItem="MJ5-i0-6fc" secondAttribute="trailing" constant="10" id="9cF-s9-K02"/>
-                                            <constraint firstAttribute="trailing" secondItem="zCs-b7-0ta" secondAttribute="trailing" constant="10" id="AZ3-tX-DcE"/>
                                             <constraint firstItem="MJ5-i0-6fc" firstAttribute="top" secondItem="sGj-Qk-igz" secondAttribute="bottom" constant="25" id="CXf-eg-UEH"/>
-                                            <constraint firstItem="zCs-b7-0ta" firstAttribute="top" secondItem="hCI-Ao-Zkn" secondAttribute="bottom" constant="25" id="DeA-bE-W61"/>
                                             <constraint firstAttribute="trailing" secondItem="hCI-Ao-Zkn" secondAttribute="trailing" constant="10" id="NKs-77-pa3"/>
                                             <constraint firstAttribute="trailing" secondItem="sGj-Qk-igz" secondAttribute="trailing" constant="10" id="Wrb-xF-R4M"/>
                                             <constraint firstItem="sGj-Qk-igz" firstAttribute="leading" secondItem="7pf-Dq-TXL" secondAttribute="leading" constant="10" id="Ziy-27-BgE"/>
                                             <constraint firstItem="hCI-Ao-Zkn" firstAttribute="top" secondItem="fzT-ai-Bnx" secondAttribute="bottom" constant="25" id="Zkf-xs-4lF"/>
+                                            <constraint firstItem="HXy-5R-gRY" firstAttribute="top" secondItem="hCI-Ao-Zkn" secondAttribute="bottom" constant="8" id="b4A-er-pEA"/>
                                             <constraint firstItem="fzT-ai-Bnx" firstAttribute="top" secondItem="7pf-Dq-TXL" secondAttribute="top" constant="25" id="c5f-76-Ak9"/>
+                                            <constraint firstItem="sGj-Qk-igz" firstAttribute="top" secondItem="HXy-5R-gRY" secondAttribute="bottom" constant="8" id="cAF-PG-9A2"/>
                                             <constraint firstItem="hCI-Ao-Zkn" firstAttribute="leading" secondItem="7pf-Dq-TXL" secondAttribute="leading" constant="10" id="d2p-gT-ZVU"/>
                                             <constraint firstItem="IMR-RI-amc" firstAttribute="top" secondItem="MJ5-i0-6fc" secondAttribute="bottom" constant="25" id="gBD-SX-WPl"/>
-                                            <constraint firstItem="sGj-Qk-igz" firstAttribute="top" secondItem="zCs-b7-0ta" secondAttribute="bottom" constant="25" id="gG7-DJ-4R7"/>
                                             <constraint firstItem="fzT-ai-Bnx" firstAttribute="leading" secondItem="7pf-Dq-TXL" secondAttribute="leading" constant="10" id="hey-qf-BC8"/>
                                             <constraint firstAttribute="height" constant="500" id="oBJ-x6-XkR"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="500" id="pzd-jU-HD7"/>
                                             <constraint firstItem="IMR-RI-amc" firstAttribute="leading" secondItem="7pf-Dq-TXL" secondAttribute="leading" constant="10" id="sp5-ja-xTo"/>
                                             <constraint firstItem="MJ5-i0-6fc" firstAttribute="leading" secondItem="7pf-Dq-TXL" secondAttribute="leading" constant="10" id="uPD-Mf-nHb"/>
-                                            <constraint firstItem="zCs-b7-0ta" firstAttribute="leading" secondItem="7pf-Dq-TXL" secondAttribute="leading" constant="10" id="xu8-4D-xfd"/>
                                             <constraint firstAttribute="trailing" secondItem="fzT-ai-Bnx" secondAttribute="trailing" constant="10" id="z9F-O1-GkU"/>
                                         </constraints>
                                     </view>
@@ -1412,13 +1407,13 @@
                         <outlet property="lastnameField" destination="fzT-ai-Bnx" id="YYw-rW-AMX"/>
                         <outlet property="numTelField" destination="IMR-RI-amc" id="otL-Op-FF3"/>
                         <outlet property="organizationField" destination="sGj-Qk-igz" id="o0k-q4-Msn"/>
-                        <outlet property="titleField" destination="zCs-b7-0ta" id="LcB-XE-Qe2"/>
+                        <outlet property="titlePicker" destination="HXy-5R-gRY" id="Pk0-bu-dr1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cOu-ze-k5r" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="5GP-VR-A7l" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3716" y="332"/>
+            <point key="canvasLocation" x="3716" y="331.48425787106447"/>
         </scene>
         <!--FormRDV View Controller-->
         <scene sceneID="LwK-70-Avc">

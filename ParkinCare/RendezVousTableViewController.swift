@@ -77,7 +77,7 @@ class RendezVousTableViewController: NSObject, UITableViewDataSource, UITableVie
     @discardableResult
     private func configure(cell: RendezVousTableViewCell, atIndexPath indexPath: IndexPath) -> UITableViewCell{
         guard let rendezVous = self.rendezVousViewModel.getRDV(at: indexPath) else { return cell }
-        let dateTime = rendezVous.dateTime as! Date
+        let dateTime = rendezVous.dateTime! as Date
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM/yyyy"
         let date = formatter.string(from: dateTime)
@@ -92,7 +92,7 @@ class RendezVousTableViewController: NSObject, UITableViewDataSource, UITableVie
         else{
             cell.lastnameLabel.text = rendezVous.professional!.lastname
             cell.firstnameLabel.text = rendezVous.professional!.firstname
-            cell.titleLabel.text = Presenter.emptyString(text: rendezVous.professional!.title)
+            cell.titleLabel.text = Presenter.emptyString(text: rendezVous.professional!.title!.name)
         }
         cell.dateLabel.text = date
         cell.hourLabel.text = hour
