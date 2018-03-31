@@ -22,12 +22,7 @@ class DoseSet : Sequence{
     /// - Returns: `DoseSet` with new `Dose` added to the set, or `DoseSet` unmodified if `Dose` belonged already to the set.
     @discardableResult
     func add(dose: Dose) -> DoseSet{
-        if DoseDAO.count(dose: dose) > 1{
-            CoreDataManager.context.delete(dose)
-        }
-        else{
-            DoseDAO.save()
-        }
+        DoseDAO.save()
         return self
     }
     

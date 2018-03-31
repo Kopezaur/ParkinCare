@@ -66,7 +66,7 @@ class NewRDVViewController: UIViewController, UITextFieldDelegate, UNUserNotific
             let content = UNMutableNotificationContent()
             content.title = "Vous avez bientot un rendez vous !"
             content.subtitle = "Dans " + self.editRDVController.timeLabel.text! + " min."
-            content.body = "Vous avez rendez vous à " + hour + " avec " + professional.lastname! + " " + professional.firstname! + " (" + professional.title! + ") au  '" + location + "'"
+            content.body = "Vous avez rendez vous à " + hour + " avec " + professional.lastname! + " " + professional.firstname! + " (" + professional.title!.name! + ") au  '" + location + "'"
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
             let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
             

@@ -22,6 +22,8 @@ class ContactFormViewController: UIViewController, UIPickerViewDataSource, UIPic
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        titlePicker.delegate = self
+        titlePicker.dataSource = self
 
         self.titles = TitleDAO.fetchAll()
     }

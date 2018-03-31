@@ -80,17 +80,17 @@ class DoseDAO{
 //        }
 //    }
 //    
-//    static func search(dose: Dose) -> Dose?{
-//        self.request.predicate = NSPredicate(format: "medName == %@ AND quantity == %@", dose.medName!, dose.quantity)
-//        do{
-//            let result = try CoreDataManager.context.fetch(request) as [Dose]
-//            guard result.count != 0 else { return nil }
-//            return result[0]
-//        }
-//        catch{
-//            return nil
-//        }
-//    }
+    static func search(dose: Dose) -> Dose?{
+        self.request.predicate = NSPredicate(format: "medicament == %@ AND quantity == %@ AND prescription == %@", dose.medicament!, dose.quantity, dose.prescription!)
+        do{
+            let result = try CoreDataManager.context.fetch(request) as [Dose]
+            guard result.count != 0 else { return nil }
+            return result[0]
+        }
+        catch{
+            return nil
+        }
+    }
     
     static func search(medName: String, quantity: Int16) -> Dose?{
         self.request.predicate = NSPredicate(format: "medName == %@ AND quantity == %@", medName, quantity)

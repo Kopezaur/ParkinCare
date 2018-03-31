@@ -92,7 +92,7 @@ class RendezVousTableViewController: NSObject, UITableViewDataSource, UITableVie
         else{
             cell.lastnameLabel.text = rendezVous.professional!.lastname
             cell.firstnameLabel.text = rendezVous.professional!.firstname
-            cell.titleLabel.text = Presenter.emptyString(text: rendezVous.professional!.title!.name)
+            cell.titleLabel.text = Presenter.emptyString(text: rendezVous.professional!.title?.name)
         }
         cell.dateLabel.text = date
         cell.hourLabel.text = hour

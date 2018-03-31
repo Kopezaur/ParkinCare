@@ -24,7 +24,7 @@ class editContactViewController: UIViewController {
         
         self.editContactController.lastnameField.text = self.professional!.lastname
         self.editContactController.firstnameField.text = self.professional!.firstname
-        self.editContactController.titleField.text = self.professional!.title
+        self.editContactController.titleSelected = self.professional!.title
         self.editContactController.organizationField.text = self.professional!.organization
         self.editContactController.emailField.text = self.professional!.email
         self.editContactController.numTelField.text = self.professional!.numTel
@@ -62,7 +62,7 @@ class editContactViewController: UIViewController {
         if segue.identifier == "editContactSegue" {
             self.professional?.lastname = self.editContactController.lastnameField.text!
             self.professional?.firstname = self.editContactController.firstnameField.text!
-            self.professional?.title = self.editContactController.titleField.text!
+            self.professional?.title = self.editContactController.titleSelected
             self.professional?.organization = self.editContactController.organizationField.text!
             self.professional?.email = self.editContactController.emailField.text!
             self.professional?.numTel = self.editContactController.numTelField.text!

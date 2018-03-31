@@ -99,9 +99,9 @@ class TitleDAO{
         }
     }
     
-    static func add(title: Title){
-        if let _ = self.search(title: title){} else{
-            let _ = self.createTitle(title: title)
+    static func add(name: String){
+        if let _ = self.search(name: name){} else{
+            let _ = self.createTitle(name: name)
             self.save()
         }
     }
