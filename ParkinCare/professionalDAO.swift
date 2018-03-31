@@ -6,6 +6,7 @@
 //  Copyright © 2018 Kopezaur. All rights reserved.
 //
 
+
 import Foundation
 import CoreData
 
@@ -44,7 +45,7 @@ class ProfessionalDAO{
         return Professional(context: CoreDataManager.context)
     }
     
-    static func createProfessional(lastname: String, firstname: String, title: String, organization: String, email: String, numTel:String) -> Professional{
+    static func createProfessional(lastname: String, firstname: String, title: Title, organization: String, email: String, numTel:String) -> Professional{
         let dao        = self.createProfessional()
         dao.lastname  = lastname
         dao.firstname = firstname
