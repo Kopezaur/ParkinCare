@@ -99,9 +99,9 @@ class MedicamentDAO{
         }
     }
     
-    static func add(medicament: Medicament){
-        if let _ = self.search(medicament: medicament){} else{
-            let _ = self.createMedicament(medicament: medicament)
+    static func add(name: String){
+        if let _ = self.search(name: name){} else{
+            let _ = self.createMedicament(name: name)
             self.save()
         }
     }

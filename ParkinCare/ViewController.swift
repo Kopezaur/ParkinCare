@@ -18,9 +18,53 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if(TitleDAO.count == 0){
-            TitleDAO.add(name: "Kinésithérapeute")
+        // MARK: - Seeders
+        var titles : [String] = ["Kinésithérapeute", "Orthophoniste", "Infirmier", "Psychologue clinicien",
+                                 "Neuropsychologue", "Neurologue", "Medecin generaliste", "Psychiatre",
+                                 "Neurochirugien", "Médecin de structure antidouleur", "Gériatre",
+                                 "Médecin spécialiste en médecin physique", "Gastro-entérologue",
+                                 "Urologue", "Gynécologue", "Sexologue", "Ophtalmologiste", "ORL-phoniatre",
+                                 "Rhumatologue", "Chirurgien orthopédique", "Pneumologue", "Cardiologue",
+                                 "Médecin du travail", "Chirurgien-dentiste", "Ergothérapeute",
+                                 "Psychometricien", "Pédicure-podologue", "Diététicien", "Orthoptiste",
+                                 "Assistant de service social", "Personnel de transport sanitaire",
+                                 "Personnel de soins infirmiere a domicile", "Agent a domicile",
+                                 "Assistante de vie", "Personnel des services d'aide a la personne",
+                                 "Personnels de coordination gérontologique",
+                                 "Maison départamentale des persones handicapées",
+                                 "Educateur medico-sportif", "Association de patients"]
+        
+        if(titles.count > TitleDAO.count){
+            for i in 0 ..< titles.count {
+                let title = titles[i]
+                if(TitleDAO.count(name: title) == 0){
+                    TitleDAO.add(name: title)
+                }
+            }
         }
+        
+        var symptomes : [String] = ["Somnolence", "Chute", "Hallucination", "Prise de dispersible", "Clic / bolus d'Apokinon"]
+        
+        if(symptomes.count > SymptomeDAO.count){
+            for i in 0 ..< symptomes.count {
+                let symptome = symptomes[i]
+                if(SymptomeDAO.count(name: symptome) == 0){
+                    SymptomeDAO.add(name: symptome)
+                }
+            }
+        }
+        
+        var medicaments : [String] = ["Modopar (62,5mg)", "Modopar (125mg)", "Modopar (250mg)", "Modopar LP (125mg)", "Modopar Dispersible (125mg)", "Sinemet (100g)", "Sinemet (250mg)", "Sinemet LP (100g)", "Sinemet LP(200mg)", "Stalevo (50mg)", "Stalevo (75mg)", "Stalevo (100mg)", "Stalevo (125mg)", "Stalevo (150mg)", "Stalevo (175mg)", "Stalevo (200mg)", "Parlodel (2,5mg)", "Parlodel (5mg)", "Parlodel (10mg)", "Trivastal (20mg)", "Trivastal LP (50mg)", "Sifrol (0,18mg)", "Sifrol (0,7mg)", "Sifrol LP (0,26mg)", "Sifrol LP (0,52mg)", "Sifrol LP (1,05mg)", "Sifrol LP (2,1mg)", "Requip (0,25mg)", "Requip (0,5mg)", "Requip (1mg)", "Requip (2mg)", "Requip (5mg)", "Requip LP (2mg)", "Requip LP (4mg)", "Requip LP (8mg)", "Neupro (Patch) (2mg)", "Neupro (Patch) (4mg)", "Neupro (Patch) (6mg)", "Neupro (Patch) (8mg)", "Mantadix (100mg)", "Azilect (1mg)", "Comtan (200mg)", "Artane (2mg)", "Artane (5mg)", "Parkinane LP (2mg)", "Parkinane LP (5mg)", "Lepticur (10mg)", "Leponex (25mg)", "Leponex (100mg)", "Exelon (1,5g)", "Exelon (3mg)", "Exelon (4,5mg)", "Exelon (6mg)", "Exelon (Patch) (4,6mg)", "Exelon (Patch) (9,5mg)"]
+        
+        if(medicaments.count > MedicamentDAO.count){
+            for i in 0 ..< medicaments.count {
+                let medicament = medicaments[i]
+                if(MedicamentDAO.count(name: medicament) == 0){
+                    MedicamentDAO.add(name: medicament)
+                }
+            }
+        }
+
         
     }
 

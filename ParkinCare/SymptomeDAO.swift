@@ -99,9 +99,9 @@ class SymptomeDAO{
         }
     }
     
-    static func add(symptome: Symptome){
-        if let _ = self.search(symptome: symptome){} else{
-            let _ = self.createSymptome(symptome: symptome)
+    static func add(name: String){
+        if let _ = self.search(name: name){} else{
+            let _ = self.createSymptome(name: name)
             self.save()
         }
     }
