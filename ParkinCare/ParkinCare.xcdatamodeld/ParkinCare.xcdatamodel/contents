@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Activity" representedClassName="Activity" parentEntity="Reminder" syncable="YES" codeGenerationType="class">
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
@@ -7,7 +7,6 @@
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="activities" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="Dose" representedClassName="Dose" syncable="YES" codeGenerationType="class">
-        <attribute name="medName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="validated" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="medicament" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Medicament" inverseName="dose" inverseEntity="Medicament" syncable="YES"/>
@@ -18,6 +17,7 @@
         <attribute name="extraEvent" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rating" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="validated" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="symptome" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Symptome" inverseName="evaluations" inverseEntity="Symptome" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="evaluations" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="Medicament" representedClassName="Medicament" syncable="YES" codeGenerationType="class">
@@ -39,9 +39,9 @@
     </entity>
     <entity name="Professional" representedClassName="Professional" parentEntity="Person" syncable="YES" codeGenerationType="class">
         <attribute name="organization" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="patient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="contacts" inverseEntity="User" syncable="YES"/>
         <relationship name="rdv" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RDV" inverseName="professional" inverseEntity="RDV" syncable="YES"/>
+        <relationship name="title" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Title" inverseName="professional" inverseEntity="Title" syncable="YES"/>
     </entity>
     <entity name="RDV" representedClassName="RDV" parentEntity="Reminder" syncable="YES" codeGenerationType="class">
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
@@ -52,6 +52,14 @@
         <attribute name="dateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dateTimeReminder" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
+    <entity name="Symptome" representedClassName="Symptome" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="evaluations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Evaluation" inverseName="symptome" inverseEntity="Evaluation" syncable="YES"/>
+    </entity>
+    <entity name="Title" representedClassName="Title" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="professional" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Professional" inverseName="title" inverseEntity="Professional" syncable="YES"/>
+    </entity>
     <entity name="User" representedClassName="User" parentEntity="Person" syncable="YES" codeGenerationType="class">
         <relationship name="activities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activity" inverseName="user" inverseEntity="Activity" syncable="YES"/>
         <relationship name="contacts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Professional" inverseName="patient" inverseEntity="Professional" syncable="YES"/>
@@ -61,14 +69,16 @@
     </entity>
     <elements>
         <element name="Activity" positionX="-3735" positionY="-3042" width="128" height="105"/>
-        <element name="Dose" positionX="-3368" positionY="-2808" width="128" height="120"/>
-        <element name="Evaluation" positionX="-3368" positionY="-2958" width="128" height="120"/>
-        <element name="Medicament" positionX="-3116" positionY="-2808" width="128" height="75"/>
+        <element name="Dose" positionX="-3537" positionY="-2767" width="128" height="103"/>
+        <element name="Evaluation" positionX="-3368" positionY="-3051" width="128" height="133"/>
+        <element name="Medicament" positionX="-3726" positionY="-2808" width="128" height="75"/>
         <element name="Person" positionX="-3116" positionY="-3331" width="128" height="118"/>
         <element name="Prescription" positionX="-3548" positionY="-2916" width="128" height="105"/>
-        <element name="Professional" positionX="-3114" positionY="-3112" width="128" height="105"/>
-        <element name="RDV" positionX="-3116" positionY="-2941" width="128" height="90"/>
+        <element name="RDV" positionX="-3161" positionY="-2788" width="128" height="88"/>
         <element name="Reminder" positionX="-3735" positionY="-3180" width="128" height="73"/>
-        <element name="User" positionX="-3375" positionY="-3213" width="128" height="120"/>
+        <element name="User" positionX="-3375" positionY="-3213" width="128" height="118"/>
+        <element name="Professional" positionX="-3116" positionY="-3103" width="128" height="103"/>
+        <element name="Title" positionX="-3116" positionY="-2938" width="128" height="73"/>
+        <element name="Symptome" positionX="-3368" positionY="-2806" width="128" height="73"/>
     </elements>
 </model>

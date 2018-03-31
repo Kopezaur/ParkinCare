@@ -49,6 +49,8 @@
 		E938374C20454C85005A6FCF /* ProfessionalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374B20454C85005A6FCF /* ProfessionalModel.swift */; };
 		E938375020454E16005A6FCF /* Professionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374F20454E16005A6FCF /* Professionals.swift */; };
 		E938375120454E16005A6FCF /* Professionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938374F20454E16005A6FCF /* Professionals.swift */; };
+		E9482CBA206FE3D600D85B94 /* TitleDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9482CB9206FE3D600D85B94 /* TitleDAO.swift */; };
+		E9482CBC206FE46500D85B94 /* SymptomeDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9482CBB206FE46500D85B94 /* SymptomeDAO.swift */; };
 		E9490398203C38DC00FE7396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9490397203C38DC00FE7396 /* AppDelegate.swift */; };
 		E949039A203C38DC00FE7396 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9490399203C38DC00FE7396 /* ViewController.swift */; };
 		E949039D203C38DC00FE7396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E949039B203C38DC00FE7396 /* Main.storyboard */; };
@@ -145,6 +147,8 @@
 		E92A50E8206C5802009C6D0F /* PrescriptionSetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrescriptionSetViewModel.swift; sourceTree = "<group>"; };
 		E938374B20454C85005A6FCF /* ProfessionalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfessionalModel.swift; sourceTree = "<group>"; };
 		E938374F20454E16005A6FCF /* Professionals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Professionals.swift; sourceTree = "<group>"; };
+		E9482CB9206FE3D600D85B94 /* TitleDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleDAO.swift; sourceTree = "<group>"; };
+		E9482CBB206FE46500D85B94 /* SymptomeDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymptomeDAO.swift; sourceTree = "<group>"; };
 		E9490394203C38DC00FE7396 /* ParkinCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkinCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9490397203C38DC00FE7396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9490399203C38DC00FE7396 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -258,6 +262,8 @@
 				E962798E206A86190029CA05 /* Prescription.swift */,
 				E9627990206A87660029CA05 /* PrescriptionDAO.swift */,
 				E9277859206B091800B18210 /* UserDAO.swift */,
+				E9482CB9206FE3D600D85B94 /* TitleDAO.swift */,
+				E9482CBB206FE46500D85B94 /* SymptomeDAO.swift */,
 			);
 			name = DAO;
 			sourceTree = "<group>";
@@ -594,6 +600,7 @@
 				E9490398203C38DC00FE7396 /* AppDelegate.swift in Sources */,
 				E94F2776206974590032BAB1 /* RDVSetViewModel.swift in Sources */,
 				E92A50E9206C5802009C6D0F /* PrescriptionSetViewModel.swift in Sources */,
+				E9482CBA206FE3D600D85B94 /* TitleDAO.swift in Sources */,
 				E91D69332065BE57001BAE17 /* Medicament.swift in Sources */,
 				E94903A0203C38DC00FE7396 /* ParkinCare.xcdatamodeld in Sources */,
 				15356CDD2045C562003A7EB8 /* MedicamentModel.swift in Sources */,
@@ -603,6 +610,7 @@
 				B1051AC920699DEA0056CC5A /* RendezVousTableViewCell.swift in Sources */,
 				1535056E2062665100D500D6 /* ContactViewController.swift in Sources */,
 				B16BDAA3206AFD98002A0E5B /* Presenter.swift in Sources */,
+				E9482CBC206FE46500D85B94 /* SymptomeDAO.swift in Sources */,
 				E962798D206A81BE0029CA05 /* EvaluationDAO.swift in Sources */,
 				6F0B99B620453ED200A1BEF8 /* RendezVousSet.swift in Sources */,
 				B1D5E6B12065D39B0093166B /* ProfessionalTableViewController.swift in Sources */,
