@@ -72,7 +72,7 @@ extension Professional{
     ///   - lastname: `String` last name of `Professional`
     ///   - firstname:  `String` first name of `Professional`
     ///   - title: `String` title of `Professional`
-    convenience init(lastname: String, firstname: String, title: String, organization: String, email: String, numTel: String){
+    convenience init(lastname: String, firstname: String, title: Title, organization: String, email: String, numTel: String){
         self.init(context: CoreDataManager.context)
         self.lastname  = lastname
         self.firstname = firstname

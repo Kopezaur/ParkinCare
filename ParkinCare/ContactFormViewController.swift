@@ -8,21 +8,22 @@
 
 import UIKit
 
-class ContactFormViewController: UIViewController {
+class ContactFormViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var lastnameField: UITextField!
     @IBOutlet weak var firstnameField: UITextField!
-    @IBOutlet weak var titleField: UITextField!
+    @IBOutlet weak var titlePicker: UIPickerView!
     @IBOutlet weak var organizationField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var numTelField: UITextField!
     
-    
+    var titles : [Title]? = nil
+    var titleSelected : Title? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.titles = TitleDAO.fetchAll()
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,6 +40,27 @@ class ContactFormViewController: UIViewController {
         }
         else{
             return true
+        }
+    }
+    
+    // MARK: - Picker View
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return titles!.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let title = self.titles![row]
+        return title.name
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if(self.titleSelected == nil){
+            self.titleSelected = self.titles?[row]
         }
     }
 
