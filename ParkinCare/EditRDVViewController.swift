@@ -46,7 +46,7 @@ class EditRDVViewController: UIViewController, UNUserNotificationCenterDelegate 
             DialogBoxHelper.alert(view: self, WithTitle: "Des champs sont vides.")
         }
         else{
-            performSegue(withIdentifier: "addRDVSegue", sender: self)
+            performSegue(withIdentifier: "editRDVSegue", sender: self)
         }
     }
     
