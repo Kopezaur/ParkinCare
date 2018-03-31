@@ -14,18 +14,13 @@ class RendezVousViewController: UIViewController {
     var tableViewController: RendezVousTableViewController!
     
     @IBOutlet weak var rendezVousTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.tableViewController = RendezVousTableViewController(tableView: self.rendezVousTable)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     // MARK: - Navigation
     
