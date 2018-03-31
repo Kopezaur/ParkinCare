@@ -13,7 +13,6 @@
         <relationship name="prescription" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Prescription" inverseName="doses" inverseEntity="Prescription" syncable="YES"/>
     </entity>
     <entity name="Evaluation" representedClassName="Evaluation" parentEntity="Reminder" syncable="YES" codeGenerationType="class">
-        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="extraEvent" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rating" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="validated" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -70,7 +69,7 @@
     <elements>
         <element name="Activity" positionX="-3735" positionY="-3042" width="128" height="105"/>
         <element name="Dose" positionX="-3537" positionY="-2767" width="128" height="103"/>
-        <element name="Evaluation" positionX="-3368" positionY="-3051" width="128" height="133"/>
+        <element name="Evaluation" positionX="-3368" positionY="-3051" width="128" height="118"/>
         <element name="Medicament" positionX="-3726" positionY="-2808" width="128" height="75"/>
         <element name="Person" positionX="-3116" positionY="-3331" width="128" height="118"/>
         <element name="Prescription" positionX="-3548" positionY="-2916" width="128" height="105"/>

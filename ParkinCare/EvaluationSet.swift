@@ -64,8 +64,8 @@ class EvaluationSet : Sequence{
     /// - Parameter firstname: `String` firstname to be search
     /// - Parameter lastname: `String` lastname to be search
     /// - Returns: True if there is one `Evaluation` with these firstname and lastname
-    func contains(evaluationWithDateAndDesc dateTime: NSDate, desc: String) -> Bool{
-        return EvaluationDAO.count(dateTime: dateTime, desc: desc) > 0
+    func contains(evaluationWith dateTime: NSDate) -> Bool{
+        return EvaluationDAO.count(dateTime: dateTime) > 0
     }
     
     /// `EvaluationSet` x `String` x `String` -> `[Evaluation]` --
@@ -75,8 +75,8 @@ class EvaluationSet : Sequence{
     /// - Parameter lastname: `String` lastname to be looked for
     /// - Parameter birthdate: `Date?` Date if it has one, else nil
     /// - Returns: `Evaluation` will these firstname, lastname and birthdate given in parameter, or nil if it is not in set
-    func look(evaluationsWithDateAndDesc dateTime: NSDate, desc: String) -> [Evaluation]{
-        if let ret = EvaluationDAO.search(dateTime: dateTime, desc: desc){
+    func look(evaluationsWithDate dateTime: NSDate) -> [Evaluation]{
+        if let ret = EvaluationDAO.search(dateTime: dateTime){
             return [ret]
         }
         else{
