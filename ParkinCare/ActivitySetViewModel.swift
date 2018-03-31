@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 //----------------------------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------------------
@@ -35,7 +36,8 @@ protocol ActivitySetViewModelDelegate {
 //----------------------------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------------------
 // MARK: -
-/*class ActivitySetViewModel : ActivityTableViewModel{
+class ActivitySetViewModel : ActivityTableViewModel{
+    
     
     // MARK: -
     let modelset : ActivitySet = ActivitySet()
@@ -44,7 +46,7 @@ protocol ActivitySetViewModelDelegate {
     fileprivate lazy var activitysFetched : NSFetchedResultsController<Activity> = {
         // prepare a request
         let request : NSFetchRequest<Activity> = Activity.fetchRequest()
-        request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Activity.lastname),ascending:true),NSSortDescriptor(key:#keyPath(Activity.firstname),ascending:true)]
+        request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Activity.dateTime),ascending:true),NSSortDescriptor(key:#keyPath(Activity.title),ascending:true)]
         let fetchResultController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataManager.context, sectionNameKeyPath: nil, cacheName: nil)
         guard let fetchResultControllerDelegate = self.delegate as? NSFetchedResultsControllerDelegate else{
             fatalError("delegate of ActivitySetViewModel should also be a NSFetchedResultsControllerDelegate")
@@ -122,7 +124,7 @@ protocol ActivitySetViewModelDelegate {
     //-------------------------------------------------------------------------------------------------
     // MARK: Convenience functions
     
-}*/
+}
 
 
 

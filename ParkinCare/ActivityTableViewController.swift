@@ -20,93 +20,66 @@ protocol ActivityTableViewModel {
     /// person at indexPath
     ///
     /// - Parameter indexPath: (section, row)
-    /// - Returns: RendezVous at indexPath, nil if indexPath not valid
-    func getRDV(at indexPath: IndexPath) -> RDV?
+    /// - Returns: Activity at indexPath, nil if indexPath not valid
+    func getActivity(at indexPath: IndexPath) -> Activity?
 }
 
-class ActivityTableViewController: UITableViewController {
+class ActivityTableViewController: NSObject, UITableViewDataSource, UITableViewDelegate {
     
+    var tableView   : UITableView
+    let activityViewModel : ActivitySetViewModel
+    let fetchResultController : ActivityFetchResultController
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    init(tableView: UITableView) {
+        self.tableView             = tableView
+        self.activityViewModel      = ActivitySetViewModel()
+        self.fetchResultController = ActivityFetchResultController(view : tableView, model : self.activityViewModel)
+        super.init()
+        self.tableView.dataSource      = self
+        self.activityViewModel.delegate = self.fetchResultController
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    //-------------------------------------------------------------------------------------------------
+    // MARK: - TableView DataSource
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        // after it has just managed deleting
+        if(editingStyle == UITableViewCellEditingStyle.delete){
+            ActivityDAO.delete(activity: activityViewModel.getActivity(at: indexPath)!)
+        }
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.activityViewModel.rowsCount(inSection: section)
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "activityCell", for: indexPath) as! ActivityTableViewCell
+        
         // Configure the cell...
-
+        return configure(cell: cell, atIndexPath: indexPath)
+    }
+    
+    // MARK: - convenience methods
+    
+    @discardableResult
+    private func configure(cell: ActivityTableViewCell, atIndexPath indexPath: IndexPath) -> UITableViewCell{
+        guard let activity = self.activityViewModel.getActivity(at: indexPath) else { return cell }
+        let dateTime = activity.dateTime! as Date
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        let date = formatter.string(from: dateTime)
+        formatter.dateFormat = "HH:mm"
+        let hour = formatter.string(from: dateTime)
+        cell.dateLabel.text = date
+        cell.hourLabel.text = hour
+        cell.titleLabel.text = activity.title
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

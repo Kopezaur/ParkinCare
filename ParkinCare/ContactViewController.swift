@@ -44,7 +44,7 @@ class ContactViewController: UIViewController {
     func initLabels(){
         self.lastnameLabel.text = self.professional!.lastname
         self.firstnameLabel.text = self.professional!.firstname
-        self.titleLabel.text = Presenter.emptyString(text: self.professional!.title!.name)
+        self.titleLabel.text = Presenter.emptyString(text: self.professional!.title?.name)
         self.organizationLabel.text = Presenter.emptyString(text: self.professional!.organization)
         self.emailLabel.text = Presenter.emptyString(text: self.professional!.email)
         self.numTelLabel.text = Presenter.emptyString(text: self.professional!.numTel)

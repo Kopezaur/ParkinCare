@@ -26,6 +26,7 @@ class ContactFormViewController: UIViewController, UIPickerViewDataSource, UIPic
         titlePicker.dataSource = self
 
         self.titles = TitleDAO.fetchAll()
+        titleSelected = titles?[0]
     }
 
     override func didReceiveMemoryWarning() {
