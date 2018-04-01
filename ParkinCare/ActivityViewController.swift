@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ActivityViewController: UIViewController {
     
@@ -46,6 +47,9 @@ class ActivityViewController: UIViewController {
     }
     
     @IBAction func deleteButtonClicked(_ sender: Any) {
+        // Delete the notification
+        NotificationManager.deleteNotification(notificationIdentifier: self.activityViewModel!.getActivity(at: self.indexPath!)!.notificationIdentifier!)
+        // Delete the entity
         ActivityDAO.delete(activity: self.activityViewModel!.getActivity(at: self.indexPath!)!)
         performSegue(withIdentifier: "exit", sender: self)
     }

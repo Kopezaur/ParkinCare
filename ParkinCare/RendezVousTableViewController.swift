@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 //-------------------------------------------------------------------------------------------------
 // MARK: -
@@ -49,6 +50,9 @@ class RendezVousTableViewController: NSObject, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         // after it has just managed deleting
         if(editingStyle == UITableViewCellEditingStyle.delete){
+            // Delete the notification
+            NotificationManager.deleteNotification(notificationIdentifier: rendezVousViewModel.getRDV(at: indexPath)!.notificationIdentifier!)
+            // Delete the entity
             RDVDAO.delete(rdv: rendezVousViewModel.getRDV(at: indexPath)!)
         }
     }

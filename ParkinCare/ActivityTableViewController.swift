@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 //-------------------------------------------------------------------------------------------------
 // MARK: -
@@ -46,6 +47,9 @@ class ActivityTableViewController: NSObject, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         // after it has just managed deleting
         if(editingStyle == UITableViewCellEditingStyle.delete){
+            // Delete the notification
+            NotificationManager.deleteNotification(notificationIdentifier: activityViewModel.getActivity(at: indexPath)!.notificationIdentifier!)
+            // Delete the entity
             ActivityDAO.delete(activity: activityViewModel.getActivity(at: indexPath)!)
         }
     }
