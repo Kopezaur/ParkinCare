@@ -37,6 +37,7 @@ class ActivityTableViewController: NSObject, UITableViewDataSource, UITableViewD
         super.init()
         self.tableView.dataSource      = self
         self.activityViewModel.delegate = self.fetchResultController
+        self.tableView.rowHeight = 60.0
     }
     
     //-------------------------------------------------------------------------------------------------

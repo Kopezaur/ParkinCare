@@ -25,7 +25,7 @@ class ActivitiesViewController: UIViewController{
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if let destController = segue.destination as? ActivityViewController{
@@ -47,6 +47,9 @@ class ActivitiesViewController: UIViewController{
                 self.tableViewController.activityViewModel.add(activity: newActivity)
             }
         }
-    }*/
+    }
+    
+    @IBAction func unwindToActivities(sender: UIStoryboardSegue) {
+    }
 
 }

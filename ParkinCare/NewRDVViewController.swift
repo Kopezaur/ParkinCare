@@ -56,8 +56,8 @@ class NewRDVViewController: UIViewController, UITextFieldDelegate, UNUserNotific
             let location : String  = self.editRDVController.locationField.text!
             let professional : Professional = self.editRDVController.professional!
             let calendar = Calendar.current
-            let dateTimeReminder = calendar.date(byAdding: .minute, value: (0 - Int(self.editRDVController.timeLabel.text!)!), to: (self.editRDVController.datePicker.date))
-            self.newRDV  = RDV(date: date, location: location, professional: professional, dateTimeReminder: dateTimeReminder!)
+            let dateTimeReminder : Date = calendar.date(byAdding: .minute, value: (0 - Int(self.editRDVController.timeLabel.text!)!), to: (self.editRDVController.datePicker.date))!
+            self.newRDV  = RDV(date: date, location: location, professional: professional, dateTimeReminder: dateTimeReminder)
             
             //Creation de la notif
             let formatter = DateFormatter()

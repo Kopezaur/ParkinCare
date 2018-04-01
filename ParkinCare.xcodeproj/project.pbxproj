@@ -21,6 +21,13 @@
 		A324973F20700946007D9095 /* ActivityFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324973E20700946007D9095 /* ActivityFetchResultController.swift */; };
 		A324974120700AB8007D9095 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324974020700AB8007D9095 /* ActivityTableViewCell.swift */; };
 		A324974320700DDC007D9095 /* NewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324974220700DDC007D9095 /* NewActivityViewController.swift */; };
+		A324974520701F0F007D9095 /* FormActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324974420701F0F007D9095 /* FormActivityViewController.swift */; };
+		A32497472070414D007D9095 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32497462070414D007D9095 /* ActivityViewController.swift */; };
+		A324974B20704C53007D9095 /* teamwork.png in Resources */ = {isa = PBXBuildFile; fileRef = A3EC47C4206EC3AF0055A6C5 /* teamwork.png */; };
+		A324974C20704C56007D9095 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = A3EC47C5206EC3B20055A6C5 /* home.png */; };
+		A324974D20704C58007D9095 /* running-man.png in Resources */ = {isa = PBXBuildFile; fileRef = A3EC47C6206EC3B60055A6C5 /* running-man.png */; };
+		A324974E20704C5A007D9095 /* trophy.png in Resources */ = {isa = PBXBuildFile; fileRef = A324974A207045E9007D9095 /* trophy.png */; };
+		A38CAC6B2070585B007C06DE /* CongratulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CAC6A2070585B007C06DE /* CongratulationViewController.swift */; };
 		A3EC47C8206EC8EF0055A6C5 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC47C7206EC8EF0055A6C5 /* ActivitiesViewController.swift */; };
 		B1051AC320698FFD0056CC5A /* RendezVousTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1051AC220698FFD0056CC5A /* RendezVousTableViewController.swift */; };
 		B1051AC7206999D70056CC5A /* RDVFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1051AC6206999D70056CC5A /* RDVFetchResultController.swift */; };
@@ -119,9 +126,13 @@
 		A324973E20700946007D9095 /* ActivityFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFetchResultController.swift; sourceTree = "<group>"; };
 		A324974020700AB8007D9095 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		A324974220700DDC007D9095 /* NewActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityViewController.swift; sourceTree = "<group>"; };
-		A3EC47C4206EC3AF0055A6C5 /* teamwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teamwork.png; sourceTree = "<group>"; };
-		A3EC47C5206EC3B20055A6C5 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
-		A3EC47C6206EC3B60055A6C5 /* running-man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "running-man.png"; sourceTree = "<group>"; };
+		A324974420701F0F007D9095 /* FormActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormActivityViewController.swift; sourceTree = "<group>"; };
+		A32497462070414D007D9095 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		A324974A207045E9007D9095 /* trophy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trophy.png; path = ParkinCare/trophy.png; sourceTree = "<group>"; };
+		A38CAC6A2070585B007C06DE /* CongratulationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationViewController.swift; sourceTree = "<group>"; };
+		A3EC47C4206EC3AF0055A6C5 /* teamwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teamwork.png; path = ParkinCare/teamwork.png; sourceTree = "<group>"; };
+		A3EC47C5206EC3B20055A6C5 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = ParkinCare/home.png; sourceTree = "<group>"; };
+		A3EC47C6206EC3B60055A6C5 /* running-man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "running-man.png"; path = "ParkinCare/running-man.png"; sourceTree = "<group>"; };
 		A3EC47C7206EC8EF0055A6C5 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		B1051AC220698FFD0056CC5A /* RendezVousTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendezVousTableViewController.swift; sourceTree = "<group>"; };
 		B1051AC6206999D70056CC5A /* RDVFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDVFetchResultController.swift; sourceTree = "<group>"; };
@@ -250,6 +261,9 @@
 				A324973B206FD0D4007D9095 /* ActivityTableViewController.swift */,
 				A324973E20700946007D9095 /* ActivityFetchResultController.swift */,
 				A324974220700DDC007D9095 /* NewActivityViewController.swift */,
+				A324974420701F0F007D9095 /* FormActivityViewController.swift */,
+				A32497462070414D007D9095 /* ActivityViewController.swift */,
+				A38CAC6A2070585B007C06DE /* CongratulationViewController.swift */,
 			);
 			name = Activities;
 			sourceTree = "<group>";
@@ -403,6 +417,7 @@
 		E96D540020582541004562BE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A324974A207045E9007D9095 /* trophy.png */,
 				A3EC47C6206EC3B60055A6C5 /* running-man.png */,
 				A3EC47C5206EC3B20055A6C5 /* home.png */,
 				A3EC47C4206EC3AF0055A6C5 /* teamwork.png */,
@@ -546,9 +561,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A324974B20704C53007D9095 /* teamwork.png in Resources */,
 				E94903A5203C38DC00FE7396 /* LaunchScreen.storyboard in Resources */,
+				A324974C20704C56007D9095 /* home.png in Resources */,
+				A324974E20704C5A007D9095 /* trophy.png in Resources */,
 				E94903A2203C38DC00FE7396 /* Assets.xcassets in Resources */,
 				E96D5406205830CA004562BE /* ParkinCareLogo.png in Resources */,
+				A324974D20704C58007D9095 /* running-man.png in Resources */,
 				E949039D203C38DC00FE7396 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,12 +601,14 @@
 				E94F2774206971EA0032BAB1 /* RDVSet.swift in Sources */,
 				1581149020583434001A912F /* MedicamentTableViewCell.swift in Sources */,
 				E949039A203C38DC00FE7396 /* ViewController.swift in Sources */,
+				A38CAC6B2070585B007C06DE /* CongratulationViewController.swift in Sources */,
 				B1D5E6BA2066921B0093166B /* ProfessionalFetchResultController.swift in Sources */,
 				E962798F206A86190029CA05 /* Prescription.swift in Sources */,
 				6F0B99B820453F7D00A1BEF8 /* RDVModel.swift in Sources */,
 				E94903D2203C452F00FE7396 /* Prescriptions.swift in Sources */,
 				A324973C206FD0D4007D9095 /* ActivityTableViewController.swift in Sources */,
 				E92A50E3206C5556009C6D0F /* EvaluationSet.swift in Sources */,
+				A324974520701F0F007D9095 /* FormActivityViewController.swift in Sources */,
 				E94F277220696C030032BAB1 /* RDVDAO.swift in Sources */,
 				E938375020454E16005A6FCF /* Professionals.swift in Sources */,
 				B1D5E6BC20698C700093166B /* RendezVousViewController.swift in Sources */,
@@ -626,6 +647,7 @@
 				E92A50E5206C56B0009C6D0F /* PrescriptionSet.swift in Sources */,
 				15D08BF92061829200302868 /* NewContactViewController.swift in Sources */,
 				E94E74CF20402C0C00AECAC6 /* Evaluations.swift in Sources */,
+				A32497472070414D007D9095 /* ActivityViewController.swift in Sources */,
 				E9E6585C206AA34C0038686D /* ActivitySetViewModel.swift in Sources */,
 				B19E00542064091D00F9F0A8 /* CoreDataManager.swift in Sources */,
 				E94903CE203C3E8100FE7396 /* UserModel.swift in Sources */,

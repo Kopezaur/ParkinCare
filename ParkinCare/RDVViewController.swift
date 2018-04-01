@@ -27,8 +27,6 @@ class RDVViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
         if let rdv = self.rdvViewModel!.getRDV(at: self.indexPath!) {
             self.rdv = rdv
