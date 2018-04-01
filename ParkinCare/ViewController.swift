@@ -27,8 +27,23 @@ class ViewController: UIViewController {
         
         // MARK: - Seeders -
         
-        if(UserDAO.count == 0){
-            UserDAO.add(user: User(lastname: "", firstname: "", address: "", email: "", numTel: "", activityRemind: true))
+        if(UserDAO.count != 1){
+            if(UserDAO.count > 1){
+                var users : [User] = UserDAO.search()!
+                for i in 0..<users.count {
+                    UserDAO.delete(user: users[i])
+                }
+            }
+            var component = DateComponents()
+            component.calendar = Calendar.current
+            component.hour = 8
+            component.minute = 0
+            let startDate = component.date
+            component.hour = 20
+            component.minute = 0
+            let endDate = component.date
+            
+            let _ : User = User(lastname: "", firstname: "", address: "", email: "", numTel: "", activityRemind: true, startEvaluation: startDate!, endEvaluation: endDate!, hourIntervalEvaluation: 1)
         }
         
         var titles : [String] = ["Kinésithérapeute", "Orthophoniste", "Infirmier", "Psychologue clinicien",

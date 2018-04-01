@@ -61,6 +61,9 @@
     </entity>
     <entity name="User" representedClassName="User" parentEntity="Person" syncable="YES" codeGenerationType="class">
         <attribute name="activityRemind" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="endEvaluation" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hourIntervalEvaluation" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="startEvaluation" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="activities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activity" inverseName="user" inverseEntity="Activity" syncable="YES"/>
         <relationship name="contacts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Professional" inverseName="patient" inverseEntity="Professional" syncable="YES"/>
         <relationship name="evaluations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Evaluation" inverseName="user" inverseEntity="Evaluation" syncable="YES"/>
@@ -79,6 +82,6 @@
         <element name="Reminder" positionX="-3735" positionY="-3180" width="128" height="73"/>
         <element name="Symptome" positionX="-3368" positionY="-2806" width="128" height="73"/>
         <element name="Title" positionX="-3116" positionY="-2938" width="128" height="73"/>
-        <element name="User" positionX="-3375" positionY="-3213" width="128" height="133"/>
+        <element name="User" positionX="-3375" positionY="-3213" width="128" height="180"/>
     </elements>
 </model>

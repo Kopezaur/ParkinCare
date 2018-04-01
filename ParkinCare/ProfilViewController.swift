@@ -16,13 +16,17 @@ class ProfilViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var numTelField: UITextField!
     @IBOutlet weak var allowRemindSwitch: UISwitch!
+    @IBOutlet weak var startEvaluationDatePicker: UIDatePicker!
+    @IBOutlet weak var endEvaluationDatePicker: UIDatePicker!
+    @IBOutlet weak var hourIntervalSlider: UISlider!
+    @IBOutlet weak var hourIntervalLabel: UILabel!
     
     var user : User? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let user : User = UserDAO.search() {
+        if let user : User = UserDAO.searchOne() {
             self.user = user
             initLabels()
         }
@@ -36,6 +40,10 @@ class ProfilViewController: UIViewController {
         self.emailField.text = self.user!.email
         self.numTelField.text = self.user!.numTel
         self.allowRemindSwitch.setOn(self.user!.activityRemind, animated: true)
+        self.startEvaluationDatePicker.date = self.user!.startEvaluation! as Date
+        self.endEvaluationDatePicker.date = self.user!.endEvaluation! as Date
+        self.hourIntervalSlider.value = Float(self.user!.hourIntervalEvaluation)
+        self.hourIntervalLabel.text = String(self.user!.hourIntervalEvaluation)
     }
     
     @IBAction func saveModificationsButtonClicked(_ sender: Any) {
@@ -45,10 +53,16 @@ class ProfilViewController: UIViewController {
         self.user!.email = self.emailField.text
         self.user!.numTel = self.numTelField.text
         self.user!.activityRemind = self.allowRemindSwitch.isOn
+        self.user!.startEvaluation = self.startEvaluationDatePicker.date as NSDate
+        self.user!.endEvaluation = self.endEvaluationDatePicker.date as NSDate
+        self.user!.hourIntervalEvaluation = Int16(self.hourIntervalSlider.value)
         UserDAO.save()
         DialogBoxHelper.alert(view: self, WithTitle: "Modifications enregistrées.")
     }
     
+    @IBAction func changeValueHourSlider(_ sender: Any) {
+        self.hourIntervalLabel.text = String(Int(self.hourIntervalSlider.value))
+    }
     
 
     /*

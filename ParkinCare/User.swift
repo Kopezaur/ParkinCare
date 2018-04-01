@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 extension User {
-    convenience init(lastname: String, firstname: String, address: String, email: String, numTel: String, activityRemind: Bool!){
+    convenience init(lastname: String, firstname: String, address: String, email: String, numTel: String, activityRemind: Bool!, startEvaluation: Date, endEvaluation: Date, hourIntervalEvaluation: Int){
         self.init(context: CoreDataManager.context)
         self.lastname  = lastname
         self.firstname = firstname
@@ -18,5 +18,8 @@ extension User {
         self.email = email
         self.numTel = numTel
         self.activityRemind = activityRemind
+        self.startEvaluation = startEvaluation as NSDate
+        self.endEvaluation = endEvaluation as NSDate
+        self.hourIntervalEvaluation = Int16(hourIntervalEvaluation)
     }
 }

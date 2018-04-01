@@ -97,7 +97,18 @@ class UserDAO{
         }
     }
     
-    static func search() -> User?{
+    static func search() -> [User]?{
+        do{
+            let result = try CoreDataManager.context.fetch(request) as [User]
+            guard result.count != 0 else { return nil }
+            return result
+        }
+        catch{
+            return nil
+        }
+    }
+    
+    static func searchOne() -> User?{
         do{
             let result = try CoreDataManager.context.fetch(request) as [User]
             guard result.count != 0 else { return nil }
