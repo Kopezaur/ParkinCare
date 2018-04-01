@@ -12,13 +12,21 @@ import CoreData
 
 class ViewController: UIViewController {
     
+    let introNotification = Notification.Name(rawValue:"IntroNotification")
     
-    @IBAction func addRDVButton(_ sender: Any) {
-    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // MARK: - Seeders
+        let nc = NotificationCenter.default
+        nc.addObserver(forName:introNotification, object:nil, queue:nil, using: catchIntroNotification)
+        
+        // MARK: - Seeders -
+        if(UserDAO.count == 0){
+            UserDAO.add(user: UserDAO.createUser(lastname: "", firstname: "", email: "", numTel: "", address: ""))
+        }
+        
         var titles : [String] = ["Kinésithérapeute", "Orthophoniste", "Infirmier", "Psychologue clinicien",
                                  "Neuropsychologue", "Neurologue", "Medecin generaliste", "Psychiatre",
                                  "Neurochirugien", "Médecin de structure antidouleur", "Gériatre",
@@ -64,16 +72,22 @@ class ViewController: UIViewController {
                 }
             }
         }
-
-        
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let nc = NotificationCenter.default
+        nc.post(name:introNotification,
+                object: nil,
+                userInfo:["message":"Yo!", "date":Date()])
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Helper Methods
+    // MARK: - Helper Methods -
     
     /// get context of core data initialized in application delegate
     ///
@@ -109,6 +123,22 @@ class ViewController: UIViewController {
         self.alert(WithTitle: "\(error)", andMessage: "\(error.userInfo)")
     }
     
+    // MARK: - Notifications -
+    
+    func catchIntroNotification(notification: Notification) -> Void {
+        guard let userInfo = notification.userInfo,
+            let message  = userInfo["message"] as? String,
+            let date     = userInfo["date"]    as? Date else {
+                print("No userInfo found in notification")
+                return
+        }
+        
+        let alert = UIAlertController(title: "Notification!",
+                                      message:"\(message) received at \(date)",
+            preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 
 
 }
