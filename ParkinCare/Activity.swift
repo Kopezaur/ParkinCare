@@ -10,12 +10,13 @@ import Foundation
 import CoreData
 
 extension Activity {
-    convenience init(dateTime: Date, dateTimeReminder: Date, title: String, desc: String, validated: Bool?){
+    convenience init(dateTime: Date, dateTimeReminder: Date, title: String, desc: String, validated: Bool?, notificationIdentifier: String){
         self.init(context: CoreDataManager.context)
         self.dateTime  = dateTime as NSDate
         self.dateTimeReminder = dateTimeReminder as NSDate
         self.title = title
         self.desc = desc
         self.validated = validated!
+        self.notificationIdentifier = notificationIdentifier
     }
 }

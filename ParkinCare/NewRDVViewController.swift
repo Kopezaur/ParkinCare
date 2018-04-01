@@ -67,33 +67,9 @@ class NewRDVViewController: UIViewController, UITextFieldDelegate, UNUserNotific
             // Finally calling the init() function of RDV with all the necessary arguments
             self.newRDV  = RDV(date: date, location: location, professional: professional, dateTimeReminder: dateTimeReminder, notificationIdentifier: notificationIdentifier)
             
-            // MARK: Creation of the notification
-            let year : Int = calendar.component(.year, from: dateTimeReminder)
-            let month : Int = calendar.component(.month, from: dateTimeReminder)
-            let day : Int = calendar.component(.day, from: dateTimeReminder)
-            let hour : Int = calendar.component(.hour, from: dateTimeReminder)
-            let minute : Int = calendar.component(.minute, from: dateTimeReminder)
-
-            // Creating the trigger for the notification
-            let trigger = UNCalendarNotificationTrigger(dateMatching: DateComponents(year: year, month: month, day: day, hour: hour, minute: minute), repeats: false)
-            
-            // Creating the content that will be displayed in the notification
-            let content = UNMutableNotificationContent()
-            formatter.dateFormat = "HH:mm"
-            let hourMinutes = formatter.string(from: date)
-            content.title = "Vous avez bientot un rendez vous !"
-            content.subtitle = "Dans " + self.editRDVController.timeLabel.text! + " min."
-            content.body = "Vous avez rendez vous à " + hourMinutes + " avec " + professional.lastname! + " " + professional.firstname! + " (" + professional.title!.name! + ") au  '" + location + "'"            // The identifier of the request will be the unique notificationIdentifier of the entity
-            
-            //Creating the request of the notification with it's unique identifier
-            let request = UNNotificationRequest(identifier: notificationIdentifier, content: content, trigger: trigger)
-            UNUserNotificationCenter.current().add(request) { error in
-                if let error = error {
-                    print(error)
-                    return
-                }
+            // Creation of the notification
+            NotificationManager.createRDVNotification(rdv: (self.newRDV)!)
             }
-        }
     }
 
 }

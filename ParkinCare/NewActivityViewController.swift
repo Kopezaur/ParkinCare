@@ -54,8 +54,24 @@ class NewActivityViewController: UIViewController, UITextFieldDelegate, UNUserNo
             let hour : Int = calendar.component(.hour, from: hourDate)
             let minute : Int = calendar.component(.minute, from: hourDate)
             var dateTime : Date = calendar.date(bySettingHour: hour, minute: minute, second: 0, of: startDate)!
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm"
+            var dateId : String
+            var notificationIdentifier : String
+            
             while(endDate > dateTime){
-                self.newActivity = Activity(dateTime : dateTime, dateTimeReminder: dateTime, title: title, desc: description, validated : false )
+                // Creation of the notificationIdentifier
+                dateId = formatter.string(from: dateTime)
+                notificationIdentifier = title + dateId
+
+                // Initialization of the Activity
+                self.newActivity = Activity(dateTime : dateTime, dateTimeReminder: dateTime, title: title, desc: description, validated : false, notificationIdentifier: notificationIdentifier)
+                
+                // Creation of the notification
+                NotificationManager.createActivityNotification(activity: self.newActivity!)
+                
+                // Move on to the next activity
                 dateTime = calendar.date(byAdding: .day, value: intervalDay, to: dateTime)!
             }
         }

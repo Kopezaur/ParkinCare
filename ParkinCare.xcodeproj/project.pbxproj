@@ -93,6 +93,8 @@
 		E96D5406205830CA004562BE /* ParkinCareLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E96D5405205830CA004562BE /* ParkinCareLogo.png */; };
 		E9E6585A206AA2050038686D /* ActivitySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E65859206AA2050038686D /* ActivitySet.swift */; };
 		E9E6585C206AA34C0038686D /* ActivitySetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E6585B206AA34C0038686D /* ActivitySetViewModel.swift */; };
+		E9ED881E20716DB700F7CBE9 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED881D20716DB700F7CBE9 /* NotificationManager.swift */; };
+		E9ED882020717ABD00F7CBE9 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED881F20717ABD00F7CBE9 /* DateHelper.swift */; };
 		E9FA19252070335800441BDD /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA19242070335800441BDD /* Activity.swift */; };
 /* End PBXBuildFile section */
 
@@ -202,6 +204,8 @@
 		E96D5405205830CA004562BE /* ParkinCareLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ParkinCareLogo.png; path = ParkinCare/ParkinCareLogo.png; sourceTree = "<group>"; };
 		E9E65859206AA2050038686D /* ActivitySet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitySet.swift; sourceTree = "<group>"; };
 		E9E6585B206AA34C0038686D /* ActivitySetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitySetViewModel.swift; sourceTree = "<group>"; };
+		E9ED881D20716DB700F7CBE9 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		E9ED881F20717ABD00F7CBE9 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		E9FA19242070335800441BDD /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -447,6 +451,8 @@
 				B19E00532064091D00F9F0A8 /* CoreDataManager.swift */,
 				B19E00552064092000F9F0A8 /* DialogBoxHelper.swift */,
 				B16BDAA2206AFD98002A0E5B /* Presenter.swift */,
+				E9ED881D20716DB700F7CBE9 /* NotificationManager.swift */,
+				E9ED881F20717ABD00F7CBE9 /* DateHelper.swift */,
 			);
 			name = "Class Helpers";
 			sourceTree = "<group>";
@@ -607,6 +613,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9ED882020717ABD00F7CBE9 /* DateHelper.swift in Sources */,
 				15356CDF2045C5AE003A7EB8 /* DoseModel.swift in Sources */,
 				B1051ACB2069A4B30056CC5A /* RDVViewController.swift in Sources */,
 				15D08BF72061779500302868 /* ContactsViewController.swift in Sources */,
@@ -642,6 +649,7 @@
 				E9490398203C38DC00FE7396 /* AppDelegate.swift in Sources */,
 				E94F2776206974590032BAB1 /* RDVSetViewModel.swift in Sources */,
 				E92A50E9206C5802009C6D0F /* PrescriptionSetViewModel.swift in Sources */,
+				E9ED881E20716DB700F7CBE9 /* NotificationManager.swift in Sources */,
 				E9482CBA206FE3D600D85B94 /* TitleDAO.swift in Sources */,
 				E9FA19252070335800441BDD /* Activity.swift in Sources */,
 				E91D69332065BE57001BAE17 /* Medicament.swift in Sources */,
