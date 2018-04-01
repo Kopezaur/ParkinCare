@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class RDVViewController: UIViewController {
     
@@ -67,6 +68,9 @@ class RDVViewController: UIViewController {
     }
     
     @IBAction func deleteButtonClicked(_ sender: Any) {
+        // First we delete the associated notification
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [(self.rdvViewModel!.getRDV(at: self.indexPath!)!.notificationIdentifier)!])
+        // Then we delete the entity
         RDVDAO.delete(rdv: self.rdvViewModel!.getRDV(at: self.indexPath!)!)
         performSegue(withIdentifier: "exit", sender: self)
     }

@@ -51,49 +51,48 @@ class NewRDVViewController: UIViewController, UITextFieldDelegate, UNUserNotific
         // Pass the selected object to the new view controller.
         
         if segue.identifier == "addRDVSegue" {
-            //Creation du nouveau rdv
+            //Creation of the new RDV's arguments
             let date : Date = self.editRDVController.datePicker.date
             let location : String  = self.editRDVController.locationField.text!
             let professional : Professional = self.editRDVController.professional!
             let calendar = Calendar.current
             let dateTimeReminder : Date = calendar.date(byAdding: .minute, value: (0 - Int(self.editRDVController.timeLabel.text!)!), to: (self.editRDVController.datePicker.date))!
-            self.newRDV  = RDV(date: date, location: location, professional: professional, dateTimeReminder: dateTimeReminder)
             
-            // Notification for the new RDV
+            // Creation of the notificationIdentifier
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm"
+            let dateId : String = formatter.string(from: date)
+            let notificationIdentifier : String = professional.firstname! + professional.lastname! + dateId
+            
+            // Finally calling the init() function of RDV with all the necessary arguments
+            self.newRDV  = RDV(date: date, location: location, professional: professional, dateTimeReminder: dateTimeReminder, notificationIdentifier: notificationIdentifier)
+            
+            // MARK: Creation of the notification
             let year : Int = calendar.component(.year, from: dateTimeReminder)
             let month : Int = calendar.component(.month, from: dateTimeReminder)
             let day : Int = calendar.component(.day, from: dateTimeReminder)
             let hour : Int = calendar.component(.hour, from: dateTimeReminder)
             let minute : Int = calendar.component(.minute, from: dateTimeReminder)
 
+            // Creating the trigger for the notification
             let trigger = UNCalendarNotificationTrigger(dateMatching: DateComponents(year: year, month: month, day: day, hour: hour, minute: minute), repeats: false)
-            print(trigger.nextTriggerDate() ?? "nil")
             
+            // Creating the content that will be displayed in the notification
             let content = UNMutableNotificationContent()
-            content.title = "RDV"
-            content.body = "Bonjour! N'oublie pas de votre prochaine rendezvous avec"+professional.firstname!+" "+professional.lastname!+" a "+location+"!"
-            // make sure you give each request a unique identifier. (nextTriggerDate description)
-            let request = UNNotificationRequest(identifier: "newRDVNotif", content: content, trigger: trigger)
+            formatter.dateFormat = "HH:mm"
+            let hourMinutes = formatter.string(from: date)
+            content.title = "Vous avez bientot un rendez vous !"
+            content.subtitle = "Dans " + self.editRDVController.timeLabel.text! + " min."
+            content.body = "Vous avez rendez vous à " + hourMinutes + " avec " + professional.lastname! + " " + professional.firstname! + " (" + professional.title!.name! + ") au  '" + location + "'"            // The identifier of the request will be the unique notificationIdentifier of the entity
+            
+            //Creating the request of the notification with it's unique identifier
+            let request = UNNotificationRequest(identifier: notificationIdentifier, content: content, trigger: trigger)
             UNUserNotificationCenter.current().add(request) { error in
                 if let error = error {
                     print(error)
                     return
                 }
             }
-
-            
-            //Creation de la notif
-//            let formatter = DateFormatter()
-//            formatter.dateFormat = "HH:mm"
-//            let hour = formatter.string(from: date)
-//            let content = UNMutableNotificationContent()
-//            content.title = "Vous avez bientot un rendez vous !"
-//            content.subtitle = "Dans " + self.editRDVController.timeLabel.text! + " min."
-//            content.body = "Vous avez rendez vous à " + hour + " avec " + professional.lastname! + " " + professional.firstname! + " (" + professional.title!.name! + ") au  '" + location + "'"
-//            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
-//            let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
-//            
-//            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         }
     }
 
