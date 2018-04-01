@@ -30,11 +30,6 @@ class ContactViewController: UIViewController {
             initLabels()
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     func initLabels(){
         self.lastnameLabel.text = self.professional!.lastname
@@ -45,7 +40,12 @@ class ContactViewController: UIViewController {
         self.numTelLabel.text = Presenter.emptyString(text: self.professional!.numTel)
     }
     
+    @IBAction func deleteButtonClicked(_ sender: Any) {
+        ProfessionalDAO.delete(professional: self.professionalsViewModel!.getProfessional(at: self.indexPath!)!)
+        performSegue(withIdentifier: "exit", sender: self)
 
+    }
+    
     
     // MARK: - Navigation
 

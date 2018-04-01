@@ -20,6 +20,7 @@ class MedicamentDAO{
     }
     static func fetchAll() -> [Medicament]?{
         self.request.predicate = nil
+        request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Medicament.name),ascending:true)]
         do{
             return try CoreDataManager.context.fetch(self.request)
         }

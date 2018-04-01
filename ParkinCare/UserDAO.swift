@@ -51,6 +51,7 @@ class UserDAO{
         dao.email = email
         dao.numTel = numTel
         dao.address = address
+        dao.activityRemind = true
         return dao
     }
     
@@ -86,6 +87,17 @@ class UserDAO{
     
     static func search(user: User) -> User?{
         self.request.predicate = NSPredicate(format: "firstname == %@ AND lastname == %@", user.firstname!, user.lastname!)
+        do{
+            let result = try CoreDataManager.context.fetch(request) as [User]
+            guard result.count != 0 else { return nil }
+            return result[0]
+        }
+        catch{
+            return nil
+        }
+    }
+    
+    static func search() -> User?{
         do{
             let result = try CoreDataManager.context.fetch(request) as [User]
             guard result.count != 0 else { return nil }

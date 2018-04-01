@@ -45,6 +45,10 @@ class ActivityViewController: UIViewController {
         self.hourLabel.text = hour
     }
     
+    @IBAction func deleteButtonClicked(_ sender: Any) {
+        ActivityDAO.delete(activity: self.activityViewModel!.getActivity(at: self.indexPath!)!)
+        performSegue(withIdentifier: "exit", sender: self)
+    }
     
     // MARK: - Navigation
 

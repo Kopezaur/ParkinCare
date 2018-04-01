@@ -65,6 +65,12 @@ class RDVViewController: UIViewController {
         self.locationLabel.text = self.rdv!.location
         self.remindLabel.text = "Rappel : " + formatter.string(from: (self.rdv?.dateTimeReminder)! as Date)
     }
+    
+    @IBAction func deleteButtonClicked(_ sender: Any) {
+        RDVDAO.delete(rdv: self.rdvViewModel!.getRDV(at: self.indexPath!)!)
+        performSegue(withIdentifier: "exit", sender: self)
+    }
+    
 
     // MARK: - Navigation
     

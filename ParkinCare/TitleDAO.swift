@@ -20,6 +20,7 @@ class TitleDAO{
     }
     static func fetchAll() -> [Title]?{
         self.request.predicate = nil
+        request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Title.name),ascending:true)]
         do{
             return try CoreDataManager.context.fetch(self.request)
         }

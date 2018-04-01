@@ -62,9 +62,7 @@ class ContactFormViewController: UIViewController, UIPickerViewDataSource, UIPic
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if(self.titleSelected == nil){
-            self.titleSelected = self.titles?[row]
-        }
+        self.titleSelected = self.titles?[row]
     }
 
     /*

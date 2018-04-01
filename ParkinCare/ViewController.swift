@@ -23,8 +23,9 @@ class ViewController: UIViewController {
         nc.addObserver(forName:introNotification, object:nil, queue:nil, using: catchIntroNotification)
         
         // MARK: - Seeders -
+        
         if(UserDAO.count == 0){
-            UserDAO.add(user: UserDAO.createUser(lastname: "", firstname: "", email: "", numTel: "", address: ""))
+            UserDAO.add(user: User(lastname: "", firstname: "", address: "", email: "", numTel: "", activityRemind: true))
         }
         
         var titles : [String] = ["Kinésithérapeute", "Orthophoniste", "Infirmier", "Psychologue clinicien",
@@ -74,7 +75,7 @@ class ViewController: UIViewController {
         }
     }
 
-    override func viewDidAppear(_ animated: Bool) {
+    /*override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let nc = NotificationCenter.default
         nc.post(name:introNotification,
@@ -85,7 +86,7 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
+    }*/
 
     // MARK: - Helper Methods -
     
