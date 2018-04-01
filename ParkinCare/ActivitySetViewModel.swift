@@ -47,6 +47,7 @@ class ActivitySetViewModel : ActivityTableViewModel{
         // prepare a request
         let request : NSFetchRequest<Activity> = Activity.fetchRequest()
         request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Activity.dateTime),ascending:true),NSSortDescriptor(key:#keyPath(Activity.title),ascending:true)]
+        request.predicate = NSPredicate(format: "dateTime > %@", Date() as NSDate)
         let fetchResultController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataManager.context, sectionNameKeyPath: nil, cacheName: nil)
         guard let fetchResultControllerDelegate = self.delegate as? NSFetchedResultsControllerDelegate else{
             fatalError("delegate of ActivitySetViewModel should also be a NSFetchedResultsControllerDelegate")

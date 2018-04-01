@@ -48,6 +48,7 @@ class RDVSetViewModel : RDVTableViewModel{
         // prepare a request
         let request : NSFetchRequest<RDV> = RDV.fetchRequest()
         request.sortDescriptors = [NSSortDescriptor(key:#keyPath(RDV.dateTime),ascending:true),NSSortDescriptor(key:#keyPath(RDV.location),ascending:true)]
+        request.predicate = NSPredicate(format: "dateTime > %@", Date() as NSDate)
         let fetchResultController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataManager.context, sectionNameKeyPath: nil, cacheName: nil)
         guard let fetchResultControllerDelegate = self.delegate as? NSFetchedResultsControllerDelegate else{
             fatalError("delegate of RDVSetViewModel should also be a NSFetchedResultsControllerDelegate")
