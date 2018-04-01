@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 
 class ViewController: UIViewController {
@@ -19,8 +20,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nc = NotificationCenter.default
-        nc.addObserver(forName:introNotification, object:nil, queue:nil, using: catchIntroNotification)
+        // DEPRECIATED
+//        let nc = NotificationCenter.default
+//        nc.addObserver(forName:introNotification, object:nil, queue:nil, using: catchIntroNotification)
+        
         
         // MARK: - Seeders -
         if(UserDAO.count == 0){
@@ -76,10 +79,13 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let nc = NotificationCenter.default
-        nc.post(name:introNotification,
-                object: nil,
-                userInfo:["message":"Yo!", "date":Date()])
+        
+//        let nc = NotificationCenter.default
+//        let calendar = Calendar.current
+//        let date = calendar.date(byAdding: .minute, value: 1, to: Date())
+//        nc.post(name:introNotification,
+//                object: nil,
+//                userInfo:["message":"Yo!", "date":date!])
     }
     
     override func didReceiveMemoryWarning() {
@@ -125,20 +131,22 @@ class ViewController: UIViewController {
     
     // MARK: - Notifications -
     
-    func catchIntroNotification(notification: Notification) -> Void {
-        guard let userInfo = notification.userInfo,
-            let message  = userInfo["message"] as? String,
-            let date     = userInfo["date"]    as? Date else {
-                print("No userInfo found in notification")
-                return
-        }
         
-        let alert = UIAlertController(title: "Notification!",
-                                      message:"\(message) received at \(date)",
-            preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
+    // DEPRECIATED
+//    func catchIntroNotification(notification: Notification) -> Void {
+//        guard let userInfo = notification.userInfo,
+//            let message  = userInfo["message"] as? String,
+//            let date     = userInfo["date"]    as? Date else {
+//                print("No userInfo found in notification")
+//                return
+//        }
+//        
+//        let alert = UIAlertController(title: "Notification!",
+//                                      message:"\(message) received at \(date)",
+//            preferredStyle: UIAlertControllerStyle.alert)
+//        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+//        self.present(alert, animated: true, completion: nil)
+//    }
 
 
 }
