@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Activity" representedClassName="Activity" parentEntity="Reminder" syncable="YES" codeGenerationType="class">
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
@@ -50,6 +50,7 @@
     <entity name="Reminder" representedClassName="Reminder" isAbstract="YES" syncable="YES" codeGenerationType="class">
         <attribute name="dateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dateTimeReminder" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="notificationIdentifier" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Symptome" representedClassName="Symptome" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -79,9 +80,9 @@
         <element name="Prescription" positionX="-3548" positionY="-2916" width="128" height="105"/>
         <element name="Professional" positionX="-3116" positionY="-3103" width="128" height="103"/>
         <element name="RDV" positionX="-3161" positionY="-2788" width="128" height="88"/>
-        <element name="Reminder" positionX="-3735" positionY="-3180" width="128" height="73"/>
+        <element name="Reminder" positionX="-3735" positionY="-3180" width="128" height="88"/>
         <element name="Symptome" positionX="-3368" positionY="-2806" width="128" height="73"/>
         <element name="Title" positionX="-3116" positionY="-2938" width="128" height="73"/>
-        <element name="User" positionX="-3375" positionY="-3213" width="128" height="180"/>
+        <element name="User" positionX="-3402" positionY="-3249" width="128" height="180"/>
     </elements>
 </model>
