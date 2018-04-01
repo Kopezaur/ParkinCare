@@ -30,6 +30,7 @@
 		A35753BF20710CE5008D507C /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35753BE20710CE5008D507C /* ProfilViewController.swift */; };
 		A35753C120711D15008D507C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35753C020711D15008D507C /* User.swift */; };
 		A38CAC6B2070585B007C06DE /* CongratulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CAC6A2070585B007C06DE /* CongratulationViewController.swift */; };
+		A3B1DC2B20715DDF00141971 /* EvaluationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B1DC2A20715DDF00141971 /* EvaluationViewController.swift */; };
 		A3EC47C8206EC8EF0055A6C5 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC47C7206EC8EF0055A6C5 /* ActivitiesViewController.swift */; };
 		B1051AC320698FFD0056CC5A /* RendezVousTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1051AC220698FFD0056CC5A /* RendezVousTableViewController.swift */; };
 		B1051AC7206999D70056CC5A /* RDVFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1051AC6206999D70056CC5A /* RDVFetchResultController.swift */; };
@@ -136,6 +137,7 @@
 		A35753BE20710CE5008D507C /* ProfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewController.swift; sourceTree = "<group>"; };
 		A35753C020711D15008D507C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A38CAC6A2070585B007C06DE /* CongratulationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationViewController.swift; sourceTree = "<group>"; };
+		A3B1DC2A20715DDF00141971 /* EvaluationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationViewController.swift; sourceTree = "<group>"; };
 		A3EC47C4206EC3AF0055A6C5 /* teamwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teamwork.png; path = ParkinCare/teamwork.png; sourceTree = "<group>"; };
 		A3EC47C5206EC3B20055A6C5 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = ParkinCare/home.png; sourceTree = "<group>"; };
 		A3EC47C6206EC3B60055A6C5 /* running-man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "running-man.png"; path = "ParkinCare/running-man.png"; sourceTree = "<group>"; };
@@ -242,6 +244,14 @@
 			name = Profil;
 			sourceTree = "<group>";
 		};
+		A3B1DC2920715D7900141971 /* Evaluation */ = {
+			isa = PBXGroup;
+			children = (
+				A3B1DC2A20715DDF00141971 /* EvaluationViewController.swift */,
+			);
+			name = Evaluation;
+			sourceTree = "<group>";
+		};
 		B16BDAA4206B0430002A0E5B /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +320,7 @@
 		E9279FD62058187500381EEC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A3B1DC2920715D7900141971 /* Evaluation */,
 				A35753BD20710CB2008D507C /* Profil */,
 				B16BDAA6206B04B3002A0E5B /* Activities */,
 				B16BDAA5206B0480002A0E5B /* RDV */,
@@ -624,6 +635,7 @@
 				E949039A203C38DC00FE7396 /* ViewController.swift in Sources */,
 				A38CAC6B2070585B007C06DE /* CongratulationViewController.swift in Sources */,
 				B1D5E6BA2066921B0093166B /* ProfessionalFetchResultController.swift in Sources */,
+				A3B1DC2B20715DDF00141971 /* EvaluationViewController.swift in Sources */,
 				E962798F206A86190029CA05 /* Prescription.swift in Sources */,
 				6F0B99B820453F7D00A1BEF8 /* RDVModel.swift in Sources */,
 				E94903D2203C452F00FE7396 /* Prescriptions.swift in Sources */,

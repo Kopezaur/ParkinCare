@@ -52,16 +52,16 @@ class ContactFormViewController: UIViewController, UIPickerViewDataSource, UIPic
         return 1
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent titlePicker: Int) -> Int {
         return titles!.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent titlePicker: Int) -> String? {
         let title = self.titles![row]
         return title.name
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent titlePicker: Int) {
         self.titleSelected = self.titles?[row]
     }
 

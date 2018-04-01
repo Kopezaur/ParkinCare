@@ -144,26 +144,60 @@ class ViewController: UIViewController {
     func alert(error : NSError) {
         self.alert(WithTitle: "\(error)", andMessage: "\(error.userInfo)")
     }
+
+    // MARK: - Navigation
     
-    // MARK: - Notifications -
-    
+    var evaluation : Evaluation? = nil
+    @IBAction func evaluationsButtonClicked(_ sender: Any) {
         
-    // DEPRECIATED
-//    func catchIntroNotification(notification: Notification) -> Void {
-//        guard let userInfo = notification.userInfo,
-//            let message  = userInfo["message"] as? String,
-//            let date     = userInfo["date"]    as? Date else {
-//                print("No userInfo found in notification")
-//                return
-//        }
-//        
-//        let alert = UIAlertController(title: "Notification!",
-//                                      message:"\(message) received at \(date)",
-//            preferredStyle: UIAlertControllerStyle.alert)
-//        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-//        self.present(alert, animated: true, completion: nil)
-//    }
+        // Verification qu'il y a bien une évaluation à remplir
+        /*var evaluations : [Evaluation]? = EvaluationDAO.fetchAll()
+        let calendar : Calendar = Calendar.current
+        let currentDate : Date = Date()
+        let dateMax = calendar.date(byAdding: .minute, value: 15, to: currentDate)
+        let dateMin = calendar.date(byAdding: .minute, value: -15, to: currentDate)
+        if(evaluations == nil || evaluations?.count == 0 || (evaluations!.last!.dateTime! as Date) < dateMin!){
+            DialogBoxHelper.alert(view: self, WithTitle: "Aucune évaluation.")
+        }
+        else{
+            var index : Int = 0
+            while(index < evaluations!.count) {
+                let dateTime : Date = evaluations![index].dateTime! as Date
+                if(dateTime < dateMax! && dateTime > dateMin!){
+                    self.evaluation = evaluations![index]
+                }
+                index = index + 1
+            }
+            if(self.evaluation == nil){
+                let nextEvaluation : Evaluation = evaluations![index]
+                let formatter = DateFormatter()
+                formatter.dateFormat = "dd/MM/yyyy"
+                let date = formatter.string(from: (nextEvaluation.dateTime! as Date))
+                formatter.dateFormat = "HHhmmmin"
+                let hour = formatter.string(from: (nextEvaluation.dateTime! as Date))
+                DialogBoxHelper.alert(view: self, WithTitle: "Prochaine évaluation le " + date + " à " + hour)
+            }
+            else{
+                performSegue(withIdentifier: "toEvaluationSegue", sender: self)
+            }
+        }*/
+        performSegue(withIdentifier: "toEvaluationSegue", sender: self)
 
-
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if let evaluationViewController = segue.destination as? EvaluationViewController{
+            evaluationViewController.evaluation = self.evaluation
+        }
+    }
+    
+    @IBAction func unwindToHomeView(sender: UIStoryboardSegue) {
+        if let evaluationViewController = sender.source as? EvaluationViewController {
+            DialogBoxHelper.alert(view: self, WithTitle: "Enregistré ! test")
+        }
+    }
+    
 }
 
