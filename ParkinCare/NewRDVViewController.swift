@@ -73,7 +73,7 @@ class NewRDVViewController: UIViewController, UITextFieldDelegate, UNUserNotific
             
             // Creation des Evaluations si neurologue
             if(professional.title!.name == "Neurologue"){
-                Evaluation.createEvaluationsFromNewRdv(dateTime: date, rdv: self.newRDV!)
+                Evaluation.createEvaluationsFromNewRdv(rdv: self.newRDV!)
             }
             
         }

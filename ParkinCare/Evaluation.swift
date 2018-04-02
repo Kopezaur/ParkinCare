@@ -22,7 +22,7 @@ extension Evaluation{
         self.rdv = rdv
     }
     
-    static func createEvaluationsFromNewRdv(dateTime : Date, rdv : RDV){
+    static func createEvaluationsFromNewRdv(rdv : RDV){
         
         let calendar = Calendar.current
         
@@ -40,7 +40,7 @@ extension Evaluation{
         let endMinute : Int = calendar.component(.minute, from: endOnDay)
         
         //Initialiser la date de depart de la creation des evaluations
-        var startDate = calendar.date(byAdding: .day, value: -5, to: dateTime)
+        var startDate = calendar.date(byAdding: .day, value: -6, to: (rdv.dateTime! as Date))
         startDate = calendar.date(bySetting: .hour, value: (startHour + 2), of: startDate!)
         startDate = calendar.date(bySetting: .minute, value: startMinute, of: startDate!)
         
@@ -49,17 +49,29 @@ extension Evaluation{
         endDate = calendar.date(bySetting: .minute, value: endMinute, of: endDate)!
         
         // Créer les evaluations
-        let newEvaluations : NSSet = NSSet()
+        var newEvaluations : [Evaluation] = []
         while(startDate! < endDate){
             var currentDate = startDate
             for _ in 1...5 {
                 let evaluation = Evaluation(dateTime: currentDate!, dateTimeReminder : currentDate!, notificationIdentifier: "", extraEvent: nil, validated: false, symptome: nil, rdv : rdv)
-                newEvaluations.adding(evaluation)
+                newEvaluations.append(evaluation)
                 currentDate = calendar.date(byAdding: .day, value: 1, to: currentDate!)
             }
             startDate = calendar.date(byAdding: .hour, value: Int(user.hourIntervalEvaluation), to: startDate!)
         }
-        
-        rdv.evaluations = newEvaluations
+        rdv.evaluations?.addingObjects(from: newEvaluations)
+        RDVDAO.save()
+    }
+    
+    static func editEvaluationsFromRdv(rdv : RDV){
+        self.deleteEvaluationsFromRdv(rdv: rdv)
+        self.createEvaluationsFromNewRdv(rdv : rdv)
+    }
+    
+    static func deleteEvaluationsFromRdv(rdv: RDV){
+        let evaluations : [Evaluation] = rdv.evaluations!.allObjects as! [Evaluation]
+        for evaluation in evaluations {
+            EvaluationDAO.delete(evaluation: evaluation)
+        }
     }
 }

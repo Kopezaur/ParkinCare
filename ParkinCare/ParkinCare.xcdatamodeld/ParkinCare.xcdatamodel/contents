@@ -44,7 +44,7 @@
     </entity>
     <entity name="RDV" representedClassName="RDV" parentEntity="Reminder" syncable="YES" codeGenerationType="class">
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="evaluations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Evaluation" inverseName="rdv" inverseEntity="Evaluation" syncable="YES"/>
+        <relationship name="evaluations" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Evaluation" inverseName="rdv" inverseEntity="Evaluation" syncable="YES"/>
         <relationship name="professional" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Professional" inverseName="rdv" inverseEntity="Professional" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="rendezVous" inverseEntity="User" syncable="YES"/>
     </entity>

@@ -92,9 +92,14 @@ class ViewController: UIViewController {
             }
         }
         
+        // A suppr
         let evaluations = EvaluationDAO.fetchAll()
         for evaluation in evaluations! {
             EvaluationDAO.delete(evaluation: evaluation)
+        }
+        let rdvs = RDVDAO.fetchAll()
+        for rdv in rdvs! {
+            RDVDAO.delete(rdv: rdv)
         }
     }
     
@@ -160,6 +165,8 @@ class ViewController: UIViewController {
         // Verification qu'il y a bien une évaluation à remplir
         self.evaluation = nil
         var evaluations : [Evaluation]? = EvaluationDAO.fetchAll()
+        
+        //print(evaluations!.count)
         
         let calendar : Calendar = Calendar.current
         var currentDate : Date = Date()

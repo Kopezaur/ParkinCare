@@ -84,6 +84,11 @@ class EditRDVViewController: UIViewController, UNUserNotificationCenterDelegate 
             } else {
                 // The dateTimeReminder has not been modified and therefore there is nothing to do
             }
+            
+            // Creation des Evaluations si neurologue
+            if(self.rdv!.professional!.title!.name == "Neurologue"){
+                Evaluation.editEvaluationsFromRdv(rdv: self.rdv!)
+            }
         }
     }
 
