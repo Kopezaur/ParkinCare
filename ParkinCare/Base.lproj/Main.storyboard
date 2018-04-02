@@ -108,9 +108,12 @@
                                                     <constraint firstAttribute="height" constant="100" id="zrd-26-nz4"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <state key="normal" title="Pillulier">
+                                                <state key="normal" title="Pilulier">
                                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="gWp-Ew-vDy" kind="show" id="6dR-9x-obq"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmR-LU-eMu">
                                                 <rect key="frame" x="196" y="380" width="163.5" height="100"/>
@@ -459,7 +462,138 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YmB-4U-XbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="C8t-lS-Zyz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2000.8" y="-2484.1079460269866"/>
+            <point key="canvasLocation" x="4884" y="596"/>
+        </scene>
+        <!--Pilulier-->
+        <scene sceneID="qg8-HB-TQ6">
+            <objects>
+                <navigationController id="oUe-gr-y6d" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Pilulier" image="pills.png" id="x3c-fZ-hgJ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xUw-LZ-BIm">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gWp-Ew-vDy" kind="relationship" relationship="rootViewController" id="NwI-ep-jFM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M7S-bh-b3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="526" y="-2411"/>
+        </scene>
+        <!--Pilulier View Controller-->
+        <scene sceneID="hzX-9g-EcT">
+            <objects>
+                <viewController id="gWp-Ew-vDy" customClass="PilulierViewController" customModule="ParkinCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G3Q-jp-BYY"/>
+                        <viewControllerLayoutGuide type="bottom" id="IFc-aU-Yme"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zJM-ae-9C3" customClass="P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prescriptions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73k-op-Usk">
+                                <rect key="frame" x="0.0" y="72" width="375" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.63661755180000001" blue="0.059613820769999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMY-YI-sjz">
+                                <rect key="frame" x="16" y="550" width="343" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.63661755180000001" blue="0.059613820769999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="DBK-Px-bk5"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="ICO-CA-ADW"/>
+                                    <constraint firstAttribute="height" constant="60" id="ysH-Pp-Lwu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Ajouter une prescription">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g60-Q8-Xjx">
+                                <rect key="frame" x="16" y="107" width="343" height="435"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="NpF-yf-Tae" customClass="PrescriptionTableViewCell" customModule="ParkinCare" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NpF-yf-Tae" id="rdF-ub-skM">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njv-Yg-Wzq">
+                                                    <rect key="frame" x="60" y="11" width="39" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Médicaments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dow-ar-sBo">
+                                                    <rect key="frame" x="222" y="12" width="106" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpJ-Gs-aJi">
+                                                    <rect key="frame" x="203" y="12" width="11" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8J3-wD-uNw">
+                                                    <rect key="frame" x="15" y="11.5" width="37" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8J3-wD-uNw" firstAttribute="leading" secondItem="rdF-ub-skM" secondAttribute="leadingMargin" id="8YP-YQ-H55"/>
+                                                <constraint firstItem="Njv-Yg-Wzq" firstAttribute="centerY" secondItem="rdF-ub-skM" secondAttribute="centerY" id="C0e-mc-vT1"/>
+                                                <constraint firstItem="8J3-wD-uNw" firstAttribute="centerY" secondItem="rdF-ub-skM" secondAttribute="centerY" id="SNM-Ty-Amw"/>
+                                                <constraint firstItem="dow-ar-sBo" firstAttribute="leading" secondItem="gpJ-Gs-aJi" secondAttribute="trailing" constant="8" id="UTL-RE-bMQ"/>
+                                                <constraint firstItem="Njv-Yg-Wzq" firstAttribute="leading" secondItem="8J3-wD-uNw" secondAttribute="trailing" constant="8" id="bVm-js-ni0"/>
+                                                <constraint firstItem="dow-ar-sBo" firstAttribute="trailing" secondItem="rdF-ub-skM" secondAttribute="trailingMargin" id="idy-nM-fNC"/>
+                                                <constraint firstItem="gpJ-Gs-aJi" firstAttribute="centerY" secondItem="rdF-ub-skM" secondAttribute="centerY" id="klB-wK-8ft"/>
+                                                <constraint firstItem="dow-ar-sBo" firstAttribute="centerY" secondItem="rdF-ub-skM" secondAttribute="centerY" id="vED-WX-Vip"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="8J3-wD-uNw" id="2VN-36-0aR"/>
+                                            <outlet property="hourLabel" destination="Njv-Yg-Wzq" id="9pj-rq-M0n"/>
+                                            <outlet property="numberMedicamentLabel" destination="gpJ-Gs-aJi" id="03F-MD-tV1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="gWp-Ew-vDy" id="QT3-ZN-baI"/>
+                                    <outlet property="prefetchDataSource" destination="gWp-Ew-vDy" id="hEw-Xl-dFe"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99840182070000005" green="0.99590700860000003" blue="0.93931716679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="g60-Q8-Xjx" firstAttribute="trailing" secondItem="zJM-ae-9C3" secondAttribute="trailingMargin" id="0Cy-dn-IMP"/>
+                            <constraint firstItem="73k-op-Usk" firstAttribute="top" secondItem="G3Q-jp-BYY" secondAttribute="bottom" constant="8" id="2RV-zL-D39"/>
+                            <constraint firstAttribute="trailing" secondItem="73k-op-Usk" secondAttribute="trailing" id="3pC-P8-Jae"/>
+                            <constraint firstItem="uMY-YI-sjz" firstAttribute="trailing" secondItem="zJM-ae-9C3" secondAttribute="trailingMargin" id="7N4-6J-QzH"/>
+                            <constraint firstItem="73k-op-Usk" firstAttribute="leading" secondItem="zJM-ae-9C3" secondAttribute="leading" id="ENx-ZO-uJ6"/>
+                            <constraint firstItem="IFc-aU-Yme" firstAttribute="top" secondItem="uMY-YI-sjz" secondAttribute="bottom" constant="8" id="XOV-Zf-obM"/>
+                            <constraint firstItem="g60-Q8-Xjx" firstAttribute="top" secondItem="73k-op-Usk" secondAttribute="bottom" constant="8" id="ho7-JE-UdG"/>
+                            <constraint firstItem="uMY-YI-sjz" firstAttribute="leading" secondItem="zJM-ae-9C3" secondAttribute="leadingMargin" id="jLn-TZ-Q6D"/>
+                            <constraint firstItem="uMY-YI-sjz" firstAttribute="top" secondItem="g60-Q8-Xjx" secondAttribute="bottom" constant="8" id="jVo-ox-Xg4"/>
+                            <constraint firstItem="g60-Q8-Xjx" firstAttribute="leading" secondItem="zJM-ae-9C3" secondAttribute="leadingMargin" id="sEa-gE-5TF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ATt-eB-b0d"/>
+                    <connections>
+                        <outlet property="prescriptionTable" destination="g60-Q8-Xjx" id="ldE-TO-Alu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uja-gr-dTf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2092" y="-2411.2443778110946"/>
         </scene>
         <!--Activity View Controller-->
         <scene sceneID="ZRL-Fr-05A">
@@ -2276,6 +2410,7 @@
                         <segue destination="RPW-Lr-E4p" kind="relationship" relationship="viewControllers" id="VFh-7o-xof"/>
                         <segue destination="KmE-cN-3uZ" kind="relationship" relationship="viewControllers" id="xAr-XK-tVg"/>
                         <segue destination="V9j-Bd-kqv" kind="relationship" relationship="viewControllers" id="zgf-p1-ACa"/>
+                        <segue destination="oUe-gr-y6d" kind="relationship" relationship="viewControllers" id="mvC-JC-D3M"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hvv-SH-oVH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2468,6 +2603,7 @@
     <resources>
         <image name="ParkinCareLogo.png" width="385" height="292"/>
         <image name="home.png" width="24" height="24"/>
+        <image name="pills.png" width="24" height="24"/>
         <image name="running-man.png" width="24" height="24"/>
         <image name="teamwork.png" width="24" height="24"/>
         <image name="trophy.png" width="512" height="512"/>
@@ -2477,6 +2613,7 @@
         <segue reference="V4F-34-HdX"/>
         <segue reference="7mJ-PY-czD"/>
         <segue reference="iUi-hu-b0G"/>
+        <segue reference="NwI-ep-jFM"/>
         <segue reference="6aZ-MB-xzM"/>
     </inferredMetricsTieBreakers>
 </document>

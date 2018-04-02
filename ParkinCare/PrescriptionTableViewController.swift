@@ -8,88 +8,81 @@
 
 import UIKit
 
-class PrescriptionTableViewController: UITableViewController {
+//-------------------------------------------------------------------------------------------------
+// MARK: -
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+protocol PrescriptionTableViewModel {
+    /// numbers of rows for a given section
+    ///
+    /// - Parameter section: section we want the number of rows
+    /// - Returns: number of rows for section
+    func rowsCount(inSection section : Int) -> Int
+    /// person at indexPath
+    ///
+    /// - Parameter indexPath: (section, row)
+    /// - Returns: Prescription at indexPath, nil if indexPath not valid
+    func getPrescription(at indexPath: IndexPath) -> Prescription?
+}
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+class PrescriptionTableViewController: NSObject, UITableViewDataSource, UITableViewDelegate {
+    
+    var tableView   : UITableView
+    let prescriptionViewModel : PrescriptionSetViewModel
+    let fetchResultController : PrescriptionFetchResultController
+    
+    init(tableView: UITableView) {
+        self.tableView = tableView
+        self.prescriptionViewModel = PrescriptionSetViewModel()
+        self.fetchResultController = PrescriptionFetchResultController(view : tableView, model : self.prescriptionViewModel)
+        super.init()
+        self.tableView.dataSource      = self
+        self.prescriptionViewModel.delegate = self.fetchResultController
     }
 
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        // after it has just managed deleting
+        if(editingStyle == UITableViewCellEditingStyle.delete){
+            // Delete the notification
+            NotificationManager.deleteNotification(notificationIdentifier: prescriptionViewModel.getPrescription(at: indexPath)!.notificationIdentifier!)
+            // Delete the entity
+            PrescriptionDAO.delete(prescription: prescriptionViewModel.getPrescription(at: indexPath)!)
+        }
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.prescriptionViewModel.rowsCount(inSection: section)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "prescriptionCell", for: indexPath) as! PrescriptionTableViewCell
+        
+        // Configure the cell...
+        return configure(cell: cell, atIndexPath: indexPath)
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
-
+    // MARK: - convenience methods
+    
+    @discardableResult
+    private func configure(cell: PrescriptionTableViewCell, atIndexPath indexPath: IndexPath) -> UITableViewCell{
+        guard let prescription = self.prescriptionViewModel.getPrescription(at: indexPath) else { return cell }
+        let dateTime = prescription.dateTime! as Date
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        let date = formatter.string(from: dateTime)
+        formatter.dateFormat = "HH:mm"
+        let hour = formatter.string(from: dateTime)
+        cell.dateLabel.text = date
+        cell.hourLabel.text = hour
+        cell.numberMedicamentLabel.text = String(prescription.doses!.count)
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -24,6 +24,11 @@
 		A324974C20704C56007D9095 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = A3EC47C5206EC3B20055A6C5 /* home.png */; };
 		A324974D20704C58007D9095 /* running-man.png in Resources */ = {isa = PBXBuildFile; fileRef = A3EC47C6206EC3B60055A6C5 /* running-man.png */; };
 		A324974E20704C5A007D9095 /* trophy.png in Resources */ = {isa = PBXBuildFile; fileRef = A324974A207045E9007D9095 /* trophy.png */; };
+		A332BD8E2072B0D70059D1A1 /* PilulierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A332BD8D2072B0D70059D1A1 /* PilulierViewController.swift */; };
+		A332BD902072B1460059D1A1 /* PrescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A332BD8F2072B1460059D1A1 /* PrescriptionTableViewCell.swift */; };
+		A332BD922072B27E0059D1A1 /* PrescriptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A332BD912072B27E0059D1A1 /* PrescriptionTableViewController.swift */; };
+		A332BD942072B76C0059D1A1 /* PrescriptionFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A332BD932072B76C0059D1A1 /* PrescriptionFetchResultController.swift */; };
+		A332BD962072BC500059D1A1 /* pills.png in Resources */ = {isa = PBXBuildFile; fileRef = A332BD952072BC500059D1A1 /* pills.png */; };
 		A35753BF20710CE5008D507C /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35753BE20710CE5008D507C /* ProfilViewController.swift */; };
 		A35753C120711D15008D507C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35753C020711D15008D507C /* User.swift */; };
 		A38CAC6B2070585B007C06DE /* CongratulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CAC6A2070585B007C06DE /* CongratulationViewController.swift */; };
@@ -124,6 +129,11 @@
 		A324974420701F0F007D9095 /* FormActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormActivityViewController.swift; sourceTree = "<group>"; };
 		A32497462070414D007D9095 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		A324974A207045E9007D9095 /* trophy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trophy.png; path = ParkinCare/trophy.png; sourceTree = "<group>"; };
+		A332BD8D2072B0D70059D1A1 /* PilulierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilulierViewController.swift; sourceTree = "<group>"; };
+		A332BD8F2072B1460059D1A1 /* PrescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		A332BD912072B27E0059D1A1 /* PrescriptionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionTableViewController.swift; sourceTree = "<group>"; };
+		A332BD932072B76C0059D1A1 /* PrescriptionFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionFetchResultController.swift; sourceTree = "<group>"; };
+		A332BD952072BC500059D1A1 /* pills.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pills.png; path = ParkinCare/pills.png; sourceTree = SOURCE_ROOT; };
 		A35753BE20710CE5008D507C /* ProfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewController.swift; sourceTree = "<group>"; };
 		A35753C020711D15008D507C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A38CAC6A2070585B007C06DE /* CongratulationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +232,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A332BD8C2072AFE10059D1A1 /* Prescription */ = {
+			isa = PBXGroup;
+			children = (
+				A332BD8D2072B0D70059D1A1 /* PilulierViewController.swift */,
+				A332BD912072B27E0059D1A1 /* PrescriptionTableViewController.swift */,
+				A332BD932072B76C0059D1A1 /* PrescriptionFetchResultController.swift */,
+			);
+			name = Prescription;
+			sourceTree = "<group>";
+		};
 		A35753BD20710CB2008D507C /* Profil */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +327,7 @@
 		E9279FD62058187500381EEC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A332BD8C2072AFE10059D1A1 /* Prescription */,
 				A3B1DC2920715D7900141971 /* Evaluation */,
 				A35753BD20710CB2008D507C /* Profil */,
 				B16BDAA6206B04B3002A0E5B /* Activities */,
@@ -417,6 +438,7 @@
 		E96D540020582541004562BE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A332BD952072BC500059D1A1 /* pills.png */,
 				A324974A207045E9007D9095 /* trophy.png */,
 				A3EC47C6206EC3B60055A6C5 /* running-man.png */,
 				A3EC47C5206EC3B20055A6C5 /* home.png */,
@@ -446,6 +468,7 @@
 				15D08BF420616DC000302868 /* ContactTableViewCell.swift */,
 				B1051AC820699DEA0056CC5A /* RendezVousTableViewCell.swift */,
 				A324974020700AB8007D9095 /* ActivityTableViewCell.swift */,
+				A332BD8F2072B1460059D1A1 /* PrescriptionTableViewCell.swift */,
 			);
 			name = ViewsCell;
 			sourceTree = "<group>";
@@ -568,6 +591,7 @@
 				A324974C20704C56007D9095 /* home.png in Resources */,
 				A324974E20704C5A007D9095 /* trophy.png in Resources */,
 				E94903A2203C38DC00FE7396 /* Assets.xcassets in Resources */,
+				A332BD962072BC500059D1A1 /* pills.png in Resources */,
 				E96D5406205830CA004562BE /* ParkinCareLogo.png in Resources */,
 				A324974D20704C58007D9095 /* running-man.png in Resources */,
 				E949039D203C38DC00FE7396 /* Main.storyboard in Resources */,
@@ -612,9 +636,11 @@
 				E92A50E3206C5556009C6D0F /* EvaluationSet.swift in Sources */,
 				A324974520701F0F007D9095 /* FormActivityViewController.swift in Sources */,
 				E94F277220696C030032BAB1 /* RDVDAO.swift in Sources */,
+				A332BD922072B27E0059D1A1 /* PrescriptionTableViewController.swift in Sources */,
 				E938375020454E16005A6FCF /* Professionals.swift in Sources */,
 				B1D5E6BC20698C700093166B /* RendezVousViewController.swift in Sources */,
 				B1051AC320698FFD0056CC5A /* RendezVousTableViewController.swift in Sources */,
+				A332BD902072B1460059D1A1 /* PrescriptionTableViewCell.swift in Sources */,
 				A3EC47C8206EC8EF0055A6C5 /* ActivitiesViewController.swift in Sources */,
 				E9627989206A786F0029CA05 /* DoseSet.swift in Sources */,
 				B1051AD12069C53C0056CC5A /* RDV.swift in Sources */,
@@ -639,6 +665,7 @@
 				E9627987206A74470029CA05 /* DoseDAO.swift in Sources */,
 				B1051AC920699DEA0056CC5A /* RendezVousTableViewCell.swift in Sources */,
 				1535056E2062665100D500D6 /* ContactViewController.swift in Sources */,
+				A332BD8E2072B0D70059D1A1 /* PilulierViewController.swift in Sources */,
 				B16BDAA3206AFD98002A0E5B /* Presenter.swift in Sources */,
 				E9482CBC206FE46500D85B94 /* SymptomeDAO.swift in Sources */,
 				E962798D206A81BE0029CA05 /* EvaluationDAO.swift in Sources */,
@@ -646,6 +673,7 @@
 				6F0B99B620453ED200A1BEF8 /* RendezVousSet.swift in Sources */,
 				B1D5E6B12065D39B0093166B /* ProfessionalTableViewController.swift in Sources */,
 				E9E6585A206AA2050038686D /* ActivitySet.swift in Sources */,
+				A332BD942072B76C0059D1A1 /* PrescriptionFetchResultController.swift in Sources */,
 				E92A50E5206C56B0009C6D0F /* PrescriptionSet.swift in Sources */,
 				15D08BF92061829200302868 /* NewContactViewController.swift in Sources */,
 				E94E74CF20402C0C00AECAC6 /* Evaluations.swift in Sources */,

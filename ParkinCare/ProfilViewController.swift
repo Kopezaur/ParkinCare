@@ -34,7 +34,6 @@ class ProfilViewController: UIViewController {
     }
     
     func initLabels(){
-        print(self.user?.startEvaluation)
         self.lastnameField.text = self.user!.lastname
         self.firstnameField.text = self.user!.firstname
         self.addressField.text = self.user!.address
