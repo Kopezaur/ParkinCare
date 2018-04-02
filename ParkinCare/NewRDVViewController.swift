@@ -69,7 +69,15 @@ class NewRDVViewController: UIViewController, UITextFieldDelegate, UNUserNotific
             
             // Creation of the notification
             NotificationManager.createRDVNotification(rdv: (self.newRDV)!)
+            
+            
+            // Creation des Evaluations si neurologue
+            if(professional.title!.name == "Neurologue"){
+                Evaluation.createEvaluationsFromNewRdv(dateTime: date, rdv: self.newRDV!)
             }
+            
+        }
     }
+    
 
 }

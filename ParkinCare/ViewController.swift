@@ -70,7 +70,7 @@ class ViewController: UIViewController {
             }
         }
         
-        var symptomes : [String] = ["Somnolence", "Chute", "Hallucination", "Prise de dispersible", "Clic / bolus d'Apokinon"]
+        var symptomes : [String] = ["Aucun","Somnolence", "Chute", "Hallucination", "Prise de dispersible", "Clic / bolus d'Apokinon"]
         
         if(symptomes.count > SymptomeDAO.count){
             for i in 0 ..< symptomes.count {
@@ -91,7 +91,14 @@ class ViewController: UIViewController {
                 }
             }
         }
+        
+        let evaluations = EvaluationDAO.fetchAll()
+        for evaluation in evaluations! {
+            EvaluationDAO.delete(evaluation: evaluation)
+        }
     }
+    
+    
 
     /*override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -151,18 +158,23 @@ class ViewController: UIViewController {
     @IBAction func evaluationsButtonClicked(_ sender: Any) {
         
         // Verification qu'il y a bien une évaluation à remplir
-        /*var evaluations : [Evaluation]? = EvaluationDAO.fetchAll()
+        self.evaluation = nil
+        var evaluations : [Evaluation]? = EvaluationDAO.fetchAll()
+        
         let calendar : Calendar = Calendar.current
-        let currentDate : Date = Date()
+        var currentDate : Date = Date()
+        currentDate = calendar.date(byAdding: .hour, value: 2, to: currentDate)!
         let dateMax = calendar.date(byAdding: .minute, value: 15, to: currentDate)
         let dateMin = calendar.date(byAdding: .minute, value: -15, to: currentDate)
+        
         if(evaluations == nil || evaluations?.count == 0 || (evaluations!.last!.dateTime! as Date) < dateMin!){
             DialogBoxHelper.alert(view: self, WithTitle: "Aucune évaluation.")
         }
         else{
             var index : Int = 0
-            while(index < evaluations!.count) {
+            while(dateMax! > (evaluations![index].dateTime! as Date)) {
                 let dateTime : Date = evaluations![index].dateTime! as Date
+                
                 if(dateTime < dateMax! && dateTime > dateMin!){
                     self.evaluation = evaluations![index]
                 }
@@ -171,18 +183,18 @@ class ViewController: UIViewController {
             if(self.evaluation == nil){
                 let nextEvaluation : Evaluation = evaluations![index]
                 let formatter = DateFormatter()
+                var nextDateTime : Date = nextEvaluation.dateTime! as Date
+                nextDateTime = calendar.date(byAdding: .hour, value: -2, to: nextDateTime)!
                 formatter.dateFormat = "dd/MM/yyyy"
-                let date = formatter.string(from: (nextEvaluation.dateTime! as Date))
-                formatter.dateFormat = "HHhmmmin"
-                let hour = formatter.string(from: (nextEvaluation.dateTime! as Date))
+                let date = formatter.string(from: nextDateTime)
+                formatter.dateFormat = "HH:mm"
+                let hour = formatter.string(from: nextDateTime)
                 DialogBoxHelper.alert(view: self, WithTitle: "Prochaine évaluation le " + date + " à " + hour)
             }
             else{
                 performSegue(withIdentifier: "toEvaluationSegue", sender: self)
             }
-        }*/
-        performSegue(withIdentifier: "toEvaluationSegue", sender: self)
-
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -194,8 +206,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func unwindToHomeView(sender: UIStoryboardSegue) {
-        if let evaluationViewController = sender.source as? EvaluationViewController {
-            DialogBoxHelper.alert(view: self, WithTitle: "Enregistré ! test")
+        if sender.source is EvaluationViewController {
+            //DialogBoxHelper.alert(view: self, WithTitle: "Enregistré !")
         }
     }
     

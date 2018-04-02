@@ -363,7 +363,7 @@
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="C8t-lS-Zyz" kind="unwind" identifier="toHomeSegue" unwindAction="unwindToHomeViewWithSender:" id="dZP-7V-08I"/>
+                                    <action selector="validateEvaluationButtonClicked:" destination="Pnq-0Q-zh8" eventType="touchUpInside" id="HHS-Vf-0cP"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4j-WL-g2Y">
@@ -453,6 +453,7 @@
                     <connections>
                         <outlet property="particularEventPicker" destination="SKy-6F-rD8" id="RPZ-28-csJ"/>
                         <outlet property="symptomesPicker" destination="gkO-w1-foG" id="Y1U-CA-gRx"/>
+                        <segue destination="C8t-lS-Zyz" kind="unwind" identifier="returnHome" unwindAction="unwindToHomeViewWithSender:" id="gkN-r2-PZ2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YmB-4U-XbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -722,12 +723,8 @@
                             <constraint firstAttribute="trailing" secondItem="auB-7M-lez" secondAttribute="trailing" id="pFQ-jv-JlO"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <segue destination="ghR-im-FAb" kind="unwind" identifier="addActivitySegue" unwindAction="unwindToThisViewWithSender:" id="XpM-4A-XGt"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LiS-GH-OEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="ghR-im-FAb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2889" y="-702"/>
         </scene>

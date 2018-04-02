@@ -51,14 +51,6 @@ class EvaluationModel {
         }
     }
     
-    var rating: Double{
-        get{
-            return self.dao.rating
-        }
-        set{
-            self.dao.rating = newValue
-        }
-    }
     
     var extraEvent: String?{
         get{
@@ -88,15 +80,13 @@ class EvaluationModel {
         }
     }
     
-    init(dateTime: NSDate, dateTimeReminder: NSDate, rating: Double, extraEvent: String, validated: Bool?){
+    init(dateTime: NSDate, dateTimeReminder: NSDate, extraEvent: String, validated: Bool?){
         guard let dao = Evaluation.getNewEvaluationDao() else{
             fatalError("Initialisation error")
         }
         self.dao = dao
         self.dao.dateTime = dateTime
         self.dao.dateTimeReminder = dateTimeReminder
-        self.rating = rating
-        self.extraEvent = extraEvent
         self.validated = validated!
         self.user = nil
     }

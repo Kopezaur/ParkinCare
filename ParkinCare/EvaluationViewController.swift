@@ -64,6 +64,13 @@ class EvaluationViewController: UIViewController, UIPickerViewDataSource, UIPick
         }
     }
     
+    @IBAction func validateEvaluationButtonClicked(_ sender: Any) {
+        self.evaluation?.symptome = self.particularEvent
+        self.evaluation?.extraEvent = self.symptome
+        self.evaluation?.validated = true
+        EvaluationDAO.save()
+        performSegue(withIdentifier: "returnHome", sender: self)
+    }
     
     
     /*

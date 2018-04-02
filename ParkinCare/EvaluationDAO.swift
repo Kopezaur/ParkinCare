@@ -19,7 +19,8 @@ class EvaluationDAO{
         CoreDataManager.context.delete(evaluation)
     }
     static func fetchAll() -> [Evaluation]?{
-        self.request.predicate = nil
+        self.request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Evaluation.dateTime),ascending:true)]
+        request.predicate = NSPredicate(format: "validated = %@", "false")
         do{
             return try CoreDataManager.context.fetch(self.request)
         }
@@ -43,12 +44,11 @@ class EvaluationDAO{
         return Evaluation(context: CoreDataManager.context)
     }
     
-    static func createEvaluation(dateTime: NSDate, dateTimeReminder: NSDate, symptome: Symptome, rating: Double, extraEvent: String, validated: Bool?) -> Evaluation{
+    static func createEvaluation(dateTime: NSDate, dateTimeReminder: NSDate, symptome: Symptome, extraEvent: String, validated: Bool?) -> Evaluation{
         let dao = self.createEvaluation()
         dao.dateTime = dateTime
         dao.dateTimeReminder  = dateTimeReminder
         dao.symptome = symptome
-        dao.rating = rating
         dao.extraEvent = extraEvent
         dao.validated = validated!
         return dao
@@ -59,7 +59,6 @@ class EvaluationDAO{
         dao.dateTime = evaluation.dateTime
         dao.dateTimeReminder  = evaluation.dateTimeReminder
         dao.symptome = evaluation.symptome
-        dao.rating = evaluation.rating
         dao.extraEvent = evaluation.extraEvent
         dao.validated = evaluation.validated
         return dao

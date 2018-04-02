@@ -23,11 +23,11 @@ class NotificationManager{
             if user.activityRemind == true { // if they are active, we can continue creating the notification
                 // Creation of the trigger parameters
                 let calendar = Calendar.current
-                let year : Int = calendar.component(.year, from: activity.dateTimeReminder as! Date)
-                let month : Int = calendar.component(.month, from: activity.dateTimeReminder as! Date)
-                let day : Int = calendar.component(.day, from: activity.dateTimeReminder as! Date)
-                let hour : Int = calendar.component(.hour, from: activity.dateTimeReminder as! Date)
-                let minute : Int = calendar.component(.minute, from: activity.dateTimeReminder as! Date)
+                let year : Int = calendar.component(.year, from: activity.dateTimeReminder! as Date)
+                let month : Int = calendar.component(.month, from: activity.dateTimeReminder! as Date)
+                let day : Int = calendar.component(.day, from: activity.dateTimeReminder! as Date)
+                let hour : Int = calendar.component(.hour, from: activity.dateTimeReminder! as Date)
+                let minute : Int = calendar.component(.minute, from: activity.dateTimeReminder! as Date)
         
                 // Creating the trigger for the notification
                 let trigger = UNCalendarNotificationTrigger(dateMatching: DateComponents(year: year, month: month, day: day, hour: hour, minute: minute), repeats: false)
@@ -57,8 +57,8 @@ class NotificationManager{
             if user.activityRemind == true { // if they are active, we can continue creating the notification
                 // Creation of the trigger parameters
                 let calendar = Calendar.current
-                let finalDate = rdv.dateTime as! Date
-                let initialDate = rdv.dateTimeReminder as! Date
+                let finalDate = rdv.dateTime! as Date
+                let initialDate = rdv.dateTimeReminder! as Date
                 let year : Int = calendar.component(.year, from: initialDate)
                 let month : Int = calendar.component(.month, from: initialDate)
                 let day : Int = calendar.component(.day, from: initialDate)
@@ -75,7 +75,7 @@ class NotificationManager{
                 let hourMinutes = formatter.string(from: initialDate)
                 content.title = "Rendezvous"
                 content.subtitle = "Dans " + finalDate.offset(from: initialDate)
-                content.body = "Vous avez rendez vous à " + hourMinutes + " avec \(rdv.professional?.lastname!) \(rdv.professional?.firstname!) (\(rdv.professional?.title!.name!)) au  '\(rdv.location)'."
+                content.body = "Vous avez rendez vous à " + hourMinutes + " avec \(rdv.professional!.lastname!) \(rdv.professional!.firstname!) (\(rdv.professional!.title!.name!)) au  '\(rdv.location)'."
                 // The identifier of the request will be the unique notificationIdentifier of the entity
                 
                 //Creating the request of the notification with it's unique identifier
