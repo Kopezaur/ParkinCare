@@ -76,10 +76,46 @@ class NotificationManager{
                 content.title = "Rendezvous"
                 content.subtitle = "Dans " + finalDate.offset(from: initialDate)
                 content.body = "Vous avez rendez vous à " + hourMinutes + " avec \(rdv.professional!.lastname!) \(rdv.professional!.firstname!) (\(rdv.professional!.title!.name!)) au  '\(rdv.location)'."
-                // The identifier of the request will be the unique notificationIdentifier of the entity
                 
-                //Creating the request of the notification with it's unique identifier
+                // Creating the request of the notification with it's unique identifier
+                // The identifier of the request will be the unique notificationIdentifier of the entity
                 let request = UNNotificationRequest(identifier: rdv.notificationIdentifier!, content: content, trigger: trigger)
+                UNUserNotificationCenter.current().add(request) { error in
+                    if let error = error {
+                        print(error)
+                        return
+                    }
+                }
+
+            }
+        }
+    }
+    
+    class func createEvaluationNotification(evaluation: Evaluation){
+        // Check if the profile has been created
+        if let user : User = UserDAO.searchOne() {
+            // Check if the user has the notifications active
+            if user.activityRemind == true { // if they are active, we can continue creating the notification
+                // Creation of the trigger parameters
+                let calendar = Calendar.current
+                let notificationDate = evaluation.dateTimeReminder! as Date
+                let year : Int = calendar.component(.year, from: notificationDate)
+                let month : Int = calendar.component(.month, from: notificationDate)
+                let day : Int = calendar.component(.day, from: notificationDate)
+                let hour : Int = calendar.component(.hour, from: notificationDate)
+                let minute : Int = calendar.component(.minute, from: notificationDate)
+                
+                // Creating the trigger for the notification
+                let trigger = UNCalendarNotificationTrigger(dateMatching: DateComponents(year: year, month: month, day: day, hour: hour, minute: minute), repeats: false)
+                
+                // Creating the content that will be displayed in the notification
+                let content = UNMutableNotificationContent()
+                content.title = "Evaluation"
+                content.body = "C'est le moment d'évaluer vos symptômes!"
+                
+                // Creating the request of the notification with it's unique identifier
+                // The identifier of the request will be the unique notificationIdentifier of the entity
+                let request = UNNotificationRequest(identifier: evaluation.notificationIdentifier!, content: content, trigger: trigger)
                 UNUserNotificationCenter.current().add(request) { error in
                     if let error = error {
                         print(error)
