@@ -127,4 +127,36 @@ class NotificationManager{
         }
     }
     
+    class func reactivateNotifications(){
+        // Recreate notifications for RDVs
+        if(RDVDAO.count > 0){
+            let rdvs = RDVDAO.fetchAll()
+            for i in 0 ..< RDVDAO.count {
+                let rdv = rdvs[i]
+                self.createRDVNotification(rdv: rdv)
+            }
+        }
+        
+        // Recreate notifications for Activities
+        if(ActivityDAO.count > 0){
+            let activities = ActivityDAO.fetchAll()
+            for i in 0 ..< ActivityDAO.count {
+                let activity = activities[i]
+                self.createActivityNotification(activity: activity)
+            }
+        }
+        
+        // Recreate notifications for Evaluations
+        if(EvaluationDAO.count > 0){
+            let evaluations = EvaluationDAO.fetchAll()
+            for i in 0 ..< EvaluationDAO.count {
+                let evaluation = evaluations[i]
+                self.createEvaluationNotification(evaluation: evaluation)
+            }
+        }
+        
+        // Recreate notifications for Prescriptions
+        // - to be done -
+    }
+    
 }
