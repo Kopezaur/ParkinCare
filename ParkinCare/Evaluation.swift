@@ -49,11 +49,15 @@ extension Evaluation{
         endDate = calendar.date(bySetting: .minute, value: endMinute, of: endDate)!
         
         // Créer les evaluations
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm"
+        var notificationIdentifier : String
         var newEvaluations : [Evaluation] = []
         while(startDate! < endDate){
             var currentDate = startDate
             for _ in 1...5 {
-                let evaluation = Evaluation(dateTime: currentDate!, dateTimeReminder : currentDate!, notificationIdentifier: "", extraEvent: nil, validated: false, symptome: nil, rdv : rdv)
+                notificationIdentifier = formatter.string(from: currentDate!)
+                let evaluation = Evaluation(dateTime: currentDate!, dateTimeReminder : currentDate!, notificationIdentifier: notificationIdentifier, extraEvent: nil, validated: false, symptome: nil, rdv : rdv)
                 newEvaluations.append(evaluation)
                 NotificationManager.createEvaluationNotification(evaluation: evaluation)
                 currentDate = calendar.date(byAdding: .day, value: 1, to: currentDate!)
