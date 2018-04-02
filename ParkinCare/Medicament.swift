@@ -40,41 +40,6 @@ extension Medicament{
         
     }
     
-    static func search(medicament: MedicamentModel) -> Medicament? {
-        self.request.predicate = NSPredicate(format:"name == %@", medicament.name!)
-        do{
-            let result = try CoreDataManager.context.fetch(request) as [Medicament]
-            guard result.count != 0 else { return nil }
-            return result[0]
-        }
-        catch{
-            return nil
-        }
-    }
-    
-    static func delete(medicamentModel : MedicamentModel){
-        if let medicament: Medicament = self.search(medicament: medicamentModel){
-            CoreDataManager.context.delete(medicament)
-            CoreDataManager.save()
-        }
-    }
-    
-    static func getAll() -> [MedicamentModel]{
-        var results : [MedicamentModel] = []
-        do{
-            let result = try CoreDataManager.context.fetch(request) as [Medicament]
-            guard result.count != 0 else { return [] }
-            for object in result {
-                let model = MedicamentModel(medicament: object)
-                results.append(model)
-            }
-        }
-        catch{
-            return []
-        }
-        return results
-    }
-    
     /// initialize a `Medicament`
     ///
     /// - Parameters:

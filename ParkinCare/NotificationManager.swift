@@ -73,9 +73,9 @@ class NotificationManager{
                 let formatter = DateFormatter()
                 formatter.dateFormat = "HH:mm"
                 let hourMinutes = formatter.string(from: initialDate)
-                content.title = "Rendezvous"
+                content.title = "Rendez Vous"
                 content.subtitle = "Dans " + finalDate.offset(from: initialDate)
-                content.body = "Vous avez rendez vous à " + hourMinutes + " avec \(rdv.professional!.lastname!) \(rdv.professional!.firstname!) (\(rdv.professional!.title!.name!)) au  '\(rdv.location)'."
+                content.body = "Vous avez rendez vous à " + hourMinutes + " avec \(rdv.professional!.lastname!) \(rdv.professional!.firstname!) (\(rdv.professional!.title!.name!)) au  '\(rdv.location!)'."
                 
                 // Creating the request of the notification with it's unique identifier
                 // The identifier of the request will be the unique notificationIdentifier of the entity

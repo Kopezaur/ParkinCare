@@ -723,8 +723,12 @@
                             <constraint firstAttribute="trailing" secondItem="auB-7M-lez" secondAttribute="trailing" id="pFQ-jv-JlO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="8BI-3H-mCE" kind="unwind" identifier="addActivitySegue" unwindAction="unwindToThisViewWithSender:" id="YZd-gy-nan"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LiS-GH-OEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="8BI-3H-mCE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2889" y="-702"/>
         </scene>

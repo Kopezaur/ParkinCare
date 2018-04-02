@@ -91,16 +91,6 @@ class ViewController: UIViewController {
                 }
             }
         }
-        
-        // A suppr
-        let evaluations = EvaluationDAO.fetchAll()
-        for evaluation in evaluations! {
-            EvaluationDAO.delete(evaluation: evaluation)
-        }
-        let rdvs = RDVDAO.fetchAll()
-        for rdv in rdvs! {
-            RDVDAO.delete(rdv: rdv)
-        }
     }
     
     
@@ -174,7 +164,9 @@ class ViewController: UIViewController {
         let dateMax = calendar.date(byAdding: .minute, value: 15, to: currentDate)
         let dateMin = calendar.date(byAdding: .minute, value: -15, to: currentDate)
         
+        
         if(evaluations == nil || evaluations?.count == 0 || (evaluations!.last!.dateTime! as Date) < dateMin!){
+            // S'il n'y a pas de futures evaluation
             DialogBoxHelper.alert(view: self, WithTitle: "Aucune évaluation.")
         }
         else{
@@ -183,11 +175,12 @@ class ViewController: UIViewController {
                 let dateTime : Date = evaluations![index].dateTime! as Date
                 
                 if(dateTime < dateMax! && dateTime > dateMin!){
-                    self.evaluation = evaluations![index]
+                    self.evaluation = evaluations![index] // Une evaluation a ete trouvée
                 }
                 index = index + 1
             }
             if(self.evaluation == nil){
+                // cas ou il faut attendre la prochaine evaluation
                 let nextEvaluation : Evaluation = evaluations![index]
                 let formatter = DateFormatter()
                 var nextDateTime : Date = nextEvaluation.dateTime! as Date

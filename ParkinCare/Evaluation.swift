@@ -55,6 +55,7 @@ extension Evaluation{
             for _ in 1...5 {
                 let evaluation = Evaluation(dateTime: currentDate!, dateTimeReminder : currentDate!, notificationIdentifier: "", extraEvent: nil, validated: false, symptome: nil, rdv : rdv)
                 newEvaluations.append(evaluation)
+                NotificationManager.createEvaluationNotification(evaluation: evaluation)
                 currentDate = calendar.date(byAdding: .day, value: 1, to: currentDate!)
             }
             startDate = calendar.date(byAdding: .hour, value: Int(user.hourIntervalEvaluation), to: startDate!)
@@ -71,6 +72,7 @@ extension Evaluation{
     static func deleteEvaluationsFromRdv(rdv: RDV){
         let evaluations : [Evaluation] = rdv.evaluations!.allObjects as! [Evaluation]
         for evaluation in evaluations {
+            NotificationManager.deleteNotification(notificationIdentifier: evaluation.notificationIdentifier!)
             EvaluationDAO.delete(evaluation: evaluation)
         }
     }
