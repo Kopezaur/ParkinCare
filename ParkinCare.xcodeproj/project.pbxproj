@@ -42,6 +42,7 @@
 		A332BDA9207373E30059D1A1 /* EvaluationFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A332BDA8207373E30059D1A1 /* EvaluationFetchResultController.swift */; };
 		A332BDAB207374B70059D1A1 /* SyntheseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A332BDAA207374B70059D1A1 /* SyntheseTableViewCell.swift */; };
 		A332BDAD2073D06B0059D1A1 /* SynthesePrescriptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A332BDAC2073D06B0059D1A1 /* SynthesePrescriptionTableViewController.swift */; };
+		A332BDAF2073E89A0059D1A1 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = A332BDAE2073E8980059D1A1 /* user.png */; };
 		A35753BF20710CE5008D507C /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35753BE20710CE5008D507C /* ProfilViewController.swift */; };
 		A35753C120711D15008D507C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35753C020711D15008D507C /* User.swift */; };
 		A38CAC6B2070585B007C06DE /* CongratulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CAC6A2070585B007C06DE /* CongratulationViewController.swift */; };
@@ -168,6 +169,7 @@
 		A332BDA8207373E30059D1A1 /* EvaluationFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationFetchResultController.swift; sourceTree = "<group>"; };
 		A332BDAA207374B70059D1A1 /* SyntheseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntheseTableViewCell.swift; sourceTree = "<group>"; };
 		A332BDAC2073D06B0059D1A1 /* SynthesePrescriptionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthesePrescriptionTableViewController.swift; sourceTree = "<group>"; };
+		A332BDAE2073E8980059D1A1 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = user.png; path = ParkinCare/user.png; sourceTree = "<group>"; };
 		A35753BE20710CE5008D507C /* ProfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewController.swift; sourceTree = "<group>"; };
 		A35753C020711D15008D507C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A38CAC6A2070585B007C06DE /* CongratulationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationViewController.swift; sourceTree = "<group>"; };
@@ -499,6 +501,7 @@
 		E96D540020582541004562BE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A332BDAE2073E8980059D1A1 /* user.png */,
 				A332BD952072BC500059D1A1 /* pills.png */,
 				A324974A207045E9007D9095 /* trophy.png */,
 				A3EC47C6206EC3B60055A6C5 /* running-man.png */,
@@ -686,6 +689,7 @@
 				A324974E20704C5A007D9095 /* trophy.png in Resources */,
 				E94903A2203C38DC00FE7396 /* Assets.xcassets in Resources */,
 				A332BD962072BC500059D1A1 /* pills.png in Resources */,
+				A332BDAF2073E89A0059D1A1 /* user.png in Resources */,
 				E96D5406205830CA004562BE /* ParkinCareLogo.png in Resources */,
 				A324974D20704C58007D9095 /* running-man.png in Resources */,
 				E949039D203C38DC00FE7396 /* Main.storyboard in Resources */,
@@ -1084,6 +1088,7 @@
 				048641A02073A7F60048FD7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E949038F203C38DC00FE7396 /* Build configuration list for PBXProject "ParkinCare" */ = {
 			isa = XCConfigurationList;

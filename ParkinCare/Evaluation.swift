@@ -41,13 +41,12 @@ extension Evaluation{
         
         //Initialiser la date de depart de la creation des evaluations
         var startDate = calendar.date(byAdding: .day, value: -6, to: (rdv.dateTime! as Date))
-        startDate = calendar.date(bySetting: .hour, value: (startHour + 2), of: startDate!)
+        startDate = calendar.date(bySetting: .hour, value: startHour, of: startDate!)
         startDate = calendar.date(bySetting: .minute, value: startMinute, of: startDate!)
         
         // Pareil pour la date de fin des evaluations
         
         var endDate : Date = calendar.date(bySetting: .hour, value: endHour, of: startDate!)!
-        endDate = calendar.date(byAdding: .hour, value: 2, to: endDate)!
         endDate = calendar.date(bySetting: .minute, value: endMinute, of: endDate)!
         // Créer les evaluations
         let formatter = DateFormatter()

@@ -71,7 +71,7 @@ class EditRDVViewController: UIViewController, UNUserNotificationCenterDelegate 
             let date = calendar.date(byAdding: .minute, value: (0 - Int(self.editRDVController.timeLabel.text!)!), to: (self.editRDVController.datePicker.date))
             
             // If a new date has been entered for the RDV, the old request is deleted and a new notification is created
-            if(date != (self.rdv?.dateTimeReminder! as! Date)){
+            if(date != (self.rdv!.dateTimeReminder! as Date)){
                 // Deletion of the old notification request
                 NotificationManager.deleteNotification(notificationIdentifier: (self.rdv?.notificationIdentifier!)!)
                 

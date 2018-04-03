@@ -160,7 +160,6 @@ class ViewController: UIViewController {
         
         let calendar : Calendar = Calendar.current
         var currentDate : Date = Date()
-        currentDate = calendar.date(byAdding: .hour, value: 2, to: currentDate)!
         let dateMax = calendar.date(byAdding: .minute, value: 15, to: currentDate)
         let dateMin = calendar.date(byAdding: .minute, value: -15, to: currentDate)
         
@@ -183,8 +182,7 @@ class ViewController: UIViewController {
                 // cas ou il faut attendre la prochaine evaluation
                 let nextEvaluation : Evaluation = evaluations![index]
                 let formatter = DateFormatter()
-                var nextDateTime : Date = nextEvaluation.dateTime! as Date
-                nextDateTime = calendar.date(byAdding: .hour, value: -2, to: nextDateTime)!
+                let nextDateTime : Date = nextEvaluation.dateTime! as Date
                 formatter.dateFormat = "dd/MM/yyyy"
                 let date = formatter.string(from: nextDateTime)
                 formatter.dateFormat = "HH:mm"

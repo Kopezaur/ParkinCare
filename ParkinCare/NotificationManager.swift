@@ -35,7 +35,7 @@ class NotificationManager{
                 // Creating the content that will be displayed in the notification
                 let content = UNMutableNotificationContent()
                 content.title = "Activité"
-                content.body = "Il est temps de bouger un peu! Activité proposée : " + activity.title!
+                content.body = "Il est temps de bouger un peu ! Activité proposée : " + activity.title!
         
                 // Creating the request of the notification with it's unique identifier
                 // The identifier of the request will be the unique notificationIdentifier of the entity
@@ -105,7 +105,7 @@ class NotificationManager{
             // Creating the content that will be displayed in the notification
             let content = UNMutableNotificationContent()
             content.title = "Evaluation"
-            content.body = "C'est le moment d'évaluer vos symptômes!"
+            content.body = "C'est le moment d'évaluer vos symptômes !"
                 
             // Creating the request of the notification with it's unique identifier
             // The identifier of the request will be the unique notificationIdentifier of the entity
@@ -141,7 +141,7 @@ class NotificationManager{
             }
             let content = UNMutableNotificationContent()
             content.title = "Prescription"
-            content.subtitle = "Il est temps de prendre vos pilules!"
+            content.subtitle = "Il est temps de prendre vos pilules !"
             content.body = dosesString
 
             // Creating the request of the notification with it's unique identifier

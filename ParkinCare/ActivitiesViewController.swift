@@ -42,10 +42,7 @@ class ActivitiesViewController: UIViewController{
     // segue ViewControllerB -> ViewController
     @IBAction func unwindToThisView(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? NewActivityViewController {
-            //dataRecieved = sourceViewController.dataPassed
-            /*if let newActivity = sourceViewController.newActivity{
-                self.tableViewController.activityViewModel.add(activity: newActivity)
-            }*/
+            
         }
     }
     

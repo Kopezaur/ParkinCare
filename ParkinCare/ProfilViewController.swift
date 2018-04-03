@@ -66,6 +66,7 @@ class ProfilViewController: UIViewController {
         self.user!.startEvaluation = self.startEvaluationDatePicker.date as NSDate
         self.user!.endEvaluation = self.endEvaluationDatePicker.date as NSDate
         self.user!.hourIntervalEvaluation = Int16(self.hourIntervalSlider.value)
+        print(self.startEvaluationDatePicker.date)
         UserDAO.save()
         DialogBoxHelper.alert(view: self, WithTitle: "Modifications enregistrées.")
     }
