@@ -51,6 +51,9 @@ class PrescriptionViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     @IBAction func deleteButtonClicked(_ sender: Any) {
+        // First, we delete the notification
+        NotificationManager.deleteNotification(notificationIdentifier: prescription!.notificationIdentifier!)
+        // Then we delete the prescription
         PrescriptionDAO.delete(prescription: prescription!)
         performSegue(withIdentifier: "toPilulierSegue", sender: self)
     }

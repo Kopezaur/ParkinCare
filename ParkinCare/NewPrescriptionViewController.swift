@@ -55,8 +55,9 @@ class NewPrescriptionViewController: UIViewController {
                     let formatter = DateFormatter()
                     formatter.dateFormat = "yyyy-MM-dd'T'HH:mm"
                     let notificationIdentifier = formatter.string(from: startDate) + formatter.string(from: Date())
-                    let _ : Prescription = Prescription(dateTime: startDate, dateTimeReminder: startDate, validated: false, doses: doses, notificationIdentifier: notificationIdentifier)
+                    let prescription : Prescription = Prescription(dateTime: startDate, dateTimeReminder: startDate, validated: false, doses: doses, notificationIdentifier: notificationIdentifier)
                     startDate = calendar.date(byAdding: .day, value: intervalDay, to: startDate)!
+                    NotificationManager.createPrescriptionNotification(prescription: prescription)
                 }
             }
         }
