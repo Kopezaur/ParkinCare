@@ -76,8 +76,8 @@ class EvaluationSet : Sequence{
     /// - Parameter birthdate: `Date?` Date if it has one, else nil
     /// - Returns: `Evaluation` will these firstname, lastname and birthdate given in parameter, or nil if it is not in set
     func look(evaluationsWithDate dateTime: NSDate) -> [Evaluation]{
-        if let ret = EvaluationDAO.search(dateTime: dateTime){
-            return [ret]
+        if let ret = EvaluationDAO.search(dateTime: dateTime as Date){
+            return ret
         }
         else{
             return []
