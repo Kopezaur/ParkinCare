@@ -20,6 +20,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//         Safety fonctionalities for the UnitTests
+//        if(ProfessionalDAO.count > 0) {
+//            var professionals : [Professional] = ProfessionalDAO.fetchAll()!
+//            for i in 0..<professionals.count {
+//                ProfessionalDAO.delete(professional: professionals[i])
+//            }
+//        }
+//        
+//        if(TitleDAO.count > 0){
+//            var titles : [Title] = TitleDAO.fetchAll()!
+//            for i in 0 ..< TitleDAO.count {
+//                TitleDAO.delete(title: titles[i])
+//            }
+//        }
+
+        
         // DEPRECIATED
 //        let nc = NotificationCenter.default
 //        nc.addObserver(forName:introNotification, object:nil, queue:nil, using: catchIntroNotification)
