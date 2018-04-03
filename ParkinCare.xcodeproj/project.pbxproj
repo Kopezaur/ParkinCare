@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		048641A52073AA780048FD7E /* ProfessionalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048641A42073AA780048FD7E /* ProfessionalTests.swift */; };
+		048641A72073AD470048FD7E /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048641A62073AD470048FD7E /* Title.swift */; };
 		1535056E2062665100D500D6 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1535056D2062665100D500D6 /* ContactViewController.swift */; };
 		1581149020583434001A912F /* MedicamentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1581148F20583434001A912F /* MedicamentTableViewCell.swift */; };
 		1581149220583903001A912F /* MedicamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1581149120583903001A912F /* MedicamentViewController.swift */; };
@@ -104,6 +106,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0486419D2073A7F60048FD7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E949038C203C38DC00FE7396 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9490393203C38DC00FE7396;
+			remoteInfo = ParkinCare;
+		};
 		E94903AC203C38DC00FE7396 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E949038C203C38DC00FE7396 /* Project object */;
@@ -121,6 +130,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		048641982073A7F60048FD7E /* ParkinCareCustomUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkinCareCustomUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		048641A42073AA780048FD7E /* ProfessionalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfessionalTests.swift; sourceTree = "<group>"; };
+		048641A62073AD470048FD7E /* Title.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		1535056D2062665100D500D6 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		1581148F20583434001A912F /* MedicamentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicamentTableViewCell.swift; sourceTree = "<group>"; };
 		1581149120583903001A912F /* MedicamentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicamentViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +232,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		048641952073A7F60048FD7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E9490391203C38DC00FE7396 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -337,6 +356,7 @@
 				A35753C020711D15008D507C /* User.swift */,
 				A3B1DC2C207195D700141971 /* Evaluation.swift */,
 				A332BD9D2072ECA00059D1A1 /* Dose.swift */,
+				048641A62073AD470048FD7E /* Title.swift */,
 			);
 			name = DAO;
 			sourceTree = "<group>";
@@ -385,6 +405,7 @@
 				E9490394203C38DC00FE7396 /* ParkinCare.app */,
 				E94903AB203C38DC00FE7396 /* ParkinCareTests.xctest */,
 				E94903B6203C38DC00FE7396 /* ParkinCareUITests.xctest */,
+				048641982073A7F60048FD7E /* ParkinCareCustomUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -415,6 +436,7 @@
 			children = (
 				E94903AF203C38DC00FE7396 /* ParkinCareTests.swift */,
 				E94903B1203C38DC00FE7396 /* Info.plist */,
+				048641A42073AA780048FD7E /* ProfessionalTests.swift */,
 			);
 			path = ParkinCareTests;
 			sourceTree = "<group>";
@@ -494,6 +516,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		048641972073A7F60048FD7E /* ParkinCareCustomUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 048641A12073A7F60048FD7E /* Build configuration list for PBXNativeTarget "ParkinCareCustomUnitTests" */;
+			buildPhases = (
+				048641942073A7F60048FD7E /* Sources */,
+				048641952073A7F60048FD7E /* Frameworks */,
+				048641962073A7F60048FD7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0486419E2073A7F60048FD7E /* PBXTargetDependency */,
+			);
+			name = ParkinCareCustomUnitTests;
+			productName = ParkinCareCustomUnitTests;
+			productReference = 048641982073A7F60048FD7E /* ParkinCareCustomUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E9490393203C38DC00FE7396 /* ParkinCare */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E94903BF203C38DC00FE7396 /* Build configuration list for PBXNativeTarget "ParkinCare" */;
@@ -560,6 +600,11 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Kopezaur;
 				TargetAttributes = {
+					048641972073A7F60048FD7E = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E9490393203C38DC00FE7396;
+					};
 					E9490393203C38DC00FE7396 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = SJ48XHKXUX;
@@ -595,11 +640,19 @@
 				E9490393203C38DC00FE7396 /* ParkinCare */,
 				E94903AA203C38DC00FE7396 /* ParkinCareTests */,
 				E94903B5203C38DC00FE7396 /* ParkinCareUITests */,
+				048641972073A7F60048FD7E /* ParkinCareCustomUnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		048641962073A7F60048FD7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E9490392203C38DC00FE7396 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -633,6 +686,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		048641942073A7F60048FD7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E9490390203C38DC00FE7396 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -677,6 +737,7 @@
 				E92A50E9206C5802009C6D0F /* PrescriptionSetViewModel.swift in Sources */,
 				E9ED881E20716DB700F7CBE9 /* NotificationManager.swift in Sources */,
 				E9482CBA206FE3D600D85B94 /* TitleDAO.swift in Sources */,
+				048641A72073AD470048FD7E /* Title.swift in Sources */,
 				E9FA19252070335800441BDD /* Activity.swift in Sources */,
 				E91D69332065BE57001BAE17 /* Medicament.swift in Sources */,
 				E94903A0203C38DC00FE7396 /* ParkinCare.xcdatamodeld in Sources */,
@@ -727,6 +788,7 @@
 				E94E74C42040289000AECAC6 /* Activities.swift in Sources */,
 				E94903D3203C452F00FE7396 /* Prescriptions.swift in Sources */,
 				E938375120454E16005A6FCF /* Professionals.swift in Sources */,
+				048641A52073AA780048FD7E /* ProfessionalTests.swift in Sources */,
 				E94E74D020402C0C00AECAC6 /* Evaluations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -742,6 +804,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0486419E2073A7F60048FD7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9490393203C38DC00FE7396 /* ParkinCare */;
+			targetProxy = 0486419D2073A7F60048FD7E /* PBXContainerItemProxy */;
+		};
 		E94903AD203C38DC00FE7396 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E9490393203C38DC00FE7396 /* ParkinCare */;
@@ -774,6 +841,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0486419F2073A7F60048FD7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ParkinCareCustomUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ParkinCare.ParkinCareCustomUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParkinCare.app/ParkinCare";
+			};
+			name = Debug;
+		};
+		048641A02073A7F60048FD7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ParkinCareCustomUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ParkinCare.ParkinCareCustomUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParkinCare.app/ParkinCare";
+			};
+			name = Release;
+		};
 		E94903BD203C38DC00FE7396 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -956,6 +1049,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		048641A12073A7F60048FD7E /* Build configuration list for PBXNativeTarget "ParkinCareCustomUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0486419F2073A7F60048FD7E /* Debug */,
+				048641A02073A7F60048FD7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		E949038F203C38DC00FE7396 /* Build configuration list for PBXProject "ParkinCare" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
