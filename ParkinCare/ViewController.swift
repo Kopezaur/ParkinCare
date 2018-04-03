@@ -154,7 +154,7 @@ class ViewController: UIViewController {
         
         // Verification qu'il y a bien une évaluation à remplir
         self.evaluation = nil
-        var evaluations : [Evaluation]? = EvaluationDAO.fetchAll()
+        var evaluations : [Evaluation]? = EvaluationDAO.fetchAllNotValidated()
         
         //print(evaluations!.count)
         

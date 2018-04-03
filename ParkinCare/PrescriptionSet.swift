@@ -76,8 +76,8 @@ class PrescriptionSet : Sequence{
     /// - Parameter birthdate: `Date?` Date if it has one, else nil
     /// - Returns: `Prescription` will these firstname, lastname and birthdate given in parameter, or nil if it is not in set
     func look(prescriptionsWithDate dateTime: NSDate) -> [Prescription]{
-        if let ret = PrescriptionDAO.search(dateTime: dateTime){
-            return [ret]
+        if let ret = PrescriptionDAO.search(dateTime: dateTime as Date){
+            return ret
         }
         else{
             return []

@@ -35,6 +35,11 @@
 		A332BD9E2072ECA00059D1A1 /* Dose.swift in Sources */ = {isa = PBXBuildFile; fileRef = A332BD9D2072ECA00059D1A1 /* Dose.swift */; };
 		A332BDA02072F40C0059D1A1 /* NewPrescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A332BD9F2072F40C0059D1A1 /* NewPrescriptionViewController.swift */; };
 		A332BDA220730DAA0059D1A1 /* PrescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A332BDA120730DAA0059D1A1 /* PrescriptionViewController.swift */; };
+		A332BDA5207362E00059D1A1 /* SyntheseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A332BDA4207362E00059D1A1 /* SyntheseViewController.swift */; };
+		A332BDA72073708D0059D1A1 /* SyntheseEvaluationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A332BDA62073708D0059D1A1 /* SyntheseEvaluationTableViewController.swift */; };
+		A332BDA9207373E30059D1A1 /* EvaluationFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A332BDA8207373E30059D1A1 /* EvaluationFetchResultController.swift */; };
+		A332BDAB207374B70059D1A1 /* SyntheseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A332BDAA207374B70059D1A1 /* SyntheseTableViewCell.swift */; };
+		A332BDAD2073D06B0059D1A1 /* SynthesePrescriptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A332BDAC2073D06B0059D1A1 /* SynthesePrescriptionTableViewController.swift */; };
 		A35753BF20710CE5008D507C /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35753BE20710CE5008D507C /* ProfilViewController.swift */; };
 		A35753C120711D15008D507C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35753C020711D15008D507C /* User.swift */; };
 		A38CAC6B2070585B007C06DE /* CongratulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CAC6A2070585B007C06DE /* CongratulationViewController.swift */; };
@@ -146,6 +151,11 @@
 		A332BD9D2072ECA00059D1A1 /* Dose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dose.swift; sourceTree = "<group>"; };
 		A332BD9F2072F40C0059D1A1 /* NewPrescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPrescriptionViewController.swift; sourceTree = "<group>"; };
 		A332BDA120730DAA0059D1A1 /* PrescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionViewController.swift; sourceTree = "<group>"; };
+		A332BDA4207362E00059D1A1 /* SyntheseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntheseViewController.swift; sourceTree = "<group>"; };
+		A332BDA62073708D0059D1A1 /* SyntheseEvaluationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntheseEvaluationTableViewController.swift; sourceTree = "<group>"; };
+		A332BDA8207373E30059D1A1 /* EvaluationFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationFetchResultController.swift; sourceTree = "<group>"; };
+		A332BDAA207374B70059D1A1 /* SyntheseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntheseTableViewCell.swift; sourceTree = "<group>"; };
+		A332BDAC2073D06B0059D1A1 /* SynthesePrescriptionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthesePrescriptionTableViewController.swift; sourceTree = "<group>"; };
 		A35753BE20710CE5008D507C /* ProfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewController.swift; sourceTree = "<group>"; };
 		A35753C020711D15008D507C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A38CAC6A2070585B007C06DE /* CongratulationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationViewController.swift; sourceTree = "<group>"; };
@@ -258,6 +268,17 @@
 			name = Prescription;
 			sourceTree = "<group>";
 		};
+		A332BDA3207362BC0059D1A1 /* Synthèse */ = {
+			isa = PBXGroup;
+			children = (
+				A332BDA4207362E00059D1A1 /* SyntheseViewController.swift */,
+				A332BDA62073708D0059D1A1 /* SyntheseEvaluationTableViewController.swift */,
+				A332BDA8207373E30059D1A1 /* EvaluationFetchResultController.swift */,
+				A332BDAC2073D06B0059D1A1 /* SynthesePrescriptionTableViewController.swift */,
+			);
+			name = "Synthèse";
+			sourceTree = "<group>";
+		};
 		A35753BD20710CB2008D507C /* Profil */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +365,7 @@
 		E9279FD62058187500381EEC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A332BDA3207362BC0059D1A1 /* Synthèse */,
 				A332BD8C2072AFE10059D1A1 /* Prescription */,
 				A3B1DC2920715D7900141971 /* Evaluation */,
 				A35753BD20710CB2008D507C /* Profil */,
@@ -487,6 +509,7 @@
 				A324974020700AB8007D9095 /* ActivityTableViewCell.swift */,
 				A332BD8F2072B1460059D1A1 /* PrescriptionTableViewCell.swift */,
 				A332BD9B2072DF6A0059D1A1 /* DoseTableViewCell.swift */,
+				A332BDAA207374B70059D1A1 /* SyntheseTableViewCell.swift */,
 			);
 			name = ViewsCell;
 			sourceTree = "<group>";
@@ -643,6 +666,7 @@
 				B1051AC7206999D70056CC5A /* RDVFetchResultController.swift in Sources */,
 				E94F2774206971EA0032BAB1 /* RDVSet.swift in Sources */,
 				1581149020583434001A912F /* MedicamentTableViewCell.swift in Sources */,
+				A332BDAB207374B70059D1A1 /* SyntheseTableViewCell.swift in Sources */,
 				E949039A203C38DC00FE7396 /* ViewController.swift in Sources */,
 				A332BD9E2072ECA00059D1A1 /* Dose.swift in Sources */,
 				A3B1DC2D207195D700141971 /* Evaluation.swift in Sources */,
@@ -679,6 +703,7 @@
 				E9482CBA206FE3D600D85B94 /* TitleDAO.swift in Sources */,
 				E9FA19252070335800441BDD /* Activity.swift in Sources */,
 				E91D69332065BE57001BAE17 /* Medicament.swift in Sources */,
+				A332BDA5207362E00059D1A1 /* SyntheseViewController.swift in Sources */,
 				E94903A0203C38DC00FE7396 /* ParkinCare.xcdatamodeld in Sources */,
 				B1D5E6B52066668B0093166B /* ProfessionalSet.swift in Sources */,
 				E9627987206A74470029CA05 /* DoseDAO.swift in Sources */,
@@ -691,6 +716,7 @@
 				A332BD9C2072DF6A0059D1A1 /* DoseTableViewCell.swift in Sources */,
 				E9482CBC206FE46500D85B94 /* SymptomeDAO.swift in Sources */,
 				E962798D206A81BE0029CA05 /* EvaluationDAO.swift in Sources */,
+				A332BDAD2073D06B0059D1A1 /* SynthesePrescriptionTableViewController.swift in Sources */,
 				A35753BF20710CE5008D507C /* ProfilViewController.swift in Sources */,
 				6F0B99B620453ED200A1BEF8 /* RendezVousSet.swift in Sources */,
 				B1D5E6B12065D39B0093166B /* ProfessionalTableViewController.swift in Sources */,
@@ -703,9 +729,11 @@
 				E9E6585C206AA34C0038686D /* ActivitySetViewModel.swift in Sources */,
 				B19E00542064091D00F9F0A8 /* CoreDataManager.swift in Sources */,
 				E94F2778206976CA0032BAB1 /* ProfessionalDAO.swift in Sources */,
+				A332BDA9207373E30059D1A1 /* EvaluationFetchResultController.swift in Sources */,
 				A35753C120711D15008D507C /* User.swift in Sources */,
 				B1051ACD2069B3B70056CC5A /* NewRDVViewController.swift in Sources */,
 				E92A50E7206C574D009C6D0F /* EvaluationSetViewModel.swift in Sources */,
+				A332BDA72073708D0059D1A1 /* SyntheseEvaluationTableViewController.swift in Sources */,
 				B1051ACF2069B8BD0056CC5A /* FormRDVViewController.swift in Sources */,
 				15D08BF520616DC000302868 /* ContactTableViewCell.swift in Sources */,
 				A332BD982072D98D0059D1A1 /* FormPrescriptionViewController.swift in Sources */,

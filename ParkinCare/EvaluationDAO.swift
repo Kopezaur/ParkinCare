@@ -18,7 +18,18 @@ class EvaluationDAO{
     static func delete(evaluation: Evaluation){
         CoreDataManager.context.delete(evaluation)
     }
+    
     static func fetchAll() -> [Evaluation]?{
+        self.request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Evaluation.dateTime),ascending:true)]
+        do{
+            return try CoreDataManager.context.fetch(self.request)
+        }
+        catch{
+            return nil
+        }
+    }
+    
+    static func fetchAllNotValidated() -> [Evaluation]?{
         self.request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Evaluation.dateTime),ascending:true)]
         request.predicate = NSPredicate(format: "validated = %@", "false")
         do{
@@ -96,12 +107,19 @@ class EvaluationDAO{
         }
     }
     
-    static func search(dateTime: NSDate) -> Evaluation?{
-        self.request.predicate = NSPredicate(format: "dateTime == %@", dateTime)
+    static func search(dateTime: Date) -> [Evaluation]?{
+        let calendar = Calendar.current
+        var beginDay: Date = calendar.date(bySetting: .hour, value: 2, of: dateTime)!
+        beginDay = calendar.date(bySetting: .minute, value: 0, of: beginDay)!
+        
+        var endDay: Date = calendar.date(bySetting: .hour, value: 23, of: dateTime)!
+        endDay = calendar.date(byAdding: .hour, value: 2, to: endDay)!
+        endDay = calendar.date(bySetting: .minute, value: 59, of: endDay)!
+        
+        self.request.predicate = NSPredicate(format: "dateTime >= %@ AND dateTime <= %@", beginDay as NSDate, endDay as NSDate)
         do{
             let result = try CoreDataManager.context.fetch(request) as [Evaluation]
-            guard result.count != 0 else { return nil }
-            return result[0]
+            return result
         }
         catch{
             return nil

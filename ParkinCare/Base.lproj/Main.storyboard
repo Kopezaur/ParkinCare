@@ -75,6 +75,9 @@
                                                 <state key="normal" title="Synthèse">
                                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="8gX-CZ-FH8" kind="show" id="CNp-k5-JkZ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51F-lS-74o">
                                                 <rect key="frame" x="16" y="380" width="164" height="100"/>
@@ -464,6 +467,106 @@
                 <exit id="C8t-lS-Zyz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4884" y="596"/>
+        </scene>
+        <!--Synthese View Controller-->
+        <scene sceneID="fx5-xn-eKl">
+            <objects>
+                <viewController id="8gX-CZ-FH8" customClass="SyntheseViewController" customModule="ParkinCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Aog-KE-Q41"/>
+                        <viewControllerLayoutGuide type="bottom" id="gFL-pR-6RH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H5h-5z-VP9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Synthèse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVC-WJ-5gG">
+                                <rect key="frame" x="0.0" y="72" width="375" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.63661755180000001" blue="0.059613820769999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZl-8W-hek">
+                                <rect key="frame" x="0.0" y="107" width="184" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="N6r-f4-f2r"/>
+                                </constraints>
+                            </pickerView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IBl-JH-7FY">
+                                <rect key="frame" x="0.0" y="215" width="375" height="403"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="syntheseCell" id="RJu-QH-pjm" customClass="SyntheseTableViewCell" customModule="ParkinCare" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RJu-QH-pjm" id="mjR-VW-o4T">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjF-ft-NUs">
+                                                    <rect key="frame" x="15" y="12" width="71" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="etat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qce-O8-0bY">
+                                                    <rect key="frame" x="330" y="11" width="30" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qce-O8-0bY" firstAttribute="centerY" secondItem="mjR-VW-o4T" secondAttribute="centerY" id="JQe-yW-xsu"/>
+                                                <constraint firstItem="wjF-ft-NUs" firstAttribute="centerY" secondItem="mjR-VW-o4T" secondAttribute="centerY" id="fgH-Ry-2AX"/>
+                                                <constraint firstItem="wjF-ft-NUs" firstAttribute="leading" secondItem="mjR-VW-o4T" secondAttribute="leadingMargin" id="sVg-6l-4Tj"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="qce-O8-0bY" secondAttribute="trailing" id="t7r-tj-rCL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateTimeLabel" destination="wjF-ft-NUs" id="lyV-zw-db6"/>
+                                            <outlet property="etatLabel" destination="qce-O8-0bY" id="CgX-L1-BBJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8gX-CZ-FH8" id="08Y-aM-ZIG"/>
+                                    <outlet property="delegate" destination="8gX-CZ-FH8" id="3ml-XF-lPY"/>
+                                </connections>
+                            </tableView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AGE-4g-cnd">
+                                <rect key="frame" x="191.5" y="107" width="183.5" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="5sy-Jw-Htg"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99840182070000005" green="0.99590700860000003" blue="0.93931716679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="AGE-4g-cnd" secondAttribute="trailing" id="2Aa-uG-cTD"/>
+                            <constraint firstItem="AGE-4g-cnd" firstAttribute="top" secondItem="wVC-WJ-5gG" secondAttribute="bottom" constant="8" id="9aE-h9-pMS"/>
+                            <constraint firstItem="wVC-WJ-5gG" firstAttribute="leading" secondItem="H5h-5z-VP9" secondAttribute="leading" id="Aci-fR-bhO"/>
+                            <constraint firstItem="AGE-4g-cnd" firstAttribute="leading" secondItem="AZl-8W-hek" secondAttribute="trailing" constant="8" id="EPX-9r-q3z"/>
+                            <constraint firstItem="AZl-8W-hek" firstAttribute="top" secondItem="wVC-WJ-5gG" secondAttribute="bottom" constant="8" id="ETb-55-Msp"/>
+                            <constraint firstAttribute="trailing" secondItem="wVC-WJ-5gG" secondAttribute="trailing" id="FkI-cm-s1m"/>
+                            <constraint firstItem="IBl-JH-7FY" firstAttribute="leading" secondItem="H5h-5z-VP9" secondAttribute="leading" id="Svz-mb-Jdt"/>
+                            <constraint firstItem="IBl-JH-7FY" firstAttribute="top" secondItem="AZl-8W-hek" secondAttribute="bottom" constant="8" id="ZwI-JQ-VTb"/>
+                            <constraint firstItem="AZl-8W-hek" firstAttribute="leading" secondItem="H5h-5z-VP9" secondAttribute="leading" id="eJv-OJ-h6f"/>
+                            <constraint firstItem="AGE-4g-cnd" firstAttribute="width" secondItem="AZl-8W-hek" secondAttribute="width" id="eNl-PN-y0t"/>
+                            <constraint firstItem="gFL-pR-6RH" firstAttribute="top" secondItem="IBl-JH-7FY" secondAttribute="bottom" id="rGj-zr-VGW"/>
+                            <constraint firstItem="wVC-WJ-5gG" firstAttribute="top" secondItem="Aog-KE-Q41" secondAttribute="bottom" constant="8" id="rkZ-xj-Ulx"/>
+                            <constraint firstAttribute="trailing" secondItem="IBl-JH-7FY" secondAttribute="trailing" id="sw4-ai-440"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dayPicker" destination="AZl-8W-hek" id="xa3-rl-ndV"/>
+                        <outlet property="itemsPicker" destination="AGE-4g-cnd" id="Ntf-2R-pnD"/>
+                        <outlet property="syntheseTable" destination="IBl-JH-7FY" id="Q6Q-u7-Qar"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zzr-7O-29q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6124" y="143.47826086956522"/>
         </scene>
         <!--Pilulier-->
         <scene sceneID="qg8-HB-TQ6">
@@ -3061,7 +3164,7 @@
         <segue reference="V4F-34-HdX"/>
         <segue reference="7mJ-PY-czD"/>
         <segue reference="iUi-hu-b0G"/>
-        <segue reference="NwI-ep-jFM"/>
+        <segue reference="6dR-9x-obq"/>
         <segue reference="6aZ-MB-xzM"/>
     </inferredMetricsTieBreakers>
 </document>

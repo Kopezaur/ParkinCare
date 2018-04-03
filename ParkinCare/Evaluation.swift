@@ -58,7 +58,7 @@ extension Evaluation{
             var currentDate = startDate
             for _ in 1...5 {
                 notificationIdentifier = formatter.string(from: currentDate!)
-                let evaluation = Evaluation(dateTime: currentDate!, dateTimeReminder : currentDate!, notificationIdentifier: notificationIdentifier, extraEvent: nil, validated: false, symptome: nil, rdv : rdv)
+                let evaluation = Evaluation(dateTime: currentDate!, dateTimeReminder : currentDate!, notificationIdentifier: notificationIdentifier, extraEvent: "", validated: false, symptome: nil, rdv : rdv)
                 newEvaluations.append(evaluation)
                 NotificationManager.createEvaluationNotification(evaluation: evaluation)
                 currentDate = calendar.date(byAdding: .day, value: 1, to: currentDate!)
