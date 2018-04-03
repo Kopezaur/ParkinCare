@@ -45,7 +45,7 @@ class PrescriptionTableViewController: NSObject, UITableViewDataSource, UITableV
         // after it has just managed deleting
         if(editingStyle == UITableViewCellEditingStyle.delete){
             // Delete the notification
-            //NotificationManager.deleteNotification(notificationIdentifier: prescriptionViewModel.getPrescription(at: indexPath)!.notificationIdentifier!)
+            NotificationManager.deleteNotification(notificationIdentifier: prescriptionViewModel.getPrescription(at: indexPath)!.notificationIdentifier!)
             // Delete the entity
             PrescriptionDAO.delete(prescription: prescriptionViewModel.getPrescription(at: indexPath)!)
         }

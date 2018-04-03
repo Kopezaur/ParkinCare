@@ -136,12 +136,8 @@ class NotificationManager{
             
             // Creating the content that will be displayed in the notification
             var dosesString : String = "Doses : "
-            let doses : [PrescriptionSet] = prescription.doses!
-            if (doses.count > 0){
-                for i in 0..<doses.count {
-                    let dose : Dose = doses[i]
-                    dosesString.append("("+dose.medicament!.name+"-"+dose.quantity+" doses) ; ")
-                }
+            for case let dose as Dose in prescription.doses!  {
+                dosesString.append(dose.medicament!.name!+"-"+String(dose.quantity)+" doses ; ")
             }
             let content = UNMutableNotificationContent()
             content.title = "Prescription"
@@ -165,10 +161,10 @@ class NotificationManager{
         if(ActivityDAO.count > 0){
             // Get the list of notificationIdentifiers for all activities
             let activities = ActivityDAO.fetchAll()
-            let notificationIdentifiers : [String]
+            var notificationIdentifiers : [String] = []
             for i in 0 ..< ActivityDAO.count {
                 let activity = activities![i]
-                notificationIdentifiers.append(activity.notificationIdentifier)
+                notificationIdentifiers.append(activity.notificationIdentifier!)
             }
             // Delete all the pending requests for activities
             UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: notificationIdentifiers)
