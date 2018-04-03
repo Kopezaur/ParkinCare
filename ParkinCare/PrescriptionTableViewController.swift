@@ -47,7 +47,7 @@ class PrescriptionTableViewController: NSObject, UITableViewDataSource, UITableV
             // Delete the notification
             NotificationManager.deleteNotification(notificationIdentifier: prescriptionViewModel.getPrescription(at: indexPath)!.notificationIdentifier!)
             // Delete the entity
-            PrescriptionDAO.delete(prescription: prescriptionViewModel.getPrescription(at: indexPath)!)
+            self.prescriptionViewModel.remove(indexPath: indexPath)
         }
     }
     

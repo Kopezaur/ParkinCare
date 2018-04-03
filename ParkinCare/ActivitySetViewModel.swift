@@ -47,7 +47,7 @@ class ActivitySetViewModel : ActivityTableViewModel{
         // prepare a request
         let request : NSFetchRequest<Activity> = Activity.fetchRequest()
         request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Activity.dateTime),ascending:true),NSSortDescriptor(key:#keyPath(Activity.title),ascending:true)]
-        request.predicate = NSPredicate(format: "dateTime > %@", Date() as NSDate)
+        request.predicate = NSPredicate(format: "dateTime > %@ AND validated = 0", Date() as NSDate)
         let fetchResultController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataManager.context, sectionNameKeyPath: nil, cacheName: nil)
         guard let fetchResultControllerDelegate = self.delegate as? NSFetchedResultsControllerDelegate else{
             fatalError("delegate of ActivitySetViewModel should also be a NSFetchedResultsControllerDelegate")
@@ -104,23 +104,23 @@ class ActivitySetViewModel : ActivityTableViewModel{
     //-------------------------------------------------------------------------------------------------
     // MARK: View Model functions
     
-    /// add a new Activity in set of Activitys
+    /// add a new Activity in set of Activities
     ///
     /// - Parameter Activity: Activity to be added
     public func add(activity: Activity){
         self.modelset.add(activity: activity)
     }
     
-    /// update birth date of Activity
+    /// remove an Activity in set of Activities
     ///
-    /// - Parameters:
-    ///   - indexPath: (section,row) of Activity we want to update the birth date
-    ///   - date: birth date
-    /*public func updateBirthDate(atIndexPath indexPath: IndexPath, withDate date: Date){
-     let Activity = self.activitysFetched.object(at: indexPath)
-     Activity.birthdate = date
-     self.delegate?.ActivityUpdated(at: indexPath)
-     }*/
+    /// - Parameter Activity: Activity to be remove
+    public func remove(activity: Activity){
+        self.modelset.remove(activity: activity)
+    }
+    
+    public func remove(indexPath: IndexPath){
+        self.remove(activity: self.getActivity(at: indexPath)!)
+    }
     
     //-------------------------------------------------------------------------------------------------
     // MARK: Convenience functions

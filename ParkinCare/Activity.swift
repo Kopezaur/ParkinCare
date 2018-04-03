@@ -19,4 +19,8 @@ extension Activity {
         self.validated = validated!
         self.notificationIdentifier = notificationIdentifier
     }
+    
+    public func validate(){
+        self.validated = true
+    }
 }

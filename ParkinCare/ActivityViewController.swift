@@ -50,7 +50,7 @@ class ActivityViewController: UIViewController {
         // Delete the notification
         NotificationManager.deleteNotification(notificationIdentifier: self.activityViewModel!.getActivity(at: self.indexPath!)!.notificationIdentifier!)
         // Delete the entity
-        ActivityDAO.delete(activity: self.activityViewModel!.getActivity(at: self.indexPath!)!)
+        self.activityViewModel!.remove(indexPath: indexPath!)
         performSegue(withIdentifier: "exit", sender: self)
     }
     
@@ -59,7 +59,7 @@ class ActivityViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is CongratulationViewController{
-            ActivityDAO.delete(activity: (activityViewModel?.getActivity(at: indexPath!)!)!)
+            activityViewModel!.getActivity(at: indexPath!)!.validate()
         }
     }
  

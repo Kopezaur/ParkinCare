@@ -53,7 +53,7 @@ class RendezVousTableViewController: NSObject, UITableViewDataSource, UITableVie
             // Delete the notification
             NotificationManager.deleteNotification(notificationIdentifier: rendezVousViewModel.getRDV(at: indexPath)!.notificationIdentifier!)
             // Delete the entity
-            RDVDAO.delete(rdv: rendezVousViewModel.getRDV(at: indexPath)!)
+            self.rendezVousViewModel.remove(indexPath: indexPath)
         }
     }
     

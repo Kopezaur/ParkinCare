@@ -54,7 +54,7 @@ class PrescriptionViewController: UIViewController, UITableViewDelegate, UITable
         // First, we delete the notification
         NotificationManager.deleteNotification(notificationIdentifier: prescription!.notificationIdentifier!)
         // Then we delete the prescription
-        PrescriptionDAO.delete(prescription: prescription!)
+        self.prescriptionViewModel!.remove(prescription: prescription!)
         performSegue(withIdentifier: "toPilulierSegue", sender: self)
     }
     

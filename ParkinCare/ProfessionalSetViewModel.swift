@@ -110,16 +110,13 @@ class ProfessionalSetViewModel : ProfessionalTableViewModel{
         self.modelset.add(professional: professional)
     }
     
-    /// update birth date of Professional
-    ///
-    /// - Parameters:
-    ///   - indexPath: (section,row) of Professional we want to update the birth date
-    ///   - date: birth date
-    /*public func updateBirthDate(atIndexPath indexPath: IndexPath, withDate date: Date){
-        let Professional = self.professionalsFetched.object(at: indexPath)
-        Professional.birthdate = date
-        self.delegate?.ProfessionalUpdated(at: indexPath)
-    }*/
+    public func remove(professional: Professional){
+        self.modelset.remove(professional: professional)
+    }
+    
+    public func remove(indexPath: IndexPath){
+        self.remove(professional: self.getProfessional(at: indexPath)!)
+    }
     
     //-------------------------------------------------------------------------------------------------
     // MARK: Convenience functions

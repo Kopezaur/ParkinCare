@@ -71,7 +71,7 @@ class RDVViewController: UIViewController {
         // First we delete the associated notification
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [(self.rdvViewModel!.getRDV(at: self.indexPath!)!.notificationIdentifier)!])
         // Then we delete the entity
-        RDVDAO.delete(rdv: self.rdvViewModel!.getRDV(at: self.indexPath!)!)
+        self.rdvViewModel!.remove(rdv: rdv!)
         performSegue(withIdentifier: "exit", sender: self)
     }
     

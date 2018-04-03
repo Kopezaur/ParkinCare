@@ -112,7 +112,13 @@ class PrescriptionSetViewModel : PrescriptionTableViewModel{
         self.modelset.add(prescription: prescription)
      }
  
- 
+    public func remove(prescription: Prescription){
+        self.modelset.remove(prescription: prescription)
+    }
+    
+    public func remove(indexPath: IndexPath){
+        self.remove(prescription: self.getPrescription(at: indexPath)!)
+    }
  //-------------------------------------------------------------------------------------------------
  // MARK: Convenience functions
  

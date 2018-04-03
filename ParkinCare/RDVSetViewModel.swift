@@ -112,6 +112,14 @@ class RDVSetViewModel : RDVTableViewModel{
         self.modelset.add(rdv: rdv)
     }
     
+    public func remove(rdv: RDV){
+        self.modelset.remove(rdv: rdv)
+    }
+    
+    public func remove(indexPath: IndexPath){
+        self.remove(rdv: self.getRDV(at: indexPath)!)
+    }
+    
     //-------------------------------------------------------------------------------------------------
     // MARK: Convenience functions
     

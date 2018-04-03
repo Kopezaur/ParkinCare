@@ -50,7 +50,7 @@ class ActivityTableViewController: NSObject, UITableViewDataSource, UITableViewD
             // Delete the notification
             NotificationManager.deleteNotification(notificationIdentifier: activityViewModel.getActivity(at: indexPath)!.notificationIdentifier!)
             // Delete the entity
-            ActivityDAO.delete(activity: activityViewModel.getActivity(at: indexPath)!)
+            self.activityViewModel.remove(indexPath: indexPath)
         }
     }
     
