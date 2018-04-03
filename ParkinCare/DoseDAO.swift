@@ -47,7 +47,6 @@ class DoseDAO{
         let dao = self.createDose()
         dao.medicament = medicament
         dao.quantity  = quantity
-        dao.validated = validated!
         return dao
     }
     
@@ -55,7 +54,6 @@ class DoseDAO{
         let dao = self.createDose()
         dao.medicament = dose.medicament
         dao.quantity  = dose.quantity
-        dao.validated = dose.validated
         return dao
     }
     
@@ -81,7 +79,7 @@ class DoseDAO{
 //    }
 //    
     static func search(dose: Dose) -> Dose?{
-        self.request.predicate = NSPredicate(format: "medicament == %@ AND quantity == %@ AND prescription == %@", dose.medicament!, dose.quantity, dose.prescription!)
+        self.request.predicate = NSPredicate(format: "medicament == %@ AND quantity == %@ AND prescriptions == %@", dose.medicament!, dose.quantity, dose.prescriptions!)
         do{
             let result = try CoreDataManager.context.fetch(request) as [Dose]
             guard result.count != 0 else { return nil }

@@ -132,7 +132,7 @@ class NotificationManager{
         if(RDVDAO.count > 0){
             let rdvs = RDVDAO.fetchAll()
             for i in 0 ..< RDVDAO.count {
-                let rdv = rdvs[i]
+                let rdv = rdvs![i]
                 self.createRDVNotification(rdv: rdv)
             }
         }
@@ -141,7 +141,7 @@ class NotificationManager{
         if(ActivityDAO.count > 0){
             let activities = ActivityDAO.fetchAll()
             for i in 0 ..< ActivityDAO.count {
-                let activity = activities[i]
+                let activity = activities![i]
                 self.createActivityNotification(activity: activity)
             }
         }
@@ -150,7 +150,7 @@ class NotificationManager{
         if(EvaluationDAO.count > 0){
             let evaluations = EvaluationDAO.fetchAll()
             for i in 0 ..< EvaluationDAO.count {
-                let evaluation = evaluations[i]
+                let evaluation = evaluations![i]
                 self.createEvaluationNotification(evaluation: evaluation)
             }
         }

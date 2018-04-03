@@ -21,7 +21,7 @@ class PrescriptionDAO{
     static func fetchAll() -> [Prescription]?{
         self.request.predicate = nil
         do{
-            request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Professional.lastname),ascending:true)]
+            request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Prescription.dateTime),ascending:true)]
             return try CoreDataManager.context.fetch(self.request)
         }
         catch{
@@ -48,7 +48,6 @@ class PrescriptionDAO{
         let dao = self.createPrescription()
         dao.dateTime = dateTime
         dao.dateTimeReminder = dateTimeReminder
-        dao.observations = observations
         dao.validated = validated!
         dao.doses = []
         return dao
@@ -58,7 +57,6 @@ class PrescriptionDAO{
         let dao = self.createPrescription()
         dao.dateTime = prescription.dateTime
         dao.dateTimeReminder = prescription.dateTimeReminder
-        dao.observations = prescription.observations
         dao.validated = prescription.validated
         dao.doses = []
         return dao

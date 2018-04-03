@@ -10,12 +10,12 @@ import Foundation
 import CoreData
 
 extension Prescription {
-    convenience init(dateTime: NSDate, dateTimeReminder: NSDate, observations: String, validated: Bool?, doses: NSSet){
+    convenience init(dateTime: Date, dateTimeReminder: Date, validated: Bool?, doses: [Dose], notificationIdentifier: String){
         self.init(context: CoreDataManager.context)
-        self.dateTime = dateTime
-        self.dateTimeReminder = dateTimeReminder
-        self.observations = observations
+        self.dateTime = dateTime as NSDate
+        self.dateTimeReminder = dateTimeReminder as NSDate
         self.validated = validated!
-        self.doses = doses
+        self.doses = NSSet().addingObjects(from: doses) as NSSet
+        self.notificationIdentifier = notificationIdentifier
     }
 }

@@ -21,14 +21,25 @@ class PilulierViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func unwindToThisView(sender: UIStoryboardSegue) {
+        if sender.source is NewPrescriptionViewController {
+        }
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destController = segue.destination as? PrescriptionViewController{
+            if let cell = sender as? UITableViewCell{
+                guard let index = self.prescriptionTable.indexPath(for: cell) else {
+                    return
+                }
+                destController.indexPath = index
+                destController.prescriptionViewModel = self.tableViewController.prescriptionViewModel
+            }
+        }
+    }
 
 }

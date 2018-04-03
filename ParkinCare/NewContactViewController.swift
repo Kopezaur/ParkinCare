@@ -15,19 +15,11 @@ class NewContactViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
         guard let controller = self.childViewControllers.first as? ContactFormViewController else{
             return
         }
         self.editContactController = controller
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     @IBAction func addContactButtonAction(_ sender: Any) {
         let lastname = self.editContactController.lastnameField.text!

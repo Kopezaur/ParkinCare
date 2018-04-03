@@ -8,9 +8,8 @@
     </entity>
     <entity name="Dose" representedClassName="Dose" syncable="YES" codeGenerationType="class">
         <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="validated" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="medicament" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Medicament" inverseName="dose" inverseEntity="Medicament" syncable="YES"/>
-        <relationship name="prescription" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Prescription" inverseName="doses" inverseEntity="Prescription" syncable="YES"/>
+        <relationship name="prescriptions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Prescription" inverseName="doses" inverseEntity="Prescription" syncable="YES"/>
     </entity>
     <entity name="Evaluation" representedClassName="Evaluation" parentEntity="Reminder" syncable="YES" codeGenerationType="class">
         <attribute name="extraEvent" optional="YES" attributeType="String" syncable="YES"/>
@@ -31,9 +30,8 @@
         <attribute name="numTel" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Prescription" representedClassName="Prescription" parentEntity="Reminder" syncable="YES" codeGenerationType="class">
-        <attribute name="observations" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="validated" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="doses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Dose" inverseName="prescription" inverseEntity="Dose" syncable="YES"/>
+        <relationship name="doses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Dose" inverseName="prescriptions" inverseEntity="Dose" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="prescriptions" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="Professional" representedClassName="Professional" parentEntity="Person" syncable="YES" codeGenerationType="class">
@@ -74,11 +72,11 @@
     </entity>
     <elements>
         <element name="Activity" positionX="-3735" positionY="-3042" width="128" height="105"/>
-        <element name="Dose" positionX="-3537" positionY="-2767" width="128" height="103"/>
+        <element name="Dose" positionX="-3537" positionY="-2767" width="128" height="88"/>
         <element name="Evaluation" positionX="-3368" positionY="-3007" width="128" height="118"/>
         <element name="Medicament" positionX="-3726" positionY="-2808" width="128" height="75"/>
         <element name="Person" positionX="-3116" positionY="-3331" width="128" height="118"/>
-        <element name="Prescription" positionX="-3548" positionY="-2916" width="128" height="105"/>
+        <element name="Prescription" positionX="-3548" positionY="-2916" width="128" height="90"/>
         <element name="Professional" positionX="-3116" positionY="-3103" width="128" height="103"/>
         <element name="RDV" positionX="-3161" positionY="-2788" width="128" height="103"/>
         <element name="Reminder" positionX="-3735" positionY="-3180" width="128" height="88"/>

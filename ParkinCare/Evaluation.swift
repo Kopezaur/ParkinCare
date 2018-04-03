@@ -45,9 +45,10 @@ extension Evaluation{
         startDate = calendar.date(bySetting: .minute, value: startMinute, of: startDate!)
         
         // Pareil pour la date de fin des evaluations
-        var endDate : Date = calendar.date(bySetting: .hour, value: (endHour + 2), of: startDate!)!
-        endDate = calendar.date(bySetting: .minute, value: endMinute, of: endDate)!
         
+        var endDate : Date = calendar.date(bySetting: .hour, value: endHour, of: startDate!)!
+        endDate = calendar.date(byAdding: .hour, value: 2, to: endDate)!
+        endDate = calendar.date(bySetting: .minute, value: endMinute, of: endDate)!
         // Créer les evaluations
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm"

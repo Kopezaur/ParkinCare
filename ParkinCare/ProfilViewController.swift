@@ -55,7 +55,7 @@ class ProfilViewController: UIViewController {
         self.user!.numTel = self.numTelField.text
         // Verification for Notifications supression
         if(self.allowRemindSwitch.isOn == false){ // If all notifications have been supressed
-            UNUserNotificationCenter.removeAllPendingNotificationRequests()
+            let _ = UNUserNotificationCenter.removeAllPendingNotificationRequests(UNUserNotificationCenter.current())
         } else {
             if(self.user!.activityRemind == false){
                 // If the notifications used to be supressed but he reactivated them

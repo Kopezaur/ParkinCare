@@ -103,13 +103,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ParkinCare/PrescriptionFetchResultController.swift"
-            timestampString = "544390411.915835"
+            timestampString = "544403955.038922"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            endingLineNumber = "70">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

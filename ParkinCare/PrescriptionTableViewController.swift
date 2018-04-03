@@ -35,7 +35,7 @@ class PrescriptionTableViewController: NSObject, UITableViewDataSource, UITableV
         self.prescriptionViewModel = PrescriptionSetViewModel()
         self.fetchResultController = PrescriptionFetchResultController(view : tableView, model : self.prescriptionViewModel)
         super.init()
-        self.tableView.dataSource      = self
+        self.tableView.dataSource = self
         self.prescriptionViewModel.delegate = self.fetchResultController
     }
 
@@ -45,7 +45,7 @@ class PrescriptionTableViewController: NSObject, UITableViewDataSource, UITableV
         // after it has just managed deleting
         if(editingStyle == UITableViewCellEditingStyle.delete){
             // Delete the notification
-            NotificationManager.deleteNotification(notificationIdentifier: prescriptionViewModel.getPrescription(at: indexPath)!.notificationIdentifier!)
+            //NotificationManager.deleteNotification(notificationIdentifier: prescriptionViewModel.getPrescription(at: indexPath)!.notificationIdentifier!)
             // Delete the entity
             PrescriptionDAO.delete(prescription: prescriptionViewModel.getPrescription(at: indexPath)!)
         }
@@ -73,7 +73,9 @@ class PrescriptionTableViewController: NSObject, UITableViewDataSource, UITableV
     @discardableResult
     private func configure(cell: PrescriptionTableViewCell, atIndexPath indexPath: IndexPath) -> UITableViewCell{
         guard let prescription = self.prescriptionViewModel.getPrescription(at: indexPath) else { return cell }
+        print(prescription.doses!.count)
         let dateTime = prescription.dateTime! as Date
+        
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM/yyyy"
         let date = formatter.string(from: dateTime)

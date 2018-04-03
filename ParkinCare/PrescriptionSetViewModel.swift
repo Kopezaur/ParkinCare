@@ -46,6 +46,9 @@ class PrescriptionSetViewModel : PrescriptionTableViewModel{
          // prepare a request
          let request : NSFetchRequest<Prescription> = Prescription.fetchRequest()
          request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Prescription.dateTime),ascending:true)]
+         let calendar = Calendar.current
+         let dateMin : Date = calendar.date(byAdding: .minute, value: -15, to: Date())!
+         request.predicate = NSPredicate(format: "dateTime > %@ && validated = 0", dateMin as NSDate)
          let fetchResultController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataManager.context, sectionNameKeyPath: nil, cacheName: nil)
          guard let fetchResultControllerDelegate = self.delegate as? NSFetchedResultsControllerDelegate else{
             fatalError("delegate of PrescriptionSetViewModel should also be a NSFetchedResultsControllerDelegate")
